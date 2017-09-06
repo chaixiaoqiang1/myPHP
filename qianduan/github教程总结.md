@@ -14,7 +14,5 @@
 32  git status
 33  cd yii*
 34  git status
-35  history
-36  history
 37  git checkout master
 38  vim .gitignore
