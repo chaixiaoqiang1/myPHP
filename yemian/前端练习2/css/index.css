@@ -1,0 +1,58 @@
+.top{
+	width:100%;	
+	height: 35px;
+	background:#2e3a4b ;
+}
+.head{
+	width:1180px;	
+	height: 80px;
+	background:#fff;
+}
+.logo{
+	float: left;
+	width: 199px;
+	height: 46px;
+	margin-left:31px; 
+	margin-top:17px;
+	background: #111;
+}
+.logo_right{
+	float: right;
+	width: 371px;
+	height: 20px;
+	margin-top: 13px;
+	margin-right:23px ;
+	background: #ddd;
+}
+.header{
+	width:1180px;	
+	height: 40px;
+	background: #fff;
+}
+.header_title{
+	float: left;
+	width:260px;	
+	height: 40px;
+	background: #bbb;
+}
+.header_right{
+	float: left;
+	width:920px;	
+	height: 40px;
+	background: #eee;
+}
+
+.header_right ul>li{
+	line-height: 40px;
+	list-style: none;
+	float: left;
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+}
+
+.bannar{
+	width: 1920px;
+	height: 440px;
+	background: #aaa;
+}
