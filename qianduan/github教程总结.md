@@ -11,7 +11,6 @@
 
 # window版本控制的使用
 
-
 27  git add .
 30  git clone git@git.oschina.net:templi/yiicms.git
 31  git clone https://git.oschina.net/templi/yiicms.git
@@ -20,3 +19,6 @@
 34  git status
 37  git checkout master
 38  vim .gitignore
+
+# git与svn的区别
+1、svn可以对Word、Excel文件控制后可以进行比较差异查看修改内容，git则不能。
