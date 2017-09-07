@@ -1,5 +1,9 @@
-<!--项目主入口文件-->
 <?php
+/****
+ * 这是一个集成的小型框架
+ * @author Eagle  2017年9月7日 13:28:47
+ */
+
 //入口文件
 //引入框架类
 require './framework/Framework.class.php';
