@@ -8,3 +8,5 @@ xdebug.remote_handler = dbgp
 xdebug.remote_host= localhost  
 xdebug.remote_port = 9000  
 xdebug.idekey = PHPSTORM  
+
+### 抛开需求场景讲技术的都是耍流氓
