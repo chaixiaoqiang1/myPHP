@@ -15,4 +15,4 @@
 ]
 
 ### 常用插件
-Emmet、ConvertToUTF8
+html代码补全（Emmet）、文件编码转换（ConvertToUTF8）、侧边栏（SideBarEnhancements）
