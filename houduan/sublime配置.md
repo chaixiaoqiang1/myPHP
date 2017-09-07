@@ -13,3 +13,6 @@
 	{ "keys": ["alt+ctrl+l"], "command": "reindent" },
 	{ "keys": ["ctrl+d"], "command": "duplicate_line" }
 ]
+
+### 常用插件
+Emmet、ConvertToUTF8
