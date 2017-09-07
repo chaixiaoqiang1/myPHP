@@ -1,3 +1,7 @@
+# 版本库基础知识详解
+http://www.yiibai.com/git/git_basic_concepts.html#
+
+
 # 文件夹创建
 文件夹不能为中文名    输入完后加‘/’
 
