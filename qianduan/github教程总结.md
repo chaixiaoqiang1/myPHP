@@ -26,3 +26,4 @@ http://www.yiibai.com/git/git_basic_concepts.html#
 
 # git与svn的区别
 1、svn可以对Word、Excel文件控制后可以进行比较差异查看修改内容，git则不能。
+2、SVN是集中式版本控制，Git是分布式版本控制
