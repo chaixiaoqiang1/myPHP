@@ -1,0 +1,38 @@
+<!-- Necessary markup, do not remove -->
+<div id="mws-sidebar-stitch"></div>
+<div id="mws-sidebar-bg"></div>
+
+<!-- Sidebar Wrapper -->
+<div id="mws-sidebar">
+
+    <!-- Hidden Nav Collapse Button -->
+    <div id="mws-nav-collapse">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div id="mws-navigation">
+        <ul>
+            <volist name="catgoryTop" id="v">
+            <li>
+                <a href="__ROOT__/index.php/{$v.auth_path}"><i class="{$v.ico}"></i>{$v.title}</a>
+                <ul class="closed" style="overflow: hidden;">
+                    <volist name="v[_child]" id="v1">
+                        <li><a href="__ROOT__/index.php/{$v1.auth_path}">{$v1.title}</a></li>
+                    </volist>
+                </ul>
+            </li>
+            </volist>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

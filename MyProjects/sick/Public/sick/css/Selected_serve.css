@@ -1,0 +1,92 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "Œ¢»Ì—≈∫⁄", Tahoma, sans-serif;
+    background: #EEEEEE;
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/*Õº∆¨¥Û–°*/
+.case {
+    width: 49%;
+    margin-top: 10px;
+}
+
+.left {
+    width: 100%;
+    margin-right: 1%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 60px 10px 60px 10px;
+}
+.pitch_on_bj{
+    background: #E6AF38;
+}
+.pitch_on_bottom{
+    background: #F1D397;
+}
+.bj{
+    background: #797979
+}
+.bj_bottom{
+    background: #A1A1A1;
+}
+.left_content {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+
+}
+
+.left_content_img {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+}
+
+.bottom {
+    padding: 10px;
+    color: #FFFFff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/*Õº∆¨¥Û–°*/
+.img {
+    width: 50px;
+    height: 50px;
+}

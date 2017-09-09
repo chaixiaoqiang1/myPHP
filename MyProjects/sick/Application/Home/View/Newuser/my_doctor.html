@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>我的医生</title>
+
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/my_doctor.css"/>
+</head>
+
+<body>
+<div class="container">
+    <!-- 顶部导航-->
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 top_nav">
+            <ul class="fl top_nav_content">
+                <a href="current_service.html">
+                    <li class="lf">当前服务</li>
+                </a>
+                <a href="#">
+                    <li class="lf current">我的医生</li>
+                </a>
+                <a href="service_history.html">
+                    <li class="lf">服务历史</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <!-- -->
+    <div class="loop_page">
+
+        <div class="doctor_page">
+            <div class="row fl doctor_info">
+                <div class="col-md-3 col-sm-3 col-xs-3 doctor_info_content">
+                    <div class="doctor_img">
+                        <img src="../img/doctor.jpg" class="img-responsive img-circle" alt=""/>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-9 clear_padding">
+                    <div class="info fl">
+                        <div class="top fl">
+                            <div class="lf doctor_name">黄海昌3</div>
+                            <div class="lf state">
+                                <div class="state_tx lf">在线</div>
+                                <img src="../img/chenggong.png" class="img-responsive img-circle state_img lf" alt=""/>
+                            </div>
+                            <a href="Send_the_mind.html">
+                                <div class="purpose rt">送心意</div>
+
+                            </a>
+                        </div>
+                        <div class="content fl">
+                            <div class="classfiy">内科 初级医生</div>
+                        </div>
+                        <div class="bottom fl">
+                            <div class="fl">
+                                <div class="lf">执业编号 ：</div>
+                                <div class="number lf">123456789</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 admit"align="center">
+                    <div class="fl admit_page">
+                        <div class="info_admit">接待人数 <br/><span class="number_color">1263</span></div>
+                        <div class="info_admit">评价人数 <br/><span class="number_color">1263</span></div>
+                        <div class="info_admit">应答时间 <br/><span class="number_color">3'12"</span></div>
+                        <div class="info_admit">综合评分 <br/><span class="number_color">5</span></div>
+                    </div>
+
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    擅长呼吸系统、消化系统、心血管系统、内分泌系统、泌尿系统等疾病的诊治... 擅长呼吸系统、消化系统、心血管系统、内分泌系统、泌尿系统等疾病的诊治...
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 button">
+                    <div class=" fl">
+                        <a href="Chat_record.html">
+                            <div class=" btn_left lf" align="center">
+                                <button class="chat_btn lf">服务历史</button>
+                            </div>
+                        </a>
+
+                        <div class=" btn_left lf">
+                            <a href="doctor_detail.html" class="fl">
+                                <button class="chat_btn lf">购买服务</button>
+                            </a>
+
+                        </div>
+                        <div class=" btn_left lf">
+                            <a href="evaluate_page.html " class="fl">
+                                    <button class="chat_btn lf">查看评价</button>
+                            </a>
+                        </div>
+
+                        <div class=" btn_right rt">
+                            <button class=" delete_btn lf">删除</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script src="../js/jquery-1.11.3.js"></script>
+
+<script src="../js/bootstrap.js"></script>
+<script>
+    $(".loop_page:last").children().css("margin-bottom","10px");
+    $(".delete_btn").click(function () {
+        if (confirm("确定删除？")) {
+         $(this).parent().parent().parent().parent().remove()
+        }
+    })
+</script>
+</body>
+
+</html>

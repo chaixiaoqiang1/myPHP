@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>图文咨询</title>
+
+    <link href="__PUBLIC__/doctor/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/doctor/css/quick_consultation.css"/>
+    <script src="__PUBLIC__/doctor/js/quick_consultation.js"></script>
+
+</head>
+
+<body onload="init()">
+<div class="container">
+    <div class="row content">
+        <div class="col-md-12 col-sm-12 col-xs-12 ">
+            <form action="__SELF__" id="user_reg" name="user_reg" method="post">
+                <!-- 添加 文字 图片 的病情描述-->
+                <div class="text_field fl">
+                    <textarea class="text_field_content" name="content" rows="3" id="content01"
+                              placeholder="请详细描述您的症状、疾病和身体情况，便于医生更准确地分析，易问诊将保障您的安全。"></textarea>
+
+                    <div class="fl add_content">
+                        <div class="add_img lf">
+                            <img src="" class="img-responsive" alt=""/>
+                        </div>
+                     <!--   <div class="fileInputContainer pull-right">
+                            <input class="fileInput" type="file" name="" />
+                        </div>-->
+                    </div>
+
+                </div>
+                <!-- 年龄 性别 城市区域-->
+                <div class="classfiy fl">
+                    <div class="classfiy_top fl">
+                        <div class="age fl lf">
+                                年龄
+                            <span class="age_number ">
+                                <input type="text" name="age" placeholder="请输入年龄" />
+                            </span>
+                        </div>
+                     <!--   <div class="rt fl">
+                           &lt;!&ndash; <div class="sex_right rt">
+                                <div class="right_img lf">
+                                    <img src="__PUBLIC__/doctor/img/default.png" class="img-responsive  menfolk" alt=""/>
+                                </div>
+                                <div class="man lf">女</div>
+                            </div>
+                            <div class="sex_right rt">
+                                <div class="right_img lf">
+                                    <img src="__PUBLIC__/doctor/img/default.png" class="img-responsive femininity" alt=""/>
+                                </div>
+                                <div class="man lf">男</div>
+                            </div>&ndash;&gt;
+                            <div class="sex_right rt">
+                                    <input type="radio" name="sex" id="inlineRadio1" value="1"> 男
+                                    <input type="radio" name="sex" id="inlineRadio2" value="2"> 女
+                            </div>
+                        </div>-->
+                    </div>
+
+                    <div class="classfiy_top fl">
+                        <div class="left lf">
+                            性别
+                        </div>
+                        <div class="select rt">
+                            <input type="radio" name="sex" id="inlineRadio1" value="2"> 女
+                        </div>
+                        <div class="select rt">
+                            <input type="radio" name="sex" id="inlineRadio2" value="1"> 男
+                        </div>
+                    </div>
+
+                    <div class="classfiy_bottom fl">
+                        <div class="left lf">
+                            所在城市
+                        </div>
+                        <div class="select rt">
+                            <select name="shi" onChange="select()"  class="text" style="text-align: right"></select>
+                        </div>
+                        <div class="select rt">
+                            <select  name="sheng" onchange="select()"  class="text" style="text-align: right"></select>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="button" type="submit">提交</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="__PUBLIC__/doctor/js/jquery-1.11.3.js"></script>
+<script src="__PUBLIC__/doctor/js/quick_consultation.js"></script>
+<script src="__PUBLIC__/doctor/js/bootstrap.js"></script>
+<script>
+    $(".femininity").click(function () {
+        if ($(".menfolk").attr("src") == "../img/succeed.png") {
+            $(".menfolk").attr("src", "../img/default.png")
+        }
+        if ($(this).attr("src") == "../img/default.png") {
+            $(this).attr("src", "../img/succeed.png")
+        } else {
+            $(this).attr("src", "../img/default.png")
+        }
+    })
+
+    $(".menfolk").click(function () {
+        if ($(".femininity").attr("src") == "../img/succeed.png") {
+            $(".femininity").attr("src", "../img/default.png")
+        }
+        if ($(this).attr("src") == "../img/default.png") {
+            $(this).attr("src", "../img/succeed.png")
+        } else {
+            $(this).attr("src", "../img/default.png")
+        }
+
+    })
+
+    $('.button').click(function(){
+        if(!$("#content01").val()){
+            alert('请描述您的病情！');
+            return false;
+        }
+        if(!$("input[name='age']").val()){
+            alert('请选择您的年龄！');
+            return false;
+        }
+        if(!$("input:checked").val()){
+            alert('请选择您的性别！');
+            return false;
+        }
+
+        if($('select[name="shi"]').val() == '请选择' || $('select[name="sheng"]').val() == '请选择'){
+            alert('请选择正确的地址');
+            return false;
+        }
+
+        $("form:first").submit();
+    });
+
+</script>
+</body>
+
+</html>

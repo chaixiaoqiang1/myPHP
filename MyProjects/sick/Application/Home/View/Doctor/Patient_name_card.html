@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>患者名片</title>
+    <link href="__PUBLIC__/sick/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/sick/css/Patient_name_card.css"/>
+</head>
+
+<body>
+<div class="container">
+
+        <!-- 患者资料-->
+        <div class="row top_user_info">
+            <div class="col-md-12 col-sm-12 col-xs-12" style="padding-top: 10px">
+                <a href="" class="fl cl">
+                    <div class=" fl">
+                        <div class="user_head lf">
+                            <img src="{$info.icon}" class="img-responsive img-circle" alt=""/>
+                        </div>
+                        <div class="info lf">
+                            <div class="card">{$info.username}</div>
+                            <div class="user_info">{$info.phonenum}</div>
+                        </div>
+
+
+                        <!--<div class="next_step rt">-->
+                            <!--<img src="__PUBLIC__/sick/img/right.png" class="img-responsive" alt=""/>-->
+                        <!--</div>-->
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 clear_pd">
+                <div class="height"></div>
+            </div>
+        </div>
+
+        <!-- 分类-->
+        <div class="row top_user_info">
+            <div class="col-md-12 col-sm-12 col-xs-12 ">
+
+                    <div class="subgroup fl">
+                        <div class="left lf">修改分组</div>
+                        <!--<div class="right rt">-->
+                        <div class="right_img lf rt">
+                            <img src="__PUBLIC__/sick/img/right.png" class="img-responsive" alt=""/>
+                        </div>
+
+                            <div class="select rt">
+                                <form action="__SELF__" method="post">
+                                    <input type="hidden" name="sickid" value="{$sickId}"/>
+                                    <input type="hidden" name="t" value="{$Think.get.t}"/>
+                                    <input type="hidden" name="haoyou" value="{$Think.get.haoyou}"/>
+                                    <select name="groupname" class="text" style="text-align: right">
+                                        <option value="1" <if condition="$type eq '3'">selected</if>>我的患者</option>
+                                        <option value="2" <if condition="$type eq '1'">selected</if>>我的粉丝</option>
+                                      <!--  <option value="3" <if condition="$type eq '2'">selected</if>>咨询过我的人</option>-->
+                                        <volist name="group" id="vo">
+                                            <option value="{$vo.id}">{$vo.listname}</option>
+                                        </volist>
+                                    </select>
+                                </form>
+                            </div>
+                        <!--</div>-->
+
+                    </div>
+
+                <!--<a href="" class="fl cl">-->
+                    <!--<div class="subgroup fl clear_br">-->
+                        <!--<div class="left lf">分组</div>-->
+                        <!--<div class="right rt">-->
+                            <!--<div class="right_img lf">-->
+                                <!--<img src="__PUBLIC__/sick/img/right.png" class="img-responsive" alt=""/>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                    <!--</div>-->
+                <!--</a>-->
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 clear_pd">
+                <div class="height"></div>
+            </div>
+        </div>
+
+        <!--&lt;!&ndash; 患者信息&ndash;&gt;        >field('username,phonenum,sex,userage,height,weight')-->
+
+        <div class="row top_user_info">
+            <div class="col-md-12 col-sm-12 col-xs-12 ">
+                <div class="subgroup fl">
+                    <div class="left lf">性别</div>
+                    <div class="right rt">
+                        <div class="right_tx lf">
+                            <if condition="$info['sex'] eq '1'">男
+                                <elseif condition="$info['sex'] eq '2'" />女
+                                <else /> 用户未设置
+                            </if>
+                        </div>
+                    </div>
+                </div>
+                <div class="subgroup fl">
+                    <div class="left lf">年龄</div>
+                    <div class="right rt">
+                        <div class="right_tx lf">{$info['userage']|default="用户未设置"}</div>
+
+                    </div>
+                </div>
+                <div class="subgroup fl">
+                    <div class="left lf">身高</div>
+                    <div class="right rt">
+                        <div class="right_tx lf">{$info['height']|default="用户未设置"}</div>
+                    </div>
+                </div>
+                <div class="subgroup fl clear_br">
+                    <div class="left lf">体重</div>
+                    <div class="right rt">
+                        <div class="right_tx lf">{$info['weight']|default="用户未设置"}</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 clear_pd">
+                <div class="height"></div>
+            </div>
+        </div>
+        <!-- 咨询历史-->
+     <!--   <div class="row">
+            <div class="col-md-12v col-sm-12 col-xs-12">
+                <a href="img_consult.html" class="fl cl">
+                    <div class="subgroup fl clear_br">
+                        <div class="left lf" >咨询历史</div>
+                        <div class="right rt">
+                            <div class="right_img lf">
+                                <img src="__PUBLIC__/sick/img/right.png" class="img-responsive" alt=""/>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+        </div>-->
+    <button class="button" id="tijiao">提交</button>
+</div>
+
+
+</div>
+<script src="__PUBLIC__/sick/js/jquery-1.11.3.js"></script>
+
+<script src="__PUBLIC__/sick/js/bootstrap.js"></script>
+<script>
+    $('#tijiao').click(function(){
+        $('form:first').submit();
+    })
+</script>
+</body>
+
+</html>

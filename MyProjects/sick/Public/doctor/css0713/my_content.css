@@ -1,0 +1,102 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "微软雅黑", Tahoma, sans-serif;
+    background: #EEEEEE;
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none !important;
+}
+a:hover{
+    color: #000000;
+}
+.cl{
+    color: #000;
+}
+
+/*顶部个人信息*/
+.top_user_info {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #ffffff;
+    margin-top: 10px;
+}
+
+.user_head {
+    width: 60px;
+}
+
+.user_name {
+    line-height: 60px;
+    padding-left: 10px;
+}
+
+.next_step {
+    width: 25px;
+
+    margin-top: 15px;
+}
+
+/*信息*/
+
+.integral{
+    background: #FFF;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+.integral_top{
+    border-bottom: 1px solid #E1E1E1;
+    padding:  5px 0 10px 0;
+}
+.integral_img {
+    width: 30px;
+}
+
+.integral_tx {
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+.integral_next {
+    width: 20px;
+    margin-right: 7px;
+    margin-top: 5px;
+}
+.integral_bottom{
+    padding-top: 10px;
+}
+
+

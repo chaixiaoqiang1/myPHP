@@ -1,0 +1,226 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "微软雅黑", Tahoma, sans-serif;
+    background-color: #e9e9e9;
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+
+
+.evaluate{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e4e4e4;
+}
+.evaluate_tx{
+    color: #959595;
+}
+.br_style_top {
+    padding: 5px;
+    border: 1px solid #ededed;
+    border-radius: 13px;
+    margin-right: 15px;
+    font-size: 12px;
+}
+
+.br_style_bottom {
+    margin-top: 20px;
+    padding: 5px;
+    border: 1px solid #ededed;
+    border-radius: 13px;
+    margin-right: 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+.bj {
+    background: #FF9F37;
+    color: #ffffff;
+}
+
+/*文本域设置*/
+.text_field{
+    margin-top: 20px;
+    border: 1px solid #ededed;
+    border-radius: 5px;
+    padding: 5px;
+    background: #ffffff;
+}
+.text_field_content {
+    width: 100%;
+    resize: none;
+    outline: none;
+    padding: 10px;
+    border: none;
+}
+
+/*添加按钮*/
+
+.fileInputContainer{
+    background:url("../img/ic_public_add.png")no-repeat;
+    background-size: 100% 100%;
+    position:relative;
+    width: 60px;
+    height: 60px;
+}
+.fileInput{
+    overflow: hidden;
+    font-size: 300px;
+    position:absolute;
+    right:0;
+    top:0;
+    opacity: 0;
+    filter:alpha(opacity=0);
+    cursor:pointer;
+    width: 60px;
+    height: 60px;
+}
+.add_img{
+    width: 60px;
+    height: 60px;
+}
+.add_content{
+    padding:10px;
+}
+
+
+/*年龄 性别 城市*/
+.classfiy{
+    background: #ffffff;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.classfiy_top{
+    padding: 10px;
+    border-bottom: 1px solid #e3e3e3;
+}
+.ipt{
+    width: 15px;
+    height: 15px;
+}
+.rd_left{
+    padding-right: 5px;
+}
+.rd_right{
+    padding-right: 10px;
+}
+.radio_tx{
+    padding-left: 5px;
+    line-height: 21px;
+}
+.classfiy_bottom{
+    padding: 10px 0 10px 10px;
+}
+select{
+    border: none;
+    color: #000;
+    outline: none;
+    background: #ffffff;
+}
+.times{
+   background: #FFFFff;
+    padding: 10px;
+    border-top: 1px solid #e3e3e3  ;
+}
+.ipt{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+option{}
+/*提交按钮*/
+.button{
+    width: 100%;
+    padding: 10px;
+    color: #ffffff;
+    background: #FF9F37;
+    outline: none;
+    font-size: 16px;
+    border:none ;
+    margin-top: 20px;
+    border-radius: 3px;
+}
+
+.sex_right{
+    margin: 0px;
+    padding-left: 5px;
+}
+
+.sex{
+    line-height: 20px;
+}
+
+.right_img{
+    width: 18px;
+}
+.man{
+    line-height: 20px;
+    padding-left: 5px;
+}
+
+
+
+
+/*下拉菜单样式*/
+.select {
+    margin-top: 0px;
+    outline: none;
+    border-radius: 4px;
+    position: relative;
+    width: 55px;
+    height: 20px;
+    text-align: center;
+
+}
+
+.text {
+    height: 40px;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    font-size: 14px;
+    display: block;
+    width: 55px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    color: #333333;
+    border-radius: 4px;
+    height: 20px;
+    color: #C4C4C4;
+
+}
+
+
+.age{
+    line-height: 20px;
+}

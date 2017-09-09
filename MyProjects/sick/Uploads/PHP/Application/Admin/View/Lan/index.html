@@ -1,0 +1,64 @@
+<extend name="Public/base"/>
+<block name="container">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 shop_list">
+        <div class="row">
+            <table class="table table-bordered">
+                <tr class="text-center">
+                    <td class="active">用户名</td>
+                    <td class="active">类型</td>
+                    <td class="active">用户组</td>
+                    <td class="active">状态</td>
+                    <td class="active">操作</td>
+                </tr>
+                <foreach name="admin_list" item="vo" key="k">
+
+                    <tr class="text-center">
+                        <td class="active">{$vo.username}</td>
+
+                        <td class="active">
+                            <if condition="$vo['type'] eq 1">
+                                总后台
+                                <else/>
+                                商家后台
+                            </if>
+                        </td>
+
+                        <td class="active">
+                            {$vo.title}
+                        </td>
+                        <td class="active">
+                            <if condition="$vo['status'] eq 1">
+                                正常
+                                <else/>
+                                冻结
+                            </if>
+                        </td>
+                        <td class="active">
+                            <a href="{:U('Admin/status',array('id'=>$vo['id']))}">
+                                <span class="label btn-warning">冻结</span>
+                            </a>
+                            <a href="{:U('Admin/status',array('id'=>$vo['id']))}">
+                                <span class="label btn-success">正常</span>
+                            </a>
+                            <a href="{:U('Admin/delete',array('id'=>$vo['id']))}">
+                                <span class="label btn-danger">删除</span>
+                            </a>
+                            <a href="{:U('Admin/editor',array('id'=>$vo['id']))}">
+                                <span class="label btn-info">修改</span>
+                            </a>
+                        </td>
+                    </tr>
+                    </if>
+                </foreach>
+            </table>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  text-center" id="page" style="margin-top: 20px;">
+        {$page}
+    </div>
+</block>
+<block name="js">
+    <script src="__PUBLIC__/script/jquery-2.1.1.min.js"></script>
+    <script src="__PUBLIC__/script/bootstrap.min.js"></script>
+
+</block>

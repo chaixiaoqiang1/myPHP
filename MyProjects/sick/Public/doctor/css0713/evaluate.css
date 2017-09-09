@@ -1,0 +1,212 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "微软雅黑", Tahoma, sans-serif;
+
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+
+/*顶部内容*/
+
+.doctor_info {
+    padding: 15px;
+    border-bottom: 2px solid #E7E7E7;
+}
+
+.top {
+    padding-top: 15px;
+}
+
+.doctor_name {
+    line-height: 22px;
+}
+
+.state {
+    width: 50px;
+    font-size: 12px;
+    padding: 3px 0 3px 0;
+    background: #F3F7F6;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+.state_tx {
+    color: #979797;
+    margin-left: 4px;
+    margin-top: 1px;
+}
+
+.state_img {
+    width: 16px;
+    margin-left: 2px;
+}
+
+.collect {
+    border: 1px solid #E1E1E1;
+    border-radius: 3px;
+    padding: 3px 5px 3px 5px;
+}
+
+.collect_tx {
+    font-size: 12px;
+    color: #DA7776;
+}
+
+.content {
+    padding: 3px 0 5px 0;
+}
+
+.classfiy {
+    font-size: 12px;
+    color: #A6A6A6;
+}
+
+.bottom {
+    font-size: 12px;
+    color: #A6A6A6;
+}
+
+/*评论内容*/
+
+.content {
+    padding-top: 10px;
+}
+
+/*综合评分*/
+.evaluate{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e4e4e4;
+}
+.evaluate_tx{
+    color: #959595;
+}
+.br_style_top {
+    padding: 5px;
+    border: 1px solid #ededed;
+    border-radius: 13px;
+    margin-right: 15px;
+    font-size: 12px;
+}
+
+.br_style_bottom {
+    margin-top: 20px;
+    padding: 5px;
+    border: 1px solid #ededed;
+    border-radius: 13px;
+    margin-right: 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+.bj {
+    background: #FF9F37;
+    color: #ffffff;
+}
+
+/*文本域设置*/
+.text_field{
+    margin-top: 20px;
+}
+.text_field_content {
+    width: 100%;
+    resize: none;
+    outline: none;
+    padding: 10px
+}
+
+/*提交按钮*/
+.button{
+    width: 100%;
+    padding: 10px;
+    color: #ffffff;
+    background: #FF9F37;
+    outline: none;
+    font-size: 16px;
+    border:none ;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/*媒体查询*/
+@media screen and (min-width: 320px) {
+    .doctor_info_content{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+@media screen and (min-width: 360px) {
+    .doctor_info_content{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media screen and (min-width: 375px) {
+    .doctor_info_content{
+        padding-left:10px;
+        padding-right: 10px;
+    }
+}
+@media screen and (min-width: 384px) {
+    .doctor_info_content{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media screen and (min-width: 411px) {
+    .doctor_info_content{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media screen and (min-width: 412px) {
+    .doctor_info_content{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media screen and (min-width: 414px) {
+    .doctor_info_content{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media screen and (min-width: 435px) {
+    .doctor_info_content{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+

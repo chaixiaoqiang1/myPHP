@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>医生执照</title>
+
+    <link href="__PUBLIC__/sick/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/sick/css/authentication.css"/>
+
+</head>
+
+<body>
+<div class="container">
+    <form action="__SELF__" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <!-- 上传医生职业执照-->
+            <div class="col-md-12 col-sm-12 col-xs-12 top">
+                <div class="left lf">请上传执业证书</div>
+                <div class="right rt">
+                    <div class="fileInputContainer .right_img">
+                        <input class="fileInput" type="file" name="zhizhao" />
+                    </div>
+                </div>
+            </div>
+            <!-- 证书信息填写-->
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="border">
+                    <div class="number fl">
+                        <div class="number_tx lf">执业证编码：</div>
+                        <input type="text" class="lf ipt" placeholder="请输入执业证编号" value="{$info.practice}" name="practice"/>
+                    </div>
+                    <div class="number fl">
+                        <div class="number_tx lf">资格证编码：</div>
+                        <input type="text" class="lf ipt" placeholder="请输入资格证编号" value="{$info.qualification}" name="qualification" onkeyup="value=value.replace(/[^0-9]/g,'')" onpaste="value=value.replace(/[^0-9]/g,'')" oncontextmenu = "value=value.replace(/[^0-9]/g,'')"/>
+                    </div>
+                    <div class="number fl clear_border">
+                        <div class="number_tx lf">身份证号码：</div>
+                        <input type="text" class="lf ipt" placeholder="请输入身份证号码" value="{$info.identity}" name="identity" onkeyup="value=value.replace(/[^0-9]/g,'')" onpaste="value=value.replace(/[^0-9]/g,'')" oncontextmenu = "value=value.replace(/[^0-9]/g,'')"/>
+                    </div>
+                </div>
+                <div class="tx">以上个人信息只用做认证，不给其他人展示</div>
+            </div>
+        </div>
+    </form>
+   <button class="button" id="tijiao">提交</button>
+</div>
+<script src="__PUBLIC__/sick/js/jquery-1.11.3.js"></script>
+
+<script src="__PUBLIC__/sick/js/bootstrap.js"></script>
+<script>
+    $('#tijiao').click(function(){
+        if($("input[name='qualification']").val() == '请输入资格证编号'){
+            alert("请输入正确资格证编号");
+            return false;
+        }
+        if($("input[name='identity']").val() == '请输入身份证号码'){
+            alert("请输入正确身份证号码");
+            return false;
+        }
+        $('form:first').submit();
+    })
+</script>
+
+</body>
+
+</html>

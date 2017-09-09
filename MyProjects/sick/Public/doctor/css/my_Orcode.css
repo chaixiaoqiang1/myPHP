@@ -1,0 +1,82 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "Î¢ÈíÑÅºÚ", Tahoma, sans-serif;
+    background: #fff;
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.Orcode {
+    margin-top: 20px;
+}
+
+.orcode_page {
+    background: #fff;
+    border-bottom:  1px dashed #ededed;
+    padding: 15px 25px 25px 25px;
+}
+
+/*ÓÃ»§Í·Ïñ*/
+.top {
+    width: 140px;
+    margin: auto;
+
+}
+
+.user_img {
+    width: 60px;
+}
+
+.user_name {
+    line-height: 60px;
+    padding-left: 10px;
+    font-size: 16px;
+    color: #000000;
+}
+
+/*¶þÎ¬Âë*/
+.bottom{
+    background: #ffffff;
+    padding: 30px 0 10px 0;
+}
+.Orcode_img {
+    width: 200px;
+}
+.Orcode_tx{
+    color: #a9a9a9;
+    padding: 10px;
+}

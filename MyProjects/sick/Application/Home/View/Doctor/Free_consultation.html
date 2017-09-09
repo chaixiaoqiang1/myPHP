@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>免费咨询</title>
+
+    <link href="__PUBLIC__/sick/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/sick/css/Free_consultation.css"/>
+
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0">
+            <div class="bi_img">
+                <img src="__PUBLIC__/sick/img/bj.jpg" class="img-responsive img-size" alt=""/>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <if condition="$type eq 3">
+                    <a href="javascript:">
+                <elseif condition="$type eq 1" />
+                    <a href="{:U('Doctor/img_set_up')}">
+                <elseif condition="$type eq 2" />
+                    <a href="{:U('Doctor/Free_consultation_fit')}">
+            </if>
+                <button class="button">
+                    <if condition="$type eq 3"><if condition="$Think.get.kaiguan eq 1"><span class="zhixun" id="2">关闭免费咨询</span><else /><span class="zhixun" id="1">立即参加免费咨询</span></if>
+                        <elseif condition="$type eq 1" />立即参加图文咨询
+                        <elseif condition="$type eq 2" />立即参加预约咨询
+                    </if>
+                </button>
+            </a>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="rule">活动规则</div>
+            <div class="rule_content">
+                <if condition="$type eq 3"> 1.参加免费咨询，可以增加您的曝光率，提高您在患者中的知名度，增加您的粉丝。
+                <elseif condition="$type eq 1" />1.参加图文咨询，可以增加您的曝光率，提高您在患者中的知名度，增加您的粉丝。
+                <elseif condition="$type eq 2" />1.参加预约咨询，可以增加您的曝光率，提高您在患者中的知名度，增加您的粉丝。
+            </if>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="__PUBLIC__/sick/js/jquery-1.11.3.js"></script>
+
+<script src="__PUBLIC__/sick/js/bootstrap.js"></script>
+
+<script>
+    $('.button').click(function(){
+        var kg = $('.zhixun').attr('id');
+        <if condition="$type eq 3">
+            $.post("__SELF__", { 'type': "3", 'kg' : kg } ,function(data){
+                    if(data){
+                        alert('更新成功');
+                        location.href = "{:U('Doctor/Selected_serve')}";
+                    }
+            });
+            <elseif condition="$type eq 2" />
+            $.post("__SELF__", { type: "2" } );
+            <elseif condition="$type eq 1" />
+            $.post("__SELF__", { type: "1" } );
+        </if>
+    })
+
+</script>
+
+</body>
+
+</html>

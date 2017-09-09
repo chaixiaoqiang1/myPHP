@@ -1,0 +1,88 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "Î¢ÈíÑÅºÚ", Tahoma, sans-serif;
+background: #efefef;
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none !important;
+    color: #333333;
+}
+a:hover{
+color: #333333;
+}
+
+.top{
+    background: #ffffff;
+}
+.left,.right{
+    padding: 10px;
+    border: 1px solid #EEEEEE;
+    border-bottom: 2px solid #efefef;
+}
+.cl{
+    border-bottom: 2px solid #5DC64C;
+}
+
+.doctor{
+    padding-right: 5px;
+    border-right: 1px solid #B4B4B4;
+}
+.names{
+    padding-right: 5px;
+    padding-left: 5px;
+    border-right: 1px solid #B4B4B4;
+}
+.content{
+    background: #ffffff;
+}
+.info{
+    padding: 10px;
+    margin-top: 10px;
+    border-bottom: 1px solid #efefef;
+}
+.judge{
+    padding-left: 5px;
+}
+.evaluate_tx{
+    padding: 10px;
+}
+.evaluate_content{
+    padding-bottom: 10px;
+    color: #333333;
+}
+.time{
+    font-size: 12px;
+}

@@ -1,0 +1,118 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "微软雅黑", Tahoma, sans-serif;
+
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+
+
+/*购买类别*/
+.top_content{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #F9F9F9;
+    color: #000;
+}
+/*医生信息*/
+.doctor_info{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f9f9f9;
+}
+.doctor_img{
+    width: 50px;
+}
+.doctor_names,.service_chargelf{
+    line-height: 50px;
+}
+.doctor_names{
+    padding-left: 10px;
+    color: #9C9C9C;
+}
+.service_chargelf{
+    color: #FFA039;
+}
+/*手机号填写*/
+.number_iphone{
+    border-bottom: 2px solid #F9F9F9;
+}
+.number_iphone_tx{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #8A8A8A;
+}
+.number_iphone_ipt{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #F1F1F1;
+    border-radius: 5px;
+
+}
+.ipt{
+    background: #F1F1F1;
+    padding-left: 10px;
+    width: 100%;
+}
+.payment_method{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/*微信支付*/
+.wechat_payment{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #F9F9F9;
+}
+.wechat_img{
+    width: 50px;
+}
+.wechat_tx{
+    padding-left: 10px;
+    line-height: 50px;
+}
+/*支付按钮*/
+.payment{
+    padding-top: 30px;
+}
+.payment_btn{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #FF9F37;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    font-size: 16px;
+}

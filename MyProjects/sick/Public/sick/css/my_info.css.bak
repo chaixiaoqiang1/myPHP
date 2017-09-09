@@ -1,0 +1,91 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "Î¢ÈíÑÅºÚ", Tahoma, sans-serif;
+    background: #EEEEEE;
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+/*Í·Ïñ*/
+.user_head{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #FFf;
+    margin-top: 10px;
+}
+
+.head_img{
+    border-bottom: 1px solid #EEEEEE;
+    padding-bottom: 10px;
+}
+.user_tx{
+    line-height: 60px;
+    color: #000000;
+}
+.user_img{
+    width: 60px;
+}
+
+
+.user_name{
+    padding-top: 10px;
+    border-bottom: 1px solid #EEEEEE;
+    padding-bottom: 10px;
+}
+
+.ipt{
+    outline: none;
+    border: none;
+    text-align: right;
+}
+
+.user_iphone{
+    padding-top: 10px;
+}
+.button{
+    width: 80%;
+    display: block;
+    margin: auto;
+    outline: none;
+    border: none;
+    padding: 10px;
+    color: #ffffff;
+    background: #FF9F37;
+    margin-top: 30px;
+    border-radius: 5px;
+}

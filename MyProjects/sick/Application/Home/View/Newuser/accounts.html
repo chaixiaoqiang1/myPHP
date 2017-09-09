@@ -1,0 +1,66 @@
+    <!DOCTYPE html>
+
+    <html lang="zh-CN">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+        <title>账目明细</title>
+
+        <link href="__PUBLIC__/sick/css/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="__PUBLIC__/newuser/css/accounts.css"/>
+    </head>
+
+    <body>
+    <div class="container">
+        <div class="row parent">
+            <!-- 支付记录-->
+            <div class="col-md-12 col-sm-12 col-xs-12 apply">
+                <div class="top fl">
+                    <div class="left lf" style="font-size: 16px">使用</div>
+                    <div class="right rt" style="line-height: 19px">- <span>2.00</span> </div>
+                </div>
+                <div class="button fl">
+                    <div class="left lf">2016-07-05 18:07:04</div>
+                    <div class="right rt"><span></span> </div>
+                </div>
+            </div>
+            <!-- 提现记录-->
+            <div class="col-md-12 col-sm-12 col-xs-12 apply">
+                <div class="top fl">
+                    <div class="left lf" style="font-size: 16px">提现</div>
+                    <div class="right rt" style="line-height: 19px">- <span>10.00</span> </div>
+                </div>
+                <div class="button fl">
+                    <div class="left lf">2016-07-05 18:07:04</div>
+                    <div class="right rt">提现记录</div>
+                </div>
+            </div>
+            <!-- 充值记录-->
+            <div class="col-md-12 col-sm-12 col-xs-12 apply">
+                <div class="top fl">
+                    <div class="left lf" style="font-size: 16px">充值</div>
+                    <div class="right rt" style="line-height: 19px">+ <span>10.00</span> </div>
+                </div>
+                <div class="button fl">
+                    <div class="left lf">2016-07-05 18:07:04</div>
+                    <div class="right rt">充值成功</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="../js/jquery-1.11.3.js"></script>
+
+    <script src="../js/bootstrap.js"></script>
+    <script>
+        $(".parent").children().last().css("border-bottom","none")
+    </script>
+    </body>
+
+    </html>

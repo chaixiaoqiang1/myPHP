@@ -1,0 +1,85 @@
+<extend name="Public/base"/>
+<block name="container">
+     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  shop_right">
+                <div class="row">
+                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-center">
+                        <div class="row">
+                                <p class="shop_right_color">
+                                    修改服务
+                                </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-right">
+                        <a href="{:U('Service/Servicelist')}"><button type="button" class="btn btn-primary" >返回服务列表</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                <div class="row">
+                    <form action='__SELF__' method="post" >
+                    
+                    <table class="table table-bordered">
+                        <tr class="text-left">
+                          <td class="active text-center">服务类型</td>
+                          <td class="active">
+                              <!--<input type="text" name="type" value="{$info['type']}" />-->
+                              <label class="radio-inline">
+                                  <input type="radio" name="type" value="1" <if condition="$info['type'] eq 1">checked</if>>图文咨询
+                              </label>
+                              <label class="radio-inline">
+                                  <input type="radio" name="type" value="2" <if condition="$info['type'] eq 2">checked</if>>预约咨询
+                              </label>
+                              <label class="radio-inline">
+                                  <input type="radio" name="type" value="3" <if condition="$info['type'] eq 3">checked</if>>免费咨询
+                              </label>
+                          </td>
+                        </tr>
+                        <tr class="text-left">
+                            <td class="active text-center">状态</td>
+                            <!--<td class="active"><input type="text" name="is_status" value="{$info['is_status']}" /></td>-->
+                            <td>
+                                <label class="radio-inline">
+                                    <input type="radio" name="is_status"  value="1" <if condition="$info['is_status'] eq 1">checked</if>>进行中
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="is_status"  value="2" <if condition="$info['is_status'] eq 2">checked</if>>完成待评价
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="is_status" value="3" <if condition="$info['is_status'] eq 3">checked</if>>完成已评价
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="is_status"  value="4" <if condition="$info['is_status'] eq 4">checked</if>>冻结不显示
+                                </label>
+                            </td>
+
+                        </tr>
+                        <tr class="text-left">
+                            <td class="active text-center">是否支付</td>
+                            <!--<td class="active"><input type="text" name="is_pay" value="{$info['is_pay']}" /></td>-->
+                            <td>
+                                <label class="radio-inline">
+                                    <input type="radio" name="is_pay" value="1" <if condition="$info['is_pay'] eq 1">checked</if>>已支付
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="is_pay" value="2" <if condition="$info['is_pay'] eq 2">checked</if>>未支付
+                                </label>
+                            </td>
+                        </tr>
+                        <tr class="text-center">
+                            <td class="active" colspan="2"><input type='submit' value='提&nbsp;&nbsp;&nbsp;交'style="width: 40%; margin: auto;" class="btn btn-success btn-lg btn-block"></td>
+                        </tr>
+                    </table>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+</block>
+<br />
+<block name="js">
+    <script src="__PUBLIC__/script/jquery-2.1.1.min.js"></script>
+    <script src="__PUBLIC__/script/bootstrap.min.js"></script>
+
+</block>

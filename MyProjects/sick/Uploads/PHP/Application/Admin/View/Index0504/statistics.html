@@ -1,0 +1,81 @@
+<extend name="Public/base"/>
+<block name="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  shop_right">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+                        <div class="row">
+                            <a href="{:U('Index/statistics')}">
+                                                <span class="shop_right_color" style="margin-left: 2%;">
+                                                    销量统计
+                                                </span>
+                            </a>
+                            <a href="{:U('Index/pv')}">
+                                                <span class="shop_right_color" style="margin-left: 2%;">
+                                                    流量统计
+                                                </span>
+                            </a>
+                            <a href="{:U('Index/product')}">
+                                                <span class="shop_right_color" style="margin-left: 2%;">
+                                                    商品统计
+                                                </span>
+                            </a>
+                            <a href="{:U('Index/down_statistics',array('day_num'=>$day_num))}">
+                                <button class="btn btn-danger"style="margin-left: 20px;">下载({$day_num})天的销量</button >
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pull-right">
+                        <form class="form-horizontal" method="post" id="user-editor" enctype="multipart/form-data" action="{:U('Index/statistics')}" >
+                            <div class="row form-group" style="margin-top: 8px;">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <p><input class=" pull-right" name="day_num" style="width: 50%;" onkeyup='this.value=this.value.replace(/\D/gi,"")' placeholder="输入查询的天数(默认7天)" type="text">
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="">
+                                    <div class="row">
+                                        <p><input class="" style="width: 50%;" name="shop_name" placeholder="要查看的商铺名" type="text"> <button>搜索</button></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row shop_list">
+
+                    <table class="table table-bordered">
+                        <tr class="text-center">
+                            <td class="active">商铺名称</td>
+                            <td class="active">销售数量</td>
+                            <td class="active">收益</td>
+                            <td class="active">时间</td>
+                        </tr>
+                        <foreach name="lists" item="vo" key="k">
+                            <tr class="text-center">
+                                <td class="info" style="width: 180px;overflow: hidden;white-space: nowrap;   text-overflow: ellipsis;">
+                                    {$vo.shop_name}
+                                </td>
+                                <td class="info">{$vo.sales}</td>
+                                <td class="info">{$vo.price}</td>
+                                <td class="info">{$vo.begin_time}
+                                    <if condition="$vo['end_time']">
+                                        /{$vo.end_time}
+                                    </if>
+                                </td>
+                            </tr>
+                        </foreach>
+                    </table>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  text-center" id="page" style="margin-top: 20px;">
+                    {$page}
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+<block name="js">
+
+
+</block>
+

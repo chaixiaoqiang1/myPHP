@@ -1,0 +1,162 @@
+<extend name="Public/base"/>
+<block name="container">
+    <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <div class="col-xs-3 col-xs-12 col-sm-12 col-md-12 col-lg-12  shop_right">
+                <div class="row">
+                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-center">
+                        <div class="row">
+                            <a href="{:U('User/index')}">
+                                <p class="shop_right_color">
+                                    &nbsp;医生详细信息
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-right">
+                        <form class="form-horizontal" method="post" id="user-editor" enctype="multipart/form-data" action="{:U('User/index')}">
+                            <div class="row form-group">
+<!--                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <p><input class="shop_search_input" placeholder="输入用户名关键字" name="user_name" type="text"> <button>搜索</button></p>
+                                </div>-->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--//新加的按钮-->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 shop_list">
+                <a href="{:U('Service/servicelist',array('id'=> $info['id']))}"><button type="button" class="btn btn-default">我的服务</button></a>
+                <a href="{:U('Service/imagetextlist',array('id'=> $info['id']))}"><button type="button" class="btn btn-primary">图文咨询</button></a>
+                <a href="{:U('Service/orderlist',array('id'=> $info['id']))}"><button type="button" class="btn btn-success">预约咨询</button></a>
+                <!--<a href="{:U('Service/threeidea',array('id'=> $info['id']))}"><button type="button" class="btn btn-warning">第三方建议</button></a>-->
+                <a href="{:U('Service/sickcomment',array('id'=> $info['id']))}"><button type="button" class="btn btn-danger">用户评论</button></a>
+                <a href="{:U('Service/allfriend',array('id'=> $info['id']))}"><button type="button" class="btn btn-info">朋友圈</button></a>
+                <!--<button type="button" class="btn btn-link">（链接）Link</button>-->
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 shop_list">
+                <div class="row">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>医生简介</th>
+                            <td>{$info['intro']}</td>
+                        </tr>
+                        <tr>
+                            <th>擅长领域</th>
+                            <td>{$info['speciality']}</td>
+                        </tr>
+
+                        <!--//后加字段-->
+                        <tr>
+                            <th>服务费用</th>
+                            <td>{$info['serverprice']}</td>
+                        </tr>
+                        <tr>
+                            <th>应答时间</th>
+                            <td>{$info['responsetime']}</td>
+                        </tr>
+                        <tr>
+                            <th>服务人数</th>
+                            <td>{$info['servernum']}</td>
+                        </tr>
+                        <tr>
+                            <th>评价人数</th>
+                            <td>{$info['evaluatenum']}</td>
+                        </tr>
+                        <tr>
+                            <th>综合评分</th>
+                            <td>{$info['zscore']}</td>
+                        </tr>
+                        <tr>
+                            <th>图文咨询费用</th>
+                            <td>{$info['tuwenpirce']}元</td>
+                        </tr>
+                        <tr>
+                            <th>预约就诊费用</th>
+                            <td>{$info['orderprice']}元</td>
+                        </tr>
+                        <tr>
+                            <th>关注人数</th>
+                            <td>{$info['attentionnum']}</td>
+                        </tr>
+                        <tr>
+                            <th>购买服务次数</th>
+                            <td>{$info['buyservernum']}</td>
+                        </tr>
+                        <tr>
+                            <th>接收咨询人数</th>
+                            <td>{$info['receiveconsultnum']}</td>
+                        </tr>
+                        <tr>
+                            <th>学历</th>
+                            <td>{$info['education']}</td>
+                        </tr>
+                        <tr>
+                            <th>邮箱</th>
+                            <td>{$info['mailbox']}</td>
+                        </tr>
+                        <tr>
+                            <th>专业</th>
+                            <td>{$info['major']}</td>
+                        </tr>
+                        <tr>
+                            <th>资格证编号</th>
+                            <td>{$info['qualification']}</td>
+                        </tr>
+
+                        <tr>
+                            <th>身份证号</th>
+                            <td>{$info['identity']}</td>
+                        </tr>
+                        <tr>
+                            <th>执照图片</th>
+                            <td><img src="__ROOT__/Uploads/{$info['licenseimg']}"></td>
+                        </tr>
+                        <tr>
+                            <th>接收过治疗的患者</th>
+                            <td>{$info['acceptsick_id']}</td>
+                        </tr>
+
+                        <tr>
+                            <th>免费咨询状态</th>
+                            <td>
+                                <if condition="$info['freeconsult'] eq 1">免费
+                                    <else />不免费
+                                </if>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>预约就诊状态</th>
+                            <td>
+                                <if condition="$info['is_orderstatus'] eq 1">支持预约
+                                    <else />不支持预约
+                                </if>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>二维码</th>
+                            <td><img src="__ROOT__/Uploads/{$info['twocode']}"></td>
+                        </tr>
+
+                    </table>
+
+                  <!--  <table style='border:1px;'>
+
+                    </table>-->
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  text-center" id="page" style="margin-top: 20px;">
+                {$page}
+            </div>
+        </div>
+    </div>
+</block>
+<block name="js">
+    <script src="__PUBLIC__/script/jquery-2.1.1.min.js"></script>
+    <script src="__PUBLIC__/script/bootstrap.min.js"></script>
+
+</block>
+
+

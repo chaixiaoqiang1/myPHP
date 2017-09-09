@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>图文咨询设置</title>
+
+    <link href="__PUBLIC__/sick/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/sick/css/Free_consultation_fit.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/sick/css/lc_switch.css"/>
+    <style>
+        .lcs_switch{
+            height: 25px;
+        }
+        .lcs_cursor{
+            width: 18px;
+            height: 18px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 br">
+            <div class="text fl">
+                <div class="text_left lf">图文咨询</div>
+                <div class="text_right rt">
+                    <p>
+                        <input type="checkbox" name="check-1" value="4" class="lcs_check" autocomplete="off" />
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 money">
+            <div class="text fl">
+                <div class="text_left lf">请选择价格</div>
+                <div class="text_right rt">
+                    <select name="" class="select">
+                        <option value="">请选择</option>
+                        <option value="">20</option>
+                        <option value="">40</option>
+                        <option value="">60</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 br">
+            <div class="text fl">
+                <div class="text_left lf">复诊劵</div>
+                <div class="text_right rt">
+                    <p>
+                        <input type="checkbox" name="check-1" value="4" class="lcs_check" autocomplete="off" />
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 money">
+            <div class="text fl">
+                <div class="text_left lf">请设置折扣</div>
+                <div class="text_right rt">
+                    <select name="" class="select">
+                        <option value="">8折</option>
+                        <option value="">6折</option>
+                        <option value="">4折</option>
+                        <option value="">2折</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="button">保存</button>
+</div>
+<script src="__PUBLIC__/sick/js/jquery-1.11.3.js"></script>
+
+<script src="__PUBLIC__/sick/js/bootstrap.js"></script>
+<script src="__PUBLIC__/sick/js/lc_switch.min.js"></script>
+<script>
+    $(document).ready(function(e) {
+        console.log($("input[type='checkbox']").is(':checked'))
+        $('input').lc_switch();
+        // triggered each time a field changes status
+        $('body').delegate('.lcs_check', 'lcs-statuschange', function() {
+            var status = ($(this).is(':checked')) ? 'checked' : 'unchecked';
+        });
+
+        // triggered each time a field is checked
+        $('body').delegate('.lcs_check', 'lcs-on', function() {
+            console.log('field is checked');
+        });
+        // triggered each time a is unchecked
+        $('body').delegate('.lcs_check', 'lcs-off', function() {
+            console.log('field is unchecked');
+        });
+    });
+    if($("div").hasClass(".lcs_off")){
+        alert("xxxx")
+    }
+</script>
+
+</body>
+
+</html>

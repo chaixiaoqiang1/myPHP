@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>充值</title>
+
+    <link href="__PUBLIC__/sick/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/newuser/css/recharge.css"/>
+
+</head>
+
+<body>
+<div class="container">
+    <form action="{:U('Newuser/recharge')}" method="post">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="money">充值金额</div>
+                <input required type="text" name="price" class="ipt" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9.]+/,'');}).call(this)" placeholder="请输入充值金额"/>
+            </div>
+        </div>
+        <button type="submit" class="button">确认支付</button>
+    </form>
+
+</div>
+<script src="../js/jquery-1.11.3.js"></script>
+
+<script src="../js/bootstrap.js"></script>
+
+</body>
+
+</html>

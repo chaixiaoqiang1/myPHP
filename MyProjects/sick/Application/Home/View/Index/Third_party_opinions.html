@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>第三方意见</title>
+
+    <link href="__PUBLIC__/doctor/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/doctor/css/Third_party_opinions.css"/>
+
+</head>
+
+<body>
+<div class="container">
+    <!-- 有几位医生给出建议-->
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="doctor_opinion">
+                <span>有</span><span class="doctor_number">3</span><span>位医生给出补给意见</span>
+            </div>
+
+        </div>
+    </div>
+    <!--医生建议内容-->
+    <div class="row">
+        <volist name="info" id="vo">
+        <div class="col-md-12 col-sm-12 col-xs-12 doctor_opinion_content">
+            <div class="doctor_info fl">
+                <div class="doctor_img lf">
+                    <img src="__PUBLIC__/doctor/img/doctor.jpg" class="img-responsive img-circle" alt=""/>
+                </div>
+                <div class="doctor_names lf">{$vo.d_id}</div>
+            </div>
+            <div class="opinion_content">
+                {$vo.content}
+            </div>
+        </div>
+        </volist>
+        <div class="col-md-12 col-sm-12 col-xs-12 doctor_opinion_content">
+            <div class="doctor_info fl">
+                <div class="doctor_img lf">
+                    <img src="__PUBLIC__/doctor/img/doctor.jpg" class="img-responsive img-circle" alt=""/>
+                </div>
+                <div class="doctor_names lf">黄海昌</div>
+            </div>
+            <div class="opinion_content">
+                可以暂时不用处理，定期复查。如果有增大，可以手术拿掉，希望对你有帮助！
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 doctor_opinion_content">
+            <div class="doctor_info fl">
+                <div class="doctor_img lf">
+                    <img src="__PUBLIC__/doctor/img/doctor.jpg" class="img-responsive img-circle" alt=""/>
+                </div>
+                <div class="doctor_names lf">黄海昌</div>
+            </div>
+            <div class="opinion_content">
+                可以暂时不用处理，定期复查。如果有增大，可以手术拿掉，希望对你有帮助！
+            </div>
+        </div>
+    </div>
+</div>
+<script src="__PUBLIC__/doctor/js/jquery-1.11.3.js"></script>
+
+<script src="__PUBLIC__/doctor/js/bootstrap.js"></script>
+
+</body>
+
+</html>

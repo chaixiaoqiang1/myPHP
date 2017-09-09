@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <title>我的健康</title>
+
+    <link href="__PUBLIC__/doctor/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/doctor/css/my_health.css"/>
+<!--    <link rel="stylesheet" href="__PUBLIC__/doctor/css/mobiscroll_date.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/doctor/css/mobiscroll.css"/>-->
+
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <form action="{:U('Index/my_health')}" method="post" id="form01">
+        <a href="">
+        <div class="col-md-12 col-sm-12 col-xs-12 top_info">
+
+                <div class="user_img lf">
+                    <img src="{$info.icon}" class="img-responsive img-circle" alt=""/>
+                </div>
+                <div class="user_name lf">
+                    <div class="names">{$info.username}</div>
+                    <div class="classfiy fl">
+                        <div class="sex lf">
+                            <if condition="$info['sex'] eq 1">男
+                                <elseif condition="$info['sex'] eq 2" />女
+                            </if>
+                        </div>
+                       <if condition="!empty($info['userage'])">
+                        <div class="age lf">{$info.userage}岁</div>
+                       </if>
+                    </div>
+                </div>
+
+                    <!--<div class="right rt">-->
+                        <!--<img src="__PUBLIC__/doctor/img/right.png" class="img-responsive" alt=""/>-->
+                    <!--</div>-->
+
+        </div>
+        </a>
+    </div>
+    <div class="row change">
+        <div class="col-md-12 col-sm-12 col-xs-12 classfiy_change">
+            <div class="left_tx lf cl">
+                <div class="datum">个人资料</div>
+            </div>
+            <a href="habit.html"class="color">
+                <div class="right_tx lf">
+                    <div class="practice ">生活习惯</div>
+                </div>
+            </a>
+
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 my_datum_content">
+            <div class="my_info fl">
+                <div class="height lf">身高</div>
+                <span class="rt" style="color: #a9a9a9;padding-right: 5px">cm</span>
+                <input type="text" class="ipt rt" placeholder="" value="{$info.height}" name="height" onkeyup="value=value.replace(/[^\0-9\.]/g,'')" onpaste="value=value.replace(/[^\0-9\.]/g,'')" oncontextmenu = "value=value.replace(/[^\0-9\.]/g,'')"/>
+            </div>
+            <div class="my_info fl">
+                <div class="height lf">体重</div>
+                <span class="rt" style="color: #a9a9a9;padding-right: 5px">kg</span>
+                <input type="text" class="ipt rt"  placeholder="" value="{$info.weight}" name="weight" onkeyup="value=value.replace(/[^\0-9\.]/g,'')" onpaste="value=value.replace(/[^\0-9\.]/g,'')" oncontextmenu = "value=value.replace(/[^\0-9\.]/g,'')"/>
+            </div>
+            <div class="my_info fl">
+                <div class="height lf">婚姻状态</div>
+                <div class="select rt">
+                    <select  class="text" style="text-align: right" name="marriage">
+                        <option style="text-align: right">请填写</option>
+                        <option value="1" <if condition="$info['marriage'] eq 1">selected</if>>已婚</option>
+                        <option value="2" <if condition="$info['marriage'] eq 2">selected</if>>未婚</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!-- 女性信息-->
+
+    </div>
+    <if condition="$info['sex'] eq 2">
+    <div class="row girl ">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="my_info fl">
+                <div class="height lf">末次月经时间</div>
+                <input type="text" name="USER_AGE" id="date" readonly class="input rt" placeholder="请填写"/>
+            </div>
+            <div class="my_info fl">
+                <div class="height lf">平均月经周期</div>
+                <div class="select rt">
+                    <input type="text" name="USER_AGE" id="USER_AGE" class="input rt" placeholder="请填写天数"/>
+                   <!-- <select  class="text" style="text-align: right">
+                        <option style="text-align: right">请填写</option>
+                        <option>1天</option>
+                        <option>2天</option>
+                        <option>3天</option>
+                        <option>4天</option>
+                        <option>5天</option>
+                    </select>-->
+                </div>
+
+            </div>
+            <div class="my_info fl">
+                <div class="height lf">平均月经时长</div>
+                <div class="select rt">
+                    <input type="text" name="" id="USER_AGE"  class="input rt" placeholder="请填写天数"/>
+              <!--      <select  class="text" style="text-align: right">
+                        <option style="text-align: right">请填写</option>
+                        <option>1天</option>
+                        <option>2天</option>
+                        <option>3天</option>
+                        <option>4天</option>
+                        <option>5天</option>
+                    </select>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row girl">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="my_info fl">
+                <div class="height lf">是否已孕</div>
+                <div class="select rt">
+                    <select  class="text" style="text-align: right" name="is_bady">
+                        <option style="text-align: right">请填写</option>
+                        <option value="1" <if condition="$info['is_bady'] eq 1">selected</if>>是</option>
+                        <option value="2" <if condition="$info['is_bady'] eq 2">selected</if>>否</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="my_info fl">
+                <div class="height lf">是否怀孕中</div>
+                <div class="select rt">
+                    <select  class="text" style="text-align: right" name="is_pregnancy">
+                        <option style="text-align: right">请填写</option>
+                        <option value="1" <if condition="$info['is_pregnancy'] eq 1">selected</if>>是</option>
+                        <option value="2" <if condition="$info['is_pregnancy'] eq 2">selected</if>>否</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </if>
+    <button class="button" type="submit" id="tijiao">保存</button>
+
+
+    </form>
+    
+        
+
+    <!--<section id="form">-->
+        <!--<form action="">-->
+            <!--&lt;!&ndash;<div class="clear h10"></div>&ndash;&gt;-->
+        <!--</form>-->
+    <!--</section>-->
+</div>
+<script type="text/javascript" src="__PUBLIC__/date/laydate.dev.js"></script>
+<script src="__PUBLIC__/doctor/js/jquery-1.11.3.js"></script>
+
+<script src="__PUBLIC__/doctor/js/bootstrap.js"></script>
+<!--<script src="__PUBLIC__/doctor/js/mobiscroll_date.js" charset="gb2312"></script>
+<script src="__PUBLIC__/doctor/js/mobiscroll.js"></script>-->
+<script>
+    /*$("input[name='height']").blur(function(){
+        var t =  $(this).val();
+        var z= /^[0-9]*$/;
+        if(!z.test(t)){
+            alert("请输入数字");
+            $(this).val(null);
+        };
+    });
+
+    $("input[name='weight']").blur(function(){
+        var t =  $(this).val();
+        var z= /^[0-9]*$/;
+        if(!z.test(t)){
+            alert("请输入数字");
+            $(this).val(null);
+        };
+    });*/
+
+    $(".my_info").click(function () {
+        $(this).children("input").focus();
+    })
+$(function () {
+ /*   var currYear = (new Date()).getFullYear();
+    var opt={};
+    opt.date = {preset : 'date'};
+    opt.datetime = {preset : 'datetime'};
+    opt.time = {preset : 'time'};
+    opt.default = {
+        theme: 'android-ics light', //皮肤样式
+        display: 'modal', //显示方式
+        mode: 'scroller', //日期选择模式
+        dateFormat: 'yyyy-mm-dd',
+        lang: 'zh',
+        showNow: true,
+        nowText: "今天",
+        startYear: currYear - 50, //开始年份
+        endYear: currYear + 10 //结束年份
+    };
+    
+
+    $("#USER_AGE").mobiscroll($.extend(opt['date'], opt['default']));*/
+
+//    alert($("#USER_AGE").val());
+
+    $(".dw-persp").click(function(){
+        $(this).hide()
+    })
+});
+
+  laydate({
+          elem: '#date'
+    });
+
+    $('#tijiao').click(function(){
+        if(!$("input[name='height']").val()){
+            alert('身高不能为空');
+            return false;
+        }
+        if(!$("input[name='weight']").val()){
+            alert('体重不能为空');
+            return false;
+        }
+        $('#form01').submit();
+    })
+
+
+
+
+</script>
+</body>
+
+</html>

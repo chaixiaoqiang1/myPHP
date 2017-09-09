@@ -1,0 +1,56 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "Î¢ÈíÑÅºÚ", Tahoma, sans-serif;
+    background: #F5F5F5;
+
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+
+/*¶¥²¿µ¼º½À¸*/
+.top_nav{
+    background: #ffffff;
+}
+.top_nav_content li{
+    padding: 15px 0px 15px 0px;
+    color: #000000;
+    width: 33%;
+    text-align: center;
+}
+.current{
+    color: #5DC64C!important;
+    border-bottom: 2px solid #5DC64C;
+}
+
+
+

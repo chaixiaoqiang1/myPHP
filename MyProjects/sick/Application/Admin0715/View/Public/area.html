@@ -1,0 +1,37 @@
+
+
+    <script src="http://webapi.amap.com/maps?v=1.3&key=a3ff9f75dfa792be8a49fe2b3047f239&plugin=AMap.MouseTool"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+
+<div id="container"></div>
+
+<div class="button-group">
+  <!--  <input type="button" class="button" value="鼠标绘制点" id="point"/>
+    <input type="button" class="button" value="鼠标绘制线" id="line"/>-->
+    <input type="button" class="button" value="点击绘制面" id="polygon"/>
+</div>
+<script>
+    var map = new AMap.Map("container", {
+        resizeEnable: true
+    });
+    //在地图中添加MouseTool插件
+    var mouseTool = new AMap.MouseTool(map);
+    AMap.event.addDomListener(document.getElementById('polygon'), 'click', function() {
+        mouseTool.polygon();
+    }, false);
+    AMap.event.addListener(mouseTool, 'draw', function(msg){
+      //  var draObj=msg.obj;
+        var path=msg.obj.getPath();
+        //   console.log(path.length)
+
+        var _TheArray = new Array();
+        var html='';
+        for(var i=0; i<path.length; i++){
+            html+='<input name="lng[]" value='+path[i]['lng']+'>';
+            html+='<input name="lnt[]" value='+path[i]['lat']+'>';
+        }
+       // alert(html);
+        document.getElementById("path").innerHTML=html;
+
+    });
+</script>

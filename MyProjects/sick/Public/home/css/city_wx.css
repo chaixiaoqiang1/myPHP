@@ -1,0 +1,51 @@
+/*header*/
+.header{
+    padding: 5px 10px;
+    background: #FFF;
+    border-bottom: 1px #dcdcdc solid;
+}
+.header img{
+    height: 30px;
+    margin: 5px 0;
+}
+.header p{
+    font-size: 20px;
+    line-height: 30px;
+    height: 30px;
+    margin: 5px;
+}
+/*content*/
+.content{
+    margin-top: 50px;
+}
+.content .ul1 li{
+    background: #F3F3F3;
+    height: 50px;
+    line-height: 50px;
+    font-size: 12px;
+    border-bottom: 1px #FFF solid;
+}
+.content .ul1 span{
+    width: 5px;
+    height: 100%;
+    background: #F3F3F3;
+    display: block;
+    float: left;
+    margin-right: 10%;
+}
+.right-info{
+    border-bottom: 1px #dcdcdc solid;
+    height: 50px;
+    padding: 10px;
+}
+.right-info p{
+    height: 30px;
+    line-height: 30px;
+}
+.right-info img{
+    height: 20px;
+    margin: 5px 0;
+}
+.content2,.content3,.content4{
+    display: none;
+}

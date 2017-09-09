@@ -1,0 +1,71 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "Î¢ÈíÑÅºÚ", Tahoma, sans-serif;
+
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none !important;
+}
+a:hover{
+    color: #000000;
+}
+
+/*ÆÀÂÛÄÚÈÝ*/
+.evaluate_br{
+    border-bottom: 2px solid #dddddd;
+}
+.evaluate_content{
+    padding: 10px 0;
+    border-bottom: 1px solid #f3f3f3;
+}
+.user_info{
+    font-size: 12px;
+    color: #b2b2b2;
+    padding: 10px 0 10px 0;
+}
+.user_img{
+    width: 50px;
+}
+.user_evaluate_tx{
+    width: 80%;
+    padding-left: 10px;
+}
+.city{
+    padding-left: 10px;
+}
+.up{
+    line-height: 25px;
+}

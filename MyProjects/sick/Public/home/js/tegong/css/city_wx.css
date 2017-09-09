@@ -1,0 +1,123 @@
+/*style*/
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td{
+    margin:0;
+    padding:0
+}
+body{
+    padding:0;
+    margin:0;
+    font-family: tahoma,arial,\5b8b\4f53,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: rgb(96,96,96);
+    background-color: #F1F1F1;
+}
+*{
+    /*color: #853067;*/
+    color: #000;
+    font-size: 14px
+}
+img{
+    border:none
+}
+a{
+    color: #5c307d
+}
+a:hover,a:link{
+    text-decoration: none
+}
+ol,ul,li{
+    list-style:none
+}
+.left{
+    float: left
+}
+.right{
+    float: right
+}
+.indent{
+    text-indent : 28px
+}
+.yellow-col{
+    color: #f08429;
+}
+.yellow-back{
+    background: #f08429;
+}
+/*header*/
+.header{
+    padding: 10px 0;
+    background: #FFF;
+}
+.header img{
+    height: 20px;
+    margin: 5px 0;
+}
+.header p{
+    height: 30px;
+    line-height: 30px;
+    color: #000;
+    font-size: 16px;
+}
+/*content*/
+.content{
+    margin-top: 50px;
+    padding: 10px;
+}
+.content-info1 .p1{
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+.content-info1 .p2{
+    width: 68%;
+    height: 1px;
+    margin-top: 25px;
+    margin-left: 28%;
+    background: #dcdcdc;
+}
+.content-info1 .div1{
+    width: 30%;
+    background: #FFF;
+    border: 1px #dcdcdc solid;
+    border-radius: 4px;
+    float: left;
+    margin-right: 3%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.content-info1 .p3{
+    color: #969696;
+    height: 40px;
+    line-height: 40px;
+}
+.content-info2{
+    padding: 10px;
+    border: 1px #dcdcdc solid;
+}
+.content-info2 .p4{
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+}
+.content-info3{
+    padding: 10px;
+    background: #FFF;
+    border-bottom: 1px #dcdcdc solid;
+}
+.content-info3 .p5{
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+}
+/*ul1*/
+.ul1{
+    position: fixed;
+    right: 5px;
+    top: 60px;
+}
+.ul1 li{
+    color: #ff4f4f;
+}

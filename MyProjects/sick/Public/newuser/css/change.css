@@ -1,0 +1,85 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial;
+    background: #F5F5F5;
+
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+a:hover{
+    color: #ffffff;
+}
+.money {
+    font-size: 30px;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 20%;
+}
+
+.balance {
+    color: #ffffff;
+    text-align: center;
+    padding-top: 0px;
+}
+
+.top {
+    background: #FF6134;
+    height: 150px
+}
+
+.content {
+    background: #ffffff;
+}
+
+.pd {
+    padding: 10px;
+    border-bottom: 1px solid #efefef;
+}
+
+.left {
+    line-height: 25px;
+    font-size: 18px;
+    color: #000;
+}
+
+.right {
+    width: 25px;
+}
+
+.accounts {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #ffffff;
+    padding: 10px
+}

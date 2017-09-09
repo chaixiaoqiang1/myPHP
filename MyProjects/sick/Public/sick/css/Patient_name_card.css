@@ -1,0 +1,155 @@
+
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "΢���ź�", Tahoma, sans-serif;
+    background:#fff;
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none !important;
+}
+a{
+    color: #000000;
+}
+a:focus{
+    color: #000000;
+}
+
+
+.top_user_info {
+    background: #ffffff;
+}
+
+.user_head {
+    width: 60px;
+}
+
+.info{
+    padding-left: 10px;
+}
+.user_info{
+    padding-bottom: 5px;
+    padding-top: 14px;
+}
+.card{
+    color: #4ABE38;
+
+}
+
+.left{
+    line-height: 25px;
+    color: #666;
+}
+
+.next_step {
+    width: 25px;
+    margin-top: 15px;
+}
+.right_img{
+    width: 25px;
+}
+.color{
+    line-height:25px;
+    color: #4ABE38;
+}
+.right_tx{
+    line-height:25px;
+    color: #666;
+    padding-right: 25px;
+}
+
+.subgroup{
+    /*border-bottom: 1px solid #EAEFF3;*/
+    /*padding-bottom: 10px;*/
+    padding-top: 10px;
+}
+.clear_br{
+    border: none;
+}
+
+.height{
+    height: 10px;
+    background: #F5F6F7;
+
+}
+.clear_pd{
+    padding: 0;
+    margin-top: 10px;
+}
+.button{
+    width: 80%;
+    padding: 10px;
+    background: #F79A22;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    display:block;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.select {
+    margin-top: 0px;
+    outline: none;
+    border-radius: 4px;
+    position: relative;
+    height: 20px;
+    text-align: center;
+    padding-left: 10px;
+    color: #a9a9a9;
+    width: 70%;
+    margin-top: 2px;
+
+}
+
+.text {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    font-size: 14px;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    color: #333333;
+    border-radius: 4px;
+    height: 20px;
+    color: #a9a9a9;
+    width: 100%;
+    direction: rtl;
+}

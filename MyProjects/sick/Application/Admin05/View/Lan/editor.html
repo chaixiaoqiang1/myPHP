@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+
+    <title>管理员管理</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link href="__PUBLIC__/style/bootstrap.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/admin.min.css" rel="stylesheet">
+     <style>
+.main {
+background-color: #f6f6f6;
+padding: 20px;
+}
+.input-large {
+    width: 390px;
+}
+.text {
+    width: 220px;
+    height: 20px;
+    vertical-align: middle;
+}
+.text, .textarea {
+    padding: 4px;
+    border: 1px solid #eeeeee;
+    background-color: #fff;
+    transition: all .3s linear;
+}
+.controls>input.text {
+	 width:390px;
+	height: 30px;
+	/* vertical-align: middle; */
+}
+    </style>
+</head>
+
+<body class="container-fluid">
+<div class="row">
+    <include file="Public/navbar"/>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 body_left_bg text-center">
+                <include file="Public/admin/column"/>
+            </div>
+            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" >
+                 <div class="main-title">
+                        <h2>修改管理员</h2>
+                    </div>
+                    <form action="{:U('update')}" method="post" class="form-horizontal">   
+                        <input type="hidden" name="id" value="{$list.id}"/>
+                        <div class="form-item">
+                            <label class="item-label">用户名<span class="check-tips">（用户名会作为默认的昵称）</span></label>
+                            <div class="controls">
+                                <input type="text"  disabled class="text input-large"  value="{$list.username}">
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <label class="item-label">密码<span class="check-tips">（用户密码不能少于6位）</span></label>
+                            <div class="controls">
+                                <input type="password" class="text input-large" name="password" value="">
+                            </div>
+                        </div>
+                 
+                        <div class="form-item">
+                            <label class="item-label">拥有用户权限：</label>
+                            <div class="controls">
+                                <volist name="auth" id="v">
+                                    <input type="radio"  name="group" value="{$v.id}" <if condition="$v[id] eq $group[group_id]">checked</if>/>{$v.title} &nbsp;
+                                </volist>    
+
+                            </div>
+                        </div>
+                        <if condition="$_GET[type] eq 1">  
+                            <input type="hidden" name="type" value="1"/>    
+                        </if>
+                        <if condition="$_GET[type] eq 2">  
+                            <br/>
+                            <div class="form-item">
+                                <label class="item-label">选择店铺:</label>
+                                <div class="controls" style="width:390px;">
+                                    <select name="shop_id"  class="form-control">
+                                        <foreach name="shop" item="vo">
+                                            <option value="{$vo.id}">{$vo.shop_name}</option>
+                                        </foreach>
+                                    </select>
+                                </div>
+                            </div>
+                            <input type="hidden" name="type" value="2"/>    
+                        </if>
+                        <br/>
+                        <div class="form-item">
+                            <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+                            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+<script src="__PUBLIC__/script/lrz.bundle.js?v=a1a6749"></script>
+<script src="__PUBLIC__/script/index.js?v=27ce5f7"></script>
+<script src="__PUBLIC__/script/jquery-2.1.4.min.js"></script>
+</html>

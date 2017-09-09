@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>我的收入</title>
+
+    <link href="__PUBLIC__/sick/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/newdoctor/css/earning.css"/>
+</head>
+
+<body>
+<div class="container">
+    <div class="row parent">
+        <volist name="info" id="vo">
+        <div class="col-md-12 col-sm-12 col-xs-12 br">
+
+            <div class="user_img lf">
+                <img src="../img/timg.jpg" class="img-responsive img-circle" alt=""/>
+            </div>
+            <div class="user_info lf fl">
+                <div class="user_time fl">
+                    <div class="user_name lf">{$vo.username}</div>
+                    <div class="user_name rt">{$vo.servetime|date="y-m-d",###}</div>
+                </div>
+                <div class="user_money fl">
+                    <div class="lf  cost">
+                        <if condition="$vo['type'] eq 1">图文<else />预约</if>咨询费用<span class="cl">{$vo.price}</span>元
+                    </div>
+                 <!--   <div class="rt intention">
+                        心意<span class="cl">20</span>元
+                    </div>-->
+                </div>
+            </div>
+        </div>
+        </volist>
+    </div>
+    <div class="navbar navbar-fixed-bottom">
+        <div style="color: #ffffff;font-size: 16px;text-align:center;line-height: 50px">总共收入 <span
+                style="color:#F93446;">
+            <if condition="$price neq ''">
+                {$price}
+                <else/>
+                0
+            </if>
+        </span> 元
+        </div>
+    </div>
+</div>
+<script src="__PUBLIC__/sick/js/jquery-1.11.3.js"></script>
+
+<script src="__PUBLIC__/sick/js/bootstrap.js"></script>
+<script>
+    $(".parent").children().last().css("margin-bottom","50px");
+</script>
+</body>
+
+</html>

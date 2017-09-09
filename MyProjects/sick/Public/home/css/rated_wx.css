@@ -1,0 +1,78 @@
+/*header*/
+.header{
+    padding: 5px 10px;
+    background: #FFF;
+    border-bottom: 1px #dcdcdc solid;
+}
+.header img{
+    height: 30px;
+    margin: 5px 0;
+}
+.header p{
+    font-size: 20px;
+    line-height: 30px;
+    height: 30px;
+    margin: 5px;
+}
+/*banner*/
+.banner{
+    margin-top: 60px;
+    padding: 10px;
+    background: #FFF;
+}
+.banner .img1{
+    width: 100%;
+}
+.padding-img{
+    padding-left: 7px;
+}
+.banner .p1{
+    height: 30px;
+    line-height: 30px;
+}
+.banner .p2,.banner .p3{
+    color: #787878;
+    font-size: 12px;
+    line-height: 23px;
+}
+/*content*/
+.content{
+    margin-top: 20px;
+    padding: 10px;
+    background: #FFF;
+}
+.content textarea{
+    width: 100%;
+    font-size: 13px;
+    resize: none;
+    border: 0;
+    outline: none;
+    border-bottom: 1px #dcdcdc solid;
+}
+.content-row{
+    margin-left: -12px;
+    margin-right: -12px;
+}
+.content .p1{
+    margin-top: 8px;
+    height: 30px;
+    line-height: 30px;
+}
+.content .img2{
+    height: 24px;
+    margin-top: 11px;
+    margin-right: 6px;
+}
+/*footer*/
+.footer{
+    background: #FFF;
+    padding: 6.5px;
+    border-top: 1px #dcdcdc solid;
+}
+.footer p{
+    background: red;
+    color: #FFF;
+    width: 70px;
+    height: 36px;
+    line-height: 36px;
+}

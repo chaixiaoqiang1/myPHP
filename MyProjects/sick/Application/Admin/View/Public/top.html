@@ -1,0 +1,39 @@
+<div id="mws-header" class="clearfix">
+
+    <!-- Logo Container -->
+    <div id="mws-logo-container">
+
+        <!-- Logo Wrapper, images put within this wrapper will always be vertically centered -->
+        <div id="mws-logo-wrap">
+            <img src="__PUBLIC__/images/mws-logo.png" alt="mws admin">
+        </div>
+    </div>
+    <div style="float: left; padding: 9px 0;color:#fff;">
+        <!--<span class="label label-danger"><span id="tip">0</span>个新订单</span>-->
+    </div>
+
+    <!-- User Tools (notifications, logout, profile, change password) -->
+    <div id="mws-user-tools" class="clearfix">
+        <!-- User Information and functions section -->
+        <div id="mws-user-info" class="mws-inset">
+
+            <!-- User Photo -->
+            <div id="mws-user-photo">
+                <!--<img src="__PUBLIC__/example/profile.jpg" alt="User Photo">-->
+            </div>
+
+            <!-- Username and Functions -->
+            <div id="mws-user-functions">
+                <div id="mws-username">
+                    你好,{$_SESSION['admin_name']}
+                </div>
+                <ul>
+                    <!--<li><a href="javascript:void(0)">-->
+                       <!--</a></li>-->
+                    <!--<li><a href="{:U("Aedit/gedit")}">更改密码</a></li>-->
+                    <li><a href="{:U("Public/logout")}">退出</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

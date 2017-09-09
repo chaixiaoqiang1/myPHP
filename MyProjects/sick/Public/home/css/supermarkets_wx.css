@@ -1,0 +1,156 @@
+/*header*/
+.header{
+    padding: 5px 10px;
+    background: #f7ab00;
+}
+.header1{
+    width: 30%;
+    float: left;
+}
+.header2{
+    width: 40%;
+    float: left;
+}
+.header3{
+    width: 30%;
+    float: left;
+}
+.header1 .p1{
+    color: #FFF;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+    float: left;
+}
+.header1 .img1{
+    height: 10px;
+    margin: 15px 0;
+}
+.header2 .p2{
+    height: 40px;
+    line-height: 40px;
+    color: #FFF;
+    font-size: 16px;
+}
+.header3 .p3{
+    height: 40px;
+    line-height: 40px;
+    color: #FFF;
+}
+.header3 .p3 img{
+    height: 20px;
+    margin: 10px 0;
+    margin-right: 5px;
+}
+/*banner*/
+.banner{
+    margin-top: 50px;
+    background: #dcdcdc;
+    padding: 3px 0;
+}
+.banner img{
+    height: 12px;
+    margin-right: 8px;
+    margin-top: -4px;
+}
+.banner p{
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    padding-left: 5%;
+    color: #817f7f;
+}
+/*content*/
+#content2,#content3,#content4{
+    display: none;
+}
+.content-left{
+    background: #F3F3F3;
+}
+.content .ul1{
+    height: 100%;
+    background: #F3F3F3;
+}
+.content .ul1 li{
+    height: 50px;
+    line-height: 50px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.content .ul1 span{
+    width: 5px;
+    height: 100%;
+    background: #F3F3F3;
+    display: block;
+    float: left;
+    margin-right: 10%;
+}
+.content-right{
+    padding: 0 10px;
+    background: #FFF;
+}
+.content-title{
+    padding: 15px 0;
+}
+.content-content{
+    padding: 5px 0;
+}
+.swiper-slide p{
+    font-size: 13px;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    background: #F3F3F3;
+    margin: 0 auto;
+}
+.slide-p1{
+    color: red;
+    background: none;
+}
+.content-row{
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.content-content .p3 img{
+    width: 100%;
+    border: 1px #dcdcdc solid;
+}
+.content-content .p4{
+    height: 24px;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.content-content .div2{
+    margin: 3px 0;
+}
+.content-content .div2 .p5{
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #949494;
+    float: left;
+    margin-right: 4px;
+}
+.content-content .div2 img{
+    height: 14px;
+}
+.content-content .div1{
+    height: 20px;
+    margin-bottom: 10px;
+}
+.content-content .div1 p{
+    line-height: 20px;
+    height: 20px;
+    font-size: 15px;
+    color: #FAB000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.content-content .div1 img{
+    height: 18px;
+    margin-top: -2px;
+}

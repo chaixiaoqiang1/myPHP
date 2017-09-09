@@ -1,0 +1,75 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "Î¢ÈíÑÅºÚ", Tahoma, sans-serif;
+    background: #fff;
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.user_img {
+    width: 60px;
+    position: relative;
+}
+.money{
+    background: #F93143;
+    color: #ffffff;
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+}
+.money_number{
+    display: block;
+    padding-top: 8px;
+    padding-left: 2px;
+}
+.criticism {
+    padding-left: 20px;
+}
+
+.user_name {
+    padding-bottom: 5px;
+    margin-top: 12px;
+}
+.mr{
+    margin-top: 10px;
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 10px;
+}

@@ -1,0 +1,94 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "Î¢ÈíÑÅºÚ", Tahoma, sans-serif;
+    background: #efefef;
+
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+a{
+    text-decoration:none!important;
+    color: #000000;
+}
+.left{
+    line-height: 25px;
+}
+.right{
+    width: 25px;
+}
+.up_set{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.img{
+    width: 60px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.br{
+    background: #ffffff;
+    margin-top: 5px;
+    padding-bottom: 10px;
+}
+.user_info{
+    padding: 10px 10px 5px 10px;
+    border-bottom: 1px solid #efefef;
+
+}
+.depict{
+    padding: 10px 10px 10px 30px;
+}
+.user_img{
+    width: 50px;
+}
+.user_name{
+    line-height: 50px;
+    padding-left: 10px;
+}
+.time{
+    line-height: 50px;
+}
+.case_img{
+    margin-left: 30px;
+}
+
+.communicate{
+    background: #F79A22;
+    padding: 3px 5px 3px 5px;
+    border: none;
+    outline:none;
+    color: #ffffff;
+    border-radius: 5px;
+}

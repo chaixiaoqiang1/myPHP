@@ -1,0 +1,108 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "微软雅黑", Tahoma, sans-serif;
+    background: #F5F5F5;
+
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+a{
+    text-decoration:none!important;
+    color: #000000;
+}
+/*顶部导航栏*/
+.top_nav{
+    background: #ffffff;
+}
+.top_nav_content li{
+    padding: 15px 0px 15px 0px;
+    color: #000000;
+    width: 33%;
+    text-align: center;
+}
+.current{
+    color: #5DC64C!important;
+    border-bottom: 2px solid #5DC64C;
+}
+/*服务历史内容*/
+.bj{
+    background: #ffffff;
+    margin-top: 10px;
+}
+.img_txt_content{
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+.img_txt{
+    width: 30px;
+}
+.txt_content{
+    line-height: 30px;
+    font-size: 18px;
+    color: #000000;
+    padding-left: 10px;
+}
+.content_tx{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #8D8D8D;
+}
+/*时间 评价*/
+.time{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F3F3F3;
+}
+.time_number{
+    line-height: 26px;
+    color:  #8D8D8D;
+}
+.evaluate{
+    color: #ffffff;
+    background: #FF9F37;
+    border-radius: 5px;
+    padding: 5px;
+}
+.look_over{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #FFAA4D;
+}
+.to_evaluate{
+    padding: 5px;
+    border-radius: 5px;
+    color: #8B8B8B;
+    border: 1px solid #E5E5E5;
+}
+
+
+

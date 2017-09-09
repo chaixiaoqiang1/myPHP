@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>我的关注</title>
+
+    <link href="__PUBLIC__/doctor/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/doctor/css/my_follower.css"/>
+
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <volist name="doctordata" id="vo">
+        <div class="col-md-12 col-sm-12 col-xs-12 ">
+            <div class="follower_content fl">
+                <div class="doctor_img lf" style="width: 55px;">
+
+                    <if condition="$vo['image']">
+                        <img src="__ROOT__/Uploads/{$vo.image}" class="img-responsive img-circle" style="width: 55px;height: 55px" alt=""/>
+                        <else/>
+                        <img src="__PUBLIC__/doctor/img/doctor.jpg" class="img-responsive img-circle"  style="width: 55px;height: 55px;" alt=""/>
+                    </if>
+                </div>
+                <div class="doctor_names lf" style="line-height: 55px">
+                    {$vo.username}
+                </div>
+                <div class="follow fl rt" style="margin-top: 17px;">
+                    <div class="follow_img lf">
+                        <img src="__PUBLIC__/doctor/img/correct.png" class="img-responsive"  alt=""/>
+                    </div>
+                    <div class="follow_tx lf">已关注</div>
+                </div>
+            </div>
+        </div>
+            </volist>
+    </div>
+</div>
+<script src="__PUBLIC__/doctor/js/jquery-1.11.3.js"></script>
+
+<script src="__PUBLIC__/doctor/js/bootstrap.js"></script>
+
+</body>
+
+</html>

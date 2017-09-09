@@ -1,0 +1,75 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "Î¢ÈíÑÅºÚ", Tahoma, sans-serif;
+
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+
+/*Ö§¸¶³É¹¦*/
+.page {
+    width: 96px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.success_img {
+    width: 30px;
+}
+
+.success_tx {
+    line-height: 30px;
+    padding-left: 10px;
+    color: #000;
+}
+
+.txt {
+    font-size: 12px;
+    color: #A0A0A0;
+}
+/*×ÉÑ¯°´Å¥*/
+.consultation_btn{
+    padding-top: 50px;
+}
+.consultation{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #FF9F37;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    width: 80%;
+    display: block;
+    border-radius: 5px;
+    font-size: 16px;
+}

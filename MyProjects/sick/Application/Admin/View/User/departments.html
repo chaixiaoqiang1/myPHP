@@ -1,0 +1,124 @@
+<extend name="Public/base"/>
+<block name="container">
+    <div>
+        <div class="border-bottom white-bg dashboard-header">
+            <div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <p style="font-size: 20px; margin-top: 25px;">分类管理</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top: 20px;">
+                        <a href="{:U('User/addMain')}">
+                            <button type="button" class="btn btn-default pull-right issued_pro">添加分类</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12" style="border:1px solid #eeeeee; padding-top: 20px; margin-top: 10px;">
+                <table class="table table-hover table-mail">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="20%">
+                        <col width="20%">
+                        <col width="20%">
+                    </colgroup>
+                    <tr level="1">
+                        <th>折叠</th>
+                        <th>分类名称</th>
+                        <th style="text-align: center;">状态</th>
+                        <th width="60">操作</th>
+                    </tr>
+                    <volist name="category" id="v">
+                        <tr level="1" id="{$v.id}" pid="{$v.pid}">
+                            <td id="{$v.id}">
+                                <if condition="$v['children']">
+                                    <span class="open">+</span>
+                                </if>
+                            </td>
+                            <td>{$v.cate_name}</td>
+                            <td>
+                                <if condition="$v['status'] eq 1">
+                                    <span class="label label-warning">正常</span>
+                                    <else/>
+                                    <span class="label label-primary">冻结</span>
+                                </if>
+                            </td>
+
+                            <td>
+                                <a href="{:U('User/addChild',array('id'=>$v['id']))}" class="label label-primary">添加子级</a>
+                                <a href="{:U('Category/editor',array('id'=>$v['id']))}" class="label label-info">修改</a>
+                                <a href="{:U('Category/delete',array('id'=>$v['id']))}" class="label label-danger">删除</a>
+                            </td>
+                        </tr>
+                        <if condition="$v.children">
+                            <volist name="v.children" id="v1">
+                                <tr level="2"　id="{$v1.id}" pid="{$v1.pid}">
+                                    <td id="{$v1.id}">
+                                        <if condition="$v1['children']">
+                                            <span class="open">+</span>
+                                        </if>
+                                    </td>
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$v1.cate_name}</td>
+                                    <td>
+                                        <if condition="$v1['status'] eq 1">
+                                            <span class="label label-warning">正常</span>
+                                            <else/>
+                                            <span class="label label-primary">冻结</span>
+                                        </if>
+                                    </td>
+                                    <td>
+                                        <a href="{:U('User/addChild',array('id'=>$v1['id']))}" class="label label-primary">添加子级</a>
+                                        <a href="{:U('Category/editor',array('id'=>$v1['id']))}" class="label label-info">修改</a>
+                                        <a href="{:U('Category/delete',array('id'=>$v1['id']))}" class="label label-danger">删除</a>
+                                    </td>
+                                </tr>
+                                <if condition="$v1[children]">
+                                    <volist name="v1.children" id="v2">
+                                        <tr level="3" id="{$v2.id}" pid="{$v2.pid}">
+                                            <td>
+                                            </td>
+                                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$v2.cat_name}</td>
+                                            <td>
+                                                <if condition="$v2['status'] eq 1">
+                                                    <span class="label label-warning">正常</span>
+                                                    <else/>
+                                                    <span class="label label-primary">冻结</span>
+                                                </if>
+                                            </td>
+                                            <td>
+                                                <a href="{:U('Category/editor',array('id'=>$v2['id']))}" class="label label-info">修改</a>
+                                                <a href="{:U('Category/delete',array('id'=>$v2['id']))}" class="label label-danger">删除</a>
+                                            </td>
+                                        </tr>
+
+                                    </volist>
+                                </if>
+                            </volist>
+                        </if>
+                    </volist>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+</block>
+<block name="js">
+    <script src="__PUBLIC__/script/jquery-2.1.1.min.js"></script>
+    <script src="__PUBLIC__/script/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('tr[level!=1]').hide();
+            $('.open').click(function(){
+                var index=$(this).parents('td').attr('id');
+                var sign=$(this).html();
+                if(sign=='+'){
+                    $(this).html('-');
+                    $('tr[pid='+index+']').show();
+                }else{
+                    $(this).html('+');
+                    $('tr[pid='+index+']').hide();
+                }
+            });
+        });
+    </script>
+</block>

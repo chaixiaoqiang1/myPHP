@@ -1,0 +1,328 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "΢���ź�", Tahoma, sans-serif;
+
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+.doctor_img{
+    width: 55px;
+}
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+
+.clear_padding {
+    padding-left: 0px;
+
+}
+
+/*ҽ����Ϣ*/
+.doctor_info {
+    padding: 15px 15px 15px 5px;
+    border-bottom: 2px solid #e4e4e4;
+}
+
+.top {
+    padding-top: 5px;
+}
+
+.doctor_name {
+    line-height: 22px;
+}
+
+.state {
+    width: 50px;
+    font-size: 12px;
+    padding: 3px 0 3px 0;
+    background: #F3F7F6;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+.state_tx {
+    color: #979797;
+    margin-left: 4px;
+    margin-top: 1px;
+}
+
+.state_img {
+    width: 16px;
+    margin-left: 2px;
+}
+
+.collect {
+    border: 1px solid #E1E1E1;
+    border-radius: 3px;
+    padding: 3px 5px 3px 5px;
+}
+
+.collect_tx {
+    font-size: 12px;
+    color: #A0A0A0;
+    padding-left: 5px;
+}
+
+.content {
+    padding: 3px 0 5px 0;
+}
+
+.classfiy {
+    font-size: 12px;
+    color: #A6A6A6;
+}
+
+.bottom {
+    font-size: 12px;
+    color: #A6A6A6;
+}
+.evaluate_number{
+    color: #E66F4A;
+}
+.a{
+    color: #8C8D91;
+}
+.a:hover{
+    color: #8C8D91;
+    text-decoration: none;
+}
+
+.b{
+    color: #3CC83C;
+}
+.b:hover{
+    color: #3CC83C;
+    text-decoration: none;
+}
+/*ҽ�����*/
+.summary_content {
+    padding-top: 15px;
+    border-bottom: 2px solid #dddddd;
+}
+
+.summary {
+    background: #26B4E9;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.summary_img {
+    width: 20px;
+    height: 20px;
+    margin-left: 2px;
+    margin-top: 3px;
+}
+
+.summary_tx {
+    font-size: 16px;
+    color: #393939;
+    line-height: 25px;
+    padding-left: 10px;
+}
+
+.summary_content_tx {
+    padding: 15px 0 15px 15px;
+}
+
+.spread {
+    color: #27C127;
+}
+
+/*�ۺ�����*/
+.number {
+    color: #F3A73D;
+}
+
+/*��������*/
+.image_text_img {
+    background: #3DBB28;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.image_text_tx {
+    padding-left: 10px;
+}
+
+.image_text {
+    border-bottom: 2px solid #f3f3f3;
+    padding-bottom: 10px;
+}
+
+.picture_consulting_top {
+    padding-top: 5%;
+
+
+
+
+
+}
+
+.money {
+    color: #F34949;
+}
+
+.picture_consulting_bottom {
+    font-size: 12px;
+    color: #A0A0A0;
+    padding-top: 5%;
+}
+
+.bespoke {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*ͼƬ��С*/
+.top_img {
+    width: 45px;
+    display: block;
+    margin: auto;
+    margin-top: 2px;
+
+}
+
+.bottom_img {
+    width: 35px;
+    display: block;
+    margin: auto;
+    margin-top: 7px;
+}
+
+.height {
+    height: 50px;
+}
+
+.ipt {
+    width: 15px;
+    height: 15px;
+    display: block;
+    margin-top: 19px!important;
+}
+
+
+
+.a1{
+    display: none;
+}
+.c{
+    display: block;
+}
+
+
+.sex_right{
+    margin: 0px;
+    padding-left: 5px;
+    margin-top: 21px;
+}
+
+.sex{
+    line-height: 20px;
+}
+
+.right_img{
+    width: 18px;
+}
+.man{
+    line-height: 20px;
+    padding-left: 5px;
+}
+
+/*�ײ�֧��ҳ��*/
+.navbar {
+    background: #FF9F37;
+    color: #ffffff;
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+}
+/*��������*/
+.evaluate_br{
+    border-bottom: 2px solid #dddddd;
+    margin: 0px;
+}
+.evaluate_content{
+    padding: 10px 0;
+    border-bottom: 1px solid #f3f3f3;
+}
+.user_info{
+    font-size: 12px;
+    color: #b2b2b2;
+    padding: 10px 0 10px 0;
+}
+.user_img{
+    width: 50px;
+}
+.user_evaluate_tx{
+    width: 80%;
+    padding-left: 10px;
+}
+.city{
+    padding-left: 10px;
+}
+.up{
+    line-height: 25px;
+}
+
+@media screen and (min-width: 320px) {
+    .doctor_info_content {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .doctor_info_content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (min-width: 411px) {
+    .doctor_info_content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media screen and (min-width: 412px) {
+    .doctor_info_content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media screen and (min-width: 435px) {
+    .doctor_info_content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

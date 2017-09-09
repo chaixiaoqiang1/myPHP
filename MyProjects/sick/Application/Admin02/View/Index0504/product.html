@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品统计</title>
+    <link href="__PUBLIC__/style/bootstrap.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/admin.min.css" rel="stylesheet">
+
+</head>
+
+<body class="container-fluid">
+<div class="row">
+    <include file="Public/navbar"/>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 body_left_bg text-center">
+                <include file="Public/Index/column"/>
+            </div>
+            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" >
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  shop_right">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                        <div class="row">
+                                            <a href="{:U('Index/statistics')}">
+                                                <span class="shop_right_color" style="margin-left: 2%;">
+                                                    销量统计
+                                                </span>
+                                            </a>
+                                            <a href="{:U('Index/pv')}">
+                                                <span class="shop_right_color" style="margin-left: 2%;">
+                                                    流量统计
+                                                </span>
+                                            </a>
+                                            <a href="{:U('Index/product')}">
+                                                <span class="shop_right_color" style="margin-left: 2%;">
+                                                    商品统计
+                                                </span>
+                                            </a>
+                                            <a href="{:U('Index/delivery')}">
+                                                <span class="shop_right_color" style="margin-left: 2%;">
+                                                    配送员统计
+                                                </span>
+                                            </a>
+                                            <a href="{:U('Index/down_product',array('cat_id'=>$cate_id))}">
+                                                <button class="btn btn-danger"style="margin-left: 20px;">
+                                                    <if condition="$cat_name">
+                                                        ({$cat_name})分类
+                                                    </if>
+                                                    信息下载</button >
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pull-right">
+                                        <form class="form-horizontal" method="post" id="user-editor" enctype="multipart/form-data" action="{:U('Index/product')}" >
+                                            <div class="row form-group " style="margin-top: 8px;">
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="">
+                                                    <div class="row ">
+                                                        <p>
+                                                            <select name="cate_id" id="">
+                                                                <option value="0">全部</option>
+                                                                <foreach name="category" item="vo">
+                                                                    <option value="{$vo.id}">{$vo.cat_name}</option>
+                                                                </foreach>
+
+                                                            </select>
+                                                        <input class="" style="width: 50%;" name="goods_name" placeholder="输入要查看的商品名" type="text"> <button>搜索</button></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            <div class="row shop_list">
+
+                                    <table class="table table-bordered">
+                                        <tr class="text-center">
+                                            <td class="active">商品名称</td>
+                                            <td class="active">浏览量</td>
+                                            <td class="active">销售量</td>
+                                        </tr>
+                                        <foreach name="lists" item="vo" key="k">
+                                                <tr class="text-center">
+                                                    <td class="info" style="width: 180px;overflow: hidden;white-space: nowrap;   text-overflow: ellipsis;">
+                                                        {$vo.goods_name}
+                                                    </td>
+                                                    <td class="info">{$vo.click}</td>
+                                                   <td class="info">
+                                                    {$vo.sale_num}
+
+                                                    </td>
+                                                </tr>
+                                        </foreach>
+                                    </table>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  text-center" id="page" style="margin-top: 20px;">
+                                {$page}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>

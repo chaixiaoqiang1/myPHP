@@ -1,0 +1,104 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial;
+    background: #F5F5F5;
+
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none
+}
+
+.sum {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.cl {
+    color: #F9D54A;
+}
+
+.content {
+    background: #ffffff;
+    padding: 5px 10px 5px 10px;
+}
+
+.money {
+    font-size: 20px;
+    color: #000;
+    padding-left: 15px;
+    line-height: 36px;
+}
+
+.ipt {
+    width: 80%;
+    padding: 10px;
+}
+
+.button {
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #FF9F37;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.img {
+    width: 40px;
+}
+
+.tx {
+    padding-left: 10px;
+}
+
+.user {
+    font-size: 14px;
+    padding-bottom: 5px;
+    margin-top: 3px;
+    color: #000;
+}
+
+.number {
+    font-size: 14px;
+    color: #9D9D9D;
+}

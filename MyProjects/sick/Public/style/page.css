@@ -1,0 +1,10 @@
+#page{height: 50px;}
+#page span{margin-right:5px;display: inline-block;font-size: 18px;font-weight: bolder;border: 1px solid #999999;color:#999999;width: 30px;height: 30px;text-align: center;}
+#page span.rows{margin-right:5px;display: inline-block;font-size: 18px;font-weight: bolder;border: 1px solid #999999;color:#999999;width: 120px;height: 30px;text-align: center;}
+#page span.current{margin-right:5px;display: inline-block;font-size: 18px;font-weight: bolder;border: 1px solid #336600;color:#336600;width: 30px;height: 30px;text-align: center;}
+#page a{margin-right:5px;display: inline-block;font-size: 18px;font-weight: bolder;border: 1px solid #999999;color:#999999;width: 30px;height: 30px;text-align: center;}
+#page a.prev{margin-right:5px;display: inline-block;font-size: 18px;font-weight: bolder;border: 1px solid #999999;color:#999999;width: 70px;height: 30px;}
+#page a.next{margin-right:5px;display: inline-block;font-size: 18px;font-weight: bolder;border: 1px solid #999999;color:#999999;width: 70px;height: 30px;}
+#page a.end{margin-right:5px;display: inline-block;font-size: 18px;font-weight: bolder;border: 1px solid #999999;color:#999999;width: 50px;height: 30px;}
+.page_bg{background-color: #eeeeee; border: 1px solid #E7E7EB;padding-top: 10px;}
+#page a.first{  width: 50px; }

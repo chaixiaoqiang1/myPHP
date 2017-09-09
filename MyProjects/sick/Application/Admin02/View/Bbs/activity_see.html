@@ -1,0 +1,194 @@
+<extend name="Public/base"/>
+<block name="container">
+    <div class="row  border-bottom white-bg dashboard-header">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8"  style="margin-top: 20px;">
+            <div class="ibox float-e-margins">
+
+                <div>
+                    <table class="table table-bordered">
+                        <colgroup>
+                            <col width="20%"/>
+                            <col width="80%"/>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td>发布人</td>
+                            <td>{$list.username}</td>
+                        </tr>
+                        <tr>
+                            <td>发布者头像</td>
+                            <td>
+                                <img src="__ROOT__/{$list.icon}" alt="" style="height: 40px; width: 40px; border-radius: 20px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>发布时间</td>
+                            <td>{$list.time}</td>
+                        </tr>
+                        <tr>
+                            <td>标题</td>
+                            <td>{$list.title}</td>
+                        </tr>
+                        <tr>
+                            <td>开始时间</td>
+                            <td>{$list.begin_time}</td>
+                        </tr>
+                        <tr>
+                            <td>结束时间</td>
+                            <td>{$list.end_time}</td>
+                        </tr>
+                        <tr>
+                            <td>价钱</td>
+                            <td>{$list.price}</td>
+                        </tr>
+                        <tr>
+                            <td>人数</td>
+                            <td>{$list.people_num}</td>
+                        </tr>
+                        <tr>
+                            <td>地址</td>
+                            <td>{$list.address}</td>
+                        </tr>
+                        <tr>
+                            <td>发表内容</td>
+                            <td>
+                                <p>{$list.content}</p>
+                                <p>
+                                    <foreach name="list['thumb']" item="vo">
+                                        <img src="__ROOT__/{$vo}" alt="" style="height: 50px;margin-right: 10px; margin-bottom: 10px;">
+                                    </foreach>
+                                </p>
+                            </td>
+                        </tr>
+                        <!--<tr>
+                            <td>评论内容</td>
+                            <td>
+                                <foreach name="com_list" item="vo">
+                                    <div  style="border-bottom: 1px solid #e3e3e3; margin-bottom: 20px; ">
+                                        <div class="row">
+                                            <div  class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
+                                                <p>评论人:{$vo.username}</p>
+                                                <p>评论人头像:<img src="__ROOT__/{$vo.icon}" alt="" style="height: 40px; width: 40px; border-radius: 20px;"></p>
+                                                <p>评论内容:{$vo.com_centent}</p>
+                                                <if condition="$vo['thumb']">
+                                                    <p>评论图片:
+                                                        <foreach name="vo['thumb']" item="v">
+                                                            <img src="__ROOT__/{$v}" alt="" style="height: 50px; margin-right: 10px; margin-bottom: 10px;">
+                                                        </foreach>
+                                                    </p>
+                                                </if>
+                                                <p>状态:
+                                                    <if condition="$vo['status']">
+                                                        <span class="label label-primary">正常</span>
+                                                        <else/>
+                                                        <span class="label label-danger">冻结</span>
+                                                    </if>
+                                                </p>
+                                            </div>
+                                            <div  class="col-xs-12 col-sm-12 col-md-12 col-lg-2" >
+
+                                                <p> <if condition="$vo['status']">
+                                                    <a href="{:U('Bbs/activity_com_status',array('id'=>$vo['id'],'status'=>0))}">
+                                                        <span class="label label-danger">冻结</span>
+                                                    </a>
+                                                    <else/>
+                                                    <a href="{:U('Bbs/activity_com_status',array('id'=>$vo['id'],'status'=>1))}">
+                                                        <span class="label label-primary">正常</span>
+                                                    </a>
+                                                </if>
+                                                </p>
+                                                <p >
+                                                    <a href="{:U('Bbs/activity_com_delete',array('id'=>$vo['id']))}">
+                                                        <span class="label label-primary">删除</span>
+                                                    </a>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </foreach>
+                                <if condition="$page">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  text-center" id="page" style="margin-top: 20px;">
+                                        {$page}
+                                    </div>
+                                </if>
+                            </td>
+                        </tr>-->
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered">
+                        <tbody>
+                        <tr class="">
+                            <form action="{:U('Bbs/activity_see',array('id'=>$list['id']))}" method="post">
+                                <td><input type="text" name="content" placeholder="输入内容关键字搜索" style="width: 80%; height: 35px; margin-right: 2%;"><button class="btn btn-default" >提交</button></td>
+                            </form>
+                        </tr>
+                        <tr class="text-center">
+                            <td>评论列表</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <foreach name="com_list" item="vo">
+                                    <div  style="border-bottom: 1px solid #e3e3e3; margin-bottom: 20px; ">
+                                        <div class="row">
+                                            <div  class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
+                                                <p>评论人:{$vo.username}</p>
+                                                <p>评论人头像:<img src="__ROOT__/{$vo.icon}" alt="" style="height: 40px; width: 40px; border-radius: 20px;"></p>
+                                                <p>评论内容:{$vo.com_centent}</p>
+                                                <if condition="$vo['thumb']">
+                                                    <p>评论图片:
+                                                        <foreach name="vo['thumb']" item="v">
+                                                            <img src="__ROOT__/{$v}" alt="" style="height: 50px; margin-right: 10px; margin-bottom: 10px;">
+                                                        </foreach>
+                                                    </p>
+                                                </if>
+                                                <p>状态:
+                                                    <if condition="$vo['status']">
+                                                        <span class="label label-primary">正常</span>
+                                                        <else/>
+                                                        <span class="label label-danger">冻结</span>
+                                                    </if>
+                                                </p>
+                                            </div>
+                                            <div  class="col-xs-12 col-sm-12 col-md-12 col-lg-2" >
+
+                                                <p> <if condition="$vo['status']">
+                                                    <a href="{:U('Bbs/activity_com_status',array('id'=>$vo['id'],'status'=>0))}">
+                                                        <span class="label label-danger">冻结</span>
+                                                    </a>
+                                                    <else/>
+                                                    <a href="{:U('Bbs/activity_com_status',array('id'=>$vo['id'],'status'=>1))}">
+                                                        <span class="label label-primary">正常</span>
+                                                    </a>
+                                                </if>
+                                                </p>
+                                                <p >
+                                                    <a href="{:U('Bbs/activity_com_delete',array('id'=>$vo['id']))}">
+                                                        <span class="label label-primary">删除</span>
+                                                    </a>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </foreach>
+                                <if condition="$page">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  text-center" id="page" style="margin-top: 20px;">
+                                        {$page}
+                                    </div>
+                                </if>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+</block>
+<block name="js">
+
+</block>
+

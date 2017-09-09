@@ -1,0 +1,72 @@
+<extend name="Public/base"/>
+<block name="container">
+    <div class="row  border-bottom white-bg dashboard-header">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8"  style="margin-top: 20px;">
+            <div class="ibox float-e-margins text-center">
+
+                <div>
+                    <table class="table table-bordered">
+                        <colgroup>
+                            <col width="20%"/>
+                            <col width="80%"/>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td>发布人</td>
+                            <td>{$list.user_name}</td>
+                        </tr>
+                        <tr>
+                            <td>发布者头像</td>
+                            <td>
+                                <img src="__ROOT__/{$list.icon}" alt="" style="height: 40px; width: 40px; border-radius: 20px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>发布时间</td>
+                            <td>{$list.time}</td>
+                        </tr>
+                        <tr>
+                            <td>获赞</td>
+                            <td>{$list.praise}</td>
+                        </tr>
+                        <tr>
+                            <td>评论</td>
+                            <td>{$list.comment}</td>
+                        </tr>
+                        <tr>
+                            <td>发表内容</td>
+                            <td>
+                                <p>{$list.centent}</p>
+                                <p>
+                                    <foreach name="list['Bbs_img']" item="vo">
+                                        <img src="__ROOT__/{$vo.img_url}" alt="" style="height: 50px;">
+                                    </foreach>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>评论内容</td>
+                            <td>
+                                <foreach name="com_list" item="vo">
+                                    <p>评论人:{$vo.user_name}</p>
+                                    <p>评论人头像:<img src="__ROOT__/{$vo.icon}" alt="" style="height: 40px; width: 40px; border-radius: 20px;"></p>
+                                    <p>
+                                        {$vo.com_centent}
+                                    </p>
+                                </foreach>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+</block>
+<block name="js">
+
+</block>
+
+

@@ -1,0 +1,252 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "微软雅黑", Tahoma, sans-serif;
+    background: #ffffff;
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none !important;
+    color: #333333;
+}
+
+a:hover {
+    color: #000000;
+}
+
+/*下拉按钮大小*/
+.down_img {
+    width: 25px;
+}
+
+.sufferer {
+    line-height: 25px;
+    padding-left: 5px;
+}
+
+.panel-heading {
+    background: #FFFFff !important;
+}
+
+.panel {
+    margin-top: 0px !important;
+    border-top: none !important;
+}
+
+/*用户头像*/
+.user_name {
+    width: 50px;
+
+}
+
+.user_info {
+    line-height: 50px;
+    padding-left: 5px;
+}
+
+.number {
+    line-height: 30px;
+    color: #B1B1B1;
+}
+
+.clear_pd {
+    padding: 0px;
+}
+
+.panel-heading {
+    border-radius: 0 !important;
+}
+
+.clear_br {
+    border-left: none;
+    border-right: none;
+}
+
+/*顶部搜索框*/
+.seach {
+    background: #efefef;
+}
+
+.seach_img {
+    width: 20px;
+}
+
+.seach_tx {
+    line-height: 20px;
+    padding-left: 5px;
+}
+
+.seach_left {
+    background: #ffffff;
+    padding: 5px 10px 5px 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 75%;
+    border-radius: 5px;
+}
+
+.panel-body {
+    border-top: 1px solid #ddd;
+}
+
+.ensconce {
+    display: none;
+}
+
+.panel-title {
+    padding: 10px;
+    border: 1px solid #E9EFF3;
+}
+
+.ensconce {
+    padding: 10px;
+    border-bottom: 1px solid #E9EFF3;
+
+}
+
+/*弹出框设置*/
+.pop {
+    width: 80%;
+    height: 142px;
+    background: #fff;
+    position: fixed;
+    left: 35%;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
+    _position: absolute;
+    z-index: 1111;
+    border-radius: 5px;
+    display: none;
+}
+
+.ipt {
+    border-bottom: 1px solid #e7e7e7;
+    width: 70%;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+
+.tx {
+    padding-top: 30px;
+}
+
+.number {
+    width: 50px;
+    margin: auto;
+}
+
+.button {
+    width: 100%;
+    border-top: 1px solid #e7e7e7;
+    margin-top: 85px;
+}
+
+.cancel {
+    width: 50%;
+    text-align: center;
+    padding: 15px 10px 15px 10px;
+}
+
+.confirm {
+    width: 50%;
+    text-align: center;
+    padding: 15px 10px 15px 10px;
+    border-right: 1px solid #e7e7e7;
+}
+
+.right_tx_content {
+    line-height: 25px;
+}
+
+.parent{
+    padding: 10px;
+}
+
+.window {
+    position: absolute;
+    top: 0;
+    background-color: #000;
+    opacity: 0.5;
+    display: none;
+}
+
+@media screen and (min-width: 320px) {
+    .pop{
+        left: 42%;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .pop{
+        left: 38%;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .pop{
+        left: 37%;
+    }
+}
+
+@media screen and (min-width: 384px) {
+
+}
+
+@media screen and (min-width: 411px) {
+    .pop{
+        left: 34%;
+    }
+
+}
+
+@media screen and (min-width: 412px) {
+
+}
+
+@media screen and (min-width: 414px) {
+    .pop{
+        left: 35%;
+    }
+}
+
+@media screen and (min-width: 435px) {
+    .pop{
+        left: 33%;
+    }
+}

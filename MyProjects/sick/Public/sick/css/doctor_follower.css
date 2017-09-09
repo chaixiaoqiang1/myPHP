@@ -1,0 +1,72 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "Î¢ÈíÑÅºÚ", Tahoma, sans-serif;
+    background:#ffffff;
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.follower_content{
+    margin-top: 10px;
+    border-bottom: 1px solid #ECECEC;
+    padding-bottom: 10px;
+}
+/*Ò½ÉúÍ·Ïñ*/
+.doctor_img{
+    width: 50px;
+}
+.doctor_names{
+    line-height: 50px;
+    padding-left: 10px;
+    font-size: 16px;
+    color: #000;
+}
+
+.follow{
+    border: 1px solid #e8e8e8;
+    padding: 3px 10px 3px 10px;
+    border-radius: 20px;
+    margin-top: 13px;
+}
+.follow_img{
+    width: 15px;
+}
+.follow_tx{
+    font-size: 12px;
+    padding-left: 5px;
+    color: #7F7F7F;
+}

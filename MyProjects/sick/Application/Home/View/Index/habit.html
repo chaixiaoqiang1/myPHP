@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>我的健康</title>
+
+    <link href="__PUBLIC__/doctor/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/doctor/css/my_health.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/doctor/css/habit.css"/>
+    <style>
+
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 top_info">
+            <!--<a href="revise_info.html">-->
+                <div class="user_img lf">
+                    <img src="{$sickdata.icon}" class="img-responsive img-circle" alt=""/>
+                </div>
+                <div class="user_name lf">
+                    <div class="names">{$sickdata.username}</div>
+                    <div class="classfiy fl">
+                        <div class="sex lf"><if condition="$sickdata['sex'] eq 1">男<else />女</if></div>
+                      <if condition="!empty($sickdata['userage'])">
+                        <div class="age lf">{$sickdata.userage}岁</div>
+                      </if>
+                    </div>
+                </div>
+
+                    <!--<div class="right rt">-->
+                        <!--<img src="__PUBLIC__/doctor/img/right.png" class="img-responsive" alt=""/>-->
+                    <!--</div>-->
+            <!--</a>-->
+        </div>
+    </div>
+    <div class="row change">
+        <div class="col-md-12 col-sm-12 col-xs-12 classfiy_change">
+            <a href="{:U('Index/my_health')}" class="color">
+                <div class="left_tx  lf">
+                    <div class="datum">个人资料</div>
+                </div>
+            </a>
+
+            <div class="right_tx cl lf">
+                <div class="practice ">生活习惯</div>
+            </div>
+        </div>
+        <form action="__SELF__" method="post">
+        <div class="col-md-12 col-sm-12 col-xs-12 my_datum_content">
+            <div class="my_info fl">
+                <div class="height lf">抽烟</div>
+                <div class="select rt">
+                    <select class="text" name="is_smoking">
+                        <option>请填写</option>
+                        <option value="1" <if condition="$sickdata['is_smoking'] eq 1">selected</if>>是</option>
+                        <option value="2" <if condition="$sickdata['is_smoking'] eq 2">selected</if>>否</option>
+                    </select>
+                </div>
+            </div>
+            <div class="my_info fl">
+                <div class="height lf">饮酒</div>
+                <div class="select rt">
+                    <select  class="text" name="is_drink">
+                        <option>请填写</option>
+                        <option value="1" <if condition="$sickdata['is_drink'] eq 1">selected</if>>从不</option>
+                        <option value="2" <if condition="$sickdata['is_drink'] eq 2">selected</if>>偶尔</option>
+                        <option value="3" <if condition="$sickdata['is_drink'] eq 3">selected</if>>经常</option>
+                        <option value="4" <if condition="$sickdata['is_drink'] eq 4">selected</if>>每天</option>
+                    </select>
+                </div>
+            </div>
+            <div class="my_info fl">
+                <div class="height lf">饮食是否规律</div>
+                <div class="select rt">
+                    <select class="text" name="is_yingshi">
+                        <option>请填写</option>
+                        <option value="1" <if condition="$sickdata['is_yingshi'] eq 1">selected</if>>是</option>
+                        <option value="2" <if condition="$sickdata['is_yingshi'] eq 2">selected</if>>否</option>
+                    </select>
+                </div>
+            </div>
+            <div class="my_info fl">
+                <div class="height lf">睡眠是否规律</div>
+                <div class="select rt">
+                    <select class="text" name="is_xiuxi">
+                        <option>请填写</option>
+                        <option value="1" <if condition="$sickdata['is_xiuxi'] eq 1">selected</if>>是</option>
+                        <option value="2" <if condition="$sickdata['is_xiuxi'] eq 2">selected</if>>否</option>
+                    </select>
+                </div>
+            </div>
+            <div class="my_info fl">
+                <div class="height lf">大小便是否正常</div>
+                <div class="select rt">
+                    <select class="text" name="is_wc">
+                        <option>请填写</option>
+                        <option value="1" <if condition="$sickdata['is_wc'] eq 1">selected</if>>是</option>
+                        <option value="2" <if condition="$sickdata['is_wc'] eq 2">selected</if>>否</option>
+                    </select>
+                </div>
+            </div>
+            <div class="my_info fl">
+                <div class="height lf">是否长期服用止痛药或镇定催眠药</div>
+                <div class="select rt">
+                    <select class="text" name="is_fuyao">
+                        <option>请填写</option>
+                        <option value="1" <if condition="$sickdata['is_fuyao'] eq 1">selected</if>>是</option>
+                        <option value="2" <if condition="$sickdata['is_fuyao'] eq 2">selected</if>>否</option>
+                    </select>
+                </div>
+            </div>
+            <input type="submit" value="保存" class="button" />
+        </div>
+        </form>
+    </div>
+    <!--<button class="button">确认修改</button>-->
+</div>
+<script src="__PUBLIC__/doctor/js/jquery-1.11.3.js"></script>
+
+<script src="__PUBLIC__/doctor/js/bootstrap.js"></script>
+
+</body>
+
+</html>

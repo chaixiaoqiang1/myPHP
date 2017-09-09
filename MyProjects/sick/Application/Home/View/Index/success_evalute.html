@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>评价成功</title>
+
+    <link href="__PUBLIC__/doctor/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/doctor/css/success_evalute.css"/>
+
+
+</head>
+
+<body>
+<div class="container">
+    <div class="row success_content">
+        <div class="col-md-12 col-sm-12 col-xs-12 br" align="center">
+            <div class="success fl ">
+                <div class="success_img lf">
+                    <img src="__PUBLIC__/doctor/img/success.png" class="img-responsive img-circle" alt=""/>
+                </div>
+                <div class="success_tx lf">评价成功</div>
+
+            </div>
+
+                <div class="pull-left time_tx">倒计时 ：<span id="num">3</span> 秒后返回首页</div>
+
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 pd" >
+            <div class="doctor_img lf">
+                <img src="__PUBLIC__/doctor/img/doctor.jpg" class="img-circle img-responsive" alt=""/>
+            </div>
+            <div class="doctor_info">
+                <div class="top fl">
+                    <div class="doctor_names lf"> 黄海昌</div>
+                    <div class="lf type">内科 医师</div>
+                </div>
+                <div class="bottom fl">擅长呼吸系统、消化系统、心血管系统、内分泌系统、泌尿系统等疾病的诊治。</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="__PUBLIC__/doctor/js/jquery-1.11.3.js"></script>
+
+<script src="__PUBLIC__/doctor/js/bootstrap.js"></script>
+<script>
+    $(document).ready(function() {
+        function jump(count) {
+            window.setTimeout(function(){
+                count--;
+                if(count > 0) {
+                    $('#num').attr('innerHTML', count);
+                    jump(count);
+                } else {
+                    location.href="../categroy/service_history.html";
+                }
+            }, 1000);
+        }
+        jump(3);
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "Î¢ÈíÑÅºÚ", Tahoma, sans-serif;
+    background: #fff;
+
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+
+a {
+    color: #666;
+}
+/*Ò½ÉúÍ·Ïñ*/
+.doctor_img{
+    width: 60px;
+    margin: auto;
+    padding-top: 10px;
+}
+.doctor_user{
+    text-align: center;
+    padding-top: 5px;
+}
+.thanks{
+    text-align: center;
+    font-family: "Arial";
+    font-size: 18px;
+    color: #FA505F;
+    padding-top: 5px;
+}
+.money{
+    width: 220px;
+    padding-top: 20px;
+}
+.br{
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+}
+.tx{
+    color: #737373;
+    font-size: 18px;
+    padding-left: 5px;
+}
+.ipt {
+    border-bottom: 1px solid #cec4c4;
+    background: #fff;
+    width: 50px;
+    margin-left: 5px;
+}
+
+.text_field{
+    margin-top: 50px;
+    width: 90%;
+}
+.text_field_content {
+    width: 100%;
+    resize: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px!important;
+}
+.button{
+    width: 90%;
+    padding: 10px;
+    color: #ffffff;
+    background: #FF9F37;
+    outline: none;
+    font-size: 16px;
+    border:none ;
+    margin-top: 20px;
+    border-radius: 5px;
+}

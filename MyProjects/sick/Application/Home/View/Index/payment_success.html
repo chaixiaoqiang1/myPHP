@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>支付成功</title>
+
+    <link href="__PUBLIC__/doctor/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/doctor/css/payment_success.css"/>
+
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12" align="center">
+            <div class="fl page">
+                <div class="success_img lf">
+                    <img src="__PUBLIC__/doctor/img/payment-succes.png" class="img-responsive" style="display: block" alt=""/>
+                </div>
+                <div class="success_tx lf">支付成功</div>
+            </div>
+            <div class="txt">
+                你已成功购买<span class="classfiy"><if condition="$type eq 1">图文咨询<elseif condition="$type eq 2" />预约咨询</if></span>服务
+            </div>
+        </div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12 consultation_btn" align="center">
+            <a href="{:U('Menu/index')}" style="text-decoration: none">
+          <!--  <a href="{:U('Index/quick_consultation',array('id'=> $serviceId))}" style="text-decoration: none">-->
+                <button class="consultation" id="liji02">立即咨询</button>
+            </a>
+        </div>
+    </div>
+</div>
+<script src="__PUBLIC__/doctor/js/jquery-1.11.3.js"></script>
+
+<script src="__PUBLIC__/doctor/js/bootstrap.js"></script>
+
+</body>
+
+</html>

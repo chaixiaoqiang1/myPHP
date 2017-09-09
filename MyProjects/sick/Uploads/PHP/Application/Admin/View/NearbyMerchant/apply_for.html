@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+
+    <title>附近商家申请列表</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link href="__PUBLIC__/style/bootstrap.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/admin.min.css" rel="stylesheet">
+
+</head>
+
+<body class="container-fluid">
+<div class="row">
+    <include file="Public/navbar"/>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 body_left_bg text-center">
+                <include file="Public/NearbyMerchant/column"/>
+            </div>
+            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" >
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  shop_right">
+                            <div class="row">
+                                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-center">
+                                    <div class="row">
+                                        <a href="{:U('NearbyMerchant/apply_for')}">
+                                            <p class="shop_right_color">
+                                                附近商家申请列表
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-right">
+                                    <form class="form-horizontal" method="post" id="user-editor" enctype="multipart/form-data" action="{:U('NearbyMerchant/apply_for')}">
+                                        <div class="row form-group">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                <p><input class="shop_search_input" name="mer_name" placeholder="输入商家用户名关键字" type="text"> <button>搜索</button></p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 shop_list">
+                            <div class="row">
+                                <table class="table table-bordered">
+                                    <tr class="text-center">
+                                        <td class="active">用户名</td>
+                                        <td class="active">头像</td>
+                                        <td class="active">电话</td>
+                                        <td class="active">申请时间</td>
+                                        <td class="active">状态</td>
+                                        <td class="active">操作</td>
+                                    </tr>
+                                    <foreach name="merchant_list" item="vo" key="k">
+                                        <if condition="($k%2) eq 0">
+                                            <tr class="text-center">
+                                                <td class="info">{$vo.mer_name}</td>
+                                                <td class="info"><img src="__PUBLIC__/images/8.jpg" alt="" style="height: 50px; width: 50px; border-radius: 25px;"></td>
+                                                <td class="info">{$vo.mer_phone}</td>
+                                                <td class="info">{$vo.time}</td>
+                                                <td class="info">
+                                                     冻结
+                                                </td>
+                                                <td class="info">
+                                                    <a href="{:U('NearbyMerchant/activate',array('id'=>$vo['id']))}">
+                                                         <span class="label btn-primary"> 激活</span>
+                                                    </a>
+                                                    <a href="{:U('NearbyMerchant/applyFor_see',array('id'=>$vo['id']))}">
+                                                        <span class="label btn-success"> 查看详细</span>
+                                                    </a>
+                                                    <a href="{:U('NearbyMerchant/applyFor_delete',array('id'=>$vo['id']))}">
+                                                        &nbsp;<span class="label btn-danger">删除</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <else/>
+                                            <tr class="text-center">
+                                                <td class="active">{$vo.mer_name}</td>
+                                                <td class="active"><img src="__PUBLIC__/images/8.jpg" alt="" style="height: 50px; width: 50px; border-radius: 25px;"></td>
+                                                <td class="active">{$vo.mer_phone}</td>
+                                                <td class="active">{$vo.time}</td>
+                                                <td class="active">
+                                                    冻结
+                                                </td>
+                                                <td class="active">
+                                                    <a href="{:U('NearbyMerchant/activate',array('id'=>$vo['id']))}">
+                                                        <span class="label btn-primary"> 激活</span>
+                                                    </a>
+                                                    <a href="{:U('NearbyMerchant/applyFor_see',array('id'=>$vo['id']))}">
+                                                        <span class="label btn-success"> 查看详细</span>
+                                                    </a>
+                                                    <a href="{:U('NearbyMerchant/applyFor_delete',array('id'=>$vo['id']))}">
+                                                        &nbsp;<span class="label btn-danger">删除</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </if>
+                                    </foreach>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  text-center" id="page" style="margin-top: 20px;">
+                            {$page}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>

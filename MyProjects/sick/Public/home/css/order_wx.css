@@ -1,0 +1,153 @@
+/*header*/
+.header{
+    padding: 5px 10px;
+    background: #fab700;
+}
+.header img{
+    height: 20px;
+    margin: 10px 0;
+}
+.header p{
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    margin: 5px;
+    color: #FFFFFF;
+}
+/*banner*/
+.banner{
+    margin-top: 64px;
+}
+.banner span{
+    background: url("../png/bt_order.png")repeat-x;
+    background-size: 26%;
+    display: block;
+    height: 6px;
+}
+.banner img{
+    height: 16px;
+    margin-top: 27px;
+}
+.banner-info{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #FFF;
+}
+.banner-info .p1,.banner-info .p2{
+    line-height: 24px;
+}
+.banner-info .p3{
+    line-height: 24px;
+}
+.banner-left{
+    width: 90%;
+    float: left;
+}
+.banner-right{
+    width: 10%;
+    float: left;
+}
+/*content*/
+.content{
+    margin-top: 10px;
+}
+.content-info{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #FFF;
+    border-bottom: 1px #dcdcdc solid;
+}
+.content-info .p1{
+    float: left;
+    margin-right: 10px;
+    height: 30px;
+    line-height: 30px;
+}
+.content-info input{
+    height: 30px;
+    width: 80%;
+    border: 0;
+    font-size: 13px;
+    outline: none;
+}
+.content-info img{
+    float: right;
+    height: 14px;
+    margin: 8px 0;
+}
+.content-info .p2{
+    float: right;
+    margin-right: 10px;
+    height: 30px;
+    line-height: 30px;
+}
+.content-1{
+    margin-top: 10px;
+}
+.content-title,.content-content,.content-mum{
+    padding: 10px 15px;
+    background: #FFF;
+    border-bottom: 1px #dcdcdc solid;
+}
+.content-title .p1,.content-mum .p1{
+    height: 30px;
+    line-height: 30px;
+}
+.content-content img{
+    height: 90px;
+    float: left;
+    margin-right: 10px;
+}
+.content-content .p1{
+    height: 90px;
+    line-height: 90px;
+}
+.num{
+    background: #ececec;
+    height: 30px;
+    width: 50%;
+    border-radius: 10px;
+}
+.num .img3{
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+.num .input1{
+    width: 20px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #F08429;
+    border: 0;
+    background: none;
+    outline: none;
+}
+.num .img4{
+    height: 20px;
+    margin-top: 5px;
+    margin-right: 3px;
+}
+/*footer*/
+.footer{
+    padding: 9.5px 15px;
+    background: #e4e4e4;
+}
+.footer .p1{
+    color: #FFF;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    background: #fab000;
+    border-radius: 4px;
+}
+.footer .p2{
+    margin-right: 10px;
+    height: 30px;
+    line-height: 30px;
+    color: #969696;
+    letter-spacing: 1px;
+}
+.footer span{
+    color: #969696;
+}

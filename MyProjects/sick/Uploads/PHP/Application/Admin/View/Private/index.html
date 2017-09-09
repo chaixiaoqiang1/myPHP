@@ -1,0 +1,59 @@
+<extend name="Public/base"/>
+<block name="container">
+					<div id="main" class="main" style="min-height: 400px;">
+
+						<!-- 标题栏 -->
+						<div class="main-title">
+							<h2>权限管理</h2>
+							<a class="btn btn-primary" href="{:U('Private/addGroup')}">新 增 用 户 组</a>
+						</div>
+						<!-- 数据列表 -->
+						<div class="data-table table-striped">
+							<table class="table table-border">
+								<thead>
+								<tr>
+									<th class="">用户组</th>
+									<th class="">描述</th>
+									<th class="">授权</th>
+									<th class="">状态</th>
+									<th class="">操作</th>
+								</tr>
+								</thead>
+								<tbody>
+								<volist name="data" id="v">
+									<tr>
+										<td>
+										   {$v.title}
+										</td>
+										<td>
+											{$v.description}
+										</td>
+										<td>
+											<a href="{:U('Private/auth_menager',array('id'=>$v[id],'type'=>$v[type]))}">访问授权</a>
+										</td>
+										<td>
+											<eq name="v.status" value="1">
+												  正常
+												<else/>
+												  禁用
+											</eq>
+										</td>
+										<td>
+											<if condition="$v[status] eq 1">
+												<a href="{:U('Private/err',array('id'=>$v[id]))}" class="ajax-get">禁用</a>
+										    <else/>
+												<a href="{:U('Private/open',array('id'=>$v[id]))}" class="ajax-get">起用</a>
+											</if>
+											<a href="{:U('Private/delete',array('id'=>$v[id]))}" class="confirm ajax-get">删除</a>
+										</td>
+									</tr>
+								</volist>
+								</tbody>
+							</table>
+
+						</div>
+						<div class="page">
+							<div>    </div>    </div>
+
+					</div>
+</block>

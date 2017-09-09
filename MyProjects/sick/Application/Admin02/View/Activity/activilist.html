@@ -1,0 +1,117 @@
+<extend name="Public/base"/>
+<block name="container">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  shop_right">
+        <div class="row">
+            <div class="text-center">
+                <p class="shop_right_color pull-left" style='padding-left:50px;'>
+                   活动列表
+                </p>
+                <p class="shop_right_color pull-right" style='padding-right:100px;'>
+                    <a style="color:#fff;" href="{:U('Activity/addactivity')}">添加活动</a>
+                </p>
+            </div>
+        </div>
+         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-right">
+            <form class="form-horizontal" method="post" id="user-editor" enctype="multipart/form-data" action="{:U('User/index')}">
+                <div class="row form-group">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <p><input class="shop_search_input" placeholder="输入用户名关键字" name="user_name" type="text"> <button>搜索</button></p>
+                    </div>
+                </div>
+            </form>
+         </div>
+        <div class="row shop_list">
+            <table class="table table-bordered">
+                <tr class="text-center">
+                    <td style='width:400px;' class="active">活动标题</td>
+                    <td class="active">排序值</td>
+                    <td class="active">添加时间</td>
+                    <td class="active">状态</td>
+                    <td class="active">操作</td>
+                </tr>
+                <foreach name="data" item="vo" key="k">
+                    <if condition="($k%2) eq 0">
+                    <tr class="text-center">
+                        <td class="info" style="width: 180px;overflow: hidden;white-space: nowrap;   text-overflow: ellipsis;">
+                            {$vo.name}
+                        </td>
+                        <td class="info">{$vo.displayorder}</td>
+                        <td style='width:200px;' class="info">{$vo.createtime|date="y-m-d h:i:s",###}</td>
+                        <td class="info">
+                            <if condition="$vo['status'] eq 1">
+                                禁用
+                                <else/>
+                                启用
+                            </if>
+                        </td>
+                        <td class="info">
+                            <a href="{:U('Slide/editor',array('id'=>$vo['id']))}">
+                                <span class="label btn-warning">修改</span>
+                            </a>
+                            <a href="{:U('Slide/delete',array('id'=>$vo['id']))}">
+                                <span class="label btn-danger">删除</span>
+                            </a>
+                        </td>
+                    </tr>
+                   <else/>
+                       <tr class="text-center">
+                            <td class="active" style="width: 180px;overflow: hidden;white-space: nowrap;   text-overflow: ellipsis;">
+                                {$vo.name}
+                            </td>
+                            <td class="active">{$vo.displayorder}</td>
+                            <td style='width:200px;' class="active">{$vo.createtime|date="y-m-d h:i:s",###}</td>
+                            <td class="active">
+                                <if condition="$vo['status'] eq 1">
+                                    禁用
+                                    <else/>
+                                    启用
+                                </if>
+                            </td>
+                            <td class="active">
+                                <a href="{:U('Slide/editor',array('id'=>$vo['id']))}">
+                                    <span class="label btn-warning">修改</span>
+                                </a>
+                                <a href="{:U('Slide/delete',array('id'=>$vo['id']))}">
+                                    <span class="label btn-danger">删除</span>
+                                </a>
+                            </td>
+                        </tr>
+                    </if>
+                </foreach>
+            </table>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  text-center" id="page" style="margin-top: 20px;">
+            {$page}
+        </div>
+</block>
+<block name="js">
+    <script src="__PUBLIC__/script/jquery-2.1.1.min.js"></script>
+    <script src="__PUBLIC__/script/bootstrap.min.js"></script>
+
+</block>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

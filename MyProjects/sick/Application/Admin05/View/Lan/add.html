@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<form action="{:U('add')}" style="width:600px;margin:50px auto;" method="post">
+     <p>上级栏目
+         <select name="pid" style="width:200px;">
+             <option value="0">顶级栏目</option>
+             <volist name="data" id="v">
+                 <option value="{$v.id}">{$v.title}--{$v.condition}</option>
+             </volist>
+         </select>
+     </p>
+     <p>
+        主栏目图标 <input type="text" name="ico">
+     </p>
+     <p>连接<input type="text" name="name"></p>
+     <p>标题<input type="text" name="title"></p>
+     <p>
+         <input type="radio" name="style" value="1" checked>总后台
+         <input type="radio" name="style" value="2">商家
+     </p>
+    <p>是否显示:
+        <input type="radio" name="hide" value="1" checked>影藏
+        <input type="radio" name="hide" value="0">显示
+    </p>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

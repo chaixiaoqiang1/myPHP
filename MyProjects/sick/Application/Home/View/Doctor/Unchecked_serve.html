@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>服务</title>
+
+    <link href="__PUBLIC__/sick/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/sick/css/Unchecked_serve.css"/>
+
+</head>
+
+<body>
+<div class="container" style="margin-top:auto">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <a href="Free_consultation.html">
+                <div class="case lf">
+                    <if condition="$info['freeconsult'] eq 1">
+                        <div class="left pitch_on_bj">
+                        <elseif condition="$info['freeconsult'] eq 2" /><div class="left bj">
+                    </if>
+                        <div class="left_content">
+                            <div class="left_content_img">
+                                <img src="__PUBLIC__/sick/img/Untitled.png" class="img-responsive img" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom bj_bottom" align="center">
+                     免费咨询
+                    </div>
+                </div>
+            </a>
+
+            <a href="Picture_consulting.html">
+                <div class="case rt">
+                    <div class="left bj">
+                        <div class="left_content">
+                            <div class="left_content_img">
+                                <img src="__PUBLIC__/sick/img/img_xt.png" class="img-responsive img" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom bj_bottom" align="center">
+                       图文咨询
+                    </div>
+                </div>
+            </a>
+
+            <a href="medical_appointments.html">
+                <div class="case lf">
+                    <div class="left bj" >
+                        <div class="left_content">
+                            <div class="left_content_img">
+                                <img src="__PUBLIC__/sick/img/free.png" class="img-responsive img" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom bj_bottom" align="center">
+                        预约就诊
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="case rt">
+                    <div class="left bj">
+                        <div class="left_content">
+                            <div class="left_content_img">
+                                <img src="__PUBLIC__/sick/img/wanglaizhangwu.png" class="img-responsive img" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom bj_bottom" align="center">
+                        积分问题
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="__PUBLIC__/sick/js/jquery-1.11.3.js"></script>
+
+<script src="__PUBLIC__/sick/js/bootstrap.js"></script>
+
+</body>
+
+</html>

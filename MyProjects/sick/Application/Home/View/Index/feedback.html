@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>意见反馈</title>
+
+    <link href="__PUBLIC__/doctor/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/doctor/css/evaluate.css"/>
+</head>
+
+<body>
+<div class="container">
+    <div class="row content">
+        <div class="col-md-12 col-sm-12 col-xs-12 ">
+            <form action="{:U('Index/feedback')}" method="post" id="form01">
+                <div class="text_field">
+                    <textarea class="text_field_content" name="content" id="" rows="5" placeholder="请输入您的意见或建议~"></textarea>
+                </div>
+            </form>
+            <button class="button" id="tijiao">提交</button>
+        </div>
+    </div>
+</div>
+<script src="__PUBLIC__/doctor/js/jquery-1.11.3.js"></script>
+<script src="__PUBLIC__/doctor/js/jquery.raty.min.js"></script>
+<script src="__PUBLIC__/doctor/js/bootstrap.js"></script>
+<script>
+    $('#tijiao').click(function(){
+        $("#form01").submit();
+    })
+</script>
+</body>
+
+</html>

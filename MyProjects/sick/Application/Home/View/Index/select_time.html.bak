@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+        <!--<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>-->
+        <title>预约时间设置</title>
+        <link rel="stylesheet" href="__PUBLIC__/doctor/css/calendar.css">
+        <link rel="stylesheet" href="__PUBLIC__/doctor/css/select_time.css">
+        <style type="text/css">
+
+        </style>
+        </head>
+        <body>
+        <form action="" method="post" class="parent">
+            <div id="demo">
+        <div id="ca"></div>
+        <div id="dd"></div>
+    </div>
+    <div class="tx">选择预约时间</div>
+    <div class="times fl">
+        <div class="select_time lf">9:30</div>
+        <div class="select_time lf">10:00</div>
+        <div class="select_time lf">10:30</div>
+        <div class="select_time lf">11:00</div>
+        <div class="select_time lf">11:30</div>
+        <div class="select_time lf">12:00</div>
+
+        <div class="select_time lf">13:30</div>
+        <div class="select_time lf">14:00</div>
+        <div class="select_time lf">14:30</div>
+        <div class="select_time lf">15:00</div>
+        <div class="select_time lf">15:30</div>
+        <div class="select_time lf">16:00</div>
+        <div class="select_time lf">16:30</div>
+        <div class="select_time lf">17:00</div>
+    </div>
+</form>
+<button class="button">确认选择</button>
+<script src="__PUBLIC__/doctor/js/jquery-1.11.3.js"></script>
+<script src="__PUBLIC__/doctor/js/calendar.js"></script>
+<script>
+    $('#ca').calendar({
+        width: 320,
+        height: 320,
+        data: [
+            {
+                date: '2016/6/20',
+                value: '预约'
+            }, {
+                date: '2016/6/21',
+                value: '预约'
+            },
+            {
+                date: '2016/6/22',
+                value: '预约'
+            }
+        ]
+    });
+    $(".dot").click(function () {
+        if($(this).closest(".parent").find(".times").css("display")=="block"){
+            $(".tx").show();
+            $(".select_time").show();
+            $(".button").show();
+        }
+    })
+
+    $("li").click(function(){
+        if($(this).children().length==0){
+            $(".tx").hide();
+            $(".select_time").hide();
+            $(".button").hide();
+        }
+    })
+
+    $(".select_time").click(function () {
+        $(this).siblings().css("background","#fafafa");
+        $(this).siblings().css("color", "#333")
+        $(this).css("background", "#FF9F37")
+        $(this).css("color", "#fff")
+    })
+</script>
+</body>
+</html>

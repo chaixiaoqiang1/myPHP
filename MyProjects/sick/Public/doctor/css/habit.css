@@ -1,0 +1,9 @@
+.sl{
+    border: none;
+    outline: none;
+}
+select{
+    float: right;
+    border: none;
+    background: #FFFFff;
+}

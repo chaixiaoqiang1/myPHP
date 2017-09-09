@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>我的健康</title>
+
+    <link href="__PUBLIC__/doctor/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/doctor/css/my_health.css"/>
+
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <!--<a href="revise_info.html">-->
+        <div class="col-md-12 col-sm-12 col-xs-12 top_info">
+
+                <div class="user_img lf">
+                    <img src="__PUBLIC__/doctor/img/doctor.jpg" class="img-responsive img-circle" alt=""/>
+                </div>
+                <div class="user_name lf">
+                    <div class="names">{$sickdata.username}</div>
+                    <div class="classfiy fl">
+                        <div class="sex lf"><if condition="$sickdata['sex'] eq 1">男<else />女</if></div>
+                        <div class="age lf">{$sickdata.userage}岁</div>
+                    </div>
+                </div>
+
+                    <!--<div class="right rt">-->
+                        <!--<img src="__PUBLIC__/doctor/img/right.png" class="img-responsive" alt=""/>-->
+                    <!--</div>-->
+
+        </div>
+        <!--</a>-->
+    </div>
+    <div class="row change">
+        <div class="col-md-12 col-sm-12 col-xs-12 classfiy_change">
+            <div class="left_tx lf cl">
+                <div class="datum">个人资料</div>
+            </div>
+            <a href="habit.html"class="color">
+                <div class="right_tx lf">
+                    <div class="practice ">生活习惯</div>
+                </div>
+            </a>
+        </div>
+        <form action="__SELF__" method="post">
+        <div class="col-md-12 col-sm-12 col-xs-12 my_datum_content">
+
+            <div class="my_info fl">
+                <div class="height lf">呢称</div>
+                <!--<span class="rt" style="color: #a9a9a9;padding-right: 5px">cm</span>-->
+                <input type="text" class="ipt rt" placeholder="请输入呢称" name="username" value="{$sickdata.username}" />
+            </div>
+            <div class="my_info fl">
+                <div class="height lf">身高</div>
+                <span class="rt" style="color: #a9a9a9;padding-right: 5px">cm</span>
+                <input type="text" class="ipt rt" placeholder="请输入身高" name="height" value="{$sickdata.height}" />
+            </div>
+            <div class="my_info fl">
+                <div class="height lf">体重</div>
+                <span class="rt" style="color: #a9a9a9;padding-right: 5px">kg</span>
+                <input type="text" class="ipt rt"  placeholder="请输入体重" name="weight" value="{$sickdata.weight}" />
+            </div>
+            <div class="my_info fl">
+                <div class="height lf">婚姻状态</div>
+                <div class="select rt">
+                    <select  class="text" style="text-align: right" name="marriage">
+                        <option style="text-align: right">请填写</option>
+                        <option value="1" <if condition="$sickdata['marriage'] eq 1">selected="selected"</if> >已婚</option>
+                        <option value="2" <if condition="$sickdata['marriage'] eq 2">selected</if> >未婚</option>
+                    </select>
+                </div>
+            </div>
+            <input type="submit" class="button" value="确认修改">
+        </div>
+
+            </form>
+    </div>
+    <a href="">
+        <!--<button class="button">确认修改</button>-->
+        <!--<input type="submit" class="button" value="确认修改">-->
+    </a>
+</div>
+<script src="__PUBLIC__/doctor/js/jquery-1.11.3.js"></script>
+
+<script src="__PUBLIC__/doctor/js/bootstrap.js"></script>
+<script>
+    $(".my_info").click(function () {
+        $(this).children().focus();
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+﻿<extend name="Public/base"/>
+<block name="container">
+    <form class="form-horizontal" method="post" enctype="multipart/form-data" action="{:U('Merchant/add')}">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="border:1px solid #eeeeee;">
+                <div class="row">
+                    <div class="form-group shop_info">
+                        <label class="col-lg-3 control-label">logo:</label>
+                        <div class="col-lg-1">
+                            <div class="fileInput left">
+                                <input type="file" name="header_logo" id="upload" class="upfile uplo" />
+                                <input class="upFileBtn uplo" type="button" value="上传图片" onclick="document.getElementById('upload').click()" />
+                            </div>
+                        </div>
+                        <div class="col-lg-8 height-center text-danger" id="show_img">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">名称:</label>
+                        <div class="col-lg-4">
+                            <input type="text"  class="form-control" name="name"  required>
+                        </div>
+                        <span class="col-lg-5 height-center text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">电话:</label>
+                        <div class="col-lg-4">
+                            <input type="text"  class="form-control" name="phone" required>
+                        </div>
+                        <span class="col-lg-5 height-center text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">密码:</label>
+                        <div class="col-lg-4">
+                            <input type="text"  class="form-control" name="pwd" placeholder="不填为默认123456">
+                        </div>
+                        <span class="col-lg-5 height-center text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">性别:</label>
+                        <div class="col-lg-4">
+                            <input type="radio" name="sex" value="1" checked style="margin-top: 10px;">男
+                            <input type="radio" name="sex" value="2" style="margin-top: 10px;">女
+                            <input type="radio" name="sex" value="0" style="margin-top: 10px;">保密
+                        </div>
+                        <span class="col-lg-5 height-center text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group ">
+                        <label class="col-lg-3 control-label">昵称</label>
+                        <div class="col-lg-4">
+                            <input type="text"  class="form-control" name="nickname">
+                        </div>
+                        <span class="col-lg-5 height-center text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group ">
+                        <label class="col-lg-3 control-label">个性签名</label>
+                        <div class="col-lg-4">
+                            <input type="text"  class="form-control" name="sign">
+                        </div>
+                        <span class="col-lg-5 height-center text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-offset-4 col-lg-4">
+                        <button class="btn btn-sm btn-success" id="btn" type="submit">提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</block>
+<block name="js">
+    <script src="__PUBLIC__/script/lrz.bundle.js?v=a1a6749"></script>
+    <script src="__PUBLIC__/script/index.js?v=27ce5f7"></script>
+    <script src="__PUBLIC__/script/jquery-2.1.1.min.js"></script>
+    <script src="__PUBLIC__/script/bootstrap.min.js"></script>
+</block>

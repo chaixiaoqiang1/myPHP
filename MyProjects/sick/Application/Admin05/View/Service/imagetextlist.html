@@ -1,0 +1,122 @@
+<extend name="Public/base"/>
+<block name="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 shop_right">
+                <div class="row">
+                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-center">
+                        <div class="row">
+                            <!--<a href="{:U('User/index')}">-->
+                            <p class="shop_right_color text-right">
+                                &nbsp;图文咨询列表
+                            </p>
+                            <!--</a>-->
+                        </div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-right">
+                        <form class="form-horizontal" method="post" id="user-editor" enctype="multipart/form-data" action="{:U('User/index')}">
+                            <div class="row form-group">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <!--                                    <p><input class="shop_search_input" placeholder="输入用户名关键字" name="user_name" type="text"> <button>搜索</button></p>-->
+                                    <a href="{:U('Service/servicelist')}">  <button type="button" class="btn btn-primary">返回服务列表</button></a>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 shop_list">
+                <div class="row">
+                    <table class="table table-bordered">
+                        <tr class="text-center">
+                            <td class="active">序号</td>
+                            <td class="active">科室</td>
+                            <td class="active">主治医生</td>
+                            <td class="active">是否开启</td>
+                            <td class="active">价钱</td>
+                            <td class="active">复诊券</td>
+                            <td class="active">复诊券折扣</td>
+                            <td class="active">审核</td>
+                            <td class="active">操作</td>
+                        </tr>
+
+                        <volist name="list" id="vo" key="k">
+                            <tr class="text-center">
+                                <td class="info">{$k}</td>
+                                <td class="info">
+                                    {$vo.office}
+                                </td>
+                                <td class="info">
+                                    {$vo.username}
+                                </td>
+                                <td class="info">
+                                    <if condition="$vo['is_open'] eq 1">
+                                        <p style="color:greenyellow">已开启</p>
+                                    <else />
+                                        <p style="color:red">未开启</p>
+                                    </if>
+                                </td>
+                                <td class="info">
+                                    {$vo.price}元
+                                </td>
+                                </td>
+                                <td class="info">
+                                    <if condition="$vo['is_ticket'] eq 1">
+                                          <p style="color:greenyellow">已开启</p>
+                                        <else />
+                                            <p style="color:red">未开启</p>
+                                    </if>
+                                </td>
+                                <td class="info">
+                                    {$vo.ticketdiscount}
+                                </td>
+
+                                <td class="info">
+                                    <if condition="$vo['is_status'] eq 1">
+                                        正常
+                                        <else />
+                                        冻结
+                                    </if>
+                                </td>
+
+                                <td class="info">
+                                        <a href="{:U('Service/imagetextstatus',array('id'=>$vo['id']))}">
+                                            <span class="label btn-warning">冻结</span>
+                                        </a>
+
+                                        <a href="{:U('Service/imagetextstatus',array('id'=>$vo['id']))}">
+                                            <span class="label btn-success">正常</span>
+                                        </a>
+                                        <a href="{:U('Service/imagetextedit',array('id'=>$vo['id']))}">
+                                            <span class="label btn-primary"> 修改</span>
+                                        </a>
+                                        <a href="{:U('Service/imagetextdel',array('id'=>$vo['id']))}">
+                                            <span class="label btn-danger">删除</span>
+                                        </a>
+                                    <!--  <a href="{:U('User/doctoredit',array('id'=>$vo['id']))}">
+                                         <span class="label btn-primary">编辑</span>
+                                     </a> -->
+                                </td>
+                            </tr>
+
+                        </volist>
+                    </table>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  text-center" id="page" style="margin-top: 20px;">
+                {$page}
+            </div>
+        </div>
+    </div>
+</block>
+<p>
+    <block name="js">
+        <script src="__PUBLIC__/script/jquery-2.1.1.min.js"></script>
+        <script src="__PUBLIC__/script/bootstrap.min.js"></script>
+    </block>
+</p>
+
+
+

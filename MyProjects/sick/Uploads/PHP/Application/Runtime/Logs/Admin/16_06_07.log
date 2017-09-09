@@ -1,0 +1,1907 @@
+[ 2016-06-07T19:52:31+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.010000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:52:33+08:00 ] ::1 /taiyou/index.php/Admin/User/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ty_doctor` [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Undefined variable: page E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 237 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-07T19:52:33+08:00 ] ::1 /taiyou/index.php/Admin/User/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ty_doctor` [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Undefined variable: page E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 237 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T19:52:34+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-07T19:52:38+08:00 ] ::1 /taiyou/index.php/Admin/User/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ty_doctor` [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Undefined variable: page E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 237 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-07T19:52:38+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.010001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:52:43+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:52:47+08:00 ] ::1 /taiyou/index.php/Admin/User/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ty_doctor` [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Undefined variable: page E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 237 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-07T19:52:47+08:00 ] ::1 /taiyou/index.php/Admin/User/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ty_doctor` [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Undefined variable: page E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 237 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-07T19:52:47+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-07T19:52:47+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T19:52:52+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:52:57+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:53:02+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:53:05+08:00 ] ::1 /taiyou/index.php/Admin/User/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ty_doctor` [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Undefined variable: page E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 237 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T19:53:05+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:53:08+08:00 ] ::1 /taiyou/index.php/Admin/User/doctorlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ty_doctor` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ty_doctor` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `ty_doctor` LIMIT 0,15   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Undefined variable: k E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 171 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 202 行.
+NOTIC: [8] Undefined variable: k E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 171 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 202 行.
+NOTIC: [8] Undefined variable: k E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 171 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 202 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.084005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.086005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-06-07T19:53:08+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T19:53:09+08:00 ] ::1 /taiyou/index.php/Admin/User/doctorlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ty_doctor` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ty_doctor` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ty_doctor` LIMIT 0,15   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Undefined variable: k E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 171 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 202 行.
+NOTIC: [8] Undefined variable: k E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 171 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 202 行.
+NOTIC: [8] Undefined variable: k E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 171 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 202 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.084005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.085005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-07T19:53:09+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:53:12+08:00 ] ::1 /taiyou/index.php/Admin/User/doctorlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ty_doctor` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ty_doctor` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ty_doctor` LIMIT 0,15   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Undefined variable: k E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 171 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 202 行.
+NOTIC: [8] Undefined variable: k E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 171 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 202 行.
+NOTIC: [8] Undefined variable: k E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 171 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 202 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.083004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.084004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-07T19:53:13+08:00 ] ::1 /taiyou/index.php/Admin/User/doctorlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ty_doctor` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ty_doctor` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ty_doctor` LIMIT 0,15   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Undefined variable: k E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 171 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 202 行.
+NOTIC: [8] Undefined variable: k E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 171 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 202 行.
+NOTIC: [8] Undefined variable: k E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 171 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 202 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.083005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T19:53:13+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-07T19:53:14+08:00 ] ::1 /taiyou/index.php/Admin/User/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ty_doctor` [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 100 行.
+NOTIC: [8] Undefined variable: page E:\WWW\taiyou\Application\Runtime\Cache\Admin\4e1f0ee1a12a8dbb63343fe9e6a3f60d.php 第 237 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-07T19:53:14+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:53:19+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:53:24+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:53:29+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T19:53:30+08:00 ] ::1 /taiyou/index.php/Admin/User/specialtylist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ty_category` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ty_category` ORDER BY id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\8f261bbf81244042f70e342bb0d43de1.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\8f261bbf81244042f70e342bb0d43de1.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\8f261bbf81244042f70e342bb0d43de1.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\8f261bbf81244042f70e342bb0d43de1.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\8f261bbf81244042f70e342bb0d43de1.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\8f261bbf81244042f70e342bb0d43de1.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\8f261bbf81244042f70e342bb0d43de1.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\8f261bbf81244042f70e342bb0d43de1.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\8f261bbf81244042f70e342bb0d43de1.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\8f261bbf81244042f70e342bb0d43de1.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\8f261bbf81244042f70e342bb0d43de1.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\8f261bbf81244042f70e342bb0d43de1.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\8f261bbf81244042f70e342bb0d43de1.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\8f261bbf81244042f70e342bb0d43de1.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-07T19:53:30+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T19:53:31+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T19:53:34+08:00 ] ::1 /taiyou/index.php/Admin/User/doctorlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ty_doctor` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ty_doctor` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ty_doctor` LIMIT 0,15   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 100 行.
+NOTIC: [8] Undefined variable: k E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 171 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 202 行.
+NOTIC: [8] Undefined variable: k E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 171 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 202 行.
+NOTIC: [8] Undefined variable: k E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 171 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\6b6f404fa3dbd14209b9e32c22829815.php 第 202 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.083005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-07T19:53:34+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:53:36+08:00 ] ::1 /taiyou/index.php/Admin/User/infolist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\e7abc9c79c8327e4f73bd867b43a0431.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\e7abc9c79c8327e4f73bd867b43a0431.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\e7abc9c79c8327e4f73bd867b43a0431.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\e7abc9c79c8327e4f73bd867b43a0431.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\e7abc9c79c8327e4f73bd867b43a0431.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\e7abc9c79c8327e4f73bd867b43a0431.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\e7abc9c79c8327e4f73bd867b43a0431.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\e7abc9c79c8327e4f73bd867b43a0431.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\e7abc9c79c8327e4f73bd867b43a0431.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\e7abc9c79c8327e4f73bd867b43a0431.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\e7abc9c79c8327e4f73bd867b43a0431.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\e7abc9c79c8327e4f73bd867b43a0431.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\e7abc9c79c8327e4f73bd867b43a0431.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\e7abc9c79c8327e4f73bd867b43a0431.php 第 100 行.
+NOTIC: [8] Undefined variable: list E:\WWW\taiyou\Application\Runtime\Cache\Admin\e7abc9c79c8327e4f73bd867b43a0431.php 第 170 行.
+NOTIC: [8] Undefined variable: vo E:\WWW\taiyou\Application\Runtime\Cache\Admin\e7abc9c79c8327e4f73bd867b43a0431.php 第 215 行.
+NOTIC: [8] Undefined variable: page E:\WWW\taiyou\Application\Runtime\Cache\Admin\e7abc9c79c8327e4f73bd867b43a0431.php 第 229 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-07T19:53:36+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:53:41+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T19:53:42+08:00 ] ::1 /taiyou/index.php/Admin/Sick/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ty_sick` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ty_sick`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Undefined index: image E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 175 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 194 行.
+NOTIC: [8] Undefined index: image E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 175 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 194 行.
+NOTIC: [8] Undefined variable: page E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-06-07T19:53:42+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T19:53:45+08:00 ] ::1 /taiyou/index.php/Admin/Sick/insertUser.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ty_sick` [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Undefined variable: page E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 212 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-06-07T19:53:45+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T19:53:48+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:53:50+08:00 ] ::1 /taiyou/index.php/Admin/Sick/insertUser.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ty_sick` [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 100 行.
+NOTIC: [8] Undefined variable: page E:\WWW\taiyou\Application\Runtime\Cache\Admin\ed70e116e74916b3fc28b95d8e066a55.php 第 212 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-07T19:53:50+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-07T19:53:51+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:53:52+08:00 ] ::1 /taiyou/index.php/Admin/Sick/saveUser/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ty_sick` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ty_sick` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Undefined variable: page E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-07T19:53:52+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:53:55+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:53:55+08:00 ] ::1 /taiyou/index.php/Admin/Sick/saveUser/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ty_sick` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ty_sick` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 100 行.
+NOTIC: [8] Undefined variable: page E:\WWW\taiyou\Application\Runtime\Cache\Admin\36767214efb6c20cf6536089d5efc19d.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T19:53:56+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-07T19:53:57+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:54:02+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:54:07+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:54:12+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.010000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:54:17+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:54:22+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:54:27+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:54:32+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:54:37+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:54:42+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.010000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:54:47+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:54:52+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:54:57+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:55:02+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:55:07+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:55:12+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.010000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:55:17+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.010000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-07T19:55:21+08:00 ] ::1 /taiyou/index.php/Admin/Sick/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ty_sick` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ty_sick`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Undefined index: image E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 175 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 194 行.
+NOTIC: [8] Undefined index: image E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 175 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 194 行.
+NOTIC: [8] Undefined variable: page E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-06-07T19:55:21+08:00 ] ::1 /taiyou/index.php/Admin/Sick/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ty_sick` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ty_sick`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: title E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 6 行.
+NOTIC: [8] Undefined index: admin_name E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 65 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Use of undefined constant _child - assumed '_child' E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 100 行.
+NOTIC: [8] Undefined index: image E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 175 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 194 行.
+NOTIC: [8] Undefined index: image E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 175 行.
+NOTIC: [8] Undefined index: status E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 194 行.
+NOTIC: [8] Undefined variable: page E:\WWW\taiyou\Application\Runtime\Cache\Admin\84bf1f36d095ffeba6ccc15143a3dd0a.php 第 214 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-07T19:55:22+08:00 ] ::1 /taiyou/index.php/Admin/Order/tip.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `auth_rule` WHERE ( status = 1 and id != 10 and style=1 and hide = 0 ) ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

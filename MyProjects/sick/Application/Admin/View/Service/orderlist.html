@@ -1,0 +1,114 @@
+<extend name="Public/base"/>
+<block name="container">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 shop_right">
+                <div class="row">
+                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right">
+                        <div class="row">
+                            <!--<a href="{:U('User/index')}">-->
+                            <p class="shop_right_color text-right">
+                                预约咨询历史
+                            </p>
+                            <!--</a>-->
+                        </div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-right">
+                        <form class="form-horizontal" method="post" id="user-editor" enctype="multipart/form-data" action="{:U('User/index')}">
+                            <div class="row form-group">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                                        <!--<p><input class="shop_search_input" placeholder="输入用户名关键字" name="user_name" type="text"> <button>搜索</button></p>-->
+                               <!--     <a href="{:U('Service/orderset')}">  <button type="button" class="btn btn-primary">预约设置</button></a>-->
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 shop_list">
+                <div class="row">
+                    <table class="table table-bordered">
+                        <tr class="text-center">
+                            <td class="active">序号</td>
+                            <td class="active">科室</td>
+                            <td class="active">主治医生</td>
+                            <td class="active">患者姓名</td>
+                            <td class="active">聊天信息</td>
+                            <td class="active">是否支付</td>
+                            <td class="active">状态</td>
+                        </tr>
+
+                        <volist name="info" id="vo" key="k">
+                            <tr class="text-center">
+                                <td class="">{$k}</td>
+                                <td class="">
+                                    {$vo.office}
+                                </td>
+                                <td class="" >
+                                    {$vo.username}
+                                </td>
+                                <td class="">
+                                    {$vo.s_id}
+                                </td>
+                                <td class="">
+                                    <a href="{:U('Service/liaotian',array('fid'=>$vo['id'],'did'=> $vo['d_id']))}">
+                                        <button  class="btn btn-success">点击查看</button>
+                                    </a>
+                                </td>
+                                <td class="">
+                                    <if condition="$vo['is_pay'] eq 2">
+                                        <span style="color: green;">已支付</span>
+                                        <else />
+                                        <span style="color: red;">未支付</span>
+                                    </if>
+                                </td>
+                                <td class="">
+                                    <if condition="$vo['is_status'] eq 1">进行中
+                                        <elseif condition="$vo['is_status'] eq 2" />完成待评价
+                                        <elseif condition="$vo['is_status'] eq 3" />完成已评价
+                                        <elseif condition="$vo['is_status'] eq 4" />冻结不显示
+                                    </if>
+                                </td>
+                            <!--    <td class="info">
+                                    <a href="{:U('Service/orderset',array('id'=>$vo['id']))}">
+                                        <span class="label btn-success">点击设置</span>
+                                    </a>
+                                </td>-->
+                              <!--  <td class="info col-md-3">
+                                    <a href="{:U('Service/orderstatus',array('id'=>$vo['id']))}">
+                                        <span class="label btn-warning">冻结</span>
+                                    </a>
+                                    <a href="{:U('Service/orderstatus',array('id'=>$vo['id']))}">
+                                        <span class="label btn-success">正常</span>
+                                    </a>
+                                    <a href="{:U('Service/orderedit',array('id'=>$vo['id']))}">
+                                        <span class="label btn-primary">修改</span>
+                                    </a>
+                                    <a href="{:U('Service/orderdel',array('id'=>$vo['id']))}">
+                                        <span class="label btn-danger">删除</span>
+                                    </a>
+                                    &lt;!&ndash;  <a href="{:U('User/doctoredit',array('id'=>$vo['id']))}">
+                                         <span class="label btn-primary">编辑</span>
+                                     </a> &ndash;&gt;
+                                </td>-->
+                            </tr>
+
+                        </volist>
+                    </table>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  text-center" id="page" style="margin-top: 20px;">
+                {$page}
+            </div>
+        </div>
+</block>
+<p>
+    <block name="js">
+        <script src="__PUBLIC__/script/jquery-2.1.1.min.js"></script>
+        <script src="__PUBLIC__/script/bootstrap.min.js"></script>
+    </block>
+</p>
+
+
+

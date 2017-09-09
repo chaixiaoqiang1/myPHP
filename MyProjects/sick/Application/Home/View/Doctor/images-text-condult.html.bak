@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>图文咨询</title>
+
+    <link href="__PUBLIC__/sick/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/sick/css/appointment_consultation.css"/>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <!--<div class="col-md-12 col-sm-12 col-xs-12 up_set" style="background: #ffffff">-->
+            <!--<a href="time_set_up.html">-->
+                <!--<div class=" fl">-->
+                    <!--<div class="left lf">设置预约时间</div>-->
+                    <!--<div class="right rt">-->
+                        <!--<img src="__PUBLIC__/sick/img/right.png" class="img-responsive" alt=""/>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</a>-->
+
+        <!--</div>-->
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 br">
+            <!-- 用户姓名 时间-->
+            <div class="user_info fl">
+                <div class="user_img lf">
+                    <img src="__PUBLIC__/sick/img/doctor.jpg" class="img-responsive img-circle" alt=""/>
+                </div>
+                <div class="user_name lf">王大锤</div>
+                <div class="time rt">2016-5-20</div>
+            </div>
+            <div class="depict">颈椎疼痛，坐时间常会头晕</div>
+            <!-- 病例-->
+            <div class="case_img fl">
+                <div class="img lf">
+                    <img src="__PUBLIC__/sick/img/doctor.jpg" class="img-responsive" alt=""/>
+                </div>
+                <div class="img lf">
+                    <img src="__PUBLIC__/sick/img/doctor.jpg" class="img-responsive" alt=""/>
+                </div>
+                <div class="img lf">
+                    <img src="__PUBLIC__/sick/img/doctor.jpg" class="img-responsive" alt=""/>
+                </div>
+            </div>
+
+            <!-- 立即沟通-->
+
+            <button class="communicate rt">立即沟通</button>
+
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 br">
+            <!-- 用户姓名 时间-->
+            <div class="user_info fl">
+                <div class="user_img lf">
+                    <img src="__PUBLIC__/sick/img/doctor.jpg" class="img-responsive img-circle" alt=""/>
+                </div>
+                <div class="user_name lf">王大锤</div>
+                <div class="time rt">2016-5-20</div>
+            </div>
+            <div class="depict">颈椎疼痛，坐时间常会头晕</div>
+            <!-- 病例-->
+            <div class="case_img fl">
+                <div class="img lf">
+                    <img src="__PUBLIC__/sick/img/doctor.jpg" class="img-responsive" alt=""/>
+                </div>
+                <div class="img lf">
+                    <img src="__PUBLIC__/sick/img/doctor.jpg" class="img-responsive" alt=""/>
+                </div>
+                <div class="img lf">
+                    <img src="__PUBLIC__/sick/img/doctor.jpg" class="img-responsive" alt=""/>
+                </div>
+            </div>
+
+            <!-- 立即沟通-->
+
+            <button class="communicate rt">立即沟通</button>
+
+        </div>
+    </div>
+</div>
+<script src="__PUBLIC__/sick/js/jquery-1.11.3.js"></script>
+
+<script src="__PUBLIC__/sick/js/bootstrap.js"></script>
+
+</body>
+
+</html>

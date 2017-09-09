@@ -1,0 +1,58 @@
+<extend name="Public/base"/>
+<block name="container">
+<div class="container">
+    <div class="row">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right" >
+            <p class="shop_right_color text-right">
+
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        </div>
+    </div>
+    <div class="row" style="margin-top: 10px">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <volist name="info" id="vo">
+                <if condition="$vo['reply_type'] eq 1">
+            <div class="user fl">
+                <div class="user_img lf">
+                    <img src="{$vo.s_id}" class="img-responsive img-circle" alt="" />
+                </div>
+                <if condition="substr($vo['content'],-3) eq 'jpg'">
+                    <div class="user_tx lf" >
+                        <img src="__ROOT__/{$vo.content}" style="width: 100px;height: 100px;">
+                    </div>
+                    <else />
+                    <div class="user_tx lf">
+                         {$vo.content}
+                    </div>
+                </if>
+            </div>
+                    <else />
+            <div class="doctor fl">
+                <div class="user_img rt" style="padding-bottom: 10px">
+                    <img src="__ROOT__/Uploads/{$vo.d_id}" class="img-responsive img-circle" alt="" style="height: 50px;"/>
+                </div>
+
+                <if condition="substr($vo['content'],-3) eq 'jpg'">
+                    <div class="user_tx rt" style="background: #ffffff">
+                         <img src="__ROOT__/{$vo.content}" style="width: 100px;height: 100px;">
+                    </div>
+                    <else />
+                    <div class="user_tx rt" style="background: #ffffff">
+                    {$vo.content}
+                    </div>
+                </if>
+            </div>
+                </if>
+            </volist>
+        </div>
+    </div>
+</div>
+</block>
+<p>
+    <block name="js">
+        <script src="__PUBLIC__/script/jquery-2.1.1.min.js"></script>
+        <script src="__PUBLIC__/script/bootstrap.min.js"></script>
+    </block>
+</p>

@@ -1,0 +1,48 @@
+<extend name="Public/base"/>
+<block name="container">
+    <div id="main" class="main" style="min-height: 400px;padding:10px;">
+        <div class="main-title">
+            <h2>新增用户组</h2>
+        </div>
+        <form action="{:U('Private/addGroup')}"  method="POST" class="form-horizontal">
+            <div class="form-item">
+                <label for="auth-title" class="item-label">用户组</label>
+                <div class="controls">
+                    <input id="auth-title" type="text" name="title" class="text input-large" value="">
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="item-label">类型</label>
+                <div class="controls">
+                    <input type="radio" name="type"  value="1">
+                    总后台
+                    <input type="radio" name="type" value="1" checked="checked">
+                    商家后台
+                </div>
+            </div>
+
+            <div class="form-item">
+                <label for="auth-description" class="item-label">描述</label>
+                <div class="controls">
+                    <label class="textarea input-large"><textarea id="auth-description" type="text" name="description"></textarea></label>
+                </div>
+            </div>
+            <div class="form-item">
+                <button type="submit" class="btn submit-btn ajax-post" target-form="form-horizontal">确 定</button>
+            </div>
+        </form>
+        <block>
+            <block name="script">
+                <script type="text/javascript" charset="utf-8">
+                    //导航高亮
+                    highlight_subnav('/onethink/index.php?s=/admin/auth_manager/index.html');
+                </script>
+
+            </block></block></div>
+</block>
+<block name="js">
+    <script src="__PUBLIC__/script/jquery-2.1.1.min.js"></script>
+    <script src="__PUBLIC__/script/bootstrap.min.js"></script>
+
+</block>
+

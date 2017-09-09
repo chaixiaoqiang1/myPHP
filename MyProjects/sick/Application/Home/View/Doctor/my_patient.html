@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的患者</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <link href="__PUBLIC__/sick/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/sick/css/my_patient.css"/>
+    <script src="__PUBLIC__/sick/js/jquery-1.11.3.js"></script>
+    <script src="__PUBLIC__/sick/js/bootstrap.js"></script>
+    <script src="__PUBLIC__/sick/js/my_patient.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row seach">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="seach_left fl lf">
+                <div class="seach_img fl lf">
+                    <img src="__PUBLIC__/sick/img/seach.png" class="img-responsive lf" alt=""/>
+                </div>
+                <input type="text" class="lf seach_tx" placeholder="搜索患者"/>
+            </div>
+            <div class="add rt" style="color: #A9A9A9;line-height: 52px">添加分组</div>
+        </div>
+    </div>
+    <div class="row dropdown_menu">
+        <div class="col-md-12 col-sm-12 col-xs-12 clear_pd">
+            <!--分组-->
+                <div class="parent_container">
+                <div class="panel-title fl">
+                    <div class="down_img lf">
+                        <img src="__PUBLIC__/sick/img/right_img.png" class="img-responsive cut_way" alt=""/>
+                    </div>
+                    <div class="lf sufferer">我的患者</div>
+                    <div class="number rt">{$info['acceptsick_id']['count']}</div>
+                </div>
+                    <volist name="info['acceptsick_id']" id="v1" key="k">
+                        <if condition="$k neq 'count'">
+                            <a href="{:U('doctor/Patient_name_card',array('sid'=> $v1['id'],'t'=> 3))}">
+                                  <div class="ensconce fl">
+                                      <div class="user_name lf">
+                                            <img src="{$v1.icon}" class="img-responsive img-circle" alt=""/>
+                                      </div>
+                                      <div class="user_info lf">{$v1['username']}</div>
+                                  </div>
+                            </a>
+                        </if>
+
+                    </volist>
+            </div>
+            <div class="parent_container">
+                <div class="panel-title fl">
+                    <div class="down_img lf">
+                        <img src="__PUBLIC__/sick/img/right_img.png" class="img-responsive cut_way" alt=""/>
+                    </div>
+                    <div class="lf sufferer">我的粉丝</div>
+                    <div class="number rt">{$info['sick_id']['count']}</div>
+                </div>
+                <volist name="info['sick_id']" id="vo">
+                <a href="{:U('Doctor/Patient_name_card',array('sid'=>$vo['id'],'t'=> 1))}">
+                    <div class="ensconce fl">
+                        <div class="user_name lf">
+                            <img src="{$vo.icon}" class="img-responsive img-circle" alt=""/>
+                        </div>
+                        <div class="user_info lf">{$vo['username']}</div>
+                    </div>
+                </a>
+                </volist>
+            </div>
+         <!--   <div class="parent_container consult">
+                <div class="panel-title fl">
+                    <div class="down_img lf">
+                        <img src="__PUBLIC__/sick/img/right_img.png" class="img-responsive cut_way" alt=""/>
+                    </div>
+                    <div class="lf sufferer">咨询过我的人</div>
+                    <div class="number rt">{$count_arr[1]}</div>
+                </div>
+                <volist name="userconsultid" id="vo">
+                    <a href="{:U('Doctor/Patient_name_card',array('sid'=>$vo['id'],'t'=> 2))}">
+                    <div class="ensconce fl">
+                        <div class="user_name lf">
+                            <img src="__PUBLIC__/sick/img/doctor.jpg" class="img-responsive img-circle" alt=""/>
+                        </div>
+                        <div class="user_info lf">{$vo.username}</div>
+                    </div>
+                </a>
+                </volist>
+            </div>-->
+
+            <volist name="group" id="vo">
+                <div class="parent_container" id="xinjia">
+                    <div class="panel-title fl">
+                        <div class="down_img lf">
+                            <img src="__PUBLIC__/sick/img/right_img.png" class="img-responsive cut_way" alt=""/>
+                        </div>
+                        <div class="lf sufferer">{$vo.listname}</div>
+                        <div class="number rt">{$vo['count']}</div>
+                    </div>
+                    <volist name="vo['s_id']" id="v1">
+                        <a href="{:U('Doctor/Patient_name_card',array('sid'=>$v1['id'],'haoyou'=> $vo['id'] ))}">
+                            <div class="ensconce fl">
+                                <div class="user_name lf">
+                                    <img src="{$v1['icon']}" class="img-responsive img-circle" alt=""/>
+                                </div>
+                                <div class="user_info lf">{$v1['username']}</div>
+                            </div>
+                        </a>
+                    </volist>
+                </div>
+            </volist>
+        </div>
+    </div>
+</div>
+<form action="__SELF__" method="post">
+    <div class="pop">
+        <div class="parent">
+                <div class="fl tx lf">分组名称：</div>
+                <input type="text" name="listname" class="lf ipt"/>
+            <div class="button">
+                <div class="confirm lf" id="tijiao">确定</div>
+                <div class="cancel lf">取消</div>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="window"></div>
+<script>
+  $('#tijiao').click(function(){
+      if(!$("input[name='listname']").val()){
+          alert('请输入分组名');
+          return false;
+      }
+      $('form:first').submit();
+  })
+</script>
+</body>
+</html>

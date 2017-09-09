@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>个人信息</title>
+
+    <link href="__PUBLIC__/sick/css/bootstrap.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="__PUBLIC__/sick/css/my_info.css"/>
+
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 user_head">
+            <form action="__SELF__" method="post">
+                <div class="head_img fl">
+                    <div class="lf user_tx">头像</div>
+                    <div class="rt user_img">
+                        <img src="__PUBLIC__/sick/img/doctor.jpg" class="img-responsive img-circle" alt=""/>
+                    </div>
+                </div>
+
+                <div class="user_name fl">
+                    <div class="lf names">手机号</div>
+                    <div class="rt">
+                        <input type="text" class="ipt" placeholder="请输入您的手机号" value="{$info.iphone}" name="iphone"/>
+                    </div>
+                </div>
+
+                <div class="user_name fl">
+                    <div class="lf names">年龄</div>
+                    <div class="rt">
+                        <input type="text" class="ipt" placeholder="请输入您的年龄"/>
+                    </div>
+                </div>
+                <div class="user_iphone fl" style="border-bottom: none">
+                    <div class="sex lf">性别</div>
+                    <div class="sex_right rt">
+                        <div class="right_img lf">
+                            <img src="__PUBLIC__/sick/img/default.png" class="img-responsive menfolk" alt=""/>
+                        </div>
+                        <div class="man lf">女</div>
+                    </div>
+                    <div class="sex_right rt">
+                        <div class="right_img lf">
+                            <img src="__PUBLIC__/sick/img/default.png" class="img-responsive femininity" alt=""/>
+                        </div>
+                        <div class="man lf">男</div>
+                    </div>
+                </div>
+
+
+                <!--<div class="user_iphone fl">-->
+                    <!--<div class="lf names">邮箱</div>-->
+                    <!--<div class="rt">-->
+                        <!--<input type="text" class="ipt" placeholder="请输入您的邮箱" value="{$info.mailbox}" name="mailbox"/>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </form>
+
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <button class="button" id="tijiao">确认修改</button>
+        </div>
+
+    </div>
+
+</div>
+<script src="__PUBLIC__/sick/js/jquery-1.11.3.js"></script>
+
+<script src="__PUBLIC__/sick/js/bootstrap.js"></script>
+
+<script>
+    $('#tijiao').click(function(){
+        $('form:first').submit();
+    })
+</script>
+
+
+</body>
+
+</html>

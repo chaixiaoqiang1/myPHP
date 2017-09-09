@@ -1,0 +1,105 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "微软雅黑", Tahoma, sans-serif;
+    background: #EEEEEE;
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #000;
+}
+
+.success_content {
+    background: #FFFFff;
+    margin-top: 20px;
+    margin: 20px 0 0 0 ;
+    border-radius: 5px;
+}
+
+/*图片大小*/
+
+.br {
+    border-bottom: 1px dashed #efefef;
+}
+
+.success {
+    width: 95px;
+    margin: auto;
+    padding: 20px 0 15px 0;
+}
+
+.success_img {
+    width: 25px;
+}
+
+.success_tx {
+    line-height: 25px;
+    padding-left: 10px;
+    color: #EE9B32;
+}
+
+/*医生头像*/
+.doctor_img{
+    width: 50px;
+}
+.doctor_info{
+    padding-left: 70px;
+}
+.type {
+    padding-left: 10px;
+    color: #A2A5A3;
+    font-size: 12px;
+    line-height: 16px;
+}
+.bottom{
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+
+.pd{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.time_tx{
+    padding: 5px 0 0 5px;
+    font-size: 12px;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}

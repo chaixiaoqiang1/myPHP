@@ -1,0 +1,251 @@
+<extend name="Public/base"/>
+<block name="container">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=QIx1ajOe3wSPwV14r6BvYUW0"></script>
+    <link href="__PUBLIC__/style/bootstrap.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/style/admin.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <form class="form-horizontal" method="post" enctype="multipart/form-data" action="{:U('shop/add')}">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="border:1px solid #eeeeee;">
+                <div class="row">
+                    <div class="form-group shop_info">
+                        <label class="col-lg-3 control-label">LOGO:</label>
+                        <div class="col-lg-1">
+                            <div class="fileInput left">
+                                <input type="file" name="logo" id="upload" class="upfile uplo" />
+                                <input class="upFileBtn uplo" type="button" value="上传图片" onclick="document.getElementById('upload').click()" />
+                            </div>
+                        </div>
+                        <div class="col-lg-8 height-center text-danger" id="show_img">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">商家名称:</label>
+                        <div class="col-lg-4" >
+                            <select name="sj_id" class="form-control" >
+                                <volist name="sj" id="v">
+                                    <option value="{$v.id}" >{$v.name}</option>
+                                </volist>
+                            </select>
+                        </div>
+                                        <span class="col-lg-5 height-center text-danger">
+                                            <if condition="!$sj">暂无未绑定商家的店铺</if>
+                                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">店铺名:</label>
+                        <div class="col-lg-4">
+                            <input type="text"  class="form-control" name="shop_name" value="{$dianpu.shop_name}" required>
+                        </div>
+                        <span class="col-lg-5 height-center text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">店铺联系人:</label>
+                        <div class="col-lg-4">
+                            <input type="text"  class="form-control" name="username" value="{$dianpu.username}" required>
+                        </div>
+                        <span class="col-lg-5 height-center text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">店铺联系电话:</label>
+                        <div class="col-lg-4">
+                            <input type="text"  class="form-control" name="shop_phone" value="{$dianpu.shop_phone}" required>
+                        </div>
+                        <span class="col-lg-5 height-center text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">店铺分类:</label>
+                        <div class="col-lg-4">
+                            <select class="form-control" name="cat_id">
+                                <volist name="category" id="v">
+                                    <option value="{$v.id}" >{$v.cat_name}</option>
+                                </volist>
+                            </select>
+                        </div>
+                        <span class="col-lg-5 height-center text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">选择小区:</label>
+                        <div class="col-lg-4">
+                            <select class="form-control" name="xq_id">
+                                <volist name="xq" id="v">
+                                    <option value="{$v.id}" >{$v.name}</option>
+                                </volist>
+                            </select>
+                        </div>
+                        <span class="col-lg-5 height-center text-danger">
+                            <if condition="!$xq">
+                                      <span class="col-lg-5 height-center text-danger">
+                                            <if condition="!$sj">暂无未绑定的小区</if>
+                                        </span>
+                            </if>
+
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group ">
+                        <label class="col-lg-3 control-label">地址:</label>
+                        <div class="col-lg-4">
+                            <input type="text"  class="form-control" name="shop_address" value="{$dianpu.shop_address}" required>
+                        </div>
+                        <span class="col-lg-5 height-center text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group ">
+                        <label class="col-lg-3 control-label">起送价:</label>
+                        <div class="col-lg-4">
+                            <input type="text"  class="form-control" name="start_price" value="{$dianpu.start_price}" required>
+                        </div>
+                        <span class="col-lg-5 height-center text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">所在经度:</label>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" id="lng" name="shop_x" value="{$dianpu.shop_x}">
+                            </div>
+                                                <span class="col-lg-2 height-center text-danger">
+                                                    <a href="http://api.map.baidu.com/lbsapi/getpoint/index.html" target="_blank">百度地图获取坐标</a>
+                                                </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">所在纬度:</label>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" id="lnt" name="shop_y" value="{$dianpu.shop_y}">
+                            </div>
+                            <span class="col-lg-1 height-center text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">配送区域:</label>
+                            <div class="col-lg-4" style="height: 500px;">
+                                <div class="row" id="path"></div>
+
+
+                                <include file="Public/area"/>
+                            </div>
+                                            <span class="col-lg-1 height-center text-danger">
+                                                点击按钮进行绘制，如有画错请重叠继续绘制，或刷新页面
+                                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">简介:</label>
+                            <div class="col-lg-5">
+                                                <textarea name="shop_desc" style="width:100%;height:300px;visibility:hidden;">
+
+                                                </textarea>
+                            </div>
+                            <span class="col-lg-1 height-center text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group ">
+                        <label class="col-lg-3 control-label">状态:</label>
+                        <div class="col-lg-4">
+                            <input type="radio" name="status" checked style="margin-top: 10px;">正常
+                            <input type="radio" name="status" style="margin-top: 10px;">冻结
+                        </div>
+                        <span class="col-lg-5 height-center text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-offset-4 col-lg-4">
+                        <button class="btn btn-sm btn-success" id="btn" type="submit">提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</block>
+<block name="js">
+    <script src="__PUBLIC__/script/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/script/index.js?v=27ce5f7"></script>
+    <script src="__PUBLIC__/script/lrz.bundle.js?v=a1a6749"></script>
+
+    <script src="__PUBLIC__/script/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="__PUBLIC__/kind/themes/default/default.css" />
+    <link rel="stylesheet" href="__PUBLIC__/kind/plugins/code/prettify.css" />
+    <script charset="utf-8" src="__PUBLIC__/kind/kindeditor.js"></script>
+    <script charset="utf-8" src="__PUBLIC__/kind/lang/zh_CN.js"></script>
+    <script charset="utf-8" src="__PUBLIC__/kind/plugins/code/prettify.js"></script>
+    <script>
+        KindEditor.ready(function(K) {
+            var editor1 = K.create('textarea[name="shop_desc"]', {
+                cssPath : '__PUBLIC__/kind/plugins/code/prettify.css',
+                uploadJson : '__PUBLIC__/kind/php/upload_json.php',
+                fileManagerJson : '__PUBLIC__/kind/php/file_manager_json.php',
+                allowFileManager : true,
+                afterCreate : function() {
+                    var self = this;
+                    K.ctrl(document, 13, function() {
+                        self.sync();
+                        K('form[name=example]')[0].submit();
+                    });
+                    K.ctrl(self.edit.doc, 13, function() {
+                        self.sync();
+                        K('form[name=example]')[0].submit();
+                    });
+                }
+            });
+            prettyPrint();
+        });
+    </script>
+    <script>
+        $('.uplo').click(function(){
+            $('#show_img').html('');
+        })
+        $('.up').click(function(){
+            $('#showImg').html('');
+        })
+        $('.btn').click(function(){
+            var html=$('#path').html();
+            //  alert(html);
+//alert(html.length);
+            if(html){
+                return true;
+            }else{
+                alert('请绘制配送区域');
+                return false;
+            }
+
+        })
+
+        $(function(){
+            var winH = $(window).height();
+            $('.body_left_bg').css('height',Number(winH)+Number(250));
+        })
+    </script>
+</block>

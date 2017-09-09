@@ -1,0 +1,74 @@
+<extend name="Public/base"/>
+<block name="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  shop_right">
+                <div class="row">
+                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-center">
+                        <div class="row">
+                                <p class="shop_right_color">
+                                    &nbsp;修改图文咨询
+                                </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-right">
+                        <form class="form-horizontal" method="post" id="user-editor" enctype="multipart/form-data" action="{:U('User/index')}">
+                            <div class="row form-group">
+                                
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <!--<p><input class="shop_search_input" placeholder="输入用户名关键字" name="user_name" type="text"> <button>搜索</button></p>-->
+<!--                                    <button>添加数据</button>-->
+
+                            <a href="{:U('Service/Servicelist')}"><button type="button" class="btn btn-primary">返回服务列表</button></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                <div class="row">
+                    <form action='__SELF__' method="post" >
+                    
+                    <table class="table table-bordered">
+                        <tr class="text-left">
+                            <td class="active text-center">开启服务</td>
+                            <td class="active">
+                                <label class="radio-inline">
+
+                                    <input type="radio" name="is_open" id="inlineRadio1" value="1"  <if condition="$info['is_status'] eq 1">checked</if>> 开启
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="is_open" id="inlineRadio2" value="2"  <if condition="$info['is_status'] eq 2">checked</if>> 关闭
+                                </label>
+                            </td>
+                        </tr>
+                        <tr class="text-left">
+                          <td class="active text-center">价格</td>
+                          <td class="active">
+                              <input type="text" name="price" value="{$info['price']}">&nbsp;元
+                          </td>
+                        </tr>
+
+                        <tr class="text-center">
+                            <td class="active" colspan="2"><input type='submit' value='提&nbsp;&nbsp;&nbsp;交' class="btn btn-success btn-lg btn-block"></td>
+                        </tr>
+                    </table>
+
+                    </form>
+                </div>
+            </div>
+         <!--   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  text-center" id="page" style="margin-top: 20px;">
+                {$page}
+            </div>-->
+        </div>
+    </div>
+</block>
+<br />
+<block name="js">
+    <script src="__PUBLIC__/script/jquery-2.1.1.min.js"></script>
+    <script src="__PUBLIC__/script/bootstrap.min.js"></script>
+
+</block>

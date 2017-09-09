@@ -1,0 +1,63 @@
+<extend name="Public/base"/>
+<block name="container">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 product_lists">
+        <div class="row">
+            <notempty name="data">
+                <table class="table table-bordered">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="80%">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <td>送货人</td>
+                        <td>{$user.s_name}</td>
+                    </tr>
+                    <tr>
+                        <td>送货人电话</td>
+                        <td>{$user.phone}</td>
+                    </tr>
+                    <tr>
+                        <td>状态</td>
+                        <td>
+                            <if condition="$data.status eq 1">
+                                <span class="label label-primary">配送员已接单准备发货</span>
+                                <elseif condition="$data.status eq 2"/>
+                                <span class="label label-primary">发货中</span>
+                                <elseif condition="$data.status eq 3"/>
+                                <span class="label label-primary">配送完成</span>
+                                </else>
+                            </if>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>接单时间</td>
+                        <td>{$data.receiving_time}</td>
+                    </tr>
+                    <tr>
+                        <td>发货时间</td>
+                        <td>{$data.shipments_time}</td>
+                    </tr>
+                    <tr>
+                        <td>送到时间</td>
+                        <td>{$data.sign_for_time}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            <else/>
+                <p>暂无配送信息!</p>
+            </notempty>
+             <span onclick="history.back(-1);" class="btn btn-default">返回订单</span>
+        </div>
+    </div>
+    <if condition="$page">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  text-center" id="page" style="margin-top: 20px;">
+            {$page}
+        </div>
+    </if>
+</block>
+<block name="js">
+    <script src="__PUBLIC__/script/jquery-2.1.1.min.js"></script>
+
+</block>

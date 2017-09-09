@@ -1,0 +1,128 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "Î¢ÈíÑÅºÚ", Tahoma, sans-serif;
+    background: #fff;
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.top {
+    margin-top: 15px;
+}
+
+.left {
+    padding: 20px 10px 20px 10px;
+    border: 1px solid #dfdfdf;
+    width: 80%;
+    font-size: 12px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.right {
+    padding: 7px 10px 7px 10px;
+    border: 1px solid #dfdfdf;
+    width: 20%;
+    background: #EAEAEA;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.right_img {
+    width: 40px;
+    margin: auto;
+}
+
+.fileInputContainer {
+    background: url("../img/img.png") no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+}
+
+.fileInput {
+    overflow: hidden;
+    font-size: 300px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+}
+
+.number {
+    padding: 15px 0 15px 0;
+    border-bottom: 1px solid #dfdfdf;
+}
+.clear_border{
+    border-bottom: none;
+}
+.border {
+    padding: 0 10px 0 10px;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.ipt {
+    width: 60%;
+}
+
+.tx{
+    padding: 10px 5px 10px 10px;
+    font-size: 12px;
+    color: #8E8E8E;
+}
+
+/*°´Å¥*/
+.button{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    background: #FF9F37;
+    margin-top: 20px;
+    border-radius: 5px;
+}

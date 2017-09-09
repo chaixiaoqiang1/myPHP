@@ -1,0 +1,65 @@
+body {
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Arial, "Î¢ÈíÑÅºÚ", Tahoma, sans-serif;
+    background: #e9e9e9;
+}
+
+ul, li, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+.doctor_opinion{
+    padding: 15px 0 15px 0;
+}
+
+
+.doctor_opinion_content{
+    background: #ffffff;
+    border-bottom: 1px solid #efefef;
+}
+
+.doctor_info{
+    padding: 10px 0 10px 0;
+}
+
+.doctor_img{
+    width: 50px;
+}
+.doctor_names{
+    line-height: 50px;
+    padding-left: 10px;
+    color: #969696;
+}
+.opinion_content{
+    padding: 10px;
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+
+    <title>我的医生</title>
+
+    <link href="__PUBLIC__/doctor/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/doctor/css/my_doctor.css"/>
+    <style>
+        .purpose {
+            border: 1px solid #5dc64c;
+            border-radius: 5px;
+            color: #f93446;
+            margin-right: 10px;
+            padding: 2px 10px;
+        }
+
+        .rt {
+            float: right;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="container">
+    <!-- 顶部导航-->
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 top_nav">
+            <ul class="fl top_nav_content">
+                <a href="{:U('Index/current_service')}">
+                    <li class="lf">当前服务</li>
+                </a>
+                <a href="{:U('Index/my_doctor')}">
+                    <li class="lf current">我的医生</li>
+                </a>
+                <a href="{:U('Index/service_history')}">
+                    <li class="lf">服务历史</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <!-- -->
+    <div class="loop_page">
+        <volist name="doctordata" id="vo">
+            <div class="doctor_page">
+                <div class="row fl doctor_info">
+                    <a href="{:U('Index/doctor_detail',array('id'=> $vo['id']))}">
+                        <div class="col-md-3 col-sm-3 col-xs-3 doctor_info_content">
+                            <div class="doctor_img">
+                                <img src="__ROOT__/Uploads/{$vo.image}" class="img-responsive img-circle"
+                                     style="width: 55px;height: 55px;" alt=""/>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-sm-9 col-xs-9 clear_padding">
+                            <div class="info fl">
+                                <div class="top fl">
+                                    <div class="lf doctor_name">{$vo.username}</div>
+                                    <div class="lf state">
+                                        <div class="state_tx lf">
+                                            <if condition="$vo['is_online'] eq 1">在线
+                                                <else/>
+                                                离线
+                                            </if>
+                                        </div>
+                                        <img src="__PUBLIC__/doctor/img/chenggong.png"
+                                             class="img-responsive img-circle state_img lf" alt=""/>
+                                    </div>
+
+                                    <a href="{:U('Newuser/Send_the_mind',array('id'=>$vo['id']))}">
+                                        <div class="purpose rt">送心意</div>
+                                    </a>
+                                </div>
+                                <div class="content fl">
+                                    <div class="classfiy">
+                                        <if condition="$vo['rank'] eq 1">初级医生
+                                            <elseif condition="$vo['rank'] eq 2"/>
+                                            中级医生
+                                            <elseif condition="$vo['rank'] eq 3"/>
+                                            高级医生
+                                        </if>
+                                    </div>
+                                </div>
+                                <div class="bottom fl">
+                                    <div class="fl">
+                                        <div class="lf">执业编号 ：</div>
+                                        <div class="number lf">{$vo.practice}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-12 col-sm-12 col-xs-12 admit" align="center">
+                            <div class="fl admit_page">
+                                <div class="info_admit">接待人数 <br/><span class="number_color">{$vo.servernum}</span>
+                                </div>
+                                <div class="info_admit">评价人数 <br/><span class="number_color">{$vo.evaluatenum}</span>
+                                </div>
+                                <div class="info_admit">应答时间 <br/><span class="number_color">{$vo.responsetime}</span>
+                                </div>
+                                <div class="info_admit">综合评分 <br/><span class="number_color">{$vo.zscore}</span></div>
+                            </div>
+
+                        </div>
+                        <!-- <div class="col-md-12 col-sm-12 col-xs-12">
+                             {$vo.}...
+                         </div>-->
+                    </a>
+                    <div class="col-md-12 col-sm-12 col-xs-12 button">
+                        <div class=" fl">
+                            <div class=" btn_left lf" align="center">
+                                <a href="{:U('Index/Chat_record')}">
+                                    <button class="chat_btn lf">聊天记录</button>
+                                </a>
+
+                            </div>
+                            <div class=" btn_left lf">
+                                <a href="{:U('Index/doctor_detail',array('id'=> $vo['id']))}" class="fl">
+                                    <button class="chat_btn lf">购买服务</button>
+                                </a>
+
+                            </div>
+                            <div class=" btn_left lf">
+                                <a href="{:U('Index/evaluate_page',array('did'=> $vo['id']))}" class="fl">
+                                    <button class="chat_btn lf">查看评价</button>
+                                </a>
+                            </div>
+                            <!-- <div class=" btn_right rt">
+                                 <button class=" delete_btn lf">删除</button>
+                             </div>-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </volist>
+    </div>
+
+</div>
+
+<script src="__PUBLIC__/doctor/js/jquery-1.11.3.js"></script>
+
+<script src="__PUBLIC__/doctor/js/bootstrap.js"></script>
+<script>
+    $(".loop_page:last").children().css("margin-bottom", "10px");
+    $(".delete_btn").click(function () {
+        if (confirm("确定删除？")) {
+            $(this).parent().parent().parent().parent().remove()
+        }
+    })
+</script>
+</body>
+
+</html>
