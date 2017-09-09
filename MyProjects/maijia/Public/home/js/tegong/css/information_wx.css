@@ -1,0 +1,139 @@
+/*style*/
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td{
+    margin:0;
+    padding:0
+}
+body{
+    padding:0;
+    margin:0;
+    font-family: tahoma,arial,\5b8b\4f53,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: rgb(96,96,96);
+    background-color: #F1F1F1;
+}
+*{
+    /*color: #853067;*/
+    color: #000;
+    font-size: 14px
+}
+img{
+    border:none
+}
+a{
+    color: #5c307d
+}
+a:hover,a:link{
+    text-decoration: none
+}
+ol,ul,li{
+    list-style:none
+}
+.left{
+    float: left
+}
+.right{
+    float: right
+}
+.indent{
+    text-indent : 28px
+}
+.yellow-col{
+    color: #f08429;
+}
+/*header*/
+.header{
+    padding: 10px 0;
+    background: #000;
+}
+.header img{
+    height: 20px;
+    margin: 5px 0;
+}
+.header p{
+    height: 30px;
+    line-height: 30px;
+    color: #FFF;
+    font-size: 16px;
+}
+/*content*/
+.content{
+    margin-top: 50px;
+}
+.content-info{
+    background: #FFF;
+    padding: 10px;
+    border-bottom: 1px #dcdcdc solid;
+}
+.content p{
+    height: 30px;
+    line-height: 30px;
+    font-weight: 400;
+}
+.content span{
+    color: #969696;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.content input{
+    height: 40px;
+    width: 96%;
+    margin-left: 2%;
+    padding: 0 10px;
+    border-radius: 4px;
+    background: #e6e5e5;
+    border: 0;
+    margin-top: 7px;
+    font-size: 12px;
+    color: #969696;
+}
+.content1{
+    padding: 5px 10px;
+}
+.content1 p{
+    height: 30px;
+    line-height: 30px;
+    font-weight: 400;
+}
+.content2{
+    border-top: 1px #dcdcdc solid;
+    border-bottom: 1px #dcdcdc solid;
+}
+.content2-info{
+    padding: 10px;
+    background: #FFF;
+}
+.content2-info img{
+    height: 30px;
+}
+.content2-info input{
+    height: 14px;
+    width: 14px;
+    border-radius: 14px;
+    border: 1px #ff4f4f solid;
+    -webkit-border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+}
+.content3{
+    padding: 5px 10px;
+    margin-top: 50px;
+}
+/*footer*/
+.footer{
+    background: #2f2f2f;
+    padding: 10px 0;
+}
+.footer p{
+    height: 40px;
+    line-height: 40px;
+    width: 90%;
+    color: #FFF;
+    margin-left: 5%;
+    background: #f08429;
+    border-radius: 4px;
+}

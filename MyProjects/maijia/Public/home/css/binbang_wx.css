@@ -1,0 +1,94 @@
+/*header*/
+.header{
+    padding: 5px 10px;
+    background: #fab700;
+}
+.header img{
+    height: 20px;
+    margin: 10px 0;
+}
+.header p{
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    margin: 5px;
+    color: #FFFFFF;
+}
+/*content*/
+.content{
+    margin-top: 90px;
+    padding: 10px 15px;
+}
+.content-left{
+    width: 15%;
+    float: left;
+}
+.content-middle{
+    width: 65%;
+    float: left;
+    overflow: hidden;
+}
+.content-middle1{
+    width: 45%;
+    float: left;
+    overflow: hidden;
+}
+.content-right{
+    width: 20%;
+    float: right;
+}
+.content-right1{
+    width: 40%;
+    float: right;
+}
+.content-info{
+    background: #FFF;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px #fab000 solid;
+}
+.content-left .img1{
+    height: 20px;
+    margin: 10px 0;
+}
+.content-middle .sp1,.content-middle1 .sp1{
+    height: 20px;
+    width: 2px;
+    background: #fab000;
+    display: block;
+    margin: 10px 0;
+    float: left;
+    margin-right: 10%;
+}
+.content-middle input,.content-middle1 input{
+    height: 30px;
+    margin: 5px 0;
+    line-height: 30px;
+    width: 80%;
+    padding: 0 5px;
+    border: 0;
+    color: #999;
+}
+.content-info1 .p1{
+    background: #fab000;
+    height: 40px;
+    width: 120px;
+    border-radius: 30px;
+    color: #FFF;
+    line-height: 40px;
+    font-size: 16px;
+    margin: 10px auto;
+}
+#btn{
+    background: #fab000;
+    color: #FFF;
+    height: 30px;
+    line-height: 30px;
+    margin: 5px 0;
+    padding: 0 5px;
+    font-size: 13px;
+    border-radius: 8px;
+    border: 0;
+    float: right;
+    outline: none;
+}

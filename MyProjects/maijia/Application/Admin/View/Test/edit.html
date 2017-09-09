@@ -1,0 +1,106 @@
+<include file="Public/top" />
+<body>
+<include file="Public/navbar" />
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+
+        <include file="Public/column" />
+
+        <div class="main-content">
+            <script type="text/javascript">
+                try {
+                    ace.settings.check('breadcrumbs', 'fixed')
+                } catch (e) {
+                }
+            </script>
+            <div class="breadcrumbs" id="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home home-icon"></i>
+                        <a href="{:U('Test/index')}">试车馆管理</a>
+                    </li>
+                    <li class="active"><span class="Current_page iframeurl">信息添加</span></li>
+                    <li class="active" id="parentIframe"><span class="parentIframe iframeurl"></span></li>
+                    <li class="active" id="parentIfour"><span class="parentIfour iframeurl"></span></li>
+                </ul>
+            </div>
+            <div class=" clearfix" id="advertising">
+                <form name="frm" action="{:U('Test/edit')}" method="post" enctype="multipart/form-data" onsubmit="return check()" id="form01">
+                    <input type="hidden" value="{$Think.get.id}" name="id">
+                <div id="add_ads_style" >
+                    <div class="add_adverts" style="display: inline-block;">
+                        <ul>
+                            <li>
+                                <label class="label_name" style="margin-right: 10px; width: 100px;">选择服务类别</label>
+                                <span class="cont_style">
+                                      <select class="form-control" id="form-field-select-1" name="type">
+                                          <option value="">请选择类别</option>
+                                          <option value="1"  <if condition="$info['type'] eq 1">selected</if>>试乘</option>
+                                          <option value="2"  <if condition="$info['type'] eq 2">selected</if>>试驾</option>
+                                      </select>
+                                    </span>
+                            </li>
+                            <li>
+                                <label class="label_name" style="margin-right: 10px; width: 100px;">价格</label>
+                                <span class="cont_style"><input name="price" type="text" id="price" placeholder="请输入价格" value="{$info.price}" class="col-xs-10 col-sm-5" style="width:450px" onkeyup="value=value.replace(/[^0-9]/g,'')" onpaste="value=value.replace(/[^0-9]/g,'')" oncontextmenu = "value=value.replace(/[^0-9]/g,'')"></span>
+                            </li>
+                            <li><label class="label_name" style="margin-right: 10px; width: 100px;">状&nbsp;&nbsp;态：</label>
+                               <span class="cont_style">
+                                   <if condition="$info['status'] eq 1">
+                                 &nbsp;&nbsp;<label><input name="status" value="1" type="radio" checked="checked" class="ace"><span
+                                       class="lbl">显示</span></label>&nbsp;&nbsp;&nbsp;
+                                 <label><input name="status" value="2" type="radio" class="ace"><span class="lbl">隐藏</span></label></span>
+                                <div class="prompt r_f"></div>
+                                    <else />
+                                &nbsp;&nbsp;<label><input name="status" value="1" type="radio" class="ace"><span
+                                        class="lbl">显示</span></label>&nbsp;&nbsp;&nbsp;
+                                <label><input name="status" value="2" type="radio" checked="checked" class="ace"><span class="lbl">隐藏</span></label></span>
+                                <div class="prompt r_f"></div>
+                                </if>
+                            </li>
+                            <li><label class="label_name" style="margin-right: 10px; width: 100px;">详情：</label>
+                                 <span class="cont_style" style="display: inline-block;">
+
+                                    &nbsp;&nbsp;<textarea name="content" id="" cols="30" rows="10" style="border: 1px solid #E3E3E3;">{$info.content}</textarea>
+                                 </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                    <button style="margin-top:10px;width: 20%; margin-left: 5%;" type="submit" class="btn btn-success" id="tijiao">提交</button>
+                </form>
+            </div>
+        </div>
+        <include file="Public/skin" />
+    </div>
+</div>
+
+<include file="Public/footer" />
+</body>
+</html>
+<script>
+        $("#tijiao").click(function(){
+            if(!$("select[name='type']").val()){
+                alert("请选择类别");
+                return false;
+            }
+            if(!$("#price").val()){
+                alert("请输入价格");
+                return false;
+            }
+            if(!$("textarea[name='content']").val()){
+                alert("请输入内容");
+                return false;
+            }
+            $("#form01").submit();
+        })
+</script>

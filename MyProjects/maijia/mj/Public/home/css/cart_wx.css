@@ -1,0 +1,152 @@
+/*header*/
+.header{
+    padding: 5px 10px;
+    background: #fab700;
+}
+.header img{
+    height: 20px;
+    margin: 10px 0;
+}
+.header p{
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    margin: 5px;
+    color: #FFFFFF;
+}
+.header span{
+    display: block;
+    line-height: 30px;
+    height: 30px;
+    margin: 5px;
+    color: #FFFFFF;
+}
+/*content*/
+.content{
+    margin-top: 50px;
+}
+.content-info{
+    margin-top: 10px;
+    background: #FFF;
+    border-top: 1px #dcdcdc solid;
+}
+.content-title{
+    padding: 10px;
+    border-bottom: 1px #dcdcdc solid;
+}
+
+.content-title p{
+    height: 30px;
+    line-height: 30px;
+}
+.content-title .img1{
+    height: 16px;
+    float: left;
+    margin-top: 7px;
+    margin-right: 10px;
+}
+.content-title span{
+    color: #ff4f4f;
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+}
+.content-content{
+    padding: 10px;
+    border-bottom: 1px #dcdcdc solid;
+}
+.content-content .img1{
+    height: 16px;
+    float: left;
+    margin-top: 42px;
+    margin-right: 5px;
+}
+.content-content .img2{
+    height: 100px;
+}
+.content-content .p1{
+    height: 30px;
+    line-height: 30px;
+    margin-top: 15px;
+    font-size: 16px;
+    padding: 0 10px;
+    text-align: center;
+}
+.content-content .p2{
+    height: 25px;
+    line-height: 25px;
+    margin-top: 15px;
+    color: #F08429;
+    padding: 0 10px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.num{
+    background: #ececec;
+    height: 30px;
+    width: 100%;
+    margin-top: 70px;
+    border-radius: 10px;
+}
+.num .img3{
+    height: 20px;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+.num .input1{
+    width: 20px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #F08429;
+    border: 0;
+    background: none;
+    outline: none;
+}
+.num .img4{
+    height: 20px;
+    margin-top: 5px;
+    margin-right: 3px;
+}
+/*footer*/
+.footer-top{
+    background: #f6f6f6;
+    border-top: 1px #dcdcdc solid;
+    height: 50px;
+    bottom: 50px;
+    position: absolute;
+    width: 100%;
+}
+.footer-top .img1{
+    height: 14px;
+    margin-top: 18px;
+    margin-right: 10px;
+}
+.footer-top .p1{
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+}
+.footer-top .p2{
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+    color: #666;
+}
+.footer-top .p3{
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+    color: #f7ab00;
+}
+.footer-top-right{
+    background: #f7ab00;
+    height: 49px;
+}
+.footer-top-right .p4{
+    color: #FFF;
+    height: 49px;
+    line-height: 49px;
+}

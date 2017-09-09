@@ -1,0 +1,101 @@
+<include file="Public/top" />
+<body>
+<include file="Public/navbar" />
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+
+        <include file="Public/column" />
+
+        <div class="main-content">
+            <script type="text/javascript">
+                try {
+                    ace.settings.check('breadcrumbs', 'fixed')
+                } catch (e) {
+                }
+            </script>
+            <div class="breadcrumbs" id="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home home-icon"></i>
+                        <a href="{:U('Admin/index')}">超级用户管理</a>
+                    </li>
+                    <li class="active"><span class="Current_page iframeurl">管理员添加</span></li>
+                    <li class="active" id="parentIframe"><span class="parentIframe iframeurl"></span></li>
+                    <li class="active" id="parentIfour"><span class="parentIfour iframeurl"></span></li>
+                </ul>
+            </div>
+            <div class=" clearfix" id="advertising">
+                <form name="frm" action="{:U('Admin/add')}" method="post"  onsubmit="return check()">
+                    <div id="add_ads_style" >
+                        <div class="add_adverts">
+                            <ul>
+                                <li>
+                                    <label class="label_name">账号名称</label><span class="cont_style"><input name="name" type="text" placeholder="账号名称" class="col-xs-10 col-sm-5" style="width:450px"></span>
+                                </li>
+                                <li>
+                                    <label class="label_name">账号密码</label><span class="cont_style"><input name="password" type="password" placeholder="账号密码" class="col-xs-10 col-sm-5" style="width:450px"></span>
+                                </li>
+                                <li>
+                                    <label class="label_name">确认密码</label><span class="cont_style"><input name="password2" type="password" placeholder="确认密码" class="col-xs-10 col-sm-5" style="width:450px"></span>
+                                </li>
+
+                                <li><label class="label_name">状&nbsp;&nbsp;态：</label>
+                               <span class="cont_style">
+                                 &nbsp;&nbsp;<label><input name="status" value="1" type="radio" checked="checked" class="ace"><span
+                                       class="lbl">显示</span></label>&nbsp;&nbsp;&nbsp;
+                                 <label><input name="status" value="0" type="radio" class="ace"><span class="lbl">隐藏</span></label></span>
+                                    <div class="prompt r_f"></div>
+                                </li>
+                                <li>
+                                <div class="prompt" style="top:150px; left: 0;"><button style="margin-top:10px;width: 20%;" type="submit" class="btn btn-success">提交</button></div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+        <include file="Public/skin" />
+    </div>
+</div>
+
+<include file="Public/footer" />
+</body>
+</html>
+<script>
+
+    function check(){
+        if(document.frm.name.value==""){
+            alert("账号不能为空");
+            return false;
+        }
+        if(!(/^[a-zA-Z]{4,10}$/.test(document.frm.name.value))){
+            alert("管理员账号只能为4-10位英文");
+            return false;
+        }
+        if(document.frm.password.value==""){
+            alert("密码不能为空");
+            return false;
+        }
+        if(document.frm.password2.value==""){
+            alert("确认密码不能为空");
+            return false;
+        }
+        if(document.frm.password2.value!=document.frm.password.value){
+            alert("两次密码不一致");
+            return false;
+        }
+    }
+
+
+</script>

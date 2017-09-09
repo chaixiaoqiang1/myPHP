@@ -1,0 +1,67 @@
+/*header*/
+.header{
+    padding: 5px 10px;
+    background: #fab700;
+}
+.header img{
+    height: 20px;
+    margin: 10px 0;
+}
+.header p{
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    margin: 5px;
+    color: #FFFFFF;
+}
+.header span{
+    line-height: 30px;
+    height: 30px;
+    margin: 5px 0;
+    color: #FFFFFF;
+    display: block;
+}
+/*content*/
+.content{
+    margin-top: 50px;
+}
+.content-title p{
+    height: 30px;
+    line-height: 30px;
+    margin: 10px;
+}
+.content-content{
+    padding: 10px;
+    background: #FFF;
+    border-bottom: 1px #dcdcdc solid;
+}
+.content-content .p1{
+    margin-right: 5px;
+    height: 30px;
+    line-height: 30px;
+}
+.content-content input{
+    height: 30px;
+    line-height: 30px;
+    border: 0;
+    outline: none;
+}
+.content-content .img1{
+    height: 14px;
+    margin: 8px 0;
+    margin-right: 5px;
+}
+.content-content p{
+    height: 30px;
+    line-height: 30px;
+}
+.content-content .img2{
+    height: 18px;
+    margin: 6px 0;
+ }
+.content-content .p2{
+    margin-right: 5px;
+    height: 30px;
+    line-height: 30px;
+    color: #c3c3c3;
+}

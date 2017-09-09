@@ -1,0 +1,104 @@
+/*header*/
+.header{
+    padding: 5px 10px;
+    background: #fab700;
+}
+.header img{
+    height: 20px;
+    margin: 10px 0;
+}
+.header p{
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    margin: 5px;
+    color: #FFFFFF;
+}
+.header span{
+    display: block;
+    line-height: 30px;
+    height: 30px;
+    margin: 5px;
+    color: #FFFFFF;
+}
+/*banner*/
+.banner{
+    margin-top: 60px;
+}
+.banner-info{
+    padding: 10px;
+    background: #FFF;
+}
+.banner-info .p1{
+    height: 30px;
+    line-height: 30px;
+}
+.banner-info .img1{
+    height: 30px;
+    border-radius: 30px;
+    margin-right: 5px;
+}
+.banner-info .img2{
+    height: 20px;
+    margin: 5px 0;
+    -moz-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+/*content*/
+.content{
+    margin-top: 10px;
+}
+.content-left{
+    width: 25%;
+    float: left;
+}
+.content-middle{
+    width: 70%;
+    float: left;
+    overflow: hidden;
+}
+.content-right{
+    width: 5%;
+    float: right;
+}
+.content-middle input{
+    height: 30px;
+    text-align: right;
+    background: none;
+    border: 0;
+    outline: none;
+}
+.content-info{
+    padding: 10px;
+    background: #FFF;
+    border-bottom: 1px #dcdcdc solid;
+}
+.content-info .p1,.content-info .p2{
+    height: 30px;
+    line-height: 30px;
+    margin-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.content-info .p2{
+    color: #232323;
+    width: 95%;
+    text-align: right;
+}
+.content-info .img2{
+    height: 20px;
+    margin: 5px 0;
+    -moz-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+.content span{
+    color: red;
+    font-size: 13px;
+    margin-top: 10px;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+}

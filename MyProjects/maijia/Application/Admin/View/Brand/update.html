@@ -1,0 +1,108 @@
+<include file="Public/top" />
+<body>
+<include file="Public/navbar" />
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+
+        <include file="Public/column" />
+
+        <div class="main-content">
+            <script type="text/javascript">
+                try {
+                    ace.settings.check('breadcrumbs', 'fixed')
+                } catch (e) {
+                }
+            </script>
+            <div class="breadcrumbs" id="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home home-icon"></i>
+                        <a href="{:U('Brand/index')}">品牌管理</a>
+                    </li>
+                    <li class="active"><span class="Current_page iframeurl">品牌修改</span></li>
+                    <li class="active" id="parentIframe"><span class="parentIframe iframeurl"></span></li>
+                    <li class="active" id="parentIfour"><span class="parentIfour iframeurl"></span></li>
+                </ul>
+            </div>
+            <div class=" clearfix" id="advertising">
+                <form name="frm" action="__APP__/Admin/brand/editor/id/{$brand.id}" method="post" enctype="multipart/form-data" onsubmit="return check()">
+                    <div id="add_ads_style" >
+                        <div class="add_adverts">
+                            <ul>
+                                <li>
+                                    <label class="label_name">品牌名称</label><span class="cont_style"><input name="name" type="text" placeholder="品牌名称" value="{$brand.name}" class="col-xs-10 col-sm-5" style="width:450px"></span>
+                                </li>
+                                <li>
+                                    <label class="label_name">排序</label><span class="cont_style"><input name="order" type="text" placeholder="{$brand.order}" value="{$brand.order}" class="col-xs-10 col-sm-5" style="width:450px"></span>
+                                </li>
+                                <li><label class="label_name">图片尺寸</label><span class="cont_style">
+                              <input name="height" value="{$height}" type="text" placeholder="0" class="col-xs-10 col-sm-5" style="width:80px">
+                              <span class="l_f" style="margin-left:10px;">x</span><input name="width" value="{$width}" type="text" id="form-field-1" placeholder="0"
+                                                                                         class="col-xs-10 col-sm-5" style="width:80px"></span>
+                                </li>
+                                <li><label class="label_name">状&nbsp;&nbsp;态：</label>
+                                 <if condition="$brand.status == 1">
+                                 <span class="cont_style">
+                                 &nbsp;&nbsp;<label><input name="status" value="1" type="radio" checked="checked" class="ace"><span
+                                       class="lbl">显示</span></label>&nbsp;&nbsp;&nbsp;
+                                 <label><input name="status" value="0" type="radio" class="ace"><span class="lbl">隐藏</span></label></span>
+                                  <else/>
+                                  <span class="cont_style">
+                                 &nbsp;&nbsp;<label><input name="status" value="1" type="radio" class="ace"><span
+                                          class="lbl">显示</span></label>&nbsp;&nbsp;&nbsp;
+                                 <label><input name="status" value="0" type="radio" checked="checked" class="ace"><span class="lbl">隐藏</span></label></span>
+                                  </if>
+                                    <div class="prompt r_f"></div>
+                                </li>
+                                <li><label class="label_name">图片</label><span class="cont_style">
+                                <div class="prompt" style="top:150px; left: 0;"><p>图片大小小于5MB,支持.jpg;.gif;.png;.jpeg格式的图片</p><button style="margin-top:10px;width: 20%;" type="submit" class="btn btn-success">提交</button></div>
+                                 <div class="demo">
+                                     <div class="logobox" style="width: 140px;">
+                                         <div class="resizebox"><img src="__PUBLIC__/new/images/image.png" width="100px" alt="" height="100px" onclick="document.getElementById('upload').click()"/></div>
+                                         <input type="file" name="goods_img" id="upload" class="upfile uplo" style="display: none;" />
+                                         <input type="hidden" value="{$brand.img}" name="img"/>
+                                     </div>
+                                 </div>
+                               </span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+        <include file="Public/skin" />
+    </div>
+</div>
+
+<include file="Public/footer" />
+</body>
+</html>
+<script>
+    function check(){
+        if(document.frm.name.value==""){
+            alert("品牌名称不能为空");
+            return false;
+        }else if(document.frm.order.value==""){
+            alert("排序不能为空");
+            return false;
+        }else if(document.frm.width.value==""){
+            alert("图片尺寸不能为空");
+            return false;
+        }else if(document.frm.height.value==""){
+            alert("图片尺寸不能为空");
+            return false;
+        }
+
+    }
+</script>

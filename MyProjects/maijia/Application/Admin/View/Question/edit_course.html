@@ -1,0 +1,144 @@
+<include file="Public/top" />
+<script type="text/javascript" src="__PUBLIC__/new/Widget/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="__PUBLIC__/new/Widget/icheck/jquery.icheck.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/new/Widget/zTree/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/new/Widget/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/new/Widget/webuploader/0.1.5/webuploader.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/new/Widget/ueditor/1.4.3/ueditor.config.js"></script>
+<script type="text/javascript" src="__PUBLIC__/new/Widget/ueditor/1.4.3/ueditor.all.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/new/Widget/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+<script src="__PUBLIC__/new/assets/dist/echarts.js"></script>
+<script src="__PUBLIC__/new/assets/js/ace.min.js"></script>
+<body>
+<include file="Public/navbar" />
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+
+        <include file="Public/column" />
+
+        <div class="main-content">
+            <script type="text/javascript">
+                try {
+                    ace.settings.check('breadcrumbs', 'fixed')
+                } catch (e) {
+                }
+            </script>
+            <div class="breadcrumbs" id="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home home-icon"></i>
+                        <a href="{:U('Question/index')}">课程管理</a>
+                    </li>
+                    <li class="active"><span class="Current_page iframeurl">课程修改</span></li>
+                    <li class="active" id="parentIframe"><span class="parentIframe iframeurl"></span></li>
+                    <li class="active" id="parentIfour"><span class="parentIfour iframeurl"></span></li>
+                </ul>
+            </div>
+            <form action="__SELF__" method="post">
+                <input type="hidden" name="id" value="{$Think.get.id}" />
+                <div class=" clearfix" id="advertising">
+                    <div id="add_ads_style">
+                        <div class="add_adverts">
+                            <ul>
+                                <li>
+                                    <label class="label_name">所属类别</label>
+                                  <span class="cont_style">
+                                      <select class="form-control" id="form-field-select-1-bak" name="question_id">
+                                          <option value="0">请选择课程</option>
+                                          <volist name="info" id="vo">
+                                              <if condition="$vo['id'] eq $list['question_id']['id']">
+                                                <option value="{$vo.id}" selected>{$vo.type}/{$vo.title}</option>
+                                                  <else />
+                                                  <option value="{$vo.id}">{$vo.type}/{$vo.title}</option>
+                                              </if>
+                                          </volist>
+                                      </select>
+                                  </span>
+                                </li>
+                                <li>
+                                    <label class="label_name">标题</label><span class="cont_style"><input name="title" type="text" id="" value="{$list['title']}" placeholder="请输入标题" class="col-xs-10 col-sm-5"  style="width:450px"></span>
+                                </li>
+                                <li>
+                                    <label class="label_name" style="margin-right: 10px;">内容</label>
+                                    <textarea id="editor_id" name="content" class="cont_style" rows="40">{$list.content}</textarea>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="form-group">
+                <div class="col-lg-offset-2 col-lg-4">
+                    <button class="btn btn-sm btn-success" style="width: 50%; margin-bottom: 20px; margin-top: 0;"  type="submit" id="tijiao01">提交</button>
+                </div>
+            </div>
+            </form>
+        </div>
+        <include file="Public/skin" />
+    </div>
+</div>
+
+<include file="Public/footer" />
+</body>
+<link rel="stylesheet" href="__PUBLIC__/kind/themes/default/default.css" />
+<link rel="stylesheet" href="__PUBLIC__/kind/plugins/code/prettify.css" />
+<script charset="utf-8" src="__PUBLIC__/kind/kindeditor.js"></script>
+<script charset="utf-8" src="__PUBLIC__/kind/lang/zh_CN.js"></script>
+<script charset="utf-8" src="__PUBLIC__/kind/plugins/code/prettify.js"></script>
+<script>
+    KindEditor.ready(function(K) {
+
+        var editor1 = K.create('textarea[name="content"]', {
+            cssPath : '__PUBLIC__/kind/plugins/code/prettify.css',
+            uploadJson : '__PUBLIC__/kind/php/upload_json.php',
+            fileManagerJson : '__PUBLIC__/kind/php/file_manager_json.php',
+            allowFileManager : true,
+            afterCreate : function() {
+                var self = this;
+                K.ctrl(document, 13, function() {
+                    self.sync();
+                    K('form[name=example]')[0].submit();
+                });
+                K.ctrl(self.edit.doc, 13, function() {
+                    self.sync();
+                    K('form[name=example]')[0].submit();
+                });
+            }
+        }
+        );
+        prettyPrint();
+    });
+</script>
+
+<script>
+    $("#tijiao01").click(function(){
+
+        if($("#form-field-select-1-bak").val() == 0){
+            alert("请选择课程");
+            return false;
+        }
+        if(!$("input[name='title']").val()){
+            alert("请输入标题")
+            return false;
+        }
+        /*if(!$("#editor_id").val()){
+            alert("请输入内容")
+            return false;
+        }*/
+
+        $("form:first").submit();
+    })
+</script>
+
+
+</html>
+

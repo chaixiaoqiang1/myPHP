@@ -1,0 +1,100 @@
+<include file="Public/top" />
+<body>
+<include file="Public/navbar" />
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+
+        <include file="Public/column" />
+
+        <div class="main-content">
+            <script type="text/javascript">
+                try {
+                    ace.settings.check('breadcrumbs', 'fixed')
+                } catch (e) {
+                }
+            </script>
+            <div class="breadcrumbs" id="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home home-icon"></i>
+                        <a href="{:U('Brand/demio')}">车系列表</a>
+                    </li>
+                    <li class="active"><span class="Current_page iframeurl">
+                        <if condition="$res['pid']==0">车系修改<else/>车型修改</if></span></li>
+                    <li class="active" id="parentIframe"><span class="parentIframe iframeurl"></span></li>
+                    <li class="active" id="parentIfour"><span class="parentIfour iframeurl"></span></li>
+                </ul>
+            </div>
+            <form action="__APP__/Admin/Brand/demio_update/id/{$res.id}" method="post" onsubmit="return check()">
+            <div class=" clearfix" id="advertising">
+                <div id="add_ads_style" >
+                    <div class="add_adverts">
+
+                        <ul>
+                            <li>
+                                <label class="label_name">选择分类</label><span class="cont_style">
+                                <if condition="$pid == 0">
+                                    <select class="form-control" name="brands_id" id="fid">
+                                    <foreach name="demio_name" item="v">
+                                    <option selected value="{$v.id}">{$v.name}</option>
+                                    </foreach>
+                                </select>
+                                <else/>
+                                <select class="form-control" name="pid" id="mid">
+                                    <foreach name="demio_name" item="v">
+                                    <option selected value="{$v.id}">{$v.demio_name}</option>
+                                    </foreach>
+                                </select>
+                                </if>
+                            </span>
+                            </li>
+                            <li>
+                                <label class="label_name">名称</label><span class="cont_style"><input name="demio.name" type="text" value="{$res['demio_name']}" class="col-xs-10 col-sm-5" style="width:450px"></span>
+                            </li>
+
+                            <li><label class="label_name">状&nbsp;&nbsp;态：</label>
+                                <if condition="$res.status == 1">
+                               <span class="cont_style">
+                                 &nbsp;&nbsp;<label><input name="status" value="1" type="radio" checked="checked" class="ace"><span
+                                       class="lbl">显示</span></label>&nbsp;&nbsp;&nbsp;
+                                 <label><input name="status" value="0" type="radio" class="ace"><span class="lbl">隐藏</span></label></span>
+                                <else/>
+                                  <span class="cont_style">
+                                 &nbsp;&nbsp;<label><input name="status" value="1" type="radio"  class="ace"><span
+                                          class="lbl">显示</span></label>&nbsp;&nbsp;&nbsp;
+                                 <label><input name="status" value="0" type="radio" checked="checked" class="ace"><span class="lbl">隐藏</span></label></span>
+                                </if>
+                                <div class="prompt r_f"></div>
+                            </li>
+                            <li>
+                                <button style="margin-top:10px;width: 20%; margin-left: 5%;" type="submit" class="btn btn-success">提交</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </form>
+        </div>
+        <include file="Public/skin" />
+    </div>
+</div>
+
+<include file="Public/footer" />
+</body>
+</html>
+<script>
+    if({$pid}==0){
+        $("#fid").val({$res.brands_id});
+    }else{
+        $("#mid").val({$res['pid']});
+    }
+</script>

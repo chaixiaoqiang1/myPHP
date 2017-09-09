@@ -1,0 +1,81 @@
+/*header*/
+.header{
+    padding: 5px 10px;
+    background: #fab700;
+}
+.header img{
+    height: 20px;
+    margin: 10px 0;
+}
+.header p{
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    margin: 5px;
+    color: #FFFFFF;
+}
+.header span{
+    display: block;
+    line-height: 30px;
+    height: 30px;
+    margin: 5px;
+    color: #FFFFFF;
+}
+/*banner*/
+.banner{
+    margin-top: 50px;
+    padding: 30px 0;
+}
+.banner img{
+    width: 30%;
+}
+.banner .p1{
+    height: 30px;
+    line-height: 30px;
+}
+/*content*/
+.content{
+    margin-top: 10px;
+}
+.content-info{
+    background: #FFF;
+    padding: 0 10px;
+}
+.content-left{
+    width: 6%;
+    float: left;
+    padding: 10px 0;
+}
+.content-right{
+    width: 89%;
+    margin-left: 5%;
+    padding: 10px 0;
+    border-bottom: 1px #dcdcdc solid;
+}
+.content-info .img1,.content-info .img2{
+    height: 20px;
+    margin: 5px 0;
+}
+.content-info .p1,.content-info .p2{
+    height: 30px;
+    line-height: 30px;
+    color: #272636;
+}
+.content-info .p2{
+    margin-right: 5px;
+}
+.content-info .img2{
+    -moz-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+.content-info .p2 img{
+    height: 14px;
+}
+/*footer*/
+.footer p{
+    height: 18px;
+    line-height: 18px;
+    font-size: 13px;
+    color: #575757;
+}

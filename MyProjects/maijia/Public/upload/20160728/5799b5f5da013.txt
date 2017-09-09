@@ -1,0 +1,43 @@
+
+完整内容 	id 	username 姓名	sex 性别 1是男 2是女	office 科室	practice 执业编号	rank 医生级别 1是初级 2 中级 3高级	speciality 特长	intro 简介	is_check 是否审核 1是 2否	addtime 添加时间	iphone 联系方式	image 医生图像	is_online 是否在线 1在线 2不	serverprice 服务费用	responsetime 应答时间	servernum 服务人数	evaluatenum 评价人数	zscore 综合评分	tuwenpirce 图文咨询费用	orderprice 预约就诊费用	is_status 状态 1冻结 2未冻结	attentionnum 关注人数	buyservernum 购买服务次数	receiveconsultnum 接收咨询人数	is_attestation 是否认证	education 学历	mailbox 邮箱	major 专业	qualification 资格证编号	identity 身份证号	licenseimg 执照图片	acceptsick_id 接受治疗的患者id多个用逗号隔开	freeconsult 免费咨询状态 1接受免费 2不接受	is_orderstatus 预约就诊状态 1接受预约 2 未接受	twocode 二维码  用户关注的id  sick_id   is_picture
+
+执业证编码：practice
+资格证编码：qualification
+身份证号码：identity
+以上个人信息只用做认证，不给其他人展示
+
+iphone,mailbox
+
++ 选项
+完整内容 	id 		sex 性别 1是男 2是女			is_check 是否审核 1是 2否	addtime 添加时间	iphone 联系方式	image 医生图像		serverprice 服务费用	responsetime 应答时间	servernum 服务人数	evaluatenum 评价人数			is_status 状态 1冻结 2未冻结	attentionnum 关注人数		is_attestation 是否认证	education 学历	mailbox 邮箱	major 专业	qualification 资格证编号	identity 身份证号	licenseimg 执照图片	acceptsick_id 接受治疗的患者id多个用逗号隔开	freeconsult 免费咨询状态 1接受免费 2不接受	is_orderstatus 预约就诊状态 1接受预约 2 未接受	twocode 二维码
+
+
+ 
+zscore 综合评分     username 姓名   	rank 医生级别 1是初级 2 中级 3高级   office 科室   is_online 是否在线 1在线 2不  practice 执业编号	speciality 特长	intro 简介   tuwenpirce 图文咨询费用	orderprice 预约就诊费用   buyservernum 购买服务次数	receiveconsultnum 接收咨询人数
+
+
+
+
+tuwenpirce 图文咨询费用	orderprice 预约就诊费用
+
+
+
+username 姓名
+iphone 联系方式
+mailbox 邮箱
+所在医院 hospital
+office 科室
+职务   job
+毕业学校 school
+major 专业
+education 学历
+
+类型1图文2预约3免费
+
+
+
+	
+
+
+
+

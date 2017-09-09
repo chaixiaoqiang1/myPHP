@@ -1,0 +1,135 @@
+/*header*/
+.header{
+    padding: 5px 10px;
+    background: #FFF;
+    border-bottom: 1px #dcdcdc solid;
+}
+.header img{
+    height: 30px;
+    margin: 5px 0;
+}
+.header p{
+    font-size: 20px;
+    line-height: 30px;
+    height: 30px;
+    margin: 5px;
+}
+/*banner*/
+.banner{
+    margin-top: 50px;
+    padding: 45px 0;
+    background: #fab000;
+}
+.banner p{
+    height: 30px;
+    line-height: 30px;
+    font-size: 22px;
+    color: #FFF;
+}
+.banner img{
+    height: 24px;
+    margin-left: 5px;
+}
+/*content*/
+.time{
+    padding: 10px;
+    background: #FFF;
+}
+.time .p1{
+    color: #777;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+}
+.address{
+    background: #FFF;
+    padding: 10px;
+}
+.address-left{
+    width: 10%;
+}
+.address-right{
+    width: 90%;
+}
+.address img{
+    height: 24px;
+    margin-left: -5px;
+}
+.address p{
+    color: #777;
+}
+.content{
+    margin-top: 10px;
+    background: #FFF;
+}
+.content-title{
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.content-title p{
+    height: 30px;
+    line-height: 30px;
+}
+.content-title img{
+    height: 20px;
+    margin: 5px 0;
+    margin-right: 7px;
+}
+.content-content{
+    padding: 10px;
+    background: #F1F1F1;
+    margin-top: 8px;
+}
+.content-content img{
+    height: 100px;
+    margin-right: 10px;
+}
+.content-content .p1{
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.content-content .p2,.content-content s{
+    height: 30px;
+    line-height: 30px;
+    color: #787878;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.content-content .p3{
+    height: 30px;
+    line-height: 30px;
+}
+.num{
+    background: #FFF;
+    padding: 0 10px;
+}
+.num p{
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+}
+.num span{
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    color: red;
+}
+/*footer*/
+.footer{
+    background: #FFF;
+    padding: 6.5px;
+    border-top: 1px #dcdcdc solid;
+}
+.footer p{
+    background: red;
+    color: #FFF;
+    width: 70px;
+    height: 36px;
+    line-height: 36px;
+}

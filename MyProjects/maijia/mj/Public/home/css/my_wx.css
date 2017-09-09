@@ -1,0 +1,87 @@
+/*header*/
+.header{
+    padding: 10px;
+    background: #fab700;
+}
+.header-top{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.header-top .tx{
+    height: 70px;
+    width: 70px;
+    border-radius: 70px;
+    border: 3px #FFF solid;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.header-top .p1{
+    line-height: 30px;
+    height: 30px;
+    color: #FFF;
+}
+.header-top .p2 img{
+    height: 14px;
+    margin-right: 4px;
+    margin-top: -2px;
+}
+.header-top .p2,.header-top .p3{
+    color: #FFF;
+    height: 24px;
+    line-height: 24px;
+}
+.header-bottom{
+    margin-top: 10px;
+}
+.header-bottom .p4 img{
+    height: 25px;
+}
+.header-bottom .p5{
+    height: 20px;
+    line-height: 20px;
+    margin-top: 5px;
+    color: #FFF;
+}
+/*content*/
+.content{
+    margin-top: 10px;
+}
+.content-info{
+    background: #FFF;
+    padding: 0 10px;
+}
+.content-left{
+    width: 6%;
+    float: left;
+    padding: 10px 0;
+}
+.content-right{
+    width: 89%;
+    margin-left: 5%;
+    padding: 10px 0;
+    border-bottom: 1px #dcdcdc solid;
+}
+.content-info .img1,.content-info .img2{
+    height: 20px;
+    margin: 5px 0;
+}
+.content-info .p1,.content-info .p2{
+    height: 30px;
+    line-height: 30px;
+    color: #272636;
+}
+.content-info .p2{
+    margin-right: 5px;
+    width: 85%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.content-info .img2{
+    -moz-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+.content-info .p2 img{
+    height: 14px;
+}

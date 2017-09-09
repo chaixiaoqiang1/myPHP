@@ -1,0 +1,217 @@
+/*header*/
+.header{
+    padding: 10px;
+    background: #f7ab00;
+}
+.header input{
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px #FFF solid;
+    background: none;
+    outline: none;
+    color: #FFF;
+    padding: 0 5px;
+}
+.header img{
+    height: 24px;
+    margin: 3px 0;
+}
+/*placeholder*/
+input::-webkit-input-placeholder {
+    color: #FFF !important; /* WebKit browsers */
+    text-align: center;
+}
+input:-moz-placeholder {
+    color: #FFF !important; /* Mozilla Firefox 4 to 18 */
+    text-align: center;
+}
+input::-moz-placeholder {
+    color: #FFF !important; /* Mozilla Firefox 19+ */
+    text-align: center;
+}
+input:-ms-input-placeholder {
+    color: #FFF !important; /* Internet Explorer 10+ */
+    text-align: center;
+}
+/*nav*/
+.nav{
+    margin-top: 50px;
+    padding: 5px 0;
+    background: #FFF;
+}
+.nav .p1{
+    margin-top: 1px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    width: 40%;
+    text-align: right;
+}
+.nav .p2{
+    margin-top: 8px;
+    font-size: 13px;
+    width: 6%;
+}
+.nav .p3{
+    margin-top: 2px;
+    height: 30px;
+    line-height: 30px;
+    width: 54%;
+    font-size: 12px;
+    text-align: left;
+}
+/*content*/
+.content{
+    margin-top: 10px;
+    background: #FFF;
+    padding: 10px;
+}
+.content-info .img1{
+    height: 50px;
+    margin-right: 10px;
+}
+.content-info .p1{
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0;
+    color: red;
+}
+.content-info .img2{
+    height: 24px;
+    margin: 13px 0;
+    margin-right: 13px;
+}
+.content-info .p2{
+    line-height: 30px;
+    margin-bottom: 5px;
+    color: #585757;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.content-info .p3{
+    line-height: 20px;
+    font-size: 13px;
+    color: #565555;
+}
+.content-info .img3{
+    height: 14px;
+    margin-top: 8px;
+    margin-right: 5px;
+}
+.content-info .p4,.content-info .p5{
+    font-size: 12px;
+    line-height: 20px;
+    height: 20px;
+    margin-top: 5px;
+    color: #7f7f7f;
+}
+.content-info .p4{
+    margin-right: 10px;
+}
+.content-info .img4{
+    margin-left: 10px;
+}
+.content-info1{
+    margin-top: 10px;
+}
+.content-info1 .img-row,.bottom-info .img-row{
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.content-info1 .img-row .img5{
+    width: 100%;
+}
+.content-bottom{
+    padding: 10px;
+}
+.bottom-info{
+    padding-bottom: 10px;
+}
+.bottom-info .img1{
+    height: 20px;
+    margin-top: -22px;
+    margin-right: 58px;
+}
+.bottom-info .input{
+    height: 30px;
+    line-height: 30px;
+    color: #999;
+    padding: 0 5px;
+    width: 100%;
+    border: 1px #dcdcdc solid;
+    outline: none;
+}
+.bottom-info .img2{
+    width: 100%;
+    margin-top: 5px;
+}
+.bottom-info .p1{
+    background: #ff9760;
+    color: #FFF;
+    font-size: 13px;
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.bottom-info .img3{
+    height: 14px;
+    margin-right: 8px;
+    margin-top: 22px;
+}
+.bottom-info .info-left{
+    width: 15%;
+    padding-left: 5px;
+    margin-top: 20px;
+}
+.bottom-info .info-left .img4{
+    width: 100%;
+}
+.bottom-info .info-middle{
+    width: 82%;
+    margin-left: 3%;
+}
+.bottom-info .info-middle .p2{
+    color: #95be65;
+    line-height: 24px;
+    margin-top: 15px;
+    font-size: 13px;
+}
+.bottom-info .info-middle .p2 span{
+    font-size: 13px;
+    padding-left: 5px;
+    color: #666;
+}
+.bottom-info .info-middle .p3{
+    font-size: 12px;
+    color: #808080;
+    line-height: 20px;
+    margin-top: 5px;
+}
+.bottom-info .info-middle .p3 span{
+    font-size: 12px;
+    color: #808080;
+    line-height: 20px;
+}
+.info-img .img5{
+    width: 100%;
+}
+.bottom-info1 .p4{
+    height: 20px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+.bottom-info1 .p4 img{
+    height: 15px;
+    -moz-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+.down1{
+    display: none;
+}

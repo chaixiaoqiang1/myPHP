@@ -1,0 +1,285 @@
+<include file="Public/top" />
+<style>
+    .open_demio{
+        display: block;
+        width: 16px;
+        height: 16px;
+        line-height: 14px;
+        text-align: center;
+        border: 1px solid #676A6C;
+        font-weight: bold;
+        cursor: pointer;
+    }
+</style>
+<body>
+<include file="Public/navbar" />
+
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+
+        <include file="Public/column" />
+
+        <div class="main-content">
+            <script type="text/javascript">
+                try {
+                    ace.settings.check('breadcrumbs', 'fixed')
+                } catch (e) {
+                }
+            </script>
+            <div class="breadcrumbs" id="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home home-icon"></i>
+                        <a href="{:U('Banner/index')}">品牌管理</a>
+                    </li>
+                    <li class="active"><span class="Current_page iframeurl">车系列表</span></li>
+                    <li class="active" id="parentIframe"><span class="parentIframe iframeurl"></span></li>
+                    <li class="active" id="parentIfour"><span class="parentIfour iframeurl"></span></li>
+                </ul>
+            </div>
+
+            <div class=" clearfix" id="advertising">
+
+                <div class="Ads_list"  style="width: 1730px">
+                    <div class="search_style" style="height: 80px">
+                        <div class="title_names">搜索查询</div>
+                        <form name="frm" action="__APP__/Admin/Brand/demio" method="post">
+                            <ul class="search_content clearfix">
+                                <li><label class="l_f">品牌</label>
+                                    <select class="" name="brands_id" style="margin-left: 10px;">
+                                        <option selected value="">选择品牌</option>
+                                        <foreach name="brands" item="v">
+                                            <option  value="{$v.id}">{$v.name}</option>
+                                        </foreach>
+                                    </select>
+                                </li>
+                                <li><label class="l_f">车系关键字</label><input name="demio_name" type="text" class="text_add" placeholder="输入车系关键字"
+                                                                        style=" width:250px"/></li>
+                                <li style="width:90px;">
+                                    <button type="submit" class="btn_search"><i class="icon-search"></i>查询</button>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                    <div class="border clearfix">
+                            <span class="l_f">
+                            <a href="{:U('Brand/add_demio')}" title="添加车系" class="btn btn-warning Order_form"><i class="icon-plus"></i>添加车系</a>
+                           </span>
+                        <span class="r_f">共：<b>{$count}</b>条记录</span>
+                    </div>
+                    <table class="table table-hover table-mail">
+                        <colgroup>
+                            <col width="20%"/>
+                            <col width="20%"/>
+                            <col width="20%"/>
+                            <col width="20%"/>
+                        </colgroup>
+                        <thead>
+                        <tr pid="0">
+                            <th style="text-align: center;">折叠</th>
+                            <th style="text-align: center;">分类名称</th>
+                            <th style="text-align: center;">状态</th>
+                            <th style="text-align: center;">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <volist name="category" id="v">
+                            <tr id="{$v.id}" pid="{$v.pid}">
+                                <td align="center">
+                                    <if condition="$v['child']">
+                                        <span class="open_demio">+</span>
+                                    </if>
+                                </td>
+                                <td align="center">
+                                    <input type="hidden" style="width: 50px;text-align: center;" value="">
+                                    {$v.demio_name}
+                                </td>
+                                <td align="center">
+                                    <if condition="$v['status'] eq 1">
+                                        <span class="label label-warning">正常</span>
+                                        <else/>
+                                        <span class="label label-primary">冻结</span>
+                                    </if>
+                                </td>
+                                <td align="center">
+                                    <a href="{:U('Brand/addChild',array('id'=>$v['id']))}" class="label label-primary">添加车型</a>
+                                    <a href="{:U('Brand/demio_update',array('id'=>$v['id']))}" class="label label-info">修改</a>
+                                    <a href="javascript:member_del(this,{$v.id})" class="label label-danger">删除</a>
+                                </td>
+                            </tr>
+                            <volist name="v['child']" id="vo">
+                                <tr id="{$vo.id}" pid="{$vo.pid}">
+                                    <td align="center">
+                                        <if condition="$vo['child']">
+                                            <span class="open_demio">+</span>
+                                        </if>
+                                    </td>
+                                    <td >
+                                        <input type="hidden" style="width: 50px;text-align: center;" value="">
+                                        |&#45;&#45;&#45;&#45;{$vo.demio_name}
+                                    </td>
+                                    <td align="center">
+                                        <if condition="$vo['status'] eq 1">
+                                            <span class="label label-warning">正常</span>
+                                            <else/>
+                                            <span class="label label-primary">冻结</span>
+                                        </if>
+                                    </td>
+                                    <td align="center">
+                                        <a href="{:U('Brand/demio_update',array('id'=>$vo['id']))}" style="margin-left: 68px;" class="label label-info">修改</a>
+                                        <a href="javascript:member_del(this,{$vo.id})" class="label label-danger">删除</a>
+                                    </td>
+                                </tr>
+                            </volist>
+                        </volist>
+                        </tbody>
+
+                    </table>
+                    <div id="page" class="text-center">
+                    {$show}
+                </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <include file="Public/skin" />
+    </div>
+</div>
+<!--底部样式-->
+
+<include file="Public/footer" />
+
+</body>
+</html>
+
+
+<script>
+    $('tr[pid!=0]').hide();
+    $('.open_demio').click(function(){
+        var index=$(this).parents('tr').attr('id');
+        var sign=$(this).html();
+        if(sign=='+'){
+            $(this).html('-');
+            $('tr[pid='+index+']').show();
+        }else{
+            $(this).html('+');
+            $('tr[pid='+index+']').hide();
+        }
+    });
+    $("#all_che").on("click" , function(){
+        var che= $(this).attr('checked');
+        if(che == undefined){
+            $(this).attr('checked','checked');
+            $('input[name="id"]').each(function(index,i){
+                $(this).attr('checked','checked')
+            })
+
+        }else{
+            $(this).attr('checked',false);
+            $('input[name="id"]').each(function(index,i){
+                $(this).attr('checked',false)
+            })
+        }
+    });
+    $('#all_delete').click(function(){
+        var str='';
+        $('input[name="id"]').each(function(){
+            if($(this).is(":checked")){
+                str+=$(this).val()+',';
+            }
+        })
+        if(str ==''){
+            alert('请选择要删除的选项');
+            return false;
+        }else{
+            location.href='__CONTROLLER__/delete_all/id/'+str+'';
+        }
+    })
+
+    /*广告图片-停用*/
+    function member_stop(obj, id) {
+        layer.confirm('确认要关闭吗？', {icon: 0,}, function (index) {
+            $.ajax({
+                type:"post",
+                url:"__APP__/Admin/Brand/stop",
+                data:"id="+id,
+                dataType:"html",
+                success:function (re){
+                    if(re==1){
+                        $(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" class="btn btn-xs " onClick="member_start(this,'+id+')" href="javascript:;" title="显示"><i class="fa fa-close bigger-120"></i></a>');
+                        $(obj).parents("tr").find(".td-status").html('<span class="label label-defaunt radius">已关闭</span>');
+                        $(obj).remove();
+                        layer.msg('关闭!', {icon: 5, time: 1000});
+                    }
+                }
+            });
+
+        });
+    }
+    /*广告图片-启用*/
+    function member_start(obj, id) {
+        layer.confirm('确认要显示吗？', {icon: 0,}, function (index) {
+            $.ajax({
+                type:"post",
+                url:"__APP__/Admin/Brand/stop",
+                data:"id="+id,
+                dataType:"html",
+                success:function(re){
+                    if(re==1){
+                        $(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" class="btn btn-xs btn-success" onClick="member_stop(this,'+id+')" href="javascript:;" title="关闭"><i class="fa fa-check  bigger-120"></i></a>');
+                        $(obj).parents("tr").find(".td-status").html('<span class="label label-success radius">显示</span>');
+                        $(obj).remove();
+                        layer.msg('显示!', {icon: 6, time: 1000});
+                    }
+                }
+            });
+        });
+    }
+    /*广告图片-删除*/
+    function member_del(obj, id) {
+        layer.confirm('确认要删除吗？', {icon: 0,}, function (index) {
+            window.location="__APP__/Admin/Brand/demio_delete/id/"+id;
+        });
+    }
+    function update(id){
+        window.location="__APP__/Admin/Brand/update/id/"+id;
+    }
+    laydate({
+        elem: '#start',
+        event: 'focus'
+    });
+    function orderChange(id){
+        var order=$("#order"+id).val();
+        $.ajax({
+            type:"post",
+            url:"__APP__/Admin/Brand/reorder",
+            data:"id="+id+"&order="+order,
+            dataType:"html",
+            success:function (re){
+                if(re=="ok"){
+                    $("#order"+id).val(re);
+                }
+            }
+        });
+    }
+    function check(){
+        if(document.frm.brands_id.value==""){
+            alert("请选择要搜索的品牌");
+            return false;
+        }
+    }
+</script>
+
+
+

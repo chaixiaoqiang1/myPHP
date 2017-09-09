@@ -1,0 +1,111 @@
+<include file="Public/top" />
+<body>
+<include file="Public/navbar" />
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+
+        <include file="Public/column" />
+
+        <div class="main-content">
+            <script type="text/javascript">
+                try {
+                    ace.settings.check('breadcrumbs', 'fixed')
+                } catch (e) {
+                }
+            </script>
+            <div class="breadcrumbs" id="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home home-icon"></i>
+                        <a href="{:U('Question/index')}">培训管理</a>
+                    </li>
+                    <li class="active"><span class="Current_page iframeurl">培训分类添加</span></li>
+                    <li class="active" id="parentIframe"><span class="parentIframe iframeurl"></span></li>
+                    <li class="active" id="parentIfour"><span class="parentIfour iframeurl"></span></li>
+                </ul>
+            </div>
+            <form action="__SELF__" method="post" enctype="multipart/form-data">
+            <div class="clearfix" id="advertising">
+                <div id="add_ads_style" >
+                    <div class="add_adverts">
+                        <ul>
+                            <li>
+                                <label class="label_name">培训类别：</label>
+                                  <span class="cont_style">
+                                      <select class="form-control" id="form-field-select-1" name="type">
+                                          <option value="">请选择类别</option>
+                                          <option value="1">觅车答疑/助驾服务规范</option>
+                                          <option value="2">觅驾车主测评制作约定</option>
+                                      </select>
+                                  </span>
+                            </li>
+                            <li>
+                                <label class="label_name">标题：</label><span class="cont_style"><input name="title" type="text" id="title" placeholder="请输入标题" class="col-xs-10 col-sm-5" style="width:450px" ></span>
+                            </li>
+                            <li><label class="label_name">状&nbsp;&nbsp;态：</label>
+                               <span class="cont_style">
+                                 &nbsp;&nbsp;<label><input name="status" type="radio" checked="checked" class="ace" value="1"><span
+                                       class="lbl">显示：</span></label>&nbsp;&nbsp;&nbsp;
+                                 <label><input name="status" type="radio" class="ace" value="2"><span class="lbl" >隐藏</span></label></span>
+                                <div class="prompt r_f"></div>
+                            </li>
+                            <li><label class="label_name">文件：</label><span class="cont_style">
+                                <div class="prompt" style="top:150px; left: 0;"><p></p></div>
+                                 <div class="demo">
+                                     <!--<div class="logobox" style="width: 140px;">
+                                         <div class="resizebox"><img src="__PUBLIC__/new/images/image.png" width="100px" alt="" height="100px" onclick="document.getElementById('upload').click()"/></div>
+                                         <input type="file" name="img"  id="upload"  class="upfile uplo" style="display: none;" />
+                                     </div>-->
+                                     <input type="file" name="path"  id="upload"  class="upfile uplo"  />
+                                     <br />
+                                     <br />
+                                     <div class="clearfix pull-left">
+                                     <button type="button" class="btn btn-primary btn-lg btn-block" id="tijiao01">提 交</button>
+                                     </div>
+                                 </div>
+                               </span>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+            </form>
+        </div>
+        <include file="Public/skin" />
+    </div>
+</div>
+
+<include file="Public/footer" />
+</body>
+</html>
+
+<script>
+    $("#tijiao01").click(function(){
+        if(!$("#form-field-select-1").val()){
+            alert("请选择类别");
+            return false;
+        }
+        if(!$("#title").val()){
+            alert("请输入标题")
+            return false;
+        }
+
+        if(!$("#upload").val()){
+            alert("请上传文件");
+            return false;
+        }
+
+        $("form:first").submit();
+    })
+</script>

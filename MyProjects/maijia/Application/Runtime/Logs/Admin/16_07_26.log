@@ -1,0 +1,273 @@
+[ 2016-07-26T09:20:27+08:00 ] ::1 /maijia/index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mj_admin_id E:\WWW\maijia\Application\Admin\Controller\CommonController.class.php 第 12 行.
+
+[ 2016-07-26T09:20:27+08:00 ] ::1 /maijia/index.php/Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005001s ]
+
+[ 2016-07-26T09:20:35+08:00 ] ::1 /maijia/index.php/Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `mj_admin` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `mj_admin` WHERE `name` = 'admin' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0370s ]
+
+[ 2016-07-26T09:20:35+08:00 ] ::1 /maijia/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-26T09:20:42+08:00 ] ::1 /maijia/index.php/Admin/Ask/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `mj_ask` [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `mj_user` [ RunTime:0.0650s ]
+NOTIC: [8] Undefined variable: where E:\WWW\maijia\Application\Admin\Controller\AskController.class.php 第 26 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mj_ask` LIMIT 1   [ RunTime:0.0430s ]
+NOTIC: [8] Undefined variable: where E:\WWW\maijia\Application\Admin\Controller\AskController.class.php 第 30 行.
+SQL: SELECT * FROM `mj_ask` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0440s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0460s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0470s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0470s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-26T09:20:47+08:00 ] ::1 /maijia/index.php/Admin/Ask/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `mj_ask` [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `mj_user` [ RunTime:0.0380s ]
+NOTIC: [8] Undefined variable: where E:\WWW\maijia\Application\Admin\Controller\AskController.class.php 第 26 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mj_ask` LIMIT 1   [ RunTime:0.0370s ]
+NOTIC: [8] Undefined variable: where E:\WWW\maijia\Application\Admin\Controller\AskController.class.php 第 30 行.
+SQL: SELECT * FROM `mj_ask` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0370s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-26T09:20:48+08:00 ] ::1 /maijia/index.php/Admin/Ask/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `mj_ask` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `mj_user` [ RunTime:0.0400s ]
+NOTIC: [8] Undefined variable: where E:\WWW\maijia\Application\Admin\Controller\AskController.class.php 第 26 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mj_ask` LIMIT 1   [ RunTime:0.0410s ]
+NOTIC: [8] Undefined variable: where E:\WWW\maijia\Application\Admin\Controller\AskController.class.php 第 30 行.
+SQL: SELECT * FROM `mj_ask` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0390s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0390s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-26T09:20:49+08:00 ] ::1 /maijia/index.php/Admin/Ask/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `mj_ask` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `mj_user` [ RunTime:0.0390s ]
+NOTIC: [8] Undefined variable: where E:\WWW\maijia\Application\Admin\Controller\AskController.class.php 第 26 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mj_ask` LIMIT 1   [ RunTime:0.0468s ]
+NOTIC: [8] Undefined variable: where E:\WWW\maijia\Application\Admin\Controller\AskController.class.php 第 30 行.
+SQL: SELECT * FROM `mj_ask` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0312s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0478s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0382s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0468s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0468s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-26T09:20:49+08:00 ] ::1 /maijia/index.php/Admin/Ask/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `mj_ask` [ RunTime:0.0446s ]
+SQL: SHOW COLUMNS FROM `mj_user` [ RunTime:0.0312s ]
+NOTIC: [8] Undefined variable: where E:\WWW\maijia\Application\Admin\Controller\AskController.class.php 第 26 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mj_ask` LIMIT 1   [ RunTime:0.0468s ]
+NOTIC: [8] Undefined variable: where E:\WWW\maijia\Application\Admin\Controller\AskController.class.php 第 30 行.
+SQL: SELECT * FROM `mj_ask` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0468s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0502s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0472s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0460s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-26T09:20:54+08:00 ] ::1 /maijia/index.php/Admin/Ask/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `mj_ask` [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `mj_user` [ RunTime:0.0460s ]
+NOTIC: [8] Undefined variable: where E:\WWW\maijia\Application\Admin\Controller\AskController.class.php 第 26 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mj_ask` LIMIT 1   [ RunTime:0.0460s ]
+NOTIC: [8] Undefined variable: where E:\WWW\maijia\Application\Admin\Controller\AskController.class.php 第 30 行.
+SQL: SELECT * FROM `mj_ask` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0470s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0460s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0460s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0450s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-26T10:36:11+08:00 ] ::1 /maijia/index.php/Admin/Ask/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `mj_ask` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `mj_user` [ RunTime:0.0410s ]
+NOTIC: [8] Undefined variable: where E:\WWW\maijia\Application\Admin\Controller\AskController.class.php 第 26 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mj_ask` LIMIT 1   [ RunTime:0.0380s ]
+NOTIC: [8] Undefined variable: where E:\WWW\maijia\Application\Admin\Controller\AskController.class.php 第 30 行.
+SQL: SELECT * FROM `mj_ask` ORDER BY id desc LIMIT 0,15   [ RunTime:0.0400s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT `name` FROM `mj_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0420s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

@@ -1,0 +1,93 @@
+/*header*/
+.header{
+    padding: 5px 10px;
+    background: #fab700;
+}
+.header img{
+    height: 20px;
+    margin: 10px 0;
+}
+.header p{
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    margin: 5px;
+    color: #FFFFFF;
+}
+/*content*/
+.content{
+    margin-top: 70px;
+    background: url("../images/fx_bg.png") no-repeat 99% 100px;
+    background-size: 30%;
+}
+.content .p1{
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.content .p1 img{
+    height: 14px;
+    margin-right: 5px;
+    margin-top: -5px;
+}
+.content .p2{
+    height: 24px;
+    line-height: 24px;
+    margin: 2px 0;
+}
+.content .p2 span{
+    color: #fab000;
+}
+.content .p3{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px auto;
+    background: #fab000;
+    border-radius: 10px;
+    color: #FFF;
+}
+.content .p4{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px auto;
+    background: #e1e1e1;
+    border-radius: 10px;
+    color: #616161;
+}
+/*footer*/
+.footer{
+    background: #FFF;
+    padding: 0 10px;
+}
+.footer-title{
+    padding: 10px 0;
+    border-bottom: 1px #dcdcdc solid;
+}
+.footer-title img{
+    height: 16px;
+    margin-right: 5px;
+}
+.footer-row{
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.footer-content img{
+    width: 100%;
+    border: 1px #dcdcdc solid;
+}
+.footer-content .p1{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px;
+    margin-top: 5px;
+}
+.footer-content .p2{
+    font-size: 13px;
+    color: red;
+}

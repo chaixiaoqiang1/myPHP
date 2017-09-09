@@ -1,0 +1,114 @@
+/*header*/
+.header{
+    padding: 5px 10px;
+    background: #fab700;
+}
+.header img{
+    height: 20px;
+    margin: 10px 0;
+}
+.header p{
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    margin: 5px;
+    color: #FFFFFF;
+}
+/*nav*/
+.nav{
+    margin-top: 50px;
+    padding-top: 10px;
+    background: #FFF;
+}
+.nav p{
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 7px;
+    cursor: pointer;
+}
+.nav span{
+    height: 3px;
+    display: block;
+    /*background: #f08429;*/
+    background: #FFF;
+}
+/*content*/
+.content{
+    margin-top: 10px;
+    background: #FFF;
+}
+.content-title{
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.content-title span{
+    height: 30px;
+    line-height: 30px;
+    color: #fab000;
+}
+.content-title img{
+    height: 20px;
+    margin: 5px 0;
+    margin-right: 7px;
+}
+.content-content{
+    padding: 10px;
+    margin-top: 5px;
+}
+.content-content img{
+    height: 100px;
+    margin-right: 10px;
+}
+.content-content .p1{
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.content-content .p2,.content-content s{
+    height: 30px;
+    line-height: 30px;
+    color: #787878;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.content-content .p3{
+    height: 30px;
+    line-height: 30px;
+    color: #787878;
+}
+.content-num{
+    background: #FFF;
+    padding: 5px 10px;
+    border-bottom: 1px #dcdcdc solid;
+}
+.state{
+    padding-bottom: 5px;
+}
+.state .p5{
+    height: 20px;
+    line-height: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.state .p5 .sp1{
+    font-size: 13px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: 1px #dcdcdc solid;
+    margin-left: 5px;
+}
+.state .p5 .sp2{
+    background: #f08429;
+    color: #FFF;
+    font-size: 13px;
+    padding: 6px 8px;
+    margin-left: 5px;
+}
+#content2,#content3,#content4,#content5,#content6{
+    display: none;
+}

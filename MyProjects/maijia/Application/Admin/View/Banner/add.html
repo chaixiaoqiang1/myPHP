@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>网站后台管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="__PUBLIC__/new/assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="__PUBLIC__/new/css/style.css"/>
+    <link href="__PUBLIC__/new/assets/css/codemirror.css" rel="stylesheet">
+    <link rel="stylesheet" href="__PUBLIC__/new/assets/css/ace.min.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/new/font/css/font-awesome.min.css"/>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="__PUBLIC__/new/assets/css/ace-ie.min.css"/>
+    <![endif]-->
+    <link rel="stylesheet" href="__PUBLIC__/new/css/style.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/new/assets/css/ace.min.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/new/assets/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" href="__PUBLIC__/new/assets/css/font-awesome.min.css"/>
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="__PUBLIC__/new/assets/css/font-awesome-ie7.min.css"/>
+    <![endif]-->
+    <link rel="stylesheet" href="__PUBLIC__/new/assets/css/ace.min.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/new/assets/css/ace-rtl.min.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/new/assets/css/ace-skins.min.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/new/css/style.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/new/Widget/zTree/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <link href="__PUBLIC__/new/Widget/icheck/icheck.css" rel="stylesheet" type="text/css"/>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="__PUBLIC__/new/assets/css/ace-ie.min.css"/>
+    <![endif]-->
+
+    <script src="__PUBLIC__/new/js/jquery-1.9.1.min.js"></script>
+
+    <script src="__PUBLIC__/new/assets/js/ace-extra.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="__PUBLIC__/new/assets/js/html5shiv.js"></script>
+    <script src="__PUBLIC__/new/assets/js/respond.min.js"></script>
+    <link href="__PUBLIC__/style/admin.min.css" rel="stylesheet">
+    <![endif]-->
+    <!--[if !IE]> -->
+    <!-- <![endif]-->
+    <!--[if IE]>
+
+    <![endif]-->
+
+    <script src="__PUBLIC__/new/assets/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/new/assets/js/typeahead-bs2.min.js"></script>
+    <!--[if lte IE 8]>
+    <script src="__PUBLIC__/new/assets/js/excanvas.min.js"></script>
+    <![endif]-->
+    <script src="__PUBLIC__/new/assets/js/ace-elements.min.js"></script>
+    <script src="__PUBLIC__/new/assets/js/jquery.dataTables.min.js"></script>
+    <script src="__PUBLIC__/new/assets/js/jquery.dataTables.bootstrap.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/new/js/H-ui.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/new/js/H-ui.admin.js"></script>
+    <script src="__PUBLIC__/new/js/lrtk.js" type="text/javascript"></script>
+    <script type="text/javascript" src="__PUBLIC__/new/Widget/zTree/js/jquery.ztree.all-3.5.min.js"></script>
+    <script src="__PUBLIC__/new/assets/js/ace.min.js"></script>
+    <script src="__PUBLIC__/new/assets/layer/layer.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/new/assets/laydate/laydate.js" type="text/javascript"></script>
+    <script type="text/javascript" src="__PUBLIC__/new/Widget/swfupload/swfupload.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/new/Widget/swfupload/swfupload.queue.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/new/Widget/swfupload/swfupload.speed.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/new/Widget/swfupload/handlers.js"></script>
+
+    <title>广告管理</title>
+    <script src="__PUBLIC__/new/js/common.js"></script>
+    <script>
+        function check(){
+            if(document.frm.type.value==""){
+                alert("请选择分类");
+                return false;
+            }
+            if(document.frm.width.value==""){
+                alert("图片尺寸不能为空");
+                return false;
+            }
+            if(document.frm.height.value==""){
+                alert("图片尺寸不能为空");
+                return false;
+            }
+            if(document.frm.photo.value==""){
+                alert("请上传图片");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<include file="Public/navbar" />
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+
+        <include file="Public/column" />
+
+        <div class="main-content">
+            <script type="text/javascript">
+                try {
+                    ace.settings.check('breadcrumbs', 'fixed')
+                } catch (e) {
+                }
+            </script>
+            <div class="breadcrumbs" id="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home home-icon"></i>
+                        <a href="{:U('Banner/index')}">图片管理</a>
+                    </li>
+                    <li class="active"><span class="Current_page iframeurl">图片添加</span></li>
+                    <li class="active" id="parentIframe"><span class="parentIframe iframeurl"></span></li>
+                    <li class="active" id="parentIfour"><span class="parentIfour iframeurl"></span></li>
+                </ul>
+            </div>
+            <form name="frm" action="{:U('Banner/add')}" method="post" enctype="multipart/form-data" onsubmit="return check()">
+            <div class=" clearfix" id="advertising">
+                <div id="add_ads_style" >
+                    <div class="add_adverts">
+                        <ul>
+                            <li>
+                                <label class="label_name">所属分类</label>
+                                  <span class="cont_style">
+                                      <select class="form-control" id="form-field-select-1" name="type">
+                                          <option value="">选择分类</option>
+                                          <option value="1">头部</option>
+                                          <option value="2">尾部</option>
+                                          <option value="3">选车课</option>
+                                          <option value="4">培训</option>
+                                          <option value="5">问车馆</option>
+                                          <option value="6">答疑</option>
+                                      </select>
+                                  </span>
+                            </li>
+                            <li><label class="label_name">图片尺寸</label><span class="cont_style">
+                              <input name="height" type="text" placeholder="0" class="col-xs-10 col-sm-5" style="width:80px">
+                              <span class="l_f" style="margin-left:10px;">x</span><input name="width" type="text" id="form-field-1" placeholder="0"
+                                                                                         class="col-xs-10 col-sm-5" style="width:80px"></span>
+                            </li>
+                            <li>
+                                <label class="label_name">链接地址</label><span class="cont_style"><input name="url" type="text" id="form-field-1" placeholder="地址" class="col-xs-10 col-sm-5" style="width:450px"></span>
+                            </li>
+                            <li><label class="label_name">状&nbsp;&nbsp;态：</label>
+                               <span class="cont_style">
+                                 &nbsp;&nbsp;<label><input name="status" value="1" type="radio" checked="checked" class="ace"><span
+                                       class="lbl">显示</span></label>&nbsp;&nbsp;&nbsp;
+                                 <label><input name="status" value="0" type="radio" class="ace"><span class="lbl">隐藏</span></label></span>
+                                <div class="prompt r_f"></div>
+                            </li>
+                            <li><label class="label_name">图片</label><span class="cont_style">
+                                <div class="prompt" style="top:150px; left: 0;"><p>图片大小小于5MB,支持.jpg;.gif;.png;.jpeg格式的图片</p><input type="submit" class="btn btn-success" style="width:80px; margin-top: 20px;" value="添加"/></div>
+                                 <div class="demo">
+                                     <div class="logobox" style="width: 140px;">
+                                         <div class="resizebox"><img src="__PUBLIC__/new/images/image.png" width="100px" alt="" height="100px" onclick="document.getElementById('upload').click()"/></div>
+                                         <input type="file" name="photo" id="upload"  class="upfile uplo" style="display: none;" />
+                                     </div>
+
+                                 </div>
+                               </span>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            </form>
+        </div>
+        <include file="Public/skin" />
+    </div>
+</div>
+
+<include file="Public/footer" />
+</body>
+</html>
+

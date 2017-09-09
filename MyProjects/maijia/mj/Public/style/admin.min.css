@@ -1,0 +1,54 @@
+a:link{text-decoration:none;}
+a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+a:active{text-decoration:none;}
+*{font-family:PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans;}
+.login_status{background-color: #3E3E3E; height: 10px; width: 100%; margin: 0; padding: 0;color: #ffffff;}
+.login_head{background-color: #3E3E3E; height: 85px; width: 100%; margin: 0; padding: 0;}
+.all_head_coum{ color: #ffffff; font-size: 20px; font-weight: bold; margin-bottom: 0px; margin-top: 15px; padding-top: 5px; }
+.login_bg{ background-color: #F7F7F7; }
+.navSelec{background-color: #D54E21; border-radius: 5px; height: 40px; margin-bottom: 0px;}
+.body_left_bg{ background-color: #444444; width: 160px;}
+.munu_1{ height: 60px; line-height: 60px; }
+.munu_1 a{color: #ffffff;}
+.shop_right{background-color: #5E6177; height: 40px; width:100%;  margin-top: 10px;}
+.shop_right_color{color: #ffffff; line-height: 40px; font-size: 14px;}
+.shop_search{ width:100%; border-radius: 5px;  margin-top: 10px;}
+.shop_search_input{ border-radius: 5px; height: 30px; width: 80%; margin-top: 5px; }
+.shop_list{margin-top: 20px;}
+.fileInput{width:102px;height:80px; background:url(../images/upload.png) no-repeat;overflow:hidden;position:relative; background-size: 100px 80px;}
+.upfile{position:absolute;top:-22px; height: 100px;}
+.upFileBtn{width:102px;height:84px;opacity:0;filter:alpha(opacity=0);cursor:pointer;}
+.shop_info{ margin-top: 20px;}
+.open{
+    display: block;
+    width: 16px;
+    height: 16px;
+    line-height: 14px;
+    text-align: center;
+    border: 1px solid #676A6C;
+    font-weight: bold;
+    cursor: pointer;
+}
+.add_cate{ margin-top: 50px;}
+.product_title{ padding-top: 20px; padding-bottom: 20px; font-size: 20px; border-bottom: 1px  solid #E7E7EB;}
+.product_lists{border-top: 1px solid #E7E7EB;border-left:1px solid #E7E7EB;border-right: 1px solid #E7E7EB; margin-top: 20px;}
+.user_search div{ height: 30px;border: 1px solid #E7E7EB; width: 300px; margin-top: 20px;  }
+.user_search div input{ width: 88%; border: 0;}
+.user_search div span{border-left: 1px solid #eeeeee; padding-top: 5px;padding-bottom: 5px; }
+.product_menu_list{ padding-top: 15px; border-bottom: 1px solid #E7E7EB; }
+.product_info{ font-size: 12px;}
+.order_title{ padding-top: 20px; padding-bottom: 20px; font-size: 20px;}
+.order_head{ border-bottom: 1px  solid #E7E7EB;}
+.order_menu{border-bottom: 1px solid #eeeeee; }
+.order_menu a{ color: #747474; font-size: 14px;}
+.order_select{padding-bottom:10px; border-bottom: 5px solid #9d9d9d; color: #000000;}
+.order_num{border: 1px solid #dddddd; }
+.order_action_list{ padding-top: 10px;}
+.select_date{background-color: #dddddd; height: 40px; padding-top: 10px; border-left: 1px solid #dddddd; color: #666666; border-top: 1px solid #dddddd; border-right: 1px solid #dddddd;}
+.product_title{ padding-top: 20px; padding-bottom: 20px; font-size: 20px; border-bottom: 1px  solid #E7E7EB;}
+.action_title{ background-color: #F4F5F9; padding-top: 10px;}
+.action_list{border-bottom: 1px solid #E7E7EB; padding-top: 10px;}
+.index_right{background-color: #F8524A; height: 140px; border-left: 2px solid #ffffff; color: #ffffff;}
+.index_right>.num{ font-size: 50px; margin-top: 15px;}
+.act_cen{ margin-top: 20px; border-top: 1px solid #E7E7EB;border-left:1px solid #E7E7EB;border-right: 1px solid #E7E7EB;}

@@ -1,0 +1,106 @@
+/*header*/
+.header{
+    padding: 5px 10px;
+    background: #fab700;
+}
+.header img{
+    height: 20px;
+    margin: 10px 0;
+}
+.header p{
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    margin: 5px;
+    color: #FFFFFF;
+}
+.header span{
+    display: block;
+    line-height: 30px;
+    height: 30px;
+    margin: 5px;
+    color: #FFFFFF;
+}
+/*content*/
+.content{
+    margin-top: 50px;
+    padding: 0 10px;
+}
+.content-title{
+    padding: 10px 0;
+}
+.content-title img{
+    height: 15px;
+    margin: 8px 0;
+    margin-right: 3px;
+}
+.content-title p{
+    height: 30px;
+    line-height: 30px;
+    color: #919191;
+}
+.content-content{
+    height: 120px;
+    margin-bottom: 15px;
+}
+.content-left{
+    width: 60%;
+    float: left;
+}
+.content-right{
+    width: 40%;
+    float: left;
+    padding-top: 40px;
+}
+.border-right{
+    border-right: 1px #FFF solid;
+}
+.content-top{
+    height: 80px;
+    border-bottom: 1px #FFF dashed;
+}
+.content-content .p1{
+    color: #FFF;
+    font-size: 18px;
+    line-height: 80px;
+    height: 80px;
+    padding-left: 15px;
+}
+.content-content .p1 span{
+    /*font-size: 48px;*/
+}
+.content-content .p2{
+    height: 20px;
+    line-height: 20px;
+    font-size: 13px;
+    color: #FFF;
+    margin-top: 20px;
+    padding-left: 5px;
+}
+.content-content .p3{
+    height: 24px;
+    line-height: 24px;
+    font-size: 16px;
+    color: #FFF;
+    font-weight: 600;
+    padding-left: 5px;
+}
+.content-content .sp1{
+    border: 1px #FFF solid;
+    border-radius: 4px;
+    font-size: 13px;
+    margin-top: 30px;
+    padding: 2px;
+    color: #FFF;
+}
+.content-content .sp1 img{
+    height: 23px;
+    margin-top: -3px;
+}
+.content-bottom p{
+    color: #FFF;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+}
+

@@ -1,0 +1,381 @@
+<include file="Public/top" />
+<script type="text/javascript">window.jQuery || document.write("<script src='__PUBLIC__/new/assets/js/jquery-1.10.2.min.js'>"+"<"+"script>");</script>
+<![endif]-->
+<script type="text/javascript">
+    if("ontouchend" in document) document.write("<script src='__PUBLIC__/new/assets/js/jquery.mobile.custom.min.js'>"+"<"+"script>");
+</script>
+<body>
+<include file="Public/navbar" />
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+        <include file="Public/column" />
+
+        <div class="main-content">
+            <script type="text/javascript">
+                try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+            </script>
+            <div class="breadcrumbs" id="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home home-icon"></i>
+                        <a href="{:U('Drive/index')}">试驾管理</a>
+                    </li>
+                    <li class="active"><span class="Current_page iframeurl">试驾列表</span></li>
+                    <li class="active" id="parentIframe"><span class="parentIframe iframeurl"></span></li>
+                    <li class="active" id="parentIfour"><span class="parentIfour iframeurl"></span></li>
+                </ul>
+            </div>
+            <div class=" page-content clearfix" style="width: 1700px">
+                <div id="products_style">
+                    <form action="{:U('Drive/index')}" method="post">
+                    <div class="search_style" style="height: 80px">
+                        <div class="title_names">搜索查询</div>
+                        <ul class="search_content clearfix">
+                            <div id="cart_type">
+                                <li id="demio_brand"><label class="l_f" style="margin-right: 10px;">选择类型</label>
+                                    <select name="type">
+                                        <option value="">选择类型</option>
+                                        <option value="1">试乘</option>
+                                        <option value="2">试驾</option>
+                                    </select>
+                                </li>
+                             </div>
+                            <li><label class="l_f">乘客名称</label><input name="user" type="text" class="text_add"
+                                                                          style=" margin-left:10px;"></li>
+                            <li><label class="l_f">司机名称</label><input name="motorman" type="text" class="text_add"
+                                                                    style=" margin-left:10px;"></li>
+                            <li><label class="l_f">试（驾/乘）时间</label><input name="add_time" class="inline laydate-icon" id="start"
+                                                                      style=" margin-left:10px;"></li>
+                            <li style="width:90px;">
+                                <button type="submit" class="btn_search"><i class="icon-search"></i>查询</button>
+                            </li>
+                        </ul>
+                    </div>
+                    </form>
+                    <div class="border clearfix">
+                            <span class="l_f">
+                            <a href="javascript:ovid()" id="all_delete" class="btn btn-danger"><i class="fa fa-trash"></i> 批量删除</a>
+                            <span class="r_f">共：<b>{$count}</b>条记录</span>
+                    </div>
+                    <!--产品列表展示-->
+                    <div class="h_products_list clearfix" id="products_list">
+                        <div class="table_menu_list" id="wd">
+                            <table class="table table-striped table-bordered table-hover" id="" >
+                                <thead>
+                                    <tr>
+                                        <th width="5%"><label><input id="all_che" type="checkbox" class="ace"><span class="lbl"></span></label>
+                                        </th>
+                                        <th width="12%">乘车客户</th>
+                                        <th width="12%">司机名称</th>
+                                        <th width="15%">地点</th>
+                                        <th width="10%">时间</th>
+                                        <th width="5%">类型</th>
+                                        <th width="15%">订单状态</th>
+                                        <th width="5%">审核状态</th>
+                                        <th width="20%">操作</th>
+                                    </tr>
+                                </thead>
+                                <foreach name="orderInfo" item="v">
+                                <tbody>
+                                    <tr>
+                                        <td width="5%"><label><input type="checkbox" name="id" value="{$v.id}" class="ace"><span class="lbl"></span></label>
+                                        </td>
+                                        <td width="12%">{$v.user}</td>
+                                        <td width="12%">{$v.motorman}</td>
+                                        <td width="15%">{$v.area}</td>
+                                        <td width="10%"> {$v.time}</td>
+                                        <if condition="$v.type eq 1">
+                                            <td width="5%">试乘</td>
+                                        <else/>
+                                            <td width="5%">试驾</td>
+                                        </if>
+                                        <switch name="v.status">
+                                            <case value="1"><td width="5%">待接单</td></case>
+                                            <case value="2"><td width="5%">待接单</td></case>
+                                            <case value="3"><td width="5%">已接单待开始服务</td></case>
+                                            <case value="4"><td width="5%">待支付</td></case>
+                                            <case value="5"><td width="5%">完成</td></case>
+                                        </switch>
+                                        <if condition="$v.state eq 1">
+                                        <td class="td-status"><span class="label label-success radius">显示</span></td>
+                                        <td class="td-manage">
+                                            <a onClick="member_stop(this,'{$v.id}')" href="javascript:;" title="停用"
+                                               class="btn btn-xs btn-success"><i class="fa fa-check  bigger-120"></i></a>
+                                            <else/>
+                                            <td class="td-status">
+                                            <span class="label label-defaunt radius">已关闭</span></td>
+                                            <td class="td-manage">
+                                                <a style="text-decoration:none" class="btn btn-xs " onClick="member_start(this,'{$v.id}')" href="javascript:;" title="显示"><i class="fa fa-close bigger-120"></i></a>
+                                            </if>
+                                            <a title="查看详情"  href="{:U('Drive/see',array('id'=>$v['id']))}"
+                                               class="btn btn-xs btn-info"><i class="icon-eye-open bigger-120"></i></a>
+                                            <a title="删除" href="javascript:;" onclick="member_del(this,'{$v.state}')"
+                                               class="btn btn-xs btn-warning"><i class="fa fa-trash  bigger-120"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                </foreach>
+                            </table>
+                            <div id="page" class="text-center">
+                                {$show}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- /.page-content -->
+        </div><!-- /.main-content -->
+
+        <include file="Public/skin" />
+    </div><!-- /.main-container-inner -->
+
+</div>
+<!--底部样式-->
+
+<div class="footer_style" id="footerstyle">
+    <p class="l_f">版权所有： 西安大麦网络科技有限公司  陕ICP备15003277号 </p>
+    <p class="r_f">地址：西安市碑林区火炬路东新世纪广场裙楼3层D区  邮编：710000 公司名称： 西安大麦网络科技有限公司</p>
+</div>
+<!--修改密码样式-->
+<div class="change_Pass_style" id="change_Pass">
+    <ul class="xg_style">
+        <li><label class="label_name">原&nbsp;&nbsp;密&nbsp;码</label><input name="原密码" type="password" class="" id="password"></li>
+        <li><label class="label_name">新&nbsp;&nbsp;密&nbsp;码</label><input name="新密码" type="password" class="" id="Nes_pas"></li>
+        <li><label class="label_name">确认密码</label><input name="再次确认密码" type="password" class="" id="c_mew_pas"></li>
+
+    </ul>
+    <!--       <div class="center"> <button class="btn btn-primary" type="button" id="submit">确认修改</button></div>-->
+</div>
+<!-- /.main-container -->
+<!-- basic scripts -->
+
+</body>
+</html>
+<script>
+   /* jQuery(function ($) {
+        var oTable1 = $('#sample-table').dataTable({
+            "aaSorting": [[1, "desc"]],//默认第几个排序
+            "bStateSave": true,//状态保存
+            "aoColumnDefs": [
+                //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+                {"orderable": false, "aTargets": [0, 2, 3, 4, 5, 8, 9]}// 制定列不参与排序
+            ]
+        });
+
+
+        $('table th input:checkbox').on('click', function () {
+            var that = this;
+            $(this).closest('table').find('tr > td:first-child input:checkbox')
+                    .each(function () {
+                        this.checked = that.checked;
+                        $(this).closest('tr').toggleClass('selected');
+                    });
+
+        });
+
+
+        $('[data-rel="tooltip"]').tooltip({placement: tooltip_placement});
+        function tooltip_placement(context, source) {
+            var $source = $(source);
+            var $parent = $source.closest('table')
+            var off1 = $parent.offset();
+            var w1 = $parent.width();
+
+            var off2 = $source.offset();
+            var w2 = $source.width();
+
+            if (parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2)) return 'right';
+            return 'left';
+        }
+    });*/
+   $("#all_che").click(function(){
+       var che= $(this).attr('checked');
+       if(che == undefined){
+           $(this).attr('checked','checked');
+           $("[name=id]:checkbox").prop("checked", true);
+       }else{
+           $(this).attr('checked',false);
+           $("[name=id]:checkbox").prop("checked", false);
+       }
+   })
+
+   $('#all_delete').click(function(){
+       var str='';
+       $('input[name="id"]').each(function(){
+           if($(this).is(":checked")){
+               str+=$(this).val()+',';
+           }
+       })
+       if(str ==''){
+           alert('请选择要删除的选项');
+           return false;
+       }else{
+           location.href='__CONTROLLER__/delete_all/id/'+str+'';
+       }
+   });
+
+   laydate({
+        elem: '#start',
+        event: 'focus'
+    });
+    $(function () {
+        $("#products_style").fix({
+            float: 'left',
+            //minStatue : true,
+            skin: 'green',
+            durationTime: false,
+            spacingw: 30,//设置隐藏时的距离
+            spacingh: 260,//设置显示时间距
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    //初始化宽度、高度
+    $(".widget-box").height($(window).height() - 215);
+    $(".table_menu_list").width($(window).width() - 250);
+    $(".table_menu_list").height($(window).height() - 215);
+    //当文档窗口发生改变时 触发
+    $(window).resize(function () {
+        $(".widget-box").height($(window).height() - 215);
+        $(".table_menu_list").width($(window).width() - 260);
+        $(".table_menu_list").height($(window).height() - 215);
+    })
+
+    /*******树状图*******/
+    var setting = {
+        view: {
+            dblClickExpand: false,
+            showLine: false,
+            selectedMulti: false
+        },
+        data: {
+            simpleData: {
+                enable: true,
+                idKey: "id",
+                pIdKey: "pId",
+                rootPId: ""
+            }
+        },
+        callback: {
+            beforeClick: function (treeId, treeNode) {
+                var zTree = $.fn.zTree.getZTreeObj("tree");
+                if (treeNode.isParent) {
+                    zTree.expandNode(treeNode);
+                    return false;
+                } else {
+                    demoIframe.attr("src", treeNode.file + ".html");
+                    return true;
+                }
+            }
+        }
+    };
+
+
+    var code;
+
+    function showCode(str) {
+        if (!code) code = $("#code");
+        code.empty();
+        code.append("<li>" + str + "</li>");
+    }
+
+    $(document).ready(function () {
+        var t = $("#treeDemo");
+        t = $.fn.zTree.init(t, setting, zNodes);
+        demoIframe = $("#testIframe");
+        demoIframe.bind("load", loadReady);
+        var zTree = $.fn.zTree.getZTreeObj("tree");
+        zTree.selectNode(zTree.getNodeByParam("id", '11'));
+    });
+    function member_stop(obj, id) {
+        layer.confirm('确认要关闭吗？', {icon: 0,}, function (index) {
+            $.ajax({
+                type:"post",
+                url:"{:U('Drive/state')}",
+                data:{"id":id},
+                dataType:"html",
+                success:function (re) {
+                    if(re==1){
+                        $(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" class="btn btn-xs " onClick="member_start(this,'+id+')" href="javascript:;" title="显示"><i class="fa fa-close bigger-120"></i></a>');
+                        $(obj).parents("tr").find(".td-status").html('<span class="label label-defaunt radius">已关闭</span>');
+                        $(obj).remove();
+                        layer.msg('关闭!', {icon: 5, time: 1000});
+                    }
+                }
+            });
+
+        });
+    }
+    /*广告图片-启用*/
+    function member_start(obj, id) {
+        layer.confirm('确认要显示吗？', {icon: 0,}, function (index) {
+            $.ajax({
+                type:"post",
+                url:"{:U('Drive/state')}",
+                data:{"id":id},
+                dataType:"html",
+                success:function (re) {
+                    if(re==1){
+                        $(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" class="btn btn-xs btn-success" onClick="member_stop(this,'+id+')" href="javascript:;" title="关闭"><i class="fa fa-check  bigger-120"></i></a>');
+                        $(obj).parents("tr").find(".td-status").html('<span class="label label-success radius">显示</span>');
+                        $(obj).remove();
+                        layer.msg('显示!', {icon: 6, time: 1000});
+                    }
+                }
+            });
+        });
+    }
+    /*产品-编辑*/
+    function member_edit(title, url, id, w, h) {
+        layer_show(title, url, w, h);
+    }
+
+    /*产品-删除*/
+    function member_del(obj, id) {
+        layer.confirm('确认要删除吗？', {icon: 0,}, function (index) {
+            $.ajax({
+                type:"post",
+                url:"{:U('Drive/delete')}",
+                data:"id="+id,
+                dataType:"html",
+                success:function (re) {
+                    if(re=='OK'){
+                        $(obj).parents("tr").remove();
+                        layer.msg('已删除!', {icon: 1, time: 1000});
+                    }
+                }
+            });
+        });
+    }
+    //面包屑返回值
+    var index = parent.layer.getFrameIndex(window.name);
+    parent.layer.iframeAuto(index);
+    $('.Order_form').on('click', function () {
+        var cname = $(this).attr("title");
+        var chref = $(this).attr("href");
+        var cnames = parent.$('.Current_page').html();
+        var herf = parent.$("#iframe").attr("src");
+        parent.$('#parentIframe').html(cname);
+        parent.$('#iframe').attr("src", chref).ready();
+        ;
+        parent.$('#parentIframe').css("display", "inline-block");
+        parent.$('.Current_page').attr({"name": herf, "href": "javascript:void(0)"}).css({
+            "color": "#4c8fbd",
+            "cursor": "pointer"
+        });
+        //parent.$('.Current_page').html("<a href='javascript:void(0)' name="+herf+" class='iframeurl'>" + cnames + "</a>");
+        parent.layer.close(index);
+
+    });
+</script>
+

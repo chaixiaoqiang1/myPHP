@@ -1,0 +1,125 @@
+/*style*/
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td{
+    margin:0;
+    padding:0
+}
+body{
+    padding:0;
+    margin:0;
+    font-family: tahoma,arial,\5b8b\4f53,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: rgb(96,96,96);
+    background-color: #FFF;
+}
+*{
+    /*color: #853067;*/
+    color: #000;
+    font-size: 14px
+}
+img{
+    border:none
+}
+a{
+    color: #5c307d
+}
+a:hover,a:link{
+    text-decoration: none
+}
+ol,ul,li{
+    list-style:none
+}
+.left{
+    float: left
+}
+.right{
+    float: right
+}
+.indent{
+    text-indent : 28px
+}
+.yellow-col{
+    color: #f08429;
+}
+/*header*/
+.header{
+    padding: 10px 30px;
+}
+.header p{
+    height: 30px;
+    line-height: 30px;
+    color: #f7ab00;
+    font-size: 15px;
+}
+.header img{
+    height: 8px;
+    margin: 6px 0;
+    margin-left: 5px;
+}
+/*banner*/
+.banner img{
+    width: 100%;
+    height: 220px;
+}
+.swiper-container {
+    height: 220px;
+}
+.swiper-slide {
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+/*content*/
+.content{
+    margin-top: 30px;
+    padding: 0 5%;
+}
+.content-info{
+    border-bottom: 1px #dcdcdc solid;
+}
+.content-info1{
+    margin-top: 30px;
+}
+.content-border1{
+    height: 70px;
+    width: 1px;
+    background: #dcdcdc;
+    margin-top: 30px;
+}
+.content-border2{
+    height: 70px;
+    width: 1px;
+    background: #dcdcdc;
+    margin-top: -70px;
+}
+.content-border3{
+    height: 70px;
+    width: 1px;
+    background: #dcdcdc;
+    margin-top: -30px;
+}
+.content-border4{
+    height: 70px;
+    width: 1px;
+    background: #dcdcdc;
+    margin-top: -130px;
+}
+.content .p1 img{
+    height: 50px;
+}
+.content .p2{
+    margin-top: 10px;
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}

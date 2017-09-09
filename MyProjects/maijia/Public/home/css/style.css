@@ -1,0 +1,106 @@
+/*style*/
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td{
+    margin:0;
+    padding:0
+}
+body{
+    padding:0;
+    margin:0;
+    font-family: tahoma,arial,\5b8b\4f53,sans-serif;
+    font-size: 14px;
+    color: rgb(75,75,75);
+    background-color: #F3F3F3;
+}
+img{
+    border:none
+}
+a{
+    color: rgb(75,75,75);
+}
+a:hover,a:link{
+    text-decoration: none
+}
+ol,ul,li{
+    list-style:none
+}
+.left{
+    float: left
+}
+.right{
+    float: right
+}
+.yellow-bg{
+    background: #F7AB00;
+}
+.yellow-col{
+    color: #F7AB00;
+}
+.white-bg{
+    background: #FFF;
+}
+.white-col{
+    color: #FFF;
+}
+.red-back{
+    background: #ec1616;
+}
+.red-col{
+    color: #ec1616;
+}
+.indent{
+    text-indent : 26px;
+}
+
+.content-row .p3{
+    width: 100px;
+    height: 100px;
+    background: #C6C6C6;
+}
+.content-row .p3 img{
+    min-height:100px;
+}
+
+
+
+/*footer*/
+.footer{
+    background: #FFF;
+    padding: 4px 0;
+    border-top: 1px #dcdcdc solid;
+}
+.footer-info{
+    width: 20%;
+    float: left;
+}
+.footer-info .p1 img{
+    height: 26px;
+}
+.footer-info .p2{
+    font-size: 13px;
+    height: 20px;
+    line-height: 20px;
+}
+.footer-info .p3 img{
+    height: 50px;
+    margin-top: -16px;
+}
+.footer-info .p4{
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: -8px;
+}
+.footer .sp1{
+    background: red;
+    height: 14px;
+    width: 14px;
+    border-radius: 100%;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFF;
+    margin-top: -48px;
+    float: right;
+    display: none;
+    position: absolute;
+    right: 25%;
+}

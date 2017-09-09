@@ -1,0 +1,57 @@
+/*header*/
+.header{
+    padding: 5px 10px;
+    background: #fab700;
+}
+.header img{
+    height: 20px;
+    margin: 10px 0;
+}
+.header p{
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    margin: 5px;
+    color: #FFFFFF;
+}
+/*content*/
+.content{
+    margin-top: 50px;
+}
+.content-info{
+    margin-top: 10px;
+    background: #FFF;
+    padding: 10px;
+}
+.content-info .address{
+    border-bottom: 1px #dcdcdc solid;
+}
+.content-info .name .p1{
+    height: 30px;
+    line-height: 30px;
+}
+.content-info .address .p2{
+    line-height: 30px;
+}
+.content-info .default{
+    padding-top: 10px;
+}
+.content-info .default .img1,.content-info .default .img2{
+    height: 16px;
+    margin: 7px 0;
+    margin-right: 4px;
+}
+.content-info .default .p1,.content-info .default .p2{
+    height: 30px;
+    line-height: 30px;
+}
+/*footer*/
+.footer{
+    background: #fab000;
+    padding: 10px 0;
+}
+.footer p{
+    height: 30px;
+    line-height: 30px;
+    color: #FFF;
+}

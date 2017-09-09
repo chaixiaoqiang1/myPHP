@@ -1,0 +1,208 @@
+<include file="Public/top" />
+<body>
+<include file="Public/navbar" />
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+        <include file="Public/column" />
+        <div class="main-content">
+            <script type="text/javascript">
+                try {
+                    ace.settings.check('breadcrumbs', 'fixed')
+                } catch (e) {
+                }
+            </script>
+            <div class="breadcrumbs" id="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home home-icon"></i>
+                        <a href="{:U('Cart/index')}">车辆管理</a>
+                    </li>
+                    <li class="active"><span class="Current_page iframeurl">车辆添加</span></li>
+                    <li class="active" id="parentIframe"><span class="parentIframe iframeurl"></span></li>
+                    <li class="active" id="parentIfour"><span class="parentIfour iframeurl"></span></li>
+                </ul>
+            </div>
+            <div class=" clearfix" id="advertising">
+                <form name="frm" action="{:U('Cart/add')}" method="post" enctype="multipart/form-data" onsubmit="return check()">
+                <div id="add_ads_style" >
+                    <div class="add_adverts">
+                        <ul >
+                            <div id="cart_type">
+                                <li id="demio_brand">
+                                    <label class="label_name">品牌选择</label>
+                                  <span class="cont_style">
+                                      <select class="form-control"  name="brands" onchange="query(this.value,1)">
+                                          <option selected value="">请选择品牌</option>
+                                          <foreach name="brands" item="v">
+                                          <option value="{$v.id}">{$v.name}</option>
+                                          </foreach>
+                                      </select>
+                                  </span>
+                                </li>
+                            </div>
+                            <li>
+                                <label class="label_name">价格</label><span class="cont_style"><input name="price" type="text"  placeholder="0.00"  onkeyup="value=value.replace(/[^\0-9\.]/g,'')" class="col-xs-10 col-sm-5" style="width:450px" onkeyup='this.value=this.value.replace(/\D/gi,"")'></span>
+                            </li>
+                            <li><label class="label_name">图片尺寸</label><span class="cont_style">
+                              <input name="height" type="text" placeholder="0" class="col-xs-10 col-sm-5" style="width:80px">
+                              <span class="l_f" style="margin-left:10px;">x</span><input name="width" type="text" id="form-field-1" placeholder="0"
+                                                                                         class="col-xs-10 col-sm-5" style="width:80px"></span>
+                            </li>
+                            <li><label class="label_name">状&nbsp;&nbsp;态：</label>
+                               <span class="cont_style">
+                                 &nbsp;&nbsp;<label><input name="status" value="1" type="radio" checked="checked" class="ace"><span
+                                       class="lbl">显示</span></label>&nbsp;&nbsp;&nbsp;
+                                 <label><input name="status" value="0" type="radio" class="ace"><span class="lbl">隐藏</span></label></span>
+                                <div class="prompt r_f"></div>
+                            </li>
+                            <li><label class="label_name">图片</label><span class="cont_style">
+                                <div class="prompt" style="top:150px; left: 0;">
+                                    <p>最多上传6张，图片大小小于5MB,支持.jpg;.gif;.png;.jpeg格式的图片</p>
+                                    <button style="margin-top: 20px; width: 30%;" class="btn btn-success" type="submit" id="tijiao">提交</button>
+                                </div>
+                                 <div class="demo" style="width: 1000px;">
+                                     <div class="col-lg-12 col-sm-12 col-md-12">
+                                         <div class="row">
+                                             <div class="col-lg-2 col-sm-2 col-md-2 text-center" style="border: 1px solid #E3E3E3;">
+                                                <img src="__PUBLIC__/new/images/image.png" width="100px" alt="" height="100px" onclick="document.getElementById('upload').click()"/>
+                                                <input type="file" multiple name="goods_img[]" id="upload"  class="upfile uplo" style="display: none;" />
+                                             </div>
+                                             <div class="col-lg-10 col-sm-10 col-md-10" id="inform_show_img">
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                               </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+               </form>
+            </div>
+        </div>
+        <include file="Public/skin" />
+    </div>
+</div>
+<script src="__PUBLIC__/script/jquery-1.8.0.min.js"></script>
+<include file="Public/footer" />
+<script>
+    $('#upload').on('change',function (event)
+    {
+        console.log(event.target.files);
+        var allLen=event.target.files.length;
+        if(allLen >6){
+            alert('图片不能多于6张');
+            return false;
+        }
+        var html = "";
+        for(var i=0; i<allLen; i++){
+            var tmppath = window.webkitURL.createObjectURL(event.target.files[i]);
+            html+='<img src="'+tmppath+'" alt="" style="width:100px; height:100px; margin-right:20px;">';
+        }
+        $("#inform_show_img").html(html);
+    });
+    function query(id,type){
+        $.ajax({
+            type:"post",
+            data:{"id":id,"type":type},
+            url:"{:U('Cart/query')}",
+            dataType:"json",
+            success:function (e) {
+                if(type==1){
+                    $('#demio_brand').nextAll().remove();
+                }
+                if(e==0){
+                    return false;
+                }else{
+                    var len=e.length;
+                    var html='';
+                    html+='<li>';
+                    if(type == 1){
+                        html+='<label class="label_name">车系选择</label>';
+                        html+='<span class="cont_style">';
+                        html+='<select class="form-control" name="demio_id" id="demio_list">';
+                        html+='<option selected value="">请选择车系</option>';
+                    }else{
+                        html+='<label class="label_name">车型选择</label>';
+                        html+='<span class="cont_style">';
+                        html+='<select class="form-control" id="model_list" name="model_id">';
+                        html+='<option selected value="">请选择车型</option>';
+                    }
+                    for(var i=0; i<len;i++){
+                        html+='<option value='+e[i]['id']+'>'+e[i]["demio_name"]+'</option>';
+                    }
+                        html+='</select>';
+                        html+='</span>';
+                        html+='</li>';
+
+                    $('#cart_type').append(html);
+                }
+            }
+
+        })
+
+    }
+    $('#demio_list').live('change',function(){
+      $(this).parent().parent('li').next('li').remove();
+      query($(this).val(),2)
+    })
+    function check(){
+        if(document.frm.brands.value==""){
+            alert("请选择品牌名称");
+            return false;
+        }
+        var demio_list=document.getElementById("demio_list");
+        if(demio_list == null){
+            alert("请选择车系名称");
+            return false;
+        }
+
+        if(document.frm.demio_id.value==""){
+            alert("请选择车系名称");
+            return false;
+        }
+        var model_list=document.getElementById("model_list");
+        if(model_list==null){
+            alert("请选择车型名称");
+            return false;
+        }
+        if(document.frm.model_id.value==""){
+            alert("请选择车型名称");
+            return false;
+        }
+        if(!$("input[name='price']").val()){
+            alert("价格不能为空");
+            return false;
+        }
+        if(!$("input[name='height']").val()){
+            alert("图片尺寸不能为空");
+            return false;
+        }
+        if(!$("input[name='width']").val()){
+            alert("图片尺寸不能为空");
+            return false;
+        }
+        if($("#upload").val()==""){
+            alert("请上传车辆图片");
+            return false;
+        }
+
+    }
+
+
+
+
+
+</script>
+</body>
+</html>
+

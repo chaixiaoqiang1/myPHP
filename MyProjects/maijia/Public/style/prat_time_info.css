@@ -1,0 +1,119 @@
+/*style*/
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td{
+    margin:0;
+    padding:0
+}
+body{
+    padding:0;
+    margin:0;
+    background: #F1F1F1
+}
+*{
+    color: #000;
+    font-size: 14px
+}
+img{
+    border:none
+}
+a{
+    color: #000
+}
+a:hover,a:link{
+    text-decoration: none
+}
+ol,ul,li{
+    list-style:none
+}
+.left{
+    float: left
+}
+.right{
+    float: right
+}
+.indent{
+    text-indent : 20px
+}
+/*header*/
+.header{
+    padding: 10px;
+    background: #FFF
+}
+.header li{
+    float: left;
+    margin-right: 6px;
+    color: #999
+}
+/*banner*/
+.banner{
+    padding: 10px;
+    margin-top: 10px;
+    background: #FFF
+}
+.banner-info{
+}
+.banner-info img{
+    height: 80px;
+    float: left;
+    margin-right: 10px
+}
+.info-p1{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+.info-p0{
+    float: left;
+    color: #999;
+    margin-right: 5px;
+    font-size: 13px;
+    line-height: 30px;
+    height: 30px;
+    padding-top: 2px
+}
+.info-p2{
+    float: right;
+    color: red;
+    line-height: 30px;
+    height: 30px;
+    font-size: 16px;
+    padding-top: 2px
+}
+.info-p3{
+    color: #999;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    margin-top: 30px
+}
+/*content*/
+.content{
+    margin-top: 10px;
+    background: #FFF
+}
+.content-title{
+    padding: 10px;
+    height: 50px
+}
+.content-title p{
+    line-height: 50px;
+    color: red
+}
+.content-title span{
+    color: #FFF;
+    background: #FFD601;
+    padding: 4px 10px;
+    margin-top: 10px;
+    border-radius: 3px
+}
+.content-p1{
+    line-height: 24px;
+    color: #666;
+    font-size: 13px
+}
+.content-1{
+    padding: 10px;
+    border-bottom: 1px #dcdcdc solid
+}
+.content-p2{
+    font-weight: 600;
+}

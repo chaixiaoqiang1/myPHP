@@ -1,0 +1,134 @@
+<include file="Public/top" />
+<body>
+<include file="Public/navbar" />
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+
+        <include file="Public/column" />
+
+        <div class="main-content">
+            <script type="text/javascript">
+                try {
+                    ace.settings.check('breadcrumbs', 'fixed')
+                } catch (e) {
+                }
+            </script>
+            <div class="breadcrumbs" id="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home home-icon"></i>
+                        <a href="{:U('Question/index')}">课程管理</a>
+                    </li>
+                    <li class="active"><span class="Current_page iframeurl">课程分类添加</span></li>
+                    <li class="active" id="parentIframe"><span class="parentIframe iframeurl"></span></li>
+                    <li class="active" id="parentIfour"><span class="parentIfour iframeurl"></span></li>
+                </ul>
+            </div>
+            <form action="__SELF__" method="post" enctype="multipart/form-data">
+            <div class="clearfix" id="advertising">
+                <div id="add_ads_style" >
+                    <div class="add_adverts">
+                        <ul>
+                            <li>
+                                <label class="label_name">课程类别</label>
+                                  <span class="cont_style">
+                                      <select class="form-control" id="form-field-select-1" name="type">
+                                          <option>请选择课程</option>
+                                          <option value="1">青葱课</option>
+                                          <option value="2">政治课</option>
+                                          <option value="3">物理课</option>
+                                          <option value="4">是非课</option>
+                                          <option value="5">魔法课</option>
+                                      </select>
+                                  </span>
+                            </li>
+                            <li>
+                                <label class="label_name">标题</label><span class="cont_style"><input name="title" type="text" id="title" placeholder="请输入标题" class="col-xs-10 col-sm-5" style="width:450px" ></span>
+                            </li>
+                            <li>
+                                <label class="label_name">价格</label><span class="cont_style"><input name="price" type="text" id="price" placeholder="0.00" class="col-xs-10 col-sm-5" style="width:450px" onkeyup='this.value=this.value.replace(/\D/gi,"")'></span>
+                            </li>
+                            <li><label class="label_name">图片尺寸</label><span class="cont_style">
+                              <input name="width" type="text" placeholder="0" class="col-xs-10 col-sm-5" style="width:80px" onkeyup="value=value.replace(/[^0-9]/g,'')" onpaste="value=value.replace(/[^0-9]/g,'')" oncontextmenu = "value=value.replace(/[^0-9]/g,'')">
+                              <span class="l_f" style="margin-left:10px;">x</span><input name="height" type="text" id="form-field-1" placeholder="0"
+                                                                                         class="col-xs-10 col-sm-5" style="width:80px"  onkeyup="value=value.replace(/[^0-9]/g,'')" onpaste="value=value.replace(/[^0-9]/g,'')" oncontextmenu = "value=value.replace(/[^0-9]/g,'')"></span>
+                            </li>
+                         <!--   <li>
+                                <label class="label_name">链接地址</label><span class="cont_style"><input name="地址" type="text" id="form-field-2" placeholder="地址" class="col-xs-10 col-sm-5" style="width:450px"></span>
+                            </li>-->
+                            <li><label class="label_name">状&nbsp;&nbsp;态：</label>
+                               <span class="cont_style">
+                                 &nbsp;&nbsp;<label><input name="status" type="radio" checked="checked" class="ace" value="1"><span
+                                       class="lbl">显示</span></label>&nbsp;&nbsp;&nbsp;
+                                 <label><input name="status" type="radio" class="ace" value="2"><span class="lbl" >隐藏</span></label></span>
+                                <div class="prompt r_f"></div>
+                            </li>
+                            <li><label class="label_name">图片</label><span class="cont_style">
+                                <div class="prompt" style="top:150px; left: 0;"><p>图片大小小于5MB,支持.jpg;.gif;.png;.jpeg格式的图片</p></div>
+                                 <div class="demo">
+                                     <div class="logobox" style="width: 140px;">
+                                         <div class="resizebox"><img src="__PUBLIC__/new/images/image.png" width="100px" alt="" height="100px" onclick="document.getElementById('upload').click()"/></div>
+                                         <input type="file" name="img" id="upload"  class="upfile uplo" style="display: none;" />
+                                     </div>
+                                     <br />
+                                     <br />
+                                     <div class="clearfix pull-left">
+                                     <button type="button" class="btn btn-primary btn-lg btn-block" id="tijiao01">提 交</button>
+                                     </div>
+                                 </div>
+                               </span>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+            </form>
+        </div>
+        <include file="Public/skin" />
+    </div>
+</div>
+
+<include file="Public/footer" />
+</body>
+</html>
+
+<script>
+    $("#tijiao01").click(function(){
+
+        if($("#form-field-select-1").val() == "请选择课程"){
+            alert("请选择课程");
+            return false;
+        }
+        if(!$("#title").val()){
+            alert("请输入标题")
+            return false;
+        }
+        if(!$("#price").val()){
+            alert("请输入价格")
+            return false;
+        }
+
+        if(!$("input[name='width']").val() || !$("input[name='height']").val()){
+            alert("图片长宽都不能为空")
+            return false;
+        }
+
+        if(!$("#upload").val()){
+            alert("请上传图片");
+            return false;
+        }
+
+        $("form:first").submit();
+    })
+</script>
