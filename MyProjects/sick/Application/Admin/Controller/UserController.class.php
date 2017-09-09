@@ -9,9 +9,7 @@ use Think\Controller;
  */
 class UserController extends CommonController
 {
-    /*
-    *医生用户信息列表
-    */
+    // 医生用户信息列表
     public function doctorlist()
     {
         $where = array();
@@ -78,7 +76,6 @@ class UserController extends CommonController
             $id = $_GET['id'];
             $del = M('ty_doctor')->where(array('id' => $id))->delete();
             if ($del) {
-//            $this->success('删除成功', U("User/doctorlist"));
                 $this->redirect('User/doctorlist', '', 1, "<script>alert('删除成功')</script>");
             }
         }
