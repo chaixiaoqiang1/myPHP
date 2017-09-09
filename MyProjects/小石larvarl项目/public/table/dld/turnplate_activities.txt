@@ -1,0 +1,5 @@
+编号	活动名称	活动label	是否可开
+id	name	label	canopen
+1	挖宝	wabao	1
+2	Xmas	xmas	1
+3	合体	heti	1

@@ -1,0 +1,2 @@
+游戏	uid	使用人	创建时间	创建人
+game_id	uid	user	created_time	creater

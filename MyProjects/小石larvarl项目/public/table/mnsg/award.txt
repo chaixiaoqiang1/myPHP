@@ -1,0 +1,10 @@
+编号	英文名	全服发放限制	中文名	對應圖標	描述
+id	ename	limit	cname	icon	desc
+1	mana	500000	金币	award_jinbi	元寶*%s
+2	crystal	200	钻石	award_zuanshi	钻石*%s
+3	guild_coin	50	社团徽章	award_guild_coin	社团徽章*%s
+4	top_coin	50	斗牛币	award_top_coin	斗牛币*%s
+5	region_coin	50	跨服币	award_region_coin	跨服币*%s
+6	arena_coin	50	顶楼PK币	award_arena_coin	顶楼PK币*%s
+7	march_coin	50	远征币(暂不支持)	award_march_coin	远征币*%s
+9	item	50	其他物品	0	0

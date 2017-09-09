@@ -1,0 +1,132 @@
+body, html {
+  	overflow: auto!important;
+	min-height: 760px;
+}
+/* Fix Angular UI */
+.nav a, .pagination a, .carousel a, .panel-title a { cursor: pointer; }
+
+/* Login page */
+
+.error-box { width:350px; clear:both; margin-top:15px;}
+
+.margin-top-10 { margin-top:10px;}
+
+.alert { margin-left:0 }
+
+.checkbox {
+	margin-left:20px;
+}
+
+.platforms {
+	margin-top: 50px;
+}
+
+.bg-white {
+  background-color: #f6f6f6 !important;
+}
+.dl-horizontal dd {
+	height:22px;
+}
+
+.dl-horizontal dt {
+    height:22px;
+}
+
+.game-menu {
+	width:1000px;
+}
+.skin-blue .navbar .nav .game-menu a {
+	color:#428bca;
+}
+.skin-blue .navbar .nav .game-menu dt {
+	clear:both;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.skin-blue .navbar .nav .game-menu dd {
+	padding:2px 0;
+	float:left;
+	width:240px;
+}
+.auto_hidden {
+    width:204px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    position:absolute;
+    display:none; 
+}
+.auto_show {
+    width:204px;
+    border-top: 1px solid #333;
+    border-bottom: 5px solid #8B8970;
+    border-left: 3px solid #778899;
+    border-right: 1px solid #333;
+    position:absolute;
+    z-index:9999; /* 设置对象的层叠顺序 */
+    display:block;
+}
+.auto_onmouseover{
+    color:#ffffff;
+    background-color:highlight;
+    width:100%;
+}
+.auto_onmouseout{
+    color:#000000;
+    background-color:#EEE9E9;
+    width:100%;
+}
+
+
+@media screen and (max-width: 992px) {
+    .eb-content{
+        width: 85%;
+        float: left;
+        position: relative;
+        min-height: 1px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .eb-right-side-offset{
+        margin-left: 40%;
+    }
+
+    .eb-left-side-width{
+        width: 40%;
+        float: left;
+        position: absolute;
+        min-height: 1px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .eb-content{
+        width: 50%;
+        float: left;
+        position: relative;
+        min-height: 1px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .eb-right-side-offset{
+        margin-left: 220px;
+    }
+
+    .eb-left-side-width{
+        width: 220px;
+        float: left;
+        position: absolute;
+        min-height: 1px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.sidebar-menu .treeview .treeview-menu .active{
+    font-weight: bolder;
+}

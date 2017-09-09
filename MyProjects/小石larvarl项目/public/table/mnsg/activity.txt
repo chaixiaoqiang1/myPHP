@@ -1,0 +1,62 @@
+活动id	活动描述	表类名（有奖励显示的通用模板使用）	獎勵禮包	持續時間	截止時間	倍率	活動描述	图标	资源	标题	是否显示
+id	name	table_class_name	gift	days	cut-off_time	ratio	desc	icon	res	title	is_show
+1001	首儲活動	0	90001001	-1	-1	0	0	images/activities/1001.png	windows/activities/first_recharge.csb	windows/activities/title/1001_title.png	1
+1002	每日儲值活動	ActivityEveryDayChargeTable	0	3	3	0	活動時間內，每日儲值達到指定金額(不包含系統贈送鑽石)，即可免費獲得完整戰姬的獎勵！（第一天2星，第二天3星，第三天2星）	images/activities/1002.png	0	windows/activities/title/1002_title.png	1
+1003	開服七日登陸活動	ActivitySevenLoginTable	0	7	7	0	新服開啟前七天，每天登陸都可以領取獎勵，單體強力輸出戰姬馬忠保送兩星！當天沒有領取的獎勵會過期的喲，記得每天都來！	images/activities/1003.png	0	windows/activities/title/1003_title.png	1
+1004	成長基金	0	0	-1	-1	0	0	images/activities/1004.png	windows/activities/growth_fund.csb	0	1
+1005	隨堂測驗全開	0	0	3	3	0	活動期間，【物理測驗】與【魔法測驗】同時開放！每天都能金幣經驗一起刷啦~	images/activities/1005.png	0	windows/activities/title/1005_title.png	1
+1006	歷史測驗全開	0	0	3	3	0	活動期間，【逍遙津試煉】、【夷陵試煉】、【赤壁試煉】同時開放！麻麻再也不用擔心裝備不夠用了呢~	images/activities/1006.png	0	windows/activities/title/1006_title.png	1
+1007	精英契約書雙倍	0	0	3	3	2	活動期間，精英副本戰姬契約書數量掉落雙倍！|溫馨提示：|1.只有精英副本中的戰姬契約書掉落數量翻倍，其他任何地方的戰姬契約書掉落數量不變。|2.僅掉落戰姬契約書的數量翻倍，其他道具不翻倍。|3.提高的是戰姬契約書的掉落數量，並非掉落幾率。|4.活動期間，首次通關精英副本不翻倍，再次通關則開始翻倍。	images/activities/1007.png	0	windows/activities/title/1007_title.png	1
+1008	劇情裝備雙倍	0	0	3	3	2	活動期間，普通劇情副本裝備整件、圖紙整張、裝備集點和圖紙集點數量掉落雙倍！|溫馨提示：|1.只有普通劇情副本中的裝備整件、圖紙整張、裝備集點和圖紙集點掉落數量翻倍，其他任何地方的裝備整件、圖紙整張、裝備集點和圖紙集點掉落數量不變。|2.僅掉落裝備整件、圖紙整張、裝備集點和圖紙集點的數量翻倍，其他道具不翻倍。|3.提高的是裝備整件、圖紙整張、裝備集點和圖紙集點的掉落數量，並非掉落幾率。|4.活動期間，首次通關普通劇情副本不翻倍，再次通關則開始翻倍。	images/activities/1008.png	0	windows/activities/title/1008_title.png	1
+1009	精英裝備雙倍	0	0	3	3	2	活動期間，精英副本裝備整件、圖紙整張、裝備集點和圖紙集點數量掉落雙倍！|溫馨提示：|1.只有精英副本中的裝備整件、圖紙整張、裝備集點和圖紙集點掉落數量翻倍，其他任何地方的裝備整件、圖紙整張、裝備集點和圖紙集點掉落數量不變。|2.僅掉落裝備整件、圖紙整張、裝備集點和圖紙集點的數量翻倍，其他道具不翻倍。|3.提高的是裝備整件、圖紙整張、裝備集點和圖紙集點的掉落數量，並非掉落幾率。|4.活動期間，首次通關精英副本不翻倍，再次通關則開始翻倍。	images/activities/1009.png	0	windows/activities/title/1009_title.png	1
+1010	制霸金幣雙倍	0	0	3	3	2	活動期間，全國制霸通關寶箱中的金幣數量雙倍！|溫馨提示：|1.只有全國制霸中的通關寶箱金幣獲得數量翻倍，其他任何地方的金幣掉落數量不變。|2.僅掉落金幣的數量翻倍，其他道具不翻倍。	images/activities/1010.png	0	windows/activities/title/1010_title.png	1
+1011	制霸獎盃雙倍	0	0	3	3	2	活動期間，全國制霸通關寶箱獎盃數量掉落雙倍！|溫馨提示：|1.只有全國制霸通關寶箱中的獎盃掉落數量翻倍，其他任何地方的獎盃掉落數量不變。|2.僅掉落獎盃的數量翻倍，其他道具不翻倍。	images/activities/1011.png	0	windows/activities/title/1011_title.png	1
+1012	歷史測驗次數多倍	0	0	3	3	2	活動期間，歷史測驗次數雙倍！|溫馨提示：|只有歷史測驗的挑戰次數翻倍，其他任何副本的次數不變。	images/activities/1012.png	0	windows/activities/title/1012_title.png	1
+1013	隨堂測驗次數多倍	0	0	3	3	2	活動期間，隨堂測驗次數雙倍！|溫馨提示：|只有隨堂測驗的挑戰次數翻倍，其他任何副本的次數不變。	images/activities/1013.png	0	windows/activities/title/1013_title.png	1
+1014	上頂樓pk幣多倍	0	0	3	3	2	活動期間，上頂樓pk幣數量獎勵雙倍！|溫馨提示：|1.只有上頂樓中的pk幣每日結算獎勵翻倍。|2.僅獎勵的pk幣的數量翻倍，其他道具不翻倍。	images/activities/1014.png	0	windows/activities/title/1014_title.png	1
+1015	打工獎勵多倍	0	0	3	3	2	活動期間，打工大作戰打工獎勵雙倍！|溫馨提示：|1.只有打工大作戰中的打工獎勵翻倍，打劫其他人的獎勵不變。|2.僅打工獎勵的金幣、經驗藥水、契約書數量翻倍，鑽石數量不翻倍。	images/activities/1015.png	0	windows/activities/title/1015_title.png	1
+1016	進階返還多倍	0	0	3	3	2	活動期間，進階戰姬返還的附魔道具數量雙倍！|溫馨提示：|1.只有進階戰姬時返還的附魔道具數量翻倍，其他任何地方的附魔裝備掉落數量不變。|2.僅有附魔裝備的戰姬進階時才會返還附魔道具。	images/activities/1016.png	0	windows/activities/title/1016_title.png	1
+1017	萬聖節活動	ActivityMidAutumnTable	0	3	3	0	萬聖節節日期間，每天登陸都可以領取獎勵，第三天登陸必定獲得性感的南瓜醬！當天沒有領取的獎勵會過期的喲，記得每天都來！	images/activities/1017.png	0	windows/activities/title/1017_title.png	1
+1018	積分兌換	0	0	-1	10	0	建號7天內，每天在遊戲內進行相應的操作可累積一定的積分，積分可用於兌換道具，所有積分將在10天後清除。	images/activities/1018.png	0	windows/activities/title/1018_title.png	1
+1019	契約書大放送	0	0	-1	3	0	建號第二天登錄且等級達到15級送20個大喬靈魂石，三天內儲值300鑽石送50個大喬靈魂石	images/activities/1019.png	windows/activities/normal_activity2.csb	windows/activities/title/1019_title.png	1
+1020	七日目標	0	0	-1	7	0	活動結束後，按照學院等級發放獎勵，三檔獎勵只可獲得達到的最高一檔的獎勵。	images/activities/1020.png	windows/activities/7goals_activity.csb	0	1
+1021	鬥牛幣多倍	0	0	1	1	2	活動期間，鬥牛幣數量獎勵雙倍！|溫馨提示：|1.只有鬥牛幣結算獎勵翻倍。|2.僅獎勵的鬥牛幣的數量翻倍，其他道具不翻倍。	images/activities/1021.png	0	windows/activities/title/1021_title.png	1
+1022	儲值送好康	ActivityChargeTable	0	3	3	0	活動時間內，玩家在遊戲內累計儲值達到活動條件（不包含系統贈送鑽石），即可領取對應獎勵。|每種獎勵只可領取一次，所有獎勵均可累積獲得。|例如：玩家儲值26800鑽，就可以直接獲得五星李典！	images/activities/1022.png	0	windows/activities/title/1022_title.png	1
+1023	消費送好康	ActivityConsumeTable	0	3	3	0	活動時間內，玩家在遊戲內累計消費達到活動條件，即可免費領取對應的獎勵！|每種獎勵只可領取一次，所有獎勵均可累積獲得。|例如：玩家消費1000鑚，可以領取500鑚和1000鑚的兩種獎勵。	images/activities/1023.png	0	windows/activities/title/1023_title.png	1
+1024	全服儲值活動	0	0	7	7	0		images/activities/1024.png	windows/activities/civil_charge/civil_charge.csb	0	1
+1025	粉絲團點讚活動	0	0	-1	-1	0	粉絲團點讚	images/activities/1025.png	0	windows/activities/title/1025_title.png	1
+1026	元素封印	0	0	-1	-1	0	強大的上古元素突破封印而出，召喚你們的學妹，再次將它們封印吧！	images/activities/1026.png	0	windows/activities/title/1026_title.png	1
+1027	許願得學妹	0	0	5	5	0		images/activities/1027.png	0	windows/activities/title/1027_title.png	1
+1028	元旦禮包	0	0	3	3	0		images/activities/1028.png	windows/activities/newyear.csb	windows/activities/title/1028_title.png	1
+1029	在線禮包	0	0	3	3	0		images/activities/1029.png	0	windows/activities/title/1029_title.png	1
+1030	美味大餐全天享	0	0	7	7	0	活動期間，每日午餐、晚餐、以及夜宵均可全天保留！更有精美早餐可以享用！|溫馨提示：|1.早餐的供應時間為早上7:00開始。|2.早餐、午餐、晚餐、夜宵均保留至第二天5:00。	images/activities/1030.png	0	windows/activities/title/1030_title.png	1
+1031	換裝	0	90005004	3	3	0	0	images/activities/1045.png	windows/activities/1045/valentine.csb	windows/activities/title/1045_title.png	1
+1032	技能升级钱数减半	0	0	3	3	0.5	活動期間，戰姬技能升級所需錢數減半！	images/activities/1032.png	0	windows/activities/title/1032_title.png	1
+1033	旅行商人出现几率提升	0	0	7	7	0.35	活動期間，旅行商人出現機率大幅提升！千萬別錯過他！	images/activities/1033.png	0	windows/activities/title/1033_title.png	1
+1034	新春登錄送大禮	0	0	7	7	0		images/activities/1034.png	windows/activities/activity_weeklogin/activity_weeklogin.csb	windows/activities/title/1034_title.png	1
+1035	纍計儲值活動	0	90001067	-1	-1	0	0	images/activities/1035.png		windows/activities/title/1035_title.png	0
+1036	新春儲值送紅包	0	0	7	7	0	0	0	0	0	0
+1037	春節大轉盤	0	0	7	7	0	活動期間，消耗轉盤次數來抽取轉盤禮包！	images/activities/1037.png	0	windows/activities/title/1037_title.png	1
+1038	新年副本	0	0	7	7	0		images/activities/1038.png	windows/activities/nian/nian_activity.csb	windows/activities/title/1038_title.png	1
+1039	春節開禮包	0	0	7	7	0	活動期間，購買春節大禮包！	images/activities/1039.png	windows/activities/spring_festival_gift/spring_gift.csb	windows/activities/title/1039_title.png	1
+1040	稀有戰姬大放送	ActivityHeroSellingTable	0	3	3	0	活動時間內，每日儲值達到指定金額（不包含系統贈送鑽石，每日儲值鑽石數不計入第二天），即可免費獲得一個戰姬禮包的獎勵！玩家打開戰姬禮包可以任意選擇一名歷史儲值活動戰姬，將其帶回家！（禮包中包括周泰、德古拉、顏良、文醜、服部半藏、袁術、赤兔、夏侯淵、漢獻帝和孫乾，多個戰姬禮包選擇的戰姬不可重複！）	images/activities/1040.png	0	windows/activities/title/1040_title.png	1
+1041	元宵猜燈謎	0	0	6	6	0	0	images/activities/1041.png	0	windows/activities/title/1041_title.png	1
+1042	開服七天大狂歡	0	0	-1	8	0	0	0	0	0	0
+1043	歡度兒童節	0	0	3	3	0		images/activities/1043.png	0	windows/activities/title/1043_title.png	1
+1044	VIP每週好禮	0	0	-1	-1	0	只要儲值成為VIP，即可享受為VIP量身定制的專屬優惠禮包，海量金幣、體力、經驗飲料等豐厚好禮等你來拿，每週僅限量購買1個哦！	images/activities/1044.png	windows/activities/1044/vipweek.csb	windows/activities/title/1044_title.png	1
+1046	櫻花祭超值禮盒	0	0	7	7	0	活動期間，購買櫻花祭超值禮盒	images/activities/1046.png	windows/activities/1046/sakura_sell.csb	windows/activities/title/1046_title.png	1
+1047	櫻花祭儲值大放送	ActivitySakuraChargeTable	0	7	7	0	活動時間內，玩家在遊戲內累計儲值達到活動條件（不包含系統贈送鑽石），即可領取對應獎勵。|每種獎勵只可領取一次，所有獎勵均可累積獲得。|例如：玩家儲值26800鑽，就可以直接獲得五星袁術！	images/activities/1047.png		windows/activities/title/1047_title.png	1
+1048	櫻花祭登陸送不停	ActivitySakuraLoginTable	0	7	7	0	1、活動期間，每天首次登陸即可領取櫻花祭禮包。|2、登陸天數計算的是累計登陸天數，並非連續登陸天數，隔天登陸天數不重置。|3、累積不同天數對應的禮包只能領取一次，記得每天來領喲！	images/activities/1048.png		windows/activities/title/1048_title.png	1
+1049	櫻花祭風紀監察	0	0	7	7	0	      熱鬧的櫻花祭開始了，但奇怪的是每天都會出現許多搗亂者，打倒他們可以獲得風紀委員會的豐厚獎勵	images/activities/1049.png	windows/activities/1049/activity_1049.csb	windows/activities/title/1049_title.png	1
+1050	櫻花祭踏青活動	0	0	7	7	0		images/activities/1050.png	windows/activities/1050/outing.csb	windows/activities/title/1050_title.png	1
+1051	櫻花福袋	0	0	7	7	0					0
+1052	風箏節儲值送風箏	0	0	7	7	0	活動時間內，玩家在遊戲內累計儲值達到活動條件（不包含系統贈送鑽石），即可領取對應獎勵。|每種獎勵不限制領取次數，所有獎勵均可累積獲得。				1
+1053	風箏節風箏王競選	0	0	7	7	0	1、本季風箏王競選結束時，競選票數第一名的玩家為本季風箏節的風箏王。|風箏王擁有獨特的榮譽和獎勵喔，想要為王的少年們快來參加吧。				1
+1054	風箏節登陸送不停	ActivityKiteLoginTable	0	7	7	0	1、活動期間，每天首次登陸即可領取風箏節登陸禮包。|2、登陸天數計算的是累計登陸天數，並非連續登陸天數，隔天登陸天數不重置。|3、累積不同天數對應的風箏獎勵只能領取一次，記得每天來領喲！	images/activities/1054.png		windows/activities/title/1054_title.png	1
+1055	幸運刮刮樂	0	0	7	7	0		images/activities/1055.png	windows/activities/1055/lucky_scratch.csb	windows/activities/title/1055_title.png	1
+1056	新造型限時特價	0	0	3	3	0	新造型上架，顯示3天特價！還在等什麼？	images/activities/1056.png	0	windows/activities/title/1056_title.png	0
+1057	萌寵送禮	0	0	7	7	0	活動期間，購買萌寵大禮包！	images/activities/1057.png	windows/activities/1057/pet_gift.csb	windows/activities/title/1057_title.png	1
+1058	萌寵戰姬大放送	ActivityPetDayTable	0	3	3	0	0	images/activities/1058.png	windows/activities/1058/normal_activity.csb	windows/activities/title/1058_title.png	1
+1059	審核禮包活動	0	0	-1	-1	0	0	images/activities/1035.png		windows/activities/title/1035_title.png	0
+1060	端午節龍舟大賽	0	0	7	7	0	端午節龍舟大賽	0	0	0	1
+1061	端午節品粽大會	0	0	7	7	0	端午節品粽大會	images/activities/1061.png	windows/activities/1061/main.csb	windows/activities/title/1061_title.png	1

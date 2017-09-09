@@ -1,0 +1,15 @@
+编号	活动名称	活动label	是否可开	对应操作符
+id	name	label	canopen	mid
+1	幸运大转盘/我爱世界杯	zhuanpan	1	
+2	财神游乐场	laohuji	1	
+3	歡樂卡牌	fanpai	1	
+4	挖宝(印尼三国)	wabao	1	49929,49935,49949
+5	感恩节	shejian	1	
+6	財神大富翁	xmas	1	
+7	好運轉轉	mother	1	
+8	圣吕布(印尼三国)	shenglvbu	1	49929,49935,49949
+9	端午节活动	longzhou	1	
+10	幸運777	superwheel	1	
+11	中秋點花燈	huadeng	1	
+12	钓鱼达人	diaoyu	1	49929
+13	桃园寻宝	chess	1	49929,49935,49949

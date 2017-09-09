@@ -1,0 +1,77 @@
+ID	名稱	活動類型	活動描述	禮包ID	地圖ID	地图关卡	夥伴ID	基本數值，例如萬分比、完成數等	活動是否開啟	每個帳號參與次數	每個帳號每天參與的次數	每天出現次數	前置條件	每天開始時間	每天結束時間	延时领取\使用	圖片	活动类型	活动介绍	活動入口（图集图片以#开头）	活动内容	入口所打开的窗口名	活動同時出現在某一界面的順序（从小到大）	活动结束前端展示时间	个人活动持续时间
+id	name	type	desc	giftbag_id	map_id	stage_id	partner_id	value	is_open	max_times	day_times	show_times	prev_done	start_hour	end_hour	delay	image	activity_type	picture	activity_pic	activity_function	open_window_name	order	activity_show_time	player_activity_last_time
+10001	每日簽到	1	每日簽到送銅錢、元寶、卷軸	0	0	0	0	0	1	24	1	1	0	0	0	0		1	images/qiandao.png		SignInEventLayer			0	
+10002	三日登錄	1	三日登錄，每天可以領取獎勵	0	0	0	0	0	1	0	0	0	0	0	0	0		0						0	
+10003	评价5星有礼	1	给APP5分奖励	1062	0	0	0	7	1	1	0	0	0	0	0	0		0						0	
+10004	点卡活动	1	抽点卡	0	0	0	0	8	0	1	0	0	0	0	0	0		0						0	
+20001	小天魔禮包	2	規定時間優惠夠買小天魔禮包	0	0	0	0	0	0	0	0	0	0	0	0	0		2	images/activity/xiaotianmo_banner.png		XiaotianmoLayer			0	
+20002	購買神魔卷禮包	2	規定時間優惠夠買神魔卷禮包	0	0	0	0	0	0	0	0	0	0	0	0	0		0						0	
+20003	購買屬性召喚卷禮包	2	規定時間優惠夠買屬性召喚卷禮包	0	0	0	0	0	0	0	0	0	0	0	0	0		0						0	
+20004	購買掃蕩券禮包	2	規定時間優惠夠買掃蕩卷禮包	0	0	0	0	0	0	0	0	0	0	0	0	0		0						0	
+20005	公测够买礼包活动	2	規定時間優惠購買禮包	0	0	0	0	0	0	10	0	0	0	0	0	0		0						0	
+20006	購買體力經驗禮包	2	規定時間優惠夠買體力經驗禮包	0	0	0	0	0	0	0	0	0	0	0	0	0		0						0	
+20007	屬性強化禮包	2	召喚到4-5星武將的強化禮包	0	0	0	0	0	1	0	0	0	0	0	0	0		0						0	
+20008	裝備大禮包	2	規定時間優惠購買裝備大禮包	0	0	0	0	0	0	10	0	0	0	0	0	0		2	images/runebag.png		RuneBagActivityLayer	RuneBagActivityWindow		0	
+20009	靈符禮包	2	規定時間又會購買靈符禮包	0	0	0	0	0	0	0	0	0	0	0	0	0		2	images/activity/lingfu_banner.png		LingfuBagLayer			0	
+20010	七夕情人节礼包活动	2	規定時間優惠購買禮包	0	0	0	0	0	0	0	0	0	0	0	0	0		0						0	
+20011	团购增益礼包活动	2	規定時間優惠購買禮包	0	0	0	0	0	0	0	0	0	0	0	0	0		0						0	
+20012	購買免費卸裝備禮包	2	規定時間優惠夠買免費卸裝備禮包	0	0	0	0	0	0	0	0	0	0	0	0	0		2	images/xiezhuanglibao.png		UnloadBoxLayer			0	
+20013	小天魔限購	2	規定時間限次購買小天魔禮包	0	0	0	0	0	0	3	0	0	0	0	0	0		2	images/jingxilibao.png		SmallXiaotianMoLayer			0	
+20014	靈符限購	2	規定時間限次購買靈符碎片禮包	0	0	0	0	0	0	20	0	0	0	0	0	0		2	images/jingxilibao.png		SmallLingFuLayer			0	
+30001	火之試煉	3	開啟地下城	0	301000	0	0	0	0	0	0	0	0	0	0	0		0						0	
+30002	水之試煉	3		0	302000	0	0	0	0	0	0	0	0	0	0	0		0						0	
+30003	風之試煉	3		0	303000	0	0	0	0	0	0	0	0	0	0	0		0						0	
+30004	神之試煉	3		0	304000	0	0	0	0	0	0	0	0	0	0	0		0						0	
+30005	魔之試煉	3		0	305000	0	0	0	0	0	0	0	0	0	0	0		0						0	
+30006	名将试炼	3		0	401000	409051	0	0	0	0	0	0	0	0	0	0		0						0	
+40005	7-10點領取20體力	4		1020	0	0	0	0	1	0	1	1	0	7	10	0		0						0	
+40006	17-20點領取20體力	4		1020	0	0	0	0	1	0	1	1	0	17	20	0		0						0	
+40007	7-10點領取40體力	4		1021	0	0	0	0	0	0	1	1	0	7	10	0		0						0	
+40008	12-15點領取40體力	4		1021	0	0	0	0	0	0	1	1	0	12	15	0		0						0	
+40009	17-20點領取40體力	4		1021	0	0	0	0	0	0	1	1	0	17	20	0		0						0	
+40010	每日登錄送掃蕩券	4		1052	0	0	0	0	0	0	1	1	0	0	0	0		0						0	
+50001	每日通過副本累計抽獎活動	5		0	0	0	0	30	0	0	1	0	0	0	24	86400		0						0	
+50002	七夕活动	5		0	0	0	0	0	0	0	0	0	0	0	0	86400		0						0	
+50003	中秋活动	5		0	0	0	0	50	0	0	0	0	0	0	0	86400		0						0	
+50004	萬聖節活动	5		0	0	0	0	0	0	0	0	0	0	0	0	86400		0						0	
+60001	下装备免费	6		0	0	0	0	0	0	0	0	0	0	0	0	0		0						0	
+60002	强化石掉落	6		0	0	0	0	0	0	0	0	0	0	0	0	259200		0						0	
+60003	雙倍經驗(上午)	6		0	0	0	0	10000	0	0	0	0	0	9	10	0		0						0	
+60004	雙倍銅錢(上午)	6		0	0	0	0	10000	0	0	0	0	0	12	13	0		0						0	
+60005	雙倍經驗(下午)	6		0	0	0	0	10000	0	0	0	0	0	20	21	0		0						0	
+60006	雙倍銅錢(下午)	6		0	0	0	0	10000	0	0	0	0	0	23	24	0		0						0	
+70001	購買元寶返利	7	規定時間購買元寶返利	0	0	0	0	0	0	0	0	0	0	0	0	0		0						0	
+80001	每日消費體力活動	8		1059	0	0	0	50	0	0	1	0	0	0	24	0		0						0	
+80002	每日消費銅錢活動	8		1058	0	0	0	30000	0	0	1	0	0	0	24	0		0						0	
+90001	帮会桃园结义	9		1064	0	0	0	6	1	0	1	0	0	0	0	0		0						0	
+90002	幫會boss	9		0	0	0	0	10	1	0	0	1	0	20	20.5	0		0						0	
+10005	古墓	1		0	0	0	0	0	0	0	0	0	0	0	0	0		0						0	
+10006	儲值返利	1		0	0	0	0	0	0	0	0	0	0	0	0	0		2	images/shengdan_fanli.png		RechargeRebateLayer			0	
+10007	聖誕積分	1		0	0	0	0	0	0	0	0	0	0	0	0	0		2	images/shengdan_jifen.png	#christmas1/christmas_point_cell.png	ChristmasScoreLayer	christmas_point_rank	2	86400	
+10008	裝備商店	1		0	0	0	0	0	0	0	0	0	0	0	0	0		2	images/zhuangbeishangdian.png	#christmas1/rune_shop_cell.png	ChristmasRuneLayer	christmas_rune_shop	1	0	
+10009	聖誕積分商店	1		0	0	0	0	0	0	0	0	0	0	0	0	0		2	images/shengdan_jifenshangdian.png	#christmas1/point_shop_cell.png	ChristmasPointShopLayer	christmas_point_shop	3	0	
+10010	拯救聖誕翁	1		0	0	0	0	0	0	0	0	0	0	0	0	0		2	images/shengdan_huangzhong.png	#christmas1/huangzhong_cell.png	ChristmasSavehuangzhongLayer	save_huangzhong_window	4	0	
+10011	冰雪節	1		0	0	0	0	0	0	0	0	0	0	0	0	0		3	images/bingxuejie.png			christmas_activity		0	
+10012	成長基金	1	储值返利	0	0	0	0	0	1	0	0	0	0	0	0	0		4	images/chengzhangjijin.png		czjjlayer	christmas_activity		0	604800
+10013	首儲禮包	1	首充礼包	0	0	0	0	0	1	0	0	0	0	0	0	0		0						0	
+10014	幸運賺翻天	1		0	0	0	0	0	1	0	0	0	0	0	0	0	2	2	images/laohuji_banner.png		LaohujiLayer	LaohujiWindow		0	172900
+10015	限時打折	2		0	0	0	0	0	0	6	0	0	0	0	0	0		2	images/crazy_sweep_banner.png		CrazySweepLayer			0	
+10016	封印珠禮包	2	規定時間優惠購買封印珠禮包	0	0	0	0	0	0	1	0	0	0	0	0	0		2	images/moosoul.png		MoosoulLayer	MoosoulWindow		0	
+10017	魂石禮包	2	規定時間優惠購買魂石禮包	0	0	0	0	0	0	10	0	0	0	0	0	0		2	images/soulstonegiftbag.png		SoulstoneGiftbagLayer			0	604800
+10018	月末狂歡	1		0	0	0	0	0	0	0	0	0	0	0	0	0		2	images/newyearmammon.png		NewyearMammonLayer			0	604800
+10019	新年簽到	1		0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	images/xinnianqiandao_banner.png		XinnianqiandaoLayer			0	604800
+10020	慶猴年	1		0	0	0	0	0	0	4	0	0	0	0	0	0		2	images/monkey_year_collection.png		MonkeyYearLayer			0	604800
+10021	三國之爭	1	抽取蜀國武將	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	images/women_summon.png		WomenSummonLayer			0	
+10022	等級覺醒材料禮包	1	覺醒材料等級禮包	0	0	0	0	0	1	1	0	0	0	0	0	0		2							
+10023	等級裝備禮包	1	裝備等級禮包	0	0	0	0	0	1	1	0	0	0	0	0	0		2							
+20024	搶購禮包	2	搶購禮包	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0							
+20025	皮膚禮包	2	皮膚禮包	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0							
+20026	经验双倍	1	经验双倍	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0							
+20027	消費送大禮	1	消費送大禮	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	images/consumerebate.png		ConsumeRebateLayer				
+20028	FB分享	1	FB分享	0	0	0	0	0	0	0	1	1	0	0	0	0		6	images/qiandao.png		FBShareLayer			0	
+20029	送紅包	1	送紅包	0	0	0	0	0	0	0	0	0	0	0	0	0		2	images/hongbao_rebate.png		HongbaoLayer			0	
+20030	夏日大作戰	1	夏日大作戰	0	0	0	0	0	0	0	0	0	0	0	0	0		2	images/activity/summer.png		SummerLayer			0	
+20031	幸運大轉盤	1	幸運大轉盤	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	images/activity/guaguale.png		GuagualeLayer				
+20032	粽有惊喜	1	端午节	0	0	0	0	0	0	100	0	0	0	0	0	0	0	2	images/activity/duanwu.png		DuanWuLayer				
+20033	大富翁	1	大富翁	0	0	0	0	0	0	100	0	0	0	0	0	0	0	2	images/activity/duanwu.png		DuanWuLayer				
+20034	突破武將大禮包	2	規定時間優惠突破武將禮包	0	0	0	0	0	0	2	0	0	0	0	0	0		0						0	
