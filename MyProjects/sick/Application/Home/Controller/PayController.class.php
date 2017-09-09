@@ -66,14 +66,11 @@ class PayController extends Controller
     {
         Vendor("WxPayPubHelper.WxPayPubHelper");
         Vendor("WxPayPubHelper.log_");
-
         //使用通用通知接口
         $notify = new \Notify_pub($this->appid, $this->appsecret, $this->mchid, $this->key);
-
         //存储微信的回调
         $xml = $GLOBALS['HTTP_RAW_POST_DATA'];
         $notify->saveData($xml);
-
         //验证签名，并回应微信。
         //对后台通知交互时，如果微信收到商户的应答不是成功或超时，微信认为通知失败，
         //微信会通过一定的策略（如30分钟共8次）定期重新发起通知，
@@ -86,12 +83,10 @@ class PayController extends Controller
         }
         $returnXml = $notify->returnXml();
         // echo $returnXml;
-
         //以log文件形式记录回调信息
         $log_ = new \Log_();
         $log_name = "./Public/notify_url.log";//log文件路径
         $log_->log_result($log_name, "【接收到的notify通知】:\n" . $xml . "\n");
-
         //==商户根据实际情况设置相应的处理流程，此处仅作举例=======
         if ($notify->checkSign() == TRUE) {
             if ($notify->data["return_code"] == "FAIL") {
@@ -104,7 +99,6 @@ class PayController extends Controller
                 //此处应该更新一下订单状态，商户自行增删操作
                 $log_->log_result($log_name, "【支付成功】:\n" . $xml . "\n");
             }
-
             $xml = $notify->xmlToArray($xml);
             // 商户订单号
             $out_trade_no = $xml ['out_trade_no'];
@@ -121,9 +115,6 @@ class PayController extends Controller
                 M('doctor')->where('id='.$mind_info['d_id'])->setInc('balance',$total_fee);
                 M('ty_mind')->where('id='.$out_trade_no)->data($list)->save();
             }
-
-
-
         }
     }
 

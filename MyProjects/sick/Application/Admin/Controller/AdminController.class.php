@@ -42,7 +42,6 @@ class AdminController extends CommonController
         if(IS_POST){
             $data = $this->model->create(I('post.'));
             $data['password'] = md5(trim($data['password']));
-//            var_dump($data);die;
             $data['addtime'] = time();
             $result = $this->model->add($data);
             if($result){

@@ -8,7 +8,6 @@ class MenuController extends Controller
         $appid = "wx5644101e854affee";
         $appsecret = "5c3972dd5a386dc5f8af58e662a2b891";
         $url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=$appid&secret=$appsecret";
-
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
@@ -18,8 +17,6 @@ class MenuController extends Controller
         curl_close($ch);
         $jsoninfo = json_decode($output, true);
         $access_tokens = $jsoninfo["access_token"];
-
-
         $zi_url = 'https://api.weixin.qq.com/cgi-bin/menu/create?access_token='.$access_tokens;
        /* $da='{
             "button":[
@@ -78,6 +75,12 @@ class MenuController extends Controller
         print_r($res);die;
     }
 
+    /***
+     * post请求curl方式
+     * @param $curlPost
+     * @param $url
+     * @return mixed
+     */
     function Post($curlPost,$url){
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
