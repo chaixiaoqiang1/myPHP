@@ -1,0 +1,536 @@
+<?php
+namespace Home\Controller;
+use Think\Controller;
+class IndexController extends Controller
+{
+    public function __construct()
+    {
+        parent::__construct();
+        session('sid','1');
+    }
+
+    // 首页
+    public function index()
+    {
+        $category = M('ty_category');
+        $categorydata = $category->order('id asc')->select();
+        $doctor = M('ty_doctor');
+        $doctordata = $doctor->join('ty_category on ty_doctor.office = ty_category.id')->field('ty_doctor.*,ty_category.catname')->select();
+        if(IS_POST){
+            $rank = I('rank');
+            if($rank){
+                $doctordata = $doctor->where(array('rank'=> $rank))->select();
+            }
+            $username = I('username');
+            if($username){
+                $map['username'] = array('like',"{$username}%");
+                $doctordata = $doctor->where($map)->select();
+            }
+        }
+//        var_dump($doctordata);die;
+        $this->assign('categorydata',$categorydata);
+        $this->assign('doctordata',$doctordata);
+        $this->display();
+    }
+
+    //副首页
+    public function index_state(){
+        $id = I('id');
+        $doctor = M('ty_doctor');
+        $doctordata = $doctor->join('ty_category on ty_doctor.office = ty_category.id')->field('ty_doctor.*,ty_category.catname')->where(array('office'=> $id))->select();
+        $category = M('ty_category');
+        $data = $category->order('id asc')->select();
+        $this->assign('doctordata',$doctordata);
+        $this->assign('data',$data);
+        $this->assign('id',$id);
+        $this->display();
+    }
+    //医生详细
+    public function doctor_detail(){
+        $sid = session('sid');
+        $id = I('get.id');
+        $guanzhu =  $_POST['name'];
+        if($guanzhu){
+            $sick = M('ty_sick');
+            $info = $sick->where(array('id'=> $sid))->getField('my_doctor');
+            $arr =  json_decode($info,true);
+            $arr = array_unique($arr);
+            $arr[] = (int)$id;
+            $arr =  json_encode($arr);
+            $info = $sick->where(array('id'=> $sid))->setField('my_doctor',$arr);
+        }
+       /* if(!empty($id)){}*/
+        $doctor = M('ty_doctor');
+        $data = $doctor->where(array('id'=> $id))->find();
+        if(IS_POST){
+            $type = I('type');
+            $doctordata   = M('ty_doctor')->where(array('id'=> $id))->field('username,office')->find();
+            $servicedata['type'] = $type;
+            $servicedata['servetime'] = time();
+            $servicedata['username'] = $doctordata['username'];
+            $servicedata['office'] = M('ty_category')->where(array('id'=>$doctordata['office']))->getField('catname');
+            $servicedata['s_id'] = $sid;
+            $servicedata['d_id'] = $id;
+            $result = M('ty_service')->add($servicedata);
+            if($result){
+                $serviceId = $result;
+                if($type == 2){
+                    $this->redirect('Index/order',array('id'=> $serviceId));die;
+                }
+                $this->redirect('Index/pay_immediately', array('id'=>$serviceId));
+            }
+          /*  $sick = M('ty_sick');
+            $info = $sick->where(array('id'=> $sid))->getField('attention');
+            $arr = json_decode($info,true);
+            $arr  =  array_unique($arr);
+            $arr[] = (int)$id;
+            $arr = json_encode($arr);
+            $info = $sick->where(array('id'=> $sid))->setField('attention',$arr);die;*/
+        }
+        $category = M('ty_category');
+        $data['office'] = $category->where(array('id'=>$id))->getField('catname');
+        $comment = M('ty_comment');
+        $commentdata = $comment->where(array('d_id'=> $id))->field('s_id,content,addtime')->select();
+        foreach($commentdata as &$v){
+            $v['s_id'] = M('ty_sick')->where(array('id'=>$v['s_id']))->field('username,sex,address')->find();
+        }
+        $service = M('ty_doctor');
+        $servicedata = $service->where(array('id'=> $id))->field('freeconsult,is_orderstatus,is_picture')->find();
+//        var_dump($servicedata);die;
+
+        $this->assign('servicedata',$servicedata);
+        $orderconsult = M('ty_orderconsult');
+        $orderconsultdata = $orderconsult->where(array('d_id'=> $id))->getField('price');
+        $this->assign('orderconsultdata',$orderconsultdata);
+        $this->assign('commentdata',$commentdata);
+        $this->assign('doctordata',$data);
+        $this->display();
+    }
+
+    //  立即咨询
+    public function pay_immediately(){
+        $serviceId = I('get.id');
+        $info = M('ty_service')->where(array('id'=>$serviceId))->field('id,d_id,type,username')->find();
+        $doctordata = M('ty_doctor')->where(array('id'=>$info['d_id']))->field('tuwenpirce,orderprice')->find();
+        if(IS_POST){
+            $sickphone = I('sickphone');
+            $data['sickphone'] = $sickphone;
+            $result = M('ty_service')->where(array('id'=> $serviceId))->setField($data);
+            if($result){
+                $this->redirect('Index/payment_success',array('id'=> $serviceId));die;
+            }
+        }
+        $this->assign('payprice',$doctordata);
+        $this->assign('doctordata',$info);
+        $this->display();
+    }
+
+    //支付成功
+    public function payment_success(){
+        $serviceId = I('get.id');
+        $type = M('ty_service')->where(array('id'=> $serviceId))->getField('type');
+        $this->assign('serviceId',$serviceId);
+        $this->assign('type',$type);
+        $this->display();
+    }
+    // 咨询信息
+    public function quick_consultation(){
+        $serviceId = I('get.id');
+        if(IS_GET){
+           $type = M('ty_service')->where(array('id'=>$serviceId))->getField('type');
+           if($type == 2){
+               $this->redirect('Index/order',array('id'=> $serviceId));die;
+           }
+        }
+        if(IS_POST) {
+            $servicedata = M('ty_service')->where(array('id' => $serviceId))->field('s_id,d_id')->find();
+            $data['f_id'] = $serviceId;
+            $data['s_id'] = $servicedata['s_id'];
+            $data['d_id'] = $servicedata['d_id'];
+            $data['age'] = $_POST['age'];
+            $data['sex'] = $_POST['sex'];
+            $data['content'] = $_POST['content'];
+            $data['address'] = $_POST['sheng'] . $_POST['shi'];
+            $data['addtime'] = time();
+            $result = M('ty_consult')->add($data);
+            if ($result) {
+                $consultId = $result;
+            }
+        }
+        $this->display();
+    }
+    //预约门诊
+    public function order(){
+        $serviceId = I('get.id');
+        if(IS_POST){
+            $servicedata = M('ty_service')->where(array('id' => $serviceId))->field('s_id,d_id')->find();
+            $data['f_id'] = $serviceId;
+            $data['s_id'] = $servicedata['s_id'];
+            $data['d_id'] = $servicedata['d_id'];
+            $data['age'] = $_POST['age'];
+            $data['sex'] = $_POST['sex'];
+            $data['content'] = $_POST['content'];
+            $data['address'] = $_POST['sheng'] . $_POST['shi'];
+        }
+        $this->assign('serviceId',$serviceId);
+        $this->display();
+    }
+
+    //当前服务
+    public function current_service(){
+        $this->display();
+    }
+    //意见反馈
+    public function feedback(){
+        $this->display();
+    }
+    //个人中心
+    public function my_content(){
+        $id = session('sid');
+        $sick = M('ty_sick');
+        $sickusername = $sick->where(array('id'=> $id))->getField('username');
+        $this->assign('sickusername',$sickusername);
+        $this->display();
+    }
+    // 个人信息
+    public function revise_info(){
+        $sid = session('sid');
+        $sick = M('ty_sick');
+        $sickdata = $sick->where(array('id'=> $sid))->field('sex,userage,phonenum,username')->find();
+        if(IS_POST){
+            $data = $sick->create(I('post.'),2);
+            $result = $sick->where(array('id'=> $sid))->save($data);
+            if($result){
+                $this->success('修改成功',U("Index/revise_info"),1);die;
+            }else{
+                $this->error('修改失败');die;
+            }
+        }
+        $this->assign('sickdata',$sickdata);
+        $this->display();
+    }
+    //个人信息
+   /* public function my_info(){
+        $id = session('sid');
+        $sickdata = M('ty_sick')->where(array('id'=> $id))->find();
+        if(IS_POST){
+            $data = M('ty_sick')->create(I('post.'),2);
+            $result = M('ty_sick')->where(array('id'=> $id))->save($data);
+            if($result){
+                $this->success('修改成功',U('Index/my_info'),1);
+            }else{
+                $this->error('修改失败');
+            }
+        }
+        $this->assign('sickdata',$sickdata);
+        $this->display();
+    }*/
+
+    //我的医生
+    public function my_doctor(){
+        $id = session('sid');
+        $sick = M('ty_sick');
+        $doctor =  M('ty_doctor');
+        $mydoctor = $sick->where(array('id'=> $id))->getField('my_doctor');
+        $mydoctor = json_decode($mydoctor,true);
+        $mydoctor = array_unique($mydoctor);
+        foreach($mydoctor as $k=>$v){
+            $doctordata[] = $doctor->where(array('id'=> $v))->find();
+        }
+//        var_dump($doctordata);die;
+        $this->assign('doctordata',$doctordata);
+        $this->display();
+    }
+
+    // 删除医生信息
+    public function del_doctor(){
+        $doctorId  =  I('did');
+        if(IS_POST){
+//            $()
+        }
+    }
+
+    //服务历史
+    public function service_history(){
+        $id = session('sid');
+        $service = M('ty_service');
+        $service_data =$service->where(array('s_id'=>$id))->order('servetime desc')->select();
+//        var_dump($service_data);die;
+        $this->assign('info',$service_data);
+        $this->display();
+    }
+
+    //我的关注
+    public function my_follower(){
+        $id = session('sid');
+        $sick = M('ty_sick');
+        $sickdata = $sick->where(array('id'=>$id))->getField('attention');
+        $sickdata  =  json_decode($sickdata,true);
+        $sickdata = array_unique($sickdata);
+        $doctor = M('ty_doctor');
+        $doctordata = array();
+        foreach($sickdata as $k=>$v){
+            $arr = $doctor->where(array('id'=>$v))->field('username')->find();
+            if(!empty($arr)){
+                $doctordata[] = $arr;
+            }
+        }
+        $this->assign('doctordata',$doctordata);
+        $this->display();
+    }
+    //我的健康
+    public function my_health(){
+        $sid = session('sid');
+        $sick = M('ty_sick');
+//        $sickdata = $sick->where(array('id'=> $sid))->field('phonenum,username,sex,userage,height,weight,marriage')->find();
+        $sickdata = $sick->where(array('id'=> $sid))->find();
+        if(IS_POST){
+            $data = $sick->create(I('post.'),2);
+            var_dump($data);die;
+            $result = $sick->where(array('id'=> $sid))->save($data);
+            if($result){
+                $this->success('修改成功',U("Index/my_health"),1);die;
+            }else{
+                $this->error('修改失败');die;
+            }
+        }
+        $this->assign('info',$sickdata);
+        $this->display();
+    }
+    //我的爱好
+    public function habit(){
+        $sid = session('sid');
+        $sick = M('ty_sick');
+        $sickdata = $sick->where(array('id'=> $sid))->find();
+        if(IS_POST){
+            $data = $sick->create(I('post.'),2);
+            $result = $sick->where(array('id'=> $sid))->save($data);
+            if($result){
+                $this->success('修改成功',U("Index/habit"),1);die;
+            }else{
+                $this->error('修改失败',U("Index/habit"),1);die;
+            }
+        }
+        $this->assign('sickdata',$sickdata);
+        $this->display();
+    }
+   /* //修改档案资料
+    public function revise_info(){
+        $sid = session('sid');
+        $sick = M('ty_sick');
+        $sickdata = $sick->where(array('id'=> $sid))->field('sex,userage,phonenum')->find();
+        if(IS_POST){
+            $data = $sick->create(I('post.'),2);
+            $result = $sick->where(array('id'=> $sid))->save($data);
+            if($result){
+                $this->success('修改成功',U("Index/revise_info"),1);die;
+            }else{
+                $this->error('修改失败',U("Index/revise_info"),1);die;
+            }
+        }
+        $this->assign('sickdata',$sickdata);
+        $this->display();
+    }*/
+
+    //个人积分
+    public function my_integral(){
+        $this->display();
+    }
+    //我的二维码
+    public function my_Orcode(){
+        $id = I('id');
+        $doctor = M('ty_doctor');
+        $doctordata = $doctor->where(array('id'=> 11))->field('username,twocode')->find();
+//        var_dump($doctordata);die;
+        $this->assign('doctordata',$doctordata);
+        $this->display();
+    }
+
+    //医生评价
+    public function evaluate(){
+        $sid = session('sid');
+        $id = I('get.fid');
+        $doctorobj = M('ty_doctor');
+        $serviceobj = M('ty_service');
+        $service_info = $serviceobj->where(array('id'=> $id))->field('d_id')->find();
+//        var_dump($service_info);die;
+        $doctordata = $doctorobj->where(array('id'=> $service_info['d_id']))->find();
+        $doctordata['office'] = M('ty_category')->where(array('id'=>$doctordata['office']))->getField('catname');
+        $comment = M('ty_comment');
+        if(IS_POST){
+            $data['f_id'] = $id;
+            $data['grade'] = $_POST['xingxing'];
+            $data['content'] = $_POST['pingjia'].$_POST['content'];
+            $data['addtime'] = time();
+            $result = $comment->add($data);
+            if($result){
+                echo "<script>alert('评价成功');hisgory.go(-1);</script>";
+                $this->redirect('Index/evalute');die;
+            }else{
+                $this->error('评价失败','',1);die;
+            }
+        }
+        $this->assign('doctordata',$doctordata);
+        $this->display();
+    }
+    //评论
+    public function evaluate_page(){
+        $sid = session('sid');
+        $id = I('get.did');
+//        $did = I('did');
+        $comment = M('ty_comment');
+        $comment_doctor = $comment->where(array('d_id'=> $id))->select();
+        foreach($comment_doctor as &$v){
+            $v['s_id'] = M('ty_sick')->where(array('id'=> $sid))->field('username,sex,address')->find();
+        }
+//        var_dump($comment_doctor);die;
+        $this->assign('comment',$comment_doctor);
+        $this->display();
+    }
+    //评价成功
+    public function success_evalute(){
+        $this->display();
+    }
+    //第三方意见
+    public function Third_party_opinions(){
+        $fid = I('fid');
+        $thirdparty = M('ty_thirdparty');
+        $info = $thirdparty->where(array('f_id'=> $fid))->select();
+        foreach($info as &$v){
+            $v['d_id'] = M('ty_doctor')->where(array('id'=>$v['d_id']))->getField('username');
+        }
+
+//        var_dump($info);die;
+        $this->assign('info',$info);
+        $this->display();
+    }
+
+    // 预约时间页面
+    public function select_time(){
+        if(IS_POST){
+            $date=I('date');
+            $time=I('time');
+            //echo strtotime($date);die;
+            if(!$time || !$date){
+                $this->redirect('Index/select_time','',1,"<script>alert('修改失败');</script>");
+            }
+            if(strtotime($date) <= strtotime('11:30')){
+                $set_map['ordertime']=1;
+                $begin=date('Y-m').'-'.$time.' '.'09:30:00';
+                $end=date('Y-m').'-'.$time.' '.'11:30:00';
+                $ser_map['ordertime']=array('between',"$begin,$end");
+
+            }else if(strtotime($date) <= strtotime('14:30')){
+                $set_map['ordertime']=2;
+                $begin=date('Y-m').'-'.$time.' '.'11:31:00';
+                $end=date('Y-m').'-'.$time.' '.'14:30:00';
+                $ser_map['ordertime']=array('between',"$begin,$end");
+            }else{
+                $set_map['ordertime']=3;
+                $begin=date('Y-m').'-'.$time.' '.'14:31:00';
+                $end=date('Y-m').'-'.$time.' '.'17:00:00';
+                $ser_map['ordertime']=array('between',"$begin,$end");
+            }
+            $ser_map['type']=2;
+            $ser_map['is_pay']=2;
+            $ser_map['d_id']=$_SESSION['about_order']['d_id'];
+            $people_num=M('ty_service')->where($ser_map)->count();
+            $subscribe=date('Y-m').'-'.$time.' '.$date.':00';
+            $day=date('N',strtotime($subscribe));
+            $set_map['d_id']=$_SESSION['about_order']['d_id'];
+            $set_map['week']=$day;
+            $orderset=M('ty_orderset')->where($set_map)->find();
+            if(!$orderset){
+                $this->redirect('Index/select_time','',1,"<script>alert('当前时间段不支持预约');</script>");
+            }
+            if($people_num >= $orderset['numpeople']){
+                $this->redirect('Index/select_time','',1,"<script>alert('当前时间段预约人数已满,请重新选择时间');</script>");
+            }
+
+            $about_order=M('ty_service')->create($_SESSION['about_order']);
+            $about_order['is_status']=0;
+            $about_order['is_pay']=1;
+            $about_order['ordertime']=date('Y-m').'-'.$time.' '.$date.':00';
+            $row=M('ty_service')->data($about_order)->add();
+            if(!$row){
+                $this->redirect('Index/index','',1,"<script>alert('预约失败');</script>");
+            }
+            $data['f_id'] = $row;
+            $data['s_id'] = $about_order['s_id'];
+            $data['d_id'] = $about_order['d_id'];
+            $data['age'] = $_SESSION['aserver_content']['age'];
+            $data['sex'] = $_SESSION['aserver_content']['sex'];
+            $data['content'] =$_SESSION['aserver_content']['depict'];
+            $data['address'] = $_SESSION['aserver_content']['sheng'] . $_SESSION['aserver_content']['shi'];
+            $data['province'] = $_SESSION['aserver_content']['sheng'];
+            $data['city'] = $_SESSION['aserver_content']['shi'];
+            $data['is_status'] = 1;
+            $data['addtime'] = time();
+            $num=M('ty_consult')->data($data)->add();
+            unset($_SESSION['about_order']);
+            unset($_SESSION['aserver_content']);
+            if($row && $num){
+                $this->redirect('Index/current_service');
+            }else{
+                $this->redirect('Index/index','',1,"<script>alert('预约失败');</script>");
+            }
+        }else{
+            $result = M('ty_orderset')->where(array('d_id'=>$_SESSION['about_order']['d_id']))->select();
+            $week= date('N',time());
+            $str_time='';
+            foreach($result as $k=>$v){
+                if($v['week'] < $week){
+                    $result[$k]['date']=date('Y/m/d',time()-(($week-$v['week'])*86400));
+                }
+                else if($v['week'] > $week){
+                    $result[$k]['date']=date('Y/m/d',time()+(($v['week']-$week)*86400));
+                }else{
+                    $result[$k]['date']=date('Y/m/d',time());
+                }
+                if($v['week']>= $week){
+                    $list[$k]=$result[$k];
+                    $str_time=$str_time.$result[$k]['date'].',';
+                }
+            }
+            $this->assign('list',$list);
+            $this->assign('str_time',$str_time);
+            $this->assign('result',$result);
+            $this->display();
+        }
+    }
+
+    //图文咨询历史
+    public function Chat_record(){
+        $sid = session('sid');
+        $tuwen = M('ty_service')->where(array('s_id'=> $sid,'type'=> '1'))->field('id,username,office,addtime')->select();
+        foreach($tuwen as &$v){
+             $v['id'] = M('ty_consult')->where(array('f_id'=>$v['id']))->getField('content');
+        }
+
+//        var_dump($tuwen);die;
+
+        $this->assign('info',$tuwen);
+        $this->display();
+    }
+
+    //预约咨询历史
+    public function Chat_record_two(){
+        $sid = session('sid');
+        $yuyue = M('ty_service')->where(array('s_id'=> $sid,'type'=> '2'))->field('id,username,office,addtime')->select();
+        foreach($yuyue as &$v){
+            $v['id'] = M('ty_consult')->where(array('f_id'=>$v['id']))->getField('content');
+        }
+
+//        var_dump($yuyue);die;
+        $this->assign('info',$yuyue);
+        $this->display();
+    }
+
+    // 聊天记录页面
+    public function chat(){
+        $this->display();
+    }
+
+
+}
+
