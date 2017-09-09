@@ -1,0 +1,26 @@
+<extend name="Public/base"/>
+<block name="container">
+    <div class="row">
+        <form class="form-horizontal m-t" id="signupForm" novalidate="novalidate" method="post" action="__URL__/set">
+            <volist name="data" id="v">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">{$v.name}:</label>
+                    <div class="col-sm-3">
+                        <input name="{$v.code}" class="form-control" type="text" value="{$v.value}">
+                        <span class="help-block m-b-none"><i class="fa fa-info-circle"></i>{$v.comment}</span>
+                    </div>
+                </div>
+            </volist>
+
+
+            <div class="form-group">
+                <div class="col-sm-8 col-sm-offset-3">
+                    <button class="btn btn-primary" type="submit">提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br/>
+</block>
+<block name="js">
+</block>

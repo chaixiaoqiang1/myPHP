@@ -1,0 +1,84 @@
+<extend name="Public/base"/>
+<block name="container">
+    <div class="row">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 body_left_bg text-center">
+            <include file="Public/Delivery/column"/>
+        </div>
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" >
+            <div class="row  border-bottom white-bg dashboard-header">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8"  style="margin-top: 20px;">
+                    <div class="ibox float-e-margins text-center">
+
+                        <div>
+                            <table class="table table-bordered">
+                                <colgroup>
+                                    <col width="20%"/>
+                                    <col width="80%"/>
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <td>头像</td>
+                                    <td><img src="__ROOT__/{$list.user_logo}" alt="" style="height: 80px; border-radius: 50%;"></td>
+                                </tr>
+                                <tr>
+                                    <td>名称</td>
+                                    <td>{$list.s_name}</td>
+                                </tr>
+                                <tr>
+                                    <td>身份证号码</td>
+                                    <td>{$list.s_sfz}</td>
+                                </tr>
+                                <tr>
+                                    <td>所属商铺</td>
+                                    <td>{$shop_name}</td>
+                                </tr>
+                                <tr>
+                                    <td>联系电话</td>
+                                    <td>{$list.phone}</td>
+                                </tr>
+                                <tr>
+                                    <td>工作证号</td>
+                                    <td>{$list.job_number}</td>
+                                </tr>
+                                <tr>
+                                    <td>账号</td>
+                                    <td>{$list.account_num}</td>
+                                </tr>
+                                <tr>
+                                    <td>密码</td>
+                                    <td>{$list.password}</td>
+                                </tr>
+                                <tr>
+                                    <td>出生日期</td>
+                                    <td>{$list.birth_date}</td>
+                                </tr>
+                                <tr>
+                                    <td>年龄</td>
+                                    <td>{$list.age}</td>
+                                </tr>
+                                <tr>
+                                    <td>性别</td>
+                                    <td>
+                                        <if condition="$list['sex'] eq 1">
+                                            男
+                                            <else/>
+                                            女
+                                        </if>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+    </div>
+
+</block>
+<block name="js">
+
+
+</block>
