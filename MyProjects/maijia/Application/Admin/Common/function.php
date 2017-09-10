@@ -1,4 +1,10 @@
 <?php
+
+/***
+ * 自定义分页类的设置
+ * @param $obj
+ * @return mixed
+ */
 function setPage($obj){
     $obj->setConfig('first','首页');
     $obj->setConfig('prev','上一页');

@@ -10,7 +10,7 @@ class AskController extends CommonController
     public function __construct()
     {
         parent::__construct();
-        $this->model = M('ask');
+        $this->model = M('ask');  // 因为这个类所有操作都需要用到这张表 所以我定的了一个
     }
 
     /**
