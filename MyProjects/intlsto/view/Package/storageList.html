@@ -1,0 +1,99 @@
+<include file="layout/header"/>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/validate-methods.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/messages_zh.min.js"></script>
+
+<script type="text/javascript" src="__PUBLIC__/lib/daterange/moment.min.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/lib/daterange/jquery.daterangepicker.min.js" ></script>
+<link rel="stylesheet" href="__PUBLIC__/lib/daterange/daterangepicker.min.css" />
+<script type="text/javascript" src="__PUBLIC_JS__/page/storageList.js?{:time()}"></script>
+
+<!--bootstrap table 引入-->
+<link rel="stylesheet" href="__PUBLIC__/css/layout/table_boot.css"/>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20">
+	<div class="panel-header">
+		<span class="active">仓储详情</span>
+	</div>
+	<div class="panel-body panel_body_block">
+		<form class="form form-horizontal" id="form-article-add" novalidate="novalidate">
+			<div class="row cl">
+				<div class="f-l">
+					<label class="select_w_150 f-l text-r form-label">海外快递单号：</label>
+					<div class="f-l w-200">
+						<input type="text" id="trackingNo" maxlength="35" name="trackingNo" class="input-text" />
+					</div>
+				</div>
+				<div class="f-l">
+					<label class="select_w_150 f-l text-r form-label">海外收货仓库：</label>
+					<div class="f-l">
+						<span class="select-box select_w_150">
+							<select name="consolidatorNo" id="consolidatorNo" class="select">
+								<option value="">全部</option>
+								<volist name="warehouse" id="vo">
+									<option value="{$vo.org_no}">{$vo.org_name}</option>
+								</volist>
+							</select>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="row cl">
+				<div class="f-l">
+					<label class="select_w_150 f-l text-r form-label">入库时间段：</label>
+					<div class="f-l w-200">
+						<input id="date-range16" class="w-200 input-text" type="text">
+						<input type="hidden" id="beginDate" name="beginDate" >
+						<input type="hidden" id="endDate" name="endDate">
+					</div>
+				</div>
+				<div class="f-l">
+					<label class="select_w_150 f-l text-r form-label">入库状态：</label>
+					<div class="f-l">
+								<span class="select-box select_w_150">
+									<select name="status" id="status" class="select">
+										<option value="">全部</option>
+										<foreach name="status" item="vo" key="key">
+											<option value="{$vo.status}">{$vo.text}</option>
+										</foreach>
+									</select>
+								</span>
+					</div>
+					<div class="f-l ml-20">
+						<button onclick="reloadTable('table')" type="button" class="btn btn-primary size-M">查询</button>
+						<button class="btn btn-warning size-M" onclick="resetTable(this,'table')" type="button">重置</button>
+					</div>
+				</div>
+			</div>
+		</form>
+		<div class="panel-body panel_body_block">
+			<div class="clearfix pb-20">
+				<button class="btn btn-warning radius size-M" id="storageAdd">仓储预报</button>
+				<button id="tanksSendGood" class="btn c-white btn-primary size-M">合箱发货</button>
+				<button id="separate" class="btn c-white btn-primary size-M">分箱发货</button>
+			</div>
+			<div class="clearfix">
+				<div class="clearfix" style="border: 1px solid #ddd;">
+					<table id="table" class="table" data-pagination="true"  ></table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<script type="text/javascript">
+	var storageAdd="{:U('package/storageAdd',array('box'=>1))}",//仓储预报
+		tanksSendGood="{:U('package/tanksSendGood')}",  		//合箱发货
+        separateSendPackage="{:U('package/separateSendPackage')}",		//分箱发货
+	 	orderAdd = "{:U('Package/issuePackage')}", 				//发货
+	 	abandonPackage = "{:U('Package/abandonPackage')}", 		//弃货
+	 	returnPackage = "{:U('Package/returnPackage')}", 		//退货
+	 	servicePackage = "{:U('Package/servicePackage')}", 		//增值服务
+	 	storageList = "{:U('Package/storageList',array('table'=>'1'))}", //查询列表数据
+	 	weightCompany  = '{:session("company.weightSymbol")}',	//重量单位
+	    storageDel = '{:U("Package/delStorage")}';
+</script>
+<include file="layout/footer"/>

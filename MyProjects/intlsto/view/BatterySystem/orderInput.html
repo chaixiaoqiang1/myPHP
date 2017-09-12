@@ -1,0 +1,38 @@
+<include file="layout/header"/>
+<script type="text/javascript" src="__PUBLIC__/lib/laydate/laydate.js" ></script>
+<script type="text/javascript" src="__PUBLIC_JS__/battery/orderInput.js?{:time()}"></script>
+
+<div class="bg-fff">
+	<div class="panel-body panel_body_block">
+		<form class="form form-horizontal pt-10">
+			<div class="row cl">
+				<label class="f-l form-label width_100" style="text-align: right;">订单来源：</label>
+				<div class="f-l formControls" style="width: 422px;">
+					<span class="select-box">
+						<select name="configureId" class="select">
+							<option value="">请选择</option>
+							<foreach name="configure" item="vo">
+								<option value="{$vo.configureId}">{$vo.configureName}_{:strstr($vo['platformConfig'],',',TRUE)}</option>
+							</foreach>
+						</select>
+					</span>
+				</div>
+			</div>
+			<div class="row cl">
+				<label class="f-l form-label width_100" style="text-align: right;">时间段：</label>
+				<div class="f-l formControls">
+					<input type="text" class="input-text width_200 laydate-icon" name="startTime" readonly="readonly" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" value="" placeholder="开始日期" > 至
+					<input type="text" class="input-text width_200 laydate-icon" name="endTime" readonly="readonly" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" value="" placeholder="开始日期">
+				</div>
+			</div>
+			<div class="row cl">
+				<label class="f-l form-label width_100"></label>
+				<div class="f-l formControls width_200">
+					<button class="btn btn-warning radius" id="order_input" type="button">导入</button>
+					<button class="btn btn-default-outline radius" onclick="closeThis()" type="button">取消</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<include file="layout/footer"/>

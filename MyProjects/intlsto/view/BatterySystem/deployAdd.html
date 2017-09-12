@@ -1,0 +1,75 @@
+<include file="layout/header"/>
+<script type="text/javascript" src="__PUBLIC__/lib/H-ui/js/H-ui.min.js" ></script>
+<link rel="stylesheet" href="__PUBLIC__/lib/icheck/icheck.css" />
+<script type="text/javascript" src="__PUBLIC__/lib/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/validate-methods.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/messages_zh.min.js"></script>
+<script type="text/javascript" src="__PUBLIC_JS__/battery/deployAdd.js?{:time()}"></script>
+
+	<script type="text/javascript">
+        $(function(){
+            $('.skin-minimal input').iCheck({
+                checkboxClass: 'icheckbox-blue',
+                radioClass: 'iradio-blue',
+                increaseArea: '20%'
+            });
+        });
+	</script>
+		<div class="bg-fff">
+			<div class="panel-body panel_body_block">
+				<form class="form form-horizontal pt-10" id="deploy_add">
+						<div class="row cl clearfix">
+							<label class="f-l form-label width_100" style="text-align: right;">订单来源：</label>
+							<div class="f-l formControls width_250">
+								<span class="select-box">
+									<select name="platform" class="select">
+										<option value="">全部</option>
+										<foreach name="platform" item="vo">
+											<option value="{$vo.platformCode}_{$vo.platformName}">{$vo.platformName}</option>
+										</foreach>
+									</select>
+								</span>
+							</div>
+						</div>
+						<div class="row cl clearfix">
+							<label class="f-l form-label width_100" style="text-align: right;">API ID：</label>
+							<div class="f-l formControls width_250">
+								<input type="text" name="apiId" class="input-text">
+							</div>
+						</div>
+						<div class="row cl clearfix">
+							<label class="f-l form-label width_100" style="text-align: right;">Key：</label>
+							<div class="f-l formControls width_250">
+								<input type="text" name="key" class="input-text">
+							</div>
+						</div>
+						<div class="row cl clearfix">
+							<label class="f-l form-label width_100" style="text-align: right;">状态：</label>
+							<div class="f-l formControls width_250">
+								
+								<div class="skin-minimal f-l">
+								  <div class="check-box" style="padding-top: 3px;">
+								    <input name="status" type="radio" value="1" checked="" id="checkbox-0">
+								    <label for="checkbox-0" style="font-size: 12px;">启用</label>
+								  </div>
+								</div>
+								
+								<div class="skin-minimal f-l">
+								  <div class="check-box" style="padding-top: 3px;">
+								    <input name="status" type="radio" value="0" id="checkbox-1">
+								    <label for="checkbox-1" style="font-size: 12px;">禁用</label>
+								  </div>
+								</div>
+							</div>
+						</div>
+						<div class="row cl clearfix">
+							<label class="f-l form-label width_100" style="text-align: right;"></label>
+							<div class="f-l formControls width_250">
+								<button class="btn btn btn-warning radius" type="submit">提交</button>
+								<button class="btn btn-default-outline radius" type="button" onclick="closeThis()">取消</button>
+							</div>
+						</div>
+				</form>
+			</div>
+		</div>
+<include file="layout/footer"/>

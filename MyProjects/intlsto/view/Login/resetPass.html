@@ -1,0 +1,56 @@
+<include file="layout/header"/>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/validate-methods.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/messages_zh.min.js"></script>
+<script type="text/javascript" src="__PUBLIC_JS__/page/resetPass.js?{:time()}"></script>
+<link rel="stylesheet" href="__PUBLIC_CSS__/page/forget.css" />
+		<title>星云（国际）业务系统-会员</title>
+
+		<div class="header">
+			<div class="header_forget_box">
+				<a href="{:U('Login/index')}">登录</a>
+			</div>
+		</div>
+		<div class="forget_box reg">
+			<h4>设置新密码</h4>
+			<div class="line"></div>
+			<p class="lh-30 text-c f-14 pt-20 pb-30">请设置<cite class="pl-5 pr-5 c-orange">{$info.memberEmail}</cite>的新密码，建议使用数字、字母、字符的组合密码，提高密码安全等级</p>
+			
+			<form class="form form-horizontal" id="resetPass" style="margin: 0 auto; width: 500px;">
+				<div class="row cl">
+					<label class="form-label f-l width_100" style="height: 37px;line-height: 37px;">新密码：</label>
+					<div class="formControls f-l width_350">
+						<input type="hidden" name="memberName" value="{$info.memberName}">
+						<input type="hidden" name="linkValue" value="{$info.linkValue}">
+						<input type="password" class="input-text radius" id="password" name="password" style="height: 40px;" autocomplete="off" placeholder="请输入新密码">
+						<p class="pt-10 c-999">密码由8-20个字符组成，区分大小写，请使用字母、数字和特殊符号中的两种及以上的组合</p>
+					</div>
+				</div>
+				
+				<div class="row cl" style="margin-top: 0px;">
+					<label class="form-label f-l width_100" style="height: 37px;line-height: 37px;">密码强度：</label>
+					<div class="formControls f-l width_350">
+						<div class="progress mt-15" style="width: 350px;"><div class="progress-bar"><span class="sr-only"></span></div></div>
+					</div>
+				</div>
+				
+				<div class="row cl">
+					<label class="form-label f-l width_100" style="height: 37px;line-height: 37px;">确认密码：</label>
+					<div class="formControls f-l width_350">
+						<input type="password" class="input-text radius f-l" name="confirmPwd" style="height: 40px;" autocomplete="off" placeholder="请输入确认密码">
+					</div>
+				</div>
+				
+				<div class="clearfix text-c pt-20">
+					<button class="btn btn-warning size-XL radius">确&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;定</button>
+				</div>
+			</form>
+
+		</div>
+		<footer class="footer" style="position: fixed; left: 0px;right: 0px;bottom: 0px;"> 
+			<div class="container-fluid">版权所有：申通快递有限公司&nbsp;&nbsp;沪ICP备13037807号-3</div>
+		</footer>
+		<script type="text/javascript">
+			var login_url="{:U('Login/index')}";
+		</script>
+<include file="layout/footer"/>

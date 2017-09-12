@@ -1,0 +1,58 @@
+<include file="layout/header"/>
+<title>仓储预报</title>
+<script type="text/javascript" src="__PUBLIC__/lib/H-ui/js/H-ui.min.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/validate-methods.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/messages_zh.min.js"></script>
+<script type="text/javascript" src="__PUBLIC_JS__/page/storageAdd.js?{:time()}"></script>
+<if condition="empty($box)">
+	<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20"  >
+		<div class="panel-header">
+			<span class="active">仓储预报</span>
+		</div>
+<else/>
+	<div class="bg-fff">
+</if>
+			<div class="panel-body panel_body_block">
+				<form class="form form-horizontal" id="forecast_add" novalidate="novalidate">
+					<input type="hidden" value="{$storageList.forecastId}" name="id"/>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r">海外快递公司：</label>
+						<div class="formControls col-xs-8 col-sm-9 w-300">
+							<span class="select-box">
+								<select name="expressCode" class="select">
+									<option value="">请选择</option>
+									<volist name="express" id="vo">
+										<option value="{$vo.expressCode}" <if condition="$storageList['expressCode'] eq $vo['expressCode']">selected</if>>{$vo.expressName}</option>
+									</volist>
+								</select>
+							</span>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r">海外快递单号：</label>
+						<div class="formControls col-xs-9 col-sm-9 w-300">
+							<input type="text" class="input-text" maxlength="30" name="trackingNo" value="{$storageList.trackingNo}" placeholder="">
+						</div>
+					</div>
+					
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r">商品信息：</label>
+						<div class="formControls col-xs-9 col-sm-9 width_500">
+							<textarea class="textarea" placeholder="请输入商品的名称、规格、单位等基本信息" name="inventory" onkeyup="$.Huitextarealength(this,100)">{$storageList.inventory}</textarea>
+							<p class="textarea-numberbar " style="left: 0px; text-align: right;"><em class="textarea-length">{:mb_strlen($storageList['inventory'],'utf-8')}</em>/100</p>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20"></label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<button class="btn btn-warning radius size-L" type="submit">提交信息</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			
+		</div>
+<include file="layout/footer"/>
+

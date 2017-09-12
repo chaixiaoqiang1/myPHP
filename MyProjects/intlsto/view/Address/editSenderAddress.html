@@ -1,0 +1,139 @@
+<include file="layout/header"/>
+<script type="text/javascript" src="__PUBLIC_JS__/page/editSenderAddress.js?{:time()}"></script>
+<link rel="stylesheet" href="__PUBLIC__/lib/icheck/icheck.css" />
+<script type="text/javascript" src="__PUBLIC__/lib/H-ui/js/H-ui.min.js" ></script>
+<script type="text/javascript">
+        $(function(){
+            $('.skin-minimal input').iCheck({
+                checkboxClass: 'icheckbox-blue',
+                radioClass: 'iradio-blue',
+                increaseArea: '20%'
+            });
+        });
+</script>
+		<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20">
+			<div class="panel-header"><span class="active">编辑发货地址</span></div>
+			<div class="panel-body panel_body_block">
+				<form class="form form-horizontal" id="senderEdit" novalidate="novalidate">
+                    <div class="row cl">
+                        <label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>所在地区：</label>
+                        <div class="formControls col-xs-9 col-sm-9">
+							<span class="select-box select_w_150 ">
+								<select name="country" class="select link" id="link1" link="1">
+                                    <option value="" >请选择</option>
+									<volist name="country_info" id="vo">
+                                        <option value="{$vo.country_id}_{$vo.country_name}_{$vo.country_code}" <if condition="$vo.country_code eq $sender_data['countryCode']">selected="selected" </if> >{$vo.country_name}</option>
+									</volist>
+                                </select>
+							</span>
+							<span class="select-box select_w_150" <if condition="empty($province_info)">style="display:none;" </if> >
+								<select name="province"  class="select link" id="link2" link="2">
+                                    <option value="" >请选择</option>
+                                    <volist name="province_info" id="vo">
+                                        <option value="{$vo.country_id}_{$vo.country_name}" <if condition="$vo.country_id eq $sender_data['provinceCode']">selected="selected" </if> >{$vo.country_name}</option>
+                                    </volist>
+                                </select>
+							</span>
+							<span class="select-box select_w_150" <if condition="empty($city_info)">style="display:none;" </if> >
+								<select name="city" class="select link" id="link3" link="3">
+                                    <option value="">请选择</option>
+                                    <volist name="city_info" id="vo">
+                                        <option value="{$vo.country_id}_{$vo.country_name}" <if condition="$vo.country_id eq $sender_data['cityCode']">selected="selected" </if> >{$vo.country_name}</option>
+                                    </volist>
+                                </select>
+							</span>
+							<span class="select-box select_w_150" <if condition="empty($street_info)">style="display:none;" </if> >
+								<select name="area" class="select link" id="link4" link="4">
+                                    <option value="">请选择</option>
+                                    <volist name="street_info" id="vo">
+                                        <option value="{$vo.country_id}_{$vo.country_name}" <if condition="$vo.country_id eq $sender_data['areaCode']">selected="selected" </if> >{$vo.country_name}</option>
+                                    </volist>
+                                </select>
+							</span>
+							<span class="select-box select_w_150" <if condition="empty($town_info)">style="display:none;" </if> >
+								<select name="town" class="select link" id="link5" link="5">
+									<option value="">请选择</option>
+									<volist name="town_info" id="vo">
+										<option value="{$vo.country_id}_{$vo.country_name}" <if condition="$vo.country_id eq $sender_data['townCode']">selected="selected" </if> >{$vo.country_name}</option>
+									</volist>
+								</select>
+							</span>
+                        </div>
+                    </div>
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>详细地址：</label>
+						<div class="formControls col-xs-4 col-sm-5">
+							<textarea name="address" cols="" rows="" class="textarea" placeholder="建议您如实填写详细地址，例如街道名称，门牌号码，楼层和房间号等信息" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onkeyup="$.Huitextarealength(this,100)">{$sender_data.address}</textarea>
+							<p class="textarea-numberbar"><em class="textarea-length">{:mb_strlen($sender_data['address'],'utf-8')}</em>/100</p>
+						</div>
+					</div>
+					
+					
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20">邮政编码：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="text" class="input-text select_w_150" name="postcode" value="{$sender_data.postcode}" placeholder="邮政编码" maxlength="12">
+						</div>
+					</div>
+
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>收货人姓名：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="text" class="input-text select_w_150" maxlength="25" name="senderName" value="{$sender_data.senderName}" placeholder="请输入发货人姓名">
+						</div>
+					</div>
+					
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>联系电话：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<select name="mobile_first" class="select input-text width_80" style="display: inline-block">
+								<option value="">请选择</option>
+								<foreach name="mobile_first" item="vo">
+									<option value="{$vo.countryNumber}"  <if condition="$sender_data['mobile_first'] eq $vo['countryNumber']"> selected="selected" </if> >+{$vo.countryNumber}</option>
+								</foreach>
+							</select>
+							<input type="text" class="input-text select_w_150" style="display: inline-block" maxlength="20" id="senderMobile" value="{$sender_data.mobile}" placeholder="请输入发货人手机号" name="mobile">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>邮箱：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="text" name="email" maxlength="50" class="input-text width_200" value="{$sender_data.email}" placeholder="请输入发货人邮箱">
+							<input type="hidden" name="is_default" value="{$sender_data.isDefault}">
+						</div>
+					</div>
+					
+					<!--<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"></label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<div class="skin-minimal">
+							  <div class="check-box" style="padding-top: 5px;">
+							    <input type="checkbox" id="checkbox-1" value="1" name="is_default" <if condition="$sender_data['isDefault'] eq '1'"> checked="checked"</if> >
+							    <label for="checkbox-1" style="font-size: 12px;">设置为默认收货地址</label>
+							  </div>
+							 </div>
+						</div>
+					</div>-->
+			
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"></label>
+						<div class="formControls col-xs-8 col-sm-9">
+                            <input type="hidden" name="senderAddressId" value="{$sender_data.senderAddressId}">
+							<button class="btn btn-warning radius size-L" type="submit">保存发货地址</button>
+							<button class="btn btn-default-outline radius size-L" type="button" onclick="window.location.href='{:U(\'Address/index\',array(\'active\'=>1))}'" >取消并返回</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+<include file="layout/footer" />
+<script type="text/javascript" src="__PUBLIC__/lib/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/validate-methods.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/messages_zh.min.js"></script>
+<script>
+    var check_url			=	"{:U('Login/check')}",  //校验规则地址
+		city_url			=	"{:U('Address/getAreaList')}",
+        address_url			=	"{:U('Address/index')}",
+        edit_sender_url		=	"{:U('Address/editSenderAddress')}";	//编辑发货地址;
+</script>

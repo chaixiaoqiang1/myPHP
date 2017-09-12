@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+#printHtml .print_box{
+	clear: both;
+	padding-bottom: 20px;
+	height: 186px;
+	overflow-y: auto;
+	border-bottom: 1px solid #eee;
+}
+#printHtml .print_box ul{
+	clear: both;
+	display: block;
+}
+#printHtml .print_box ul li{
+	float: left;
+	display: block;
+	width:120px;
+	margin-top: 15px;
+	margin-left: 20px;
+	line-height: 30px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	text-align: center;
+	cursor: pointer;
+}
+#printHtml .print_box ul li p{
+	margin-bottom: 0px;
+	text-align: center;
+	padding-top:5px;
+	line-height: 18px;
+	height: 18px;
+	overflow-y: hidden;
+}
+#printHtml .print_box ul li div{
+	line-height: 22px;
+	height: 22px;
+	overflow-y: hidden;
+}
+#printHtml .print_box ul li.active{
+	border: 1px solid orange;
+	color: orangered;
+}

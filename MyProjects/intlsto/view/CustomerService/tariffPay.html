@@ -1,0 +1,56 @@
+
+<include file="layout/header"/>
+<script type="text/javascript" src="__PUBLIC__/lib/daterange/moment.min.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/lib/daterange/jquery.daterangepicker.min.js" ></script>
+<script type="text/javascript" src="__PUBLIC_JS__/page/tariffPay.js?{:time()}"></script>
+<link rel="stylesheet" href="__PUBLIC__/lib/daterange/daterangepicker.min.css" />
+<!--bootstrap table 引入-->
+<link rel="stylesheet" href="__PUBLIC__/css/layout/table_boot.css"/>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+
+		<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20">
+			<div class="panel-header">
+				<span class="active">关税支付</span>
+			</div>
+			<div class="panel-body panel_body_block">
+				<form class="form form-horizontal" id="form-article-add" novalidate="novalidate">
+					<div class="row cl">
+						<div class="f-l">
+							<label class="pl-20 f-l text-r form-label">申通单号：</label>
+							<div class="f-l w-200">
+								<input type="text" id="stoNo" maxlength="25" name="stoNo" class="w-200 input-text" />
+							</div>
+						</div>
+						<div class="f-l">
+							<label class="pl-20 f-l text-r form-label">收货人：</label>
+							<div class="f-l">
+								<input type="text" id="receiver" maxlength="25" name="receiver" class="w-200 input-text" />
+							</div>
+						</div>
+						<div class="f-l">
+							<label class="pl-20 f-l text-r form-label">支付时间：</label>
+							<div class="f-l w-200">
+								<input id="date-range16" class="w-200 input-text" type="text">
+								<input type="hidden" id="beginDate" name="beginDate" >
+								<input type="hidden" id="endDate" name="endDate">
+							</div>
+						</div>
+						<label class="pl-20 f-l text-r form-label"></label>
+						<button class="btn btn-primary size-M" onclick="reloadTable('table')" type="button">查询</button>
+						<button class="btn btn-warning size-M" onclick="resetTable(this,'table')" type="button">重置</button>
+					</div>
+					
+				</form>
+
+
+				<div class="clearfix mt-20" style="border: 1px solid #ddd;">
+					<table id="table" class="table" data-pagination="true" 	></table>
+				</div>
+			</div>
+		</div>
+<script type="text/javascript">
+	var Tax_url="{:U('CustomerService/Tax')}",table_url="{:U('CustomerService/tariffPay',array('table'=>1))}";
+</script>
+<include file="layout/footer"/>

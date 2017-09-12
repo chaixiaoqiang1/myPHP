@@ -1,0 +1,75 @@
+<include file="layout/header"/>
+		<title>星云（国际）业务系统-会员</title>
+		<link rel="stylesheet" href="__PUBLIC_CSS__/page/forget.css" />
+<script type="text/javascript" src="__PUBLIC_JS__/page/forgetPass.js?{:time()}"></script>
+		<div class="header">
+			<div class="header_forget_box">
+				<a href="{:U('Login/index')}">登录</a>
+			</div>
+		</div>
+		<div class="steps_box">
+				<div class="steps_content">
+					<dl class="active">
+						<dt>1</dt>
+						<dd>输入会员账号</dd>
+						<legend></legend>
+					</dl>
+					<dl>
+						<dt>2</dt>
+						<dd>确认邮箱</dd>
+						<legend></legend>
+					</dl>
+					<dl>
+						<dt>3</dt>
+						<dd>邮件发送</dd>
+					</dl>
+				</div>
+			</div>
+		<div class="forget_box reg">
+			<form class="form form-horizontal step1" style="margin: 0 auto; width: 500px;">
+				<div class="row cl">
+					<label class="form-label f-l width_100" style="height: 37px;line-height: 37px;">会员账号：</label>
+					<div class="formControls f-l width_350">
+						<input type="text" class="input-text radius" name="memberName" style="height: 40px;" autocomplete="off" placeholder="请输入会员账号">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label f-l width_100" style="height: 37px;line-height: 37px;">验证码：</label>
+					<div class="formControls f-l width_350">
+						<input type="text" class="input-text radius width_200 f-l" name="verify" maxlength="5" style="height: 40px;" autocomplete="off" placeholder="请输入验证码">
+						<div style="width: 140px; height: 40px; background: #ddd;overflow: hidden;" class="f-r" onclick="freshCode()">
+							<img title="点击刷新验证码" class="code_login" src="{:U('Login/verifyImg')}" />
+						</div>
+					</div>
+				</div>
+				<div class="clearfix text-c pt-20">
+					<button class="btn btn-warning size-XL radius" id="step1" type="button">下一步</button>
+				</div>
+			</form>
+			
+
+			<div class="step2" style="display: none;">
+				<p class="text-c f-14 pt-20">您将通过邮箱<cite class="c-warning pl-5 pr-5"></cite>进行密码修改的验证。</p>
+				<div class="clearfix text-c pt-20">
+					<button class="btn btn-warning size-XL radius" id="step2" pass="login">确认邮箱</button>
+				</div>
+			</div>
+
+			
+
+			<div class="step3" style="display: none;">
+				<p class="text-c f-14 pt-20">邮件已发送至您的邮箱，请及时进行密码修改。</p>
+				<div class="clearfix text-c pt-20">
+					<a class="btn btn-warning size-XL radius" href="{:U('Login/index')}">去登录</a>
+				</div>
+			</div>
+		</div>
+		<footer class="footer" style="position: fixed; left: 0px;right: 0px;bottom: 0px;">
+			<div class="container-fluid">版权所有：申通快递有限公司&nbsp;&nbsp;沪ICP备13037807号-3</div>
+		</footer>
+<script type="text/javascript">
+	var check_url="{:U('Login/check')}",
+		getEmail_url="{:U('Login/forgetPass')}",
+		sendEmail_url="{:U('Login/sendEmail')}";
+</script>
+<include file="layout/footer"/>

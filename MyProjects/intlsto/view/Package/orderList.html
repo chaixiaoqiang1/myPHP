@@ -1,0 +1,162 @@
+<include file="layout/header"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/lib/validate/pay.css" />
+<script type="text/javascript" src="__PUBLIC__/lib/daterange/moment.min.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/lib/daterange/jquery.daterangepicker.min.js" ></script>
+<link rel="stylesheet" href="__PUBLIC__/lib/daterange/daterangepicker.min.css" />
+<script type="text/javascript" src="__PUBLIC_JS__/page/orderList.js?{:time()}"></script>
+<!--bootstrap table 引入-->
+<link rel="stylesheet" href="__PUBLIC__/css/layout/table_boot.css"/>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+<link rel="stylesheet" href="__PUBLIC__/lib/font_icon/iconfont.css">
+<script type="text/javascript" src="__PUBLIC__/lib/LodopFuncs.js"></script>
+
+<link rel="stylesheet" href="__PUBLIC__/css/page/printAll.css"/>
+
+		<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20">
+			<div class="panel-header">
+				<span class="active">我的包裹</span>
+			</div>
+			<div class="panel-body panel_body_block">
+				<form class="form form-horizontal" id="form-article-add" method="get" novalidate="novalidate">
+					<div class="row cl">
+						<div class="f-l">
+							<label class="select_w_150 f-l text-r form-label">海外快递单号：</label>
+							<div class="f-l w-200">
+								<input type="text" name="trackingNo" maxlength="30" id="trackingNo" class="input-text" value="{$_GET['trackingNo']}" placeholder="">
+							</div>
+						</div>
+						<div class="f-l">
+							<label class="select_w_150 f-l text-r form-label">申通单号：</label>
+							<div class="f-l w-200">
+								<input type="text" name="stoNo" id="stoNo" maxlength="25" class="input-text" value="{$_GET['stoNo']}" placeholder="">
+							</div>
+						</div>
+						<div class="f-l">
+							<label class="select_w_150 f-l text-r form-label">海外收货仓库：</label>
+							<div class="f-l">
+								<span class="select-box select_w_150">
+									<select name="consolidatorNo" class="select" id="consolidatorNo">
+										<option value="">全部</option>
+										<volist name="warehouse" id="vo">
+											<option value="{$vo.org_no}">{$vo.org_name}</option>
+										</volist>
+									</select>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="row cl">
+						<div class="f-l">
+							<label class="select_w_150 f-l text-r form-label">下单时间段：</label>
+							<div class="f-l w-200">
+								<input id="date-range16" class="w-200 input-text" type="text">
+								<input type="hidden" id="beginDate" name="beginDate" >
+								<input type="hidden" id="endDate" name="endDate">
+							</div>
+						</div>
+						<div class="f-l">
+							<label class="select_w_150 f-l text-r form-label">包裹状态：</label>
+							<div class="f-l w-200">
+								<span class="select-box select_w_200">
+									<select name="state" class="select" id="state">
+										<option value="">全部</option>
+										<foreach  name="status" item="vo" key="k">
+											<option value="{$k}" <if condition="$state eq $k">selected="selected"</if> >{$vo}</option>
+										</foreach >
+									</select>
+								</span>
+							</div>
+						</div>
+						<div class="f-l">
+							<label class="select_w_150 f-l text-r form-label">支付状态：</label>
+							<div class="f-l">
+								<span class="select-box select_w_150">
+									<select name="payState" class="select" id="payState">
+										<option value="">全部</option>
+										<option value="0">未付款</option>
+										<option value="1"  <if condition="$state eq 99">selected="selected"</if> >待付款</option>
+										<option value="2">已付款</option>
+									</select>
+								</span>
+							</div>
+						</div>
+						<div class="f-l ml-20">
+							<button class="btn btn-primary size-M" onclick="reloadTable('table')" type="button">查询</button>
+							<button class="btn btn-warning size-M" onclick="resetTable(this,'table')" type="button">重置</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="panel-body panel_body_block">
+				<div class="clearfix pb-20">
+					<a href="{:U('Package/orderAdd')}" class="btn btn-success size-M radius c-white">极速发货</a>
+					<a href="javascript:void(0);" onclick="batchExport()" class="btn btn-primary size-M radius c-white">批量导出</a>
+					<a href="javascript:void(0);" onclick="printAll()" class="btn btn-primary size-M radius c-white">批量打印</a>
+					<a href="javascript:void(0);" onclick="printAllPath()" class="btn btn-default size-M " style="display:block;text-align:right; float:right;">面单配置设置</a>
+				</div>
+				<div class="clearfix" style="border: 1px solid #ddd;">
+					<table id="table" class="table" data-pagination="true" 	></table>
+				</div>
+			</div>
+		</div>
+
+
+
+<form action=""  method="post"  id="form_paypsw" class="form form-horizontal mt-30 mr-40 ml-40" style="display: none;">
+	<div id="payPassword_container" class="alieditContainer cl pb-10" data-busy="0">
+		<input type="hidden" id="paySto" value=""/>
+		<label class="form-label width_80 f-l">支付密码：</label>
+		<div class="formControls f-l" data-error="i_error">
+			<div class="i-block six-password">
+				<input class="i-text sixDigitPassword" id="payPassword_rsainput" type="password" autocomplete="off" required="required" value="" name="payPassword_rsainput" data-role="sixDigitPassword" tabindex="" maxlength="6" minlength="6" aria-required="true">
+				<div tabindex="0" class="sixDigitPassword-box" style="width: 180px;">
+					<i style="width: 29px; border-color: transparent;" class=""><b style="visibility: hidden;"></b></i>
+					<i style="width: 29px;"><b style="visibility: hidden;"></b></i>
+					<i style="width: 29px;"><b style="visibility: hidden;"></b></i>
+					<i style="width: 29px;"><b style="visibility: hidden;"></b></i>
+					<i style="width: 29px;"><b style="visibility: hidden;"></b></i>
+					<i style="width: 29px;"><b style="visibility: hidden;"></b></i>
+					<span style="width: 29px; left: 0px; visibility: hidden;" id="cardwrap" data-role="cardwrap"></span>
+				</div>
+			</div>
+		</div>
+		<div class="help-block"><i class="Hui-iconfont Hui-iconfont-shenhe-weitongguo"></i>&nbsp;请输入6位纯数字密码</div>
+	</div>
+	<input type="button" id="submitPay" class="btn btn-warning size-L radius" style="margin-left: 80px;margin-top: 5px;" value="提交">
+</form>
+
+<div id="printHtml" style="display: none;">
+	<div class="print_box">
+		<ul class="clearfix">
+			<foreach name="express" item="vo">
+				<li <if condition="$vo.isDefault eq 1">class="active"</if> >
+					<input type="hidden" value="{$vo.expressBillId}" id="expressBillId"/>
+					<p>{$vo.expressBillName}</p>
+					<div>{$vo.expressBillSpec}</div>
+				</li>
+			</foreach>
+		</ul>
+	</div>
+	<div class="clearfix text-c">
+		<div class="clearfix pt-10 pb-10">
+			<!--<input type="checkbox" value="1" id="isTrue"/>-->
+			<!--<label>设置为默认</label>-->
+		</div>
+		<input type="button" class="btn btn-primary size-L radius" id="submit" value="确认"/>
+		<input type="button" class="btn btn-default size-L radius" id="close" value="取消"/>
+	</div>
+</div>
+<script type="text/javascript" src="__PUBLIC_JS__/page/pay.js"></script>
+<script type="text/javascript">
+	var del_url="{:U('Package/orderDel')}";
+	var pay="{:U('Package/payOrderCost')}";
+	var orderList="{:U('Package/orderList',array('table'=>'1'))}";  //查询包裹数据
+	var orderDetail = "{:U('Package/orderDetail')}"; //包裹详情
+	var orderUpdate = "{:U('Package/orderUpdate')}"; //包裹修改
+	var expressBill = "{:U('Package/orderList')}";   //面单
+	var batchExportUrl = "{:U('Package/batchExport')}";
+	var batchPrints = "{:U('Package/batchPrints')}";
+</script>
+<include file="layout/footer"/>

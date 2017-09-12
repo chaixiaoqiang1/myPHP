@@ -1,0 +1,274 @@
+<include file="layout/header"/>
+<script type="text/javascript" src="__PUBLIC__/lib/H-ui/js/H-ui.min.js" ></script>
+<script type="text/javascript" src="__PUBLIC_JS__/page/public.js?{:time()}"></script>
+<script type="text/javascript" src="__PUBLIC_JS__/page/orderUpdate.js?{:time()}"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/icheck/jquery.icheck.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/lib/icheck/icheck.css?123" />
+<script type="text/javascript">
+	$(function(){
+		$('.skin-minimal input').iCheck({
+			checkboxClass: 'icheckbox-blue',
+			radioClass: 'iradio-blue',
+			increaseArea: '20%'
+		});
+	});
+</script>
+<style type="text/css">
+	html,body{
+		height: 100%;
+	}
+	.panel{
+		background: none;
+	}
+</style>
+<div id="box" class="panel mr-20 ml-20 mb-20 pb-20" style="min-width: 1000px;">
+	<div class="panel-header">
+		<span class="active">包裹修改</span>
+	</div>
+	<div class="panel-title">物流信息</div>
+	<input type="hidden" value="" id="status"/>
+	<input type="hidden" value="{$parameter}" id="parameter"/>
+	<form class="form form-horizontal" id="form-article-update" novalidate="novalidate">
+		<input type="hidden" value="" name="order_id">
+		<input type="hidden" value="" name="sto_no">
+		<div class="panel-body panel_body_block mt-20 bg-fff form form-horizontal pb-10 form" style="border: 1px solid #ddd;">
+			<div class="form form-horizontal pb-10" >
+				<div class="row cl delivery">
+					<div class="f-l">
+						<label class="select_w_150 f-l text-r form-label"><span class="c-red">*</span>收货方式：</label>
+						<div class="f-l width_250">
+							<div class="skin-minimal f-l">
+								<div class="check-box" style="padding-top: 3px;">
+									<input type="radio" value="2" id="checkbox-2" name="delivery_type" >
+									<label for="checkbox-2" style="font-size: 12px;">自送货至门店</label>
+								</div>
+							</div>
+							<div class="skin-minimal f-l">
+								<div class="check-box" style="padding-top: 3px;">
+									<input type="radio" value="1" id="checkbox-1" name="delivery_type" >
+									<label for="checkbox-1" style="font-size: 12px;">快递至仓库</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="f-l">
+						<label class="select_w_150 f-l text-r form-label"><span class="c-red">*</span>海外收货仓库：</label>
+						<div class="f-l">
+							<span class="select-box select_w_150">
+								<select name="consolidator_no" class="select consolidator_no">
+									<option value="0">请选择</option>
+								</select>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="row cl" style="display: none;">
+					<div class="f-l">
+						<label class="select_w_150 f-l text-r form-label"><span class="c-red">*</span>海外快递公司：</label>
+						<div class="f-l">
+							<select name="express_code"  class="input-text width_250 express_code">
+								<option value="">请选择</option>
+							</select>
+						</div>
+					</div>
+					<div class="f-l">
+						<label class="select_w_150 f-l text-r form-label"><span class="c-red">*</span>海外快递单号：</label>
+						<div class="f-l">
+							<input type="text" name="tracking_no" class="input-text width_250" maxlength="30" value="" placeholder="">
+						</div>
+					</div>
+					<div class="f-l">
+						<label class="select_w_150 f-l text-r form-label">商城订单号：</label>
+						<div class="f-l">
+							<input type="text" name="mall_order_no" maxlength="50" class="input-text width_250" value="" placeholder="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel-title">
+			包裹信息
+		</div>
+		<div class="panel-body panel_body_block mt-20 bg-fff" style="border: 1px solid #ddd;">
+			<div class="form form-horizontal">
+				<div class="row cl pb-10">
+					<div class="f-l">
+						<label class="f-l text-r form-label pl-20">目的地：</label>
+						<div class="f-l">
+							<span class="select-box select_w_150">
+								<select name="destination" id="destination0"  class="select">
+									<option value="0">请选择</option>
+								</select>
+							</span>
+						</div>
+					</div>
+					<div class="f-l">
+						<label class="f-l text-r form-label pl-20">产品线路：</label>
+						<div class="f-l">
+							<span class="select-box select_w_150">
+								<select name="line_name" id="line_name0" class="select">
+									<option value="0">请选择</option>
+								</select>
+							</span>
+						</div>
+					</div>
+					<div class="f-l">
+						<label class="pl-20 f-l text-r form-label">关税支付：</label>
+						<div class="f-l">
+							<div class="skin-minimal f-l">
+								<div class="check-box" style="padding-top: 5px;">
+									<input type="radio" value="1" id="checkbox-4" name="tax_payer" >
+									<label for="checkbox-4" style="font-size: 12px;">发货人</label>
+								</div>
+							</div>
+							<div class="skin-minimal f-l">
+								<div class="check-box" style="padding-top: 5px;">
+									<input type="radio" value="0" id="checkbox-3"  name="tax_payer" >
+									<label for="checkbox-3" style="font-size: 12px;">收货人</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<table class="table table-bg table-border table-bordered table-hover table-striped mb-20">
+				<thead>
+				<tr>
+					<th class="text-c width_50">序号</th>
+					<th class="text-c">名称</th>
+					<th class="text-c">类别</th>
+					<th class="text-c">品牌</th>
+					<th class="text-c width_80">单位</th>
+					<th class="text-c width_50">数量</th>
+					<th class="text-c width_80">单价({:session("company.currencySymbol")})</th>
+					<th class="text-c width_100">合计金额({:session("company.currencySymbol")})</th>
+					<th class="text-c">操作</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr class="active orderGoods">
+					<td colspan="9" class="text-r">
+							<span class="f-16 mr-20">
+								总数量：
+								<cite class="c-orange number" ></cite>
+							</span>
+						<span class="f-16 mr-20">
+								总价：
+								<cite class="c-orange totalMoney" ></cite>
+							</span>
+						<!--<button class="btn btn-primary radius size-MINI">新增一条</button>-->
+						<input value="+新增一条" type="button" class="btn btn-primary size-MINI radius" onclick="addAGoods($(this))"/>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="panel-title" id="services0">地址选择</div>
+		<div class="clearfix pl-20 mt-10 mb-15 bg-fff pt-20 pb-20" style="border: 1px solid #ddd;">
+			<div class="f-l width_450 pr-10 mt-10" style="border-right: 1px dotted #ddd;">
+				<p style="margin-bottom: 10px;">
+					<span class="f-14 lh-30">收货地址</span>
+					<!--如果没有默认地址将deliveryAddressNo默认为1-->
+					<input type="hidden" id="deliveryAddressNo0" value="1"/>
+					<!--有默认地址时显示-->
+					<button type="button"  style="display: none;" class="btn btn-default-outline size-MINI radius f-r delivery0" onclick="administrationDeliveryAddress(0)">管理收货地址</button>
+					<!--没有默认地址时显示-->
+					<button type="button" style="display: none;" class="btn btn-default-outline size-MINI radius f-r falseDelivery0" onclick="addDeliveryAddress(0)">新增收货地址</button>
+				</p>
+				<p class="lh-20 delivery0" style="margin-bottom: 0px;" style="display: none;">
+					<span class="pr-5" style="font-weight: bolder;" id="deliveryName0"></span>
+					<span id="deliveryMobile0"></span>
+				</p>
+				<p class="lh-20 delivery0" style="margin-bottom: 0px;" style="display: none;">
+					<span class="pr-5" id="deliveryCountry0"></span>
+					<span class="pr-5" id="deliveryProvince0"></span>
+					<span class="pr-5" id="deliveryCity0"></span>
+					<span class="pr-5" id="deliveryArea0"></span>
+					<span class="pr-5" id="deliveryTown0"></span>
+					<span class="pr-5" id="deliveryAddress0"></span>
+					<span id="deliveryPostCode0"></span>
+					<input type="hidden" value="" id="deliveryAddressId0" name="delivery"/>
+				</p>
+				<!--没有默认地址时提示-->
+				<div class="c-999 f-12 falseDelivery0" style="display: none;">
+					亲~您还没有默认收货地址，赶紧去新增吧！
+				</div>
+				<!--身份证信息提示-->
+				<p class="lh-20 delivery0" style="margin-bottom: 0px;" id="certificateNum0"  style="display: none;"></p>
+
+			</div>
+
+			<div class="f-l width_450 ml-20 mt-10">
+				<p style="margin-bottom: 10px;">
+					<span class="f-14 lh-30">发货地址</span>
+					<!--如果没有默认地址将deliveryAddressNo默认为1-->
+					<input type="hidden" id="senderAddressNo0" value="1"/>
+					<button type="button" class="btn btn-default-outline size-MINI radius f-r sender0" style="display: none;" onclick="administrationSenderAddress()">管理发货地址</button>
+					<button type="button" class="btn btn-default-outline size-MINI radius f-r falseSender0"  style="display: none;" onclick="addSenderAddress()">新增发货地址</button>
+				</p>
+				<p class="lh-20 sender0" style="margin-bottom: 0px;" style="display: none;">
+					<span class="pr-5" style="font-weight: bolder;" id="senderName0"></span>
+					<span id="senderMobile0"></span>
+				</p>
+				<p class="lh-20 sender0" style="margin-bottom: 0px;" style="display: none;">
+					<span class="pr-5" id="senderCountry0"></span>
+					<span class="pr-5" id="senderProvince0"></span>
+					<span class="pr-5" id="senderCity0"></span>
+					<span class="pr-5" id="senderArea0"></span>
+					<span class="pr-5" id="senderTown0"></span>
+					<span class="pr-5" id="senderAddress0"></span>
+					<span id="senderPostCode0"></span>
+					<input type="hidden" value="" id="senderAddressId0" name="sender"/>
+				</p>
+				<div class="c-999 f-12 falseSender0" style="display: none;">
+					亲~您还没有默认发货地址，赶紧去新增吧！
+				</div>
+			</div>
+		</div>
+		<div class="clearFix estimate">
+			<div class="form form-horizontal pb-10 bg-fff" style="border: 1px solid #ddd;">
+				<div class="row cl">
+					<div class="f-l">
+						<label class="f-l text-r form-label pl-20">包裹重量：</label>
+						<div class="f-l">
+							<input type="text" class="input-text text-r width_80" maxlength="6" placeholder="{:session('company.weightSymbol')}" id="estimate" />
+						</div>
+					</div>
+					<div class="f-l">
+						<label class="f-l text-r form-label pl-20">预估费用：</label>
+						<div class="f-l c-orange f-16" style="padding-top: 3px;">
+							<strong class="f-16 c-orange">{:session("company.currencySymbol")}0.00</strong>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<input class="btn btn-warning size-L radius mt-20" id="submit" type="button" value="提交信息">
+			<button class="btn btn-default-outline size-L radius mt-20" id="return">取消并返回</button>
+		</div>
+	</form>
+</div>
+<script type="text/javascript">
+	var brandTypeUrl = "{:U('Package/selectBrandType')}",
+		brandNameUrl = "{:U('Package/selectBrandName')}",
+		selectNameByCateIdUrl = '{:U("Package/selectNameByCateId")}',//根据查询品牌关联类别
+		selectDestinationByLineName = "{:U('Package/selectDestinationByLineName')}",
+		orderUpdate = "{:U('Package/orderUpdate')}",
+		weightEstimate = '{:U("Package/weightEstimate")}',
+		consolidatorNoByAll = "{:U('Package/selectAllByConsolidatorNo')}",
+		currencySymbol  = '{:session("company.currencySymbol")}',
+		orderReceiverAddressAdd = "{:U('Package/orderAddressAdd',array('id' => '1'))}",
+		orderDeliveryAddressAdd = "{:U('Package/orderAddressAdd',array('id' => '2'))}",
+		orderReceiverAddress = "{:U('Package/orderManageAddress',array('id' => '1'))}",
+		orderDeliveryAddress = "{:U('Package/orderManageAddress',array('id' => '2'))}",
+		orderList = "{:U('package/orderList')}",
+		countryName = '{:session("countryName")}',
+		express = '{$expressStorage}',
+		addressUrl = "{:U('Package/getAddressById')}",
+		srcImg = "__PUBLIC__/img/insuranceImage.jpg",
+		unitUrl = "{:U('Package/selectUnit')}";
+		updateLoading = "{:U('Package/updateLoading')}";
+</script>
+<include file="layout/footer"/>
+

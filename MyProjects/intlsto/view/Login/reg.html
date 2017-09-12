@@ -1,0 +1,76 @@
+<include file="layout/header"/>
+		<title>星云（国际）业务系统-会员</title>
+		<link rel="stylesheet" href="__PUBLIC_CSS__/page/login_reg.css" />
+<script type="text/javascript" src="__PUBLIC__/lib/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/validate-methods.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/messages_zh.min.js"></script>
+<script type="text/javascript" src="__PUBLIC_JS__/page/reg.js?{:time()}"></script>
+<script type="text/javascript" src="__PUBLIC_JS__/layout/meteor.js"></script>
+<style>
+	div.error{
+		color: #b94a48;
+		background-color: #f2dede;
+		border-color: #eed3d7;
+		position:relative;
+		padding:8px 35px 8px 14px;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+		margin-top: 20px;
+	}
+</style>
+		<div class="reg">
+			<div class="state_text"><span>注册</span></div>
+			<img class="logo_reg clearfix" src="__PUBLIC__/img/login_logo.jpg" />
+			<form class="pb-20" style="padding-top: 40px;" id="regForm">
+				<div class="clearfix formControls">
+					<span class="select-box radius">
+						<select class="select" size="1" name="countryCode" style="height: 38px;">
+							<option value="" selected="">请选择国家</option>
+							<volist name="country" id="vo">
+								<option value="{$vo.countryCode}">{$vo.countryName}</option>
+							</volist>
+						</select>
+					</span>
+				</div>
+				<div class="formControls layer_reg_tips">
+					<input type="text" class="radius input-text" autocomplete="off" maxlength="20" id="memberName" name="memberName" placeholder="会员账号" style="height: 48px; padding: 10px 15px;" />
+				</div>
+				<div class="formControls layer_reg_tips">
+					<input type="text" class="radius input-text" autocomplete="off" id="memberEmail" name="memberEmail" placeholder="邮箱" style="height: 48px; padding: 10px 15px;" />
+				</div>
+				<div class="formControls layer_reg_tips">
+					<input type="password" class="radius input-text" autocomplete="off" maxlength="20" id="memberPassword" name="memberPassword" placeholder="密码" style="height: 48px; padding: 10px 15px;" />
+				</div>
+				<div class="formControls layer_reg_tips">
+					<input type="password" class="radius input-text" autocomplete="off" maxlength="20" name="confirmPwd" placeholder="确认密码" style="height: 48px; padding: 10px 15px;" />
+				</div>
+				<div class="clearfix member-login formControls layer_reg_tips" >
+					<input type="text" name="verify" class="radius input-text" autocomplete="off" maxlength="5" placeholder="验证码" style="height: 48px; width: 200px; padding: 0px 15px;border: none;"/>
+					<img title="点击刷新验证码" class="code_login" onclick="freshCode()" src="{:U('Login/verifyImg')}" />
+				</div>
+				<div class="clearfix member-login formControls layer_reg_tips" >
+					<input type="text" name="email_code" class="radius input-text" autocomplete="off" placeholder="邮箱验证码" style="height: 48px; width: 200px; padding: 0px 15px;border: none;"/>
+					<button type="button"  class="btn code_login email_code" onclick="getEmailCode()">获取验证码</button>
+				</div>
+				<div class="progress-bar progress-bar-warning mt-20 mb-15">
+					<span class="sr-only" ></span>
+				</div>
+				<div class="text-l dis_b pt-10 pb-20">
+					<input name="IsRead" type="checkbox" checked="checked" />　我已阅读并同意<a class="c-uleblue" href="">用户协议</a>
+				</div>
+				<div class="formControls">
+					<button class="btn btn-block btn-sto size-XL ule_reg_btn">注册</button>
+
+				</div>
+				<div class="line mt-20"></div>
+				<div class="pt-20 pb-30">
+					<div class="f-l f-14" style="padding: 4px 0px;">已有帐号/申通国际帐号？</div>
+					<a href="{:U('Login/index')}" class="btn btn-sto-outline size-M radius f-r" >去登录</a>
+				</div>
+			</form>
+		</div>
+<p class="text-c c-white f-14" style="bottom: 20px; width: 100%; z-index: 1;">版权所有：申通快递有限公司&nbsp;&nbsp;沪ICP备13037807号-3</p>
+<canvas id='canvas'></canvas>
+	<script>
+		var login_url="{:U('Login/index')}",check_url="{:U('Login/check')}",imgUrl="{:U('Login/verifyImg')}",email_url="{:U('Login/registerEmail')}";
+	</script>
+		<include file="layout/footer"/>

@@ -1,0 +1,33 @@
+<include file="layout/header"/>
+		<div class="bg-fff">
+			<div class="panel-body panel_body_block">
+					
+				<table class="table table-border table-bordered table-hover">
+					<tr>
+						<td class="width_80 active">提交时间：</td>
+						<td class="localtime">{$info.createTime}</td>
+					</tr>
+					<tr>
+						<td class="width_80 active">申通单号：</td>
+						<td>{$info.stoNo}</td>
+					</tr>
+					<tr>
+						<td class="width_80 active">投诉原因：</td>
+						<td>{$info.content}</td>
+					</tr>
+					<tr>
+						<td class="width_80 active">投诉进度：</td>
+						<td>
+							<if condition="empty($info['replyContent'])">
+								<h5 class="c-orange">无</h5>
+								<else/>
+								<h5 class="c-orange">{$info.replyContent}</h5>
+								<p class="f-12 c-999">回复日期：<span class="localtime">{$info.replyTime}</span></p>
+							</if>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<include file="layout/footer"/>
+

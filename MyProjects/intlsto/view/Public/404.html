@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>星云（国际）业务系统-会员</title>
+    <link href="__PUBLIC_IMAGES__/error/sto.ico" rel="icon" >
+    <link href="__PUBLIC_CSS__/layout/error.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="__PUBLIC_JS__/1.9.1/jquery.min.js" ></script>
+</head>
+<body>
+<div id="container_other">
+    <div class="prompt">
+        <img src="__PUBLIC_IMAGES__/error/img_404.png" alt="404img"/>
+        <p class="title">
+            <if condition="empty($error)">
+                哎呀亲...你访问的页面出错了
+                <else/>
+                {$error}
+            </if>
+        </p>
+        <div class="btnBox">
+            <a href="{:U('Index/welcome')}" class="btn btn-succeed">返回首页</a>
+            <a href="#" class="btn btn-default">访问上一步</a>
+        </div>
+        <p class="support">网点技术支持：021-60375299</p>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    $(function(){
+        $('.btn-default').on('click',function(){
+            window.history.go(-1);
+        })
+    })
+</script>

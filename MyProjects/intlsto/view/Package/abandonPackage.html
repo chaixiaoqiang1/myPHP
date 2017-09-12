@@ -1,0 +1,63 @@
+<include file="layout/header"/>
+		<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20">
+			<div class="panel-header">
+				<span class="active">弃货申请</span>
+			</div>
+			<div class="panel-body panel_body_block">
+                <form id="form-abandon">
+				<table class="table">
+					<thead>
+						<tr class="active">
+							<th class="f-14" colspan="6">包裹信息</th>
+						</tr>
+						<tr class="table-bg table-border table-bordered">
+							<th class="text-c">海外收货仓库</th>
+							<th class="text-c">海外快递单号</th>
+							<th class="text-c">状态</th>
+							<th class="text-c" colspan="3">商品明细</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="table-bg table-border table-bordered">
+							<td class="text-c">{$storage_info.consolidatorName}</td>
+							<td class="text-c">{$storage_info.trackingNo}</td>
+							<td class="text-c">{$storage_info.statusTxt}</td>
+							<td class="text-l" colspan="3">{$storage_info.inventory}</td>
+						</tr>
+						<tr>
+							<td colspan="6"></td>
+						</tr>
+						<tr>
+							<td class="text-r select_w_150 va-t">弃货原因：</td>
+							<td class="text-l" colspan="5">
+								<div class="formControls col-xs-9 col-sm-5 width_600" style="padding-left: 0px;">
+                                    <input type="hidden" name="No" value="{$storage_info.trackingNo}" />
+									<textarea class="textarea valid width_400" placeholder="说点什么...最少输入10个字符" id="remark" name="remark" onkeyup="$.Huitextarealength(this,100)"></textarea>
+									<label id="beizhu-error" class="error valid width_400" for="remark"></label>
+									<p class="textarea-numberbar width_400" style="left: -10px; text-align: right;"><em class="textarea-length">0</em>/100</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td colspan="5">
+								<button class="btn btn-warning radius size-L" id="sumbit_btn" type="submit">提交申请</button>
+								<button class="btn btn-default-outline radius size-L" type="button" id="go_back">取消并返回</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+                </form>
+			</div>
+
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="__PUBLIC__/lib/H-ui/js/H-ui.min.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/validate-methods.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/messages_zh.min.js"></script>
+<script type="text/javascript" src="__PUBLIC_JS__/page/abandonPackage.js?{:time()}"></script>
+<script>
+	var  abandonPackage = "{:U('Package/abandonPackage')}";
+</script>

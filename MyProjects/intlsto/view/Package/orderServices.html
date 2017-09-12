@@ -1,0 +1,63 @@
+<include file="layout/header"/>
+<script type="text/javascript" src="__PUBLIC__/lib/daterange/moment.min.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/lib/daterange/jquery.daterangepicker.min.js" ></script>
+<link rel="stylesheet" href="__PUBLIC__/lib/daterange/daterangepicker.min.css" />
+
+<!--bootstrap table 引入-->
+<link rel="stylesheet" href="__PUBLIC__/css/layout/table_boot.css"/>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+<script type="text/javascript" src="__PUBLIC_JS__/page/orderServices.js?{:time()}"></script>
+
+		<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20">
+			<div class="panel-header">
+				<span class="active">仓内服务</span>
+			</div>
+			<div class="panel-body panel_body_block">
+				<form class="form form-horizontal" id="form-article-add" method="get" novalidate="novalidate">
+					<div class="row cl">
+						<div class="f-l">
+							<label class="pl-20 f-l text-r form-label">海外快递单号：</label>
+							<div class="f-l w-200">
+								<input name="trackingNo" maxlength="30" id="trackingNo" type="text" class="w-200 input-text" />
+							</div>
+						</div>
+						<div class="f-l">
+							<label class="pl-20 f-l text-r form-label">海外收货仓库：</label>
+							<div class="f-l">
+								<span class="select-box select_w_150">
+									<select name="consolidatorNo" id="consolidatorNo" class="select">
+										<option value="">全部</option>
+										<volist name="warehouse" id="vo">
+											<option value="{$vo.org_no}">{$vo.org_name}</option>
+										</volist>
+
+									</select>
+								</span>
+							</div>
+						</div>
+						<label class="pl-20 f-l text-r form-label">时间段：</label>
+						<div class="f-l w-200">
+							<input id="date-range16" class="w-200 input-text" type="text">
+							<input type="hidden" id="beginDate" name="beginDate" >
+							<input type="hidden" id="endDate" name="endDate">
+						</div>
+						<label class="width_50 f-l text-r form-label"></label>
+						<button class="btn btn-primary size-M" onclick="reloadTable('table')" type="button">查询</button>
+						<button class="btn btn-warning size-M" onclick="resetTable(this,'table')" type="button">重置</button>
+					</div>
+				</form>
+				<div class="clearfix pt-20">
+					<div class="clearfix" style="border: 1px solid #ddd;">
+						<table id="table" class="table" data-pagination="true" 	></table>
+					</div>
+				</div>
+			</div>
+		</div>
+<script>
+	var currencySymbol  = '{:session("company.currencySymbol")}'; //单位
+	var orderServices  = "{:U('Package/orderServices',array('table'=>'1'))}"; //单位
+	var orderServicesStatus = "{:U('Package/orderServicesStatus')}"
+</script>
+<include file="layout/footer"/>

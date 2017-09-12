@@ -1,0 +1,33 @@
+<include file="layout/header"/>
+<script type="text/javascript" src="__PUBLIC_JS__/page/orderAbandon.js?{:time()}"></script>
+
+<!--bootstrap table 引入-->
+<link rel="stylesheet" href="__PUBLIC__/css/layout/table_boot.css"/>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+
+		<title>退弃货记录</title>
+		<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20">
+			<div class="panel-header">
+				<span class="active" val="1">退货记录</span>
+				<span val="2" see="0">弃货记录</span>
+			</div>
+			<div class="panel-body panel_body_block">
+				<div class="clearfix" style="border: 1px solid #ddd;">
+					<table id="returnTable" class="returnTable" data-pagination="true" 	></table>
+				</div>
+			</div>
+			<div class="panel-body panel_body_none">
+				<div class="clearfix" style="border: 1px solid #ddd;">
+					<table id="jettisonTable" class="jettisonTable" data-pagination="true" 	></table>
+				</div>
+			</div>
+		</div>
+<script type="text/javascript">
+    var returnTable = "{:U('Package/orderAbandon',array('table' => '1','record' => '0'))}";
+    var jettisonTable = "{:U('Package/orderAbandon',array('table' => '1','record' => '1'))}";
+</script>
+<include file="layout/footer"/>
+
+

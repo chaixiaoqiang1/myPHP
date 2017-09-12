@@ -1,0 +1,41 @@
+@charset "utf-8";
+html {
+	text-align: center;
+	height: 100%;
+}
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+body {
+	font-family:"microsoft yahei", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background: #fff;
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+div,
+form,
+img,
+ul,
+li,
+input,
+p,
+ul,
+ol,
+li,
+form {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	list-style: none;
+}
+
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}.clearfix{zoom:1}

@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+/*
+	 项目名称：分页样式
+	 开发日期：2017/01/05
+	 开发人员：344822559@qq.com
+ * */
+
+
+#page{
+	clear: all;
+	width: 100%;
+	text-align: center;
+}
+#page a{
+	display: inline-block;
+	padding: 5px 8px;
+	line-height: 15px;
+	text-align: center;
+	border: 1px solid #cccccc;
+	background: #fff;
+	color: #999;
+}
+#page a:hover{
+	border: 1px solid #fff;
+	background: #f67e63;
+	color: white;
+	text-decoration: none;
+}
+#page a.active{
+	background: #f67e63;
+	color: white;
+	border: 1px solid #fff;
+}

@@ -1,0 +1,66 @@
+<include file="layout/header"/>
+		<script type="text/javascript" src="__PUBLIC__/lib/H-ui/js/H-ui.min.js" ></script>
+		<script type="text/javascript" src="__PUBLIC__/lib/icheck/jquery.icheck.min.js" ></script>
+		<script type="text/javascript" src="__PUBLIC_JS__/page/servicePackage.js?{:time()}"></script>
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/lib/icheck/icheck.css?123" />
+		<script type="text/javascript">
+			$(function(){
+				$('.skin-minimal input').iCheck({
+					checkboxClass: 'icheckbox-blue',
+					radioClass: 'iradio-blue',
+					increaseArea: '20%'
+				});
+			});
+		</script>
+		<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20">
+			<div class="panel-header">
+				<span class="active">增值服务</span>
+			</div>
+			<div class="panel-body panel_body_block">
+				<table class="table">
+					<tbody>
+						<tr>
+							<td class="text-r select_w_150">服务类型：</td>
+							<td colspan="5">
+								<volist name="serviceList" key="k" id="vo">
+									<div class="skin-minimal f-l mt-10">
+										<div class="check-box" style="padding-top: 3px;height: 30px;">
+											<input type="checkbox" class="code" name="servicesCode" value="{$vo.servicesCode}" id="checkbox-{$k}">
+											<label for="checkbox-{$k}" title="{$vo.serviceDescription}" serviceCost="{$vo.serviceCost}">{$vo.servicesName}</label>
+											<span class="hide ml-5">
+												<button class="btn btn-primary radius numAdd size-MINI" ><i class="icon Hui-iconfont Hui-iconfont-add"></i></button>
+												<input class="input-text width_50 size-MINI" maxlength="3" style="text-align: center;" name="serviceQuantity" value="">
+												<button class="btn btn-primary radius numRed size-MINI"><i class="icon Hui-iconfont Hui-iconfont-jianhao"></i></button>
+												<strong class="f-14 c-orange">{:session("company.currencySymbol")}{$vo.serviceCost}</strong>
+											</span>
+										</div>
+									</div>
+								</volist>
+							</td>
+						</tr>
+						<tr>
+							<td class="text-r select_w_150 va-t">服务详情：</td>
+							<td class="text-l" colspan="5">
+								<div class="formControls col-xs-9 col-sm-9 width_400" style="padding-left: 0px;">
+									<textarea id="beizhu" class="textarea valid width_400" placeholder="请输入需要服务的详情" name="servicesRemarks" onkeyup="$.Huitextarealength(this,100)"></textarea>
+									<label id="beizhu-error" class="error valid width_400" for="beizhu"></label>
+									<p class="textarea-numberbar width_400" style="left: -10px; text-align: right;"><em class="textarea-length">0</em>/100</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td colspan="5">
+								<button class="btn btn-warning radius size-L" id="saveService">提交申请</button>
+								<button class="btn btn-default-outline radius size-L" id="return">取消并返回</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+<script type="text/javascript">
+	var storageList_url="{:U('Package/storageList')}";
+</script>
+<include file="layout/footer"/>
+

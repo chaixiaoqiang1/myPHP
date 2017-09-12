@@ -1,0 +1,196 @@
+<include file="layout/header"/>
+		<link rel="stylesheet" href="__PUBLIC__/css/page/welcome.css" />
+		<script type="text/javascript" src="__PUBLIC__/js/page/welcome.js?{:time()}" ></script>
+		<div class="welcome_panel">
+			<div class="panel clearfix" style="padding-right: 300px;background: none; border: none; position: relative;">
+				
+				<div class="wel_left">
+					
+					<!--快捷菜单-->
+					<div class="row cl quick_menu clearfix">
+						<div class="col-lg-3 col-sm-3 send">
+							<a href="{:U('package/orderAdd')}" class="send_box">
+								<dl>
+									<dt><img src="__PUBLIC_IMAGES__/quick_menu/icon_send.png" /></dt>
+									<dd>
+										<h4 class="c-white">极速发货</h4>
+										<p class="f-12">用最简单方式发货</p>
+									</dd>
+								</dl>
+								
+							</a>
+						</div>
+						<div class="col-lg-3 col-sm-3 send">
+							<a href="{:U('package/storageAdd')}" class="send_box bag">
+								<dl>
+									<dt><img src="__PUBLIC_IMAGES__/quick_menu/icon_bag.png" /></dt>
+									<dd>
+										<h4 class="c-white">仓储预报</h4>
+										<p class="f-12 bag">及时预报到仓包裹</p>
+									</dd>
+								</dl>
+							</a>
+						</div>
+						<div class="col-lg-3 col-sm-3 send">
+							<a href="{:U('Package/batchImportPackage')}" class="send_box Import">
+								<dl>
+									<dt><img src="__PUBLIC_IMAGES__/quick_menu/icon_Import.png" /></dt>
+									<dd>
+										<h4 class="c-white">批量导入</h4>
+										<p class="f-12 Import">批量导入发货运单</p>
+									</dd>
+								</dl>
+							</a>
+						</div>
+						<div class="col-lg-3 col-sm-3 send">
+							<a href="javascript:void(0);" class="send_box depot warehouse">
+								<dl>
+									<dt><img src="__PUBLIC_IMAGES__/quick_menu/icon_depot.png" /></dt>
+									<dd>
+										<h4 class="c-white">集散转运仓</h4>
+										<p class="f-12 depot">查看转运仓库地址</p>
+									</dd>
+								</dl>
+							</a>
+						</div>
+					</div>
+					
+					<div class="bg-fff mt-20 mr-20">
+						<ul class="order_title">
+							<volist name="status_list" key="k" id="vo">
+								<if condition="$k eq 1">
+									<li class="status_list active" load="0" code="{$vo.statusCode}">
+										{$vo.status}
+										<neq name="vo.number" value="0">[{$vo.number}]</neq>
+									</li>
+									<elseif condition="$k eq count($status_list)"/>
+									<li onclick='window.location.href="{:U(\"CustomerService/tariffPay\")}"'>
+										{$vo.status}
+										<neq name="vo.number" value="0">[{$vo.number}]</neq></li>
+									<else/>
+									<li class="status_list" load="0" code="{$vo.statusCode}">
+										{$vo.status}
+										<neq name="vo.number" value="0">[{$vo.number}]</neq>
+									</li>
+								</if>
+
+							</volist>
+						</ul>
+						<div class="order_box order_box_block p20">
+							<div class="load6">
+								<div class="bounce1"></div>
+								<div class="bounce2"></div>
+								<div class="bounce3"></div>
+							</div>
+						</div>
+						<div class="order_box p20">
+							<div class="load6">
+								<div class="bounce1"></div>
+								<div class="bounce2"></div>
+								<div class="bounce3"></div>
+							</div>
+						</div>
+						<div class="order_box p20">
+							<div class="load6">
+								<div class="bounce1"></div>
+								<div class="bounce2"></div>
+								<div class="bounce3"></div>
+							</div>
+						</div>
+						<div class="order_box p20">
+							<div class="load6">
+								<div class="bounce1"></div>
+								<div class="bounce2"></div>
+								<div class="bounce3"></div>
+							</div>
+						</div>
+						<div class="order_box p20">
+							<div class="load6">
+								<div class="bounce1"></div>
+								<div class="bounce2"></div>
+								<div class="bounce3"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				<div class="wel_right">
+					<div class="user_box">
+						<p>
+							Hi,<cite>{:session('member.memberName')}</cite>
+							<!--<i id="layer_tip">VIP2</i>-->
+						</p>
+						<div class="p20" style="padding-top: 10px;">
+							<h5>账号余额：<small class="f-24 pl-5 pr-5 c-blue">{:session('company.currencySymbol').$account['memberMoney']}</small></h5>
+							<div class="f-14 mb-15 c-999">冻结金额：<small class="pl-5 pr-5">{:session('company.currencySymbol').$account['memberFrozenMoney']}</small></div>
+							<a href="{:U('Member/memberRecharge')}" class="btn btn-warning">充值</a>
+							<a href="{:U('Member/cash')}" class="ml-5 btn btn-primary">提现</a>
+							<a href="{:U('Member/transaction_list')}" class="ml-5 btn btn-success">交易明细</a>
+						</div>
+					</div>
+					<div class="user_box mt-20">
+						<p class="f-14"><i class="f-l Hui-iconfont Hui-iconfont-msg f-16 mr-5"></i>通知公告</p>
+						<ul>
+							<if condition="empty($notice)">
+								<li><span>暂无通知公告</span></li>
+								<else/>
+								<volist name="notice" id="vo">
+									<li><a href="javascript:void(0);" class="news" new_data="{$vo.noticeContent}" >{$vo.noticeTitle}</a></li>
+								</volist>
+							</if>
+						</ul>
+					</div>
+					<div class="user_box mt-20">
+						<p class="f-14">帐号注册国家</p>
+						<div class="chage_nation" style="display: inline;">{:session('countryName')}</div>
+						<p class="f-12">最后登录时间<small class="f-r localtime">{:session('member.loginTime')}</small></p>
+						<p class="f-12" style="border: none;">最后登录IP<small class="f-r">{:session('member.lastIp')}</small></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class='List_nation' id="list_nation" style="display: none;">
+			<div class="nation_title clearfix">
+				<ul class="clearfix">
+					<if condition="empty($country['unRegisterCountry'])">
+						<li class="active">已开通国家</li>
+						<else/>
+						<li class="active">未开通国家</li>
+						<li>已开通国家</li>
+					</if>
+
+				</ul>
+			</div>
+			<div class='nation_list clearfix <if condition="!empty($country['unRegisterCountry'])">nation_list_block</if>'>
+				<ul class='clearfix'>
+					<foreach name="country.unRegisterCountry" item="vo">
+						<li  onclick='openCountry("{$vo.countryCode}")'>{$vo.countryName}</li>
+					</foreach>
+				</ul>
+			</div>
+			<div class='nation_list clearfix <if condition="empty($country['unRegisterCountry'])">nation_list_block</if>'>
+				<ul class='clearfix'>
+					<foreach name="country.registerCountry" item="vo">
+						<li  onclick='switchCountry("{$vo.countryCode}")'>{$vo.countryName}</li>
+					</foreach>
+				</ul>
+			</div>
+		</div>
+
+
+
+<script>
+	var logistics_url		=	"{:U('Index/logistics')}",  	//加载物流列表
+		ware_url			=	"{:U('Index/memberWarehouse')}",//查看转运仓库
+		switchCountry_url	=	"{:U('Index/switchCountry')}",	//切换已注册国家
+		openCountry_url		=	"{:U('Index/openCountry')}",	//开通未注册国家
+    	orderList_url		=	"{:U('Index/getOrderByStatus')}",//包裹状态列表
+        confirmOrder_url	=	"{:U('Index/confirmOrder')}",	//确认收货
+		order_detail_url	=	"{:U('Package/orderDetail')}",  //包裹详情链接
+		Order_url			=	"{:U('Package/orderList')}";	//通过状态获取包裹列表
+</script>
+		<include file="layout/footer"/>
+

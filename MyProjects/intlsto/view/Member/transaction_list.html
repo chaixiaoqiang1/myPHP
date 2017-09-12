@@ -1,0 +1,58 @@
+<include file="layout/header"/>
+<script type="text/javascript" src="__PUBLIC__/lib/daterange/moment.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/daterange/jquery.daterangepicker.min.js"></script>
+<link rel="stylesheet" href="__PUBLIC__/lib/daterange/daterangepicker.min.css"/>
+<!--bootstrap table 引入-->
+<link rel="stylesheet" href="__PUBLIC__/css/layout/table_boot.css"/>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+<script type="text/javascript" src="__PUBLIC_JS__/page/transaction_list.js?{:time()}"></script>
+<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20">
+    <div class="panel-header">
+        <span class="active">交易明细</span>
+    </div>
+    <div class="panel-body panel_body_block">
+        <form class="form form-horizontal" id="form-article-add" novalidate="novalidate" method="post"
+              action="__SELF__">
+            <div class="row cl">
+                <div class="f-l">
+                    <label class="pl-20 f-l text-r form-label">时间段：</label>
+                    <div class="f-l w-200">
+                        <input id="date-range16" class="w-200 input-text" type="text">
+                        <input type="hidden" id="beginDate" name="beginDate" >
+                        <input type="hidden" id="endDate" name="endDate">
+                    </div>
+                </div>
+                <div class="f-l">
+                    <label class="pl-20 f-l text-r form-label">类型：</label>
+                    <div class="f-l">
+                        <span class="select-box select_w_150">
+                            <select class="select" name="lgType">
+                                <option value="">请选择</option>
+                                <foreach name="paymentName" item="vo" key="k">
+                                    <option value="{$k}">{$vo}</option>
+                                </foreach>
+                            </select>
+                        </span>
+                    </div>
+                </div>
+                <button type="button" onclick="reloadTable('table')" class="btn btn-primary size-M ml-20">查询</button>
+                <button class="btn btn-warning size-M" onclick="resetTable(this,'table')" type="button">重置</button>
+            </div>
+        </form>
+    </div>
+    <div class="panel-title">查询结果</div>
+    <div class="panel-body panel_body_block">
+        <div class="clearfix" style="border: 1px solid #ddd;">
+            <table id="table" class="table" data-sort-name="price" data-sort-order="desc"
+                   data-pagination="true">
+            </table>
+        </div>
+    </div>
+</div>
+<include file="layout/footer"/>
+<script>
+    var table_url="{:U('Member/transaction_list',array('table'=>1))}";
+
+</script>

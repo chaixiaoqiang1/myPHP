@@ -1,0 +1,81 @@
+<include file="layout/header"/>
+	<script type="text/javascript" src="__PUBLIC__/lib/daterange/moment.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/lib/daterange/jquery.daterangepicker.min.js"></script>
+	<link rel="stylesheet" href="__PUBLIC__/lib/daterange/daterangepicker.min.css"/>
+	<!--bootstrap table 引入-->
+	<link rel="stylesheet" href="__PUBLIC__/css/layout/table_boot.css"/>
+	<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+
+	<script type="text/javascript" src="__PUBLIC_JS__/battery/orderList.js?{:time()}"></script>
+
+		<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20">
+			<div class="panel-header">
+				<span class="active">BMS订单管理</span>
+			</div>
+			<div class="panel-body panel_body_block">
+				<form class="form form-horizontal" novalidate="novalidate">
+					<div class="row cl">
+						<div class="f-l">
+							<label class="f-l text-r form-label pl-20">订单来源：</label>
+							<div class="f-l width_250">
+								<span class="select-box">
+									<select name="platformCode" class="select">
+										<option value="">全部</option>
+										<foreach name="configure" item="vo">
+											<option value="{$vo.platformCode}">{$vo.configureName}_{:strstr($vo['platformConfig'],',',TRUE)}</option>
+										</foreach>
+									</select>
+								</span>
+							</div>
+						</div>
+						<div class="f-l">
+							<label class="f-l text-r form-label pl-30">状态：</label>
+							<div class="f-l">
+								<span class="select-box select_w_150">
+									<select name="platformStatus" class="select">
+										<option value="">全部</option>
+										<foreach name="statusList" key="k" item="vo">
+											<option value="{$k}">{$vo}</option>
+										</foreach>
+									</select>
+								</span>
+							</div>
+						</div>
+						
+						<div class="f-l">
+							<label class="f-l text-r form-label pl-30">导入时间：</label>
+							<div class="f-l w-200">
+								<input id="date-range16" class="input-text w-200" type="text"/>
+								<input type="hidden" id="beginDate" name="beginDate" >
+								<input type="hidden" id="endDate" name="endDate">
+							</div>
+						</div>
+						<button class="btn btn-primary size-M ml-10" onclick="reloadTable('table')" type="button">查询</button>
+						<button class="btn btn-warning size-M" onclick="resetTable(this,'table')" type="button">重置</button>
+					</div>
+					
+				</form>
+			</div>
+			<div class="panel-body panel_body_block">
+				<div class="clearfix mt-20" style="border: 1px solid #ddd;">
+					<div id="toolbar" style="text-align: right;">
+						<!--<button class="btn btn-default size-S" id="bulk_import">批量导入</button>-->
+						<button class="btn btn-default size-S" id="order_build">生成运单</button>
+						<!--<button class="btn btn-default size-S" id="send_import">商家发货</button>-->
+					</div>
+					<table id="table" style="min-width: 1800px;"></table>
+				</div>
+			</div>
+		</div>
+<script type="text/javascript">
+	var table_url="{:U('BatterySystem/orderList')}",//列表url
+        order_input_url="{:U('BatterySystem/orderInput')}",//BMS批量导入
+        is_address_url="{:U('BatterySystem/getDefaultAddress')}",//获取是否有默认地址
+		order_build_url="{:U('BatterySystem/orderBuild')}",//生成运单url
+    	del_order_url="{:U('BatterySystem/delOrder')}";//删除订单
+
+
+</script>
+<include file="layout/footer"/>

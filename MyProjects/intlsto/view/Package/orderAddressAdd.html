@@ -1,0 +1,178 @@
+<include file="layout/header"/>
+
+<link rel="stylesheet" href="__PUBLIC__/lib/icheck/icheck.css" />
+<script type="text/javascript" src="__PUBLIC__/lib/icheck/jquery.icheck.min.js" ></script>
+
+<script type="text/javascript" src="__PUBLIC__/lib/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/validate-methods.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/messages_zh.min.js"></script>
+
+<script type="text/javascript" src="__PUBLIC_JS__/page/orderAddressAdd.js?{:time()}"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/H-ui/js/H-ui.min.js" ></script>
+
+<link rel="stylesheet" href="__PUBLIC__/css/layout/table_boot.css"/>
+		<script type="text/javascript">
+			$(function(){
+				$('.skin-minimal input').iCheck({
+					checkboxClass: 'icheckbox-blue',
+					radioClass: 'iradio-blue',
+					increaseArea: '20%'
+				});
+			});
+		</script>
+	<body>
+		<div class="panel-body panel_body_block">
+			<form class="form form-horizontal" action="{:U('Package/orderAddressAdd')}" method="post" id="form-article-add" novalidate="novalidate">
+				<div class="row cl">
+					<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>所属国家：</label>
+					<input type="hidden" value="{$id}" name="status" id="status"/>
+					<input type="hidden" value="{$No}" name="No" id="No"/>
+					<input type="hidden" value="{$type}" id="type"/>
+					<input type="hidden" value="{$addressArray.addressId}" name="addressId"/>
+					<div class="formControls f-l">
+						<span class="select-box select_w_150">
+							<select name="country" class="select link" link="1" id="link1" >
+								<option value="">请选择国家</option>
+								<if condition = "$return_queryCountryList">
+									<foreach name="return_queryCountryList" item="vo">
+										<option value="{$vo.country_id}_{$vo.country_name}_{$vo.country_code}" <if condition ="$vo.country_name eq $destination">selected</if> >{$vo.country_name}</option>
+									</foreach>
+								</if>
+							</select>
+						</span>
+						<span class="select-box select_w_150 <if condition ='!$province'>hide</if> ">
+							<select name="province"  class="select link" id="link2" link="2">
+								<option value="" >请选择</option>
+								<if condition ='province'>
+									<foreach name="province" item="vo">
+										<option class="re" value="{$vo.country_id}_{$vo.country_name}" <if condition = "$vo.country_id eq $addressArray['provinceCode']">selected</if> >{$vo.country_name}</option>
+									</foreach>
+								</if>
+						</select>
+						</span>
+						<span  class="select-box select_w_150 <if condition ='!$city'>hide</if> ">
+							<select name="city" class="select link" id="link3" link="3">
+								<option value="">请选择</option>
+								<if condition ='$city'>
+									<foreach name="city" item="vo">
+										<option class="re" value="{$vo.country_id}_{$vo.country_name}" <if condition = "$vo.country_id eq $addressArray['cityCode']">selected</if>>{$vo.country_name}</option>
+									</foreach>
+								</if>
+							</select>
+						</span>
+						<span class="select-box select_w_150 <if condition ='!$area'>hide</if> ">
+							<select name="area" class="select link" id="link4" link="4">
+								<option value="">请选择</option>
+								<if condition ='$area'>
+									<foreach name="area" item="vo">
+										<option class="re" value="{$vo.country_id}_{$vo.country_name}" <if condition = "$vo.country_id eq $addressArray['areaCode']">selected</if>>{$vo.country_name}</option>
+									</foreach>
+								</if>
+							</select>
+						</span>
+					</div>
+				</div>
+				<div class="row cl <if condition ='!$town'>hide</if> ">
+					<label class="form-label label_width_100 f-l pl-20"></label>
+					<div class="formControls f-l">
+						<span class="select-box select_w_150 ">
+							<select name="town" class="select link" id="link5" link="5">
+								<option value="">请选择</option>
+								<if condition ='$town'>
+									<foreach name="town" item="vo">
+										<option class="re" value="{$vo.country_id}_{$vo.country_name}" <if condition = "$vo.country_id eq $addressArray['townCode']">selected</if>>{$vo.country_name}</option>
+									</foreach>
+								</if>
+							</select>
+						</span>
+					</div>
+				</div>
+
+				<div class="row cl">
+					<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>详细地址：</label>
+					<div class="formControls f-l width_400">
+						<textarea name="address" id="address" class="textarea" placeholder="建议您如实填写详细地址，例如街道名称，门牌号码，楼层和房间号等信息" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onkeyup="$.Huitextarealength(this,150)">{$addressArray.address}</textarea>
+						<p class="textarea-numberbar"><em class="textarea-length">0</em>/150</p>
+					</div>
+				</div>
+
+
+				<div class="row cl">
+					<label class="form-label label_width_100 f-l pl-20">邮政编码：</label>
+					<div class="formControls f-l width_200">
+						<input type="text" name="postcode" maxlength="12" autocomplete="off" class="input-text" value="{$addressArray.postcode}" placeholder="邮政编码">
+					</div>
+				</div>
+
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>
+							<if condition = "$id eq 1">
+								收货人姓名：
+							<elseif condition="$id eq 2"/>
+								发货人姓名：
+							</if>
+						</label>
+						<div class="formControls f-l">
+							<input type="text" maxlength="25" class="input-text select_w_150" value="{$addressArray.name}" autocomplete="off" name="name" placeholder="长度不超过25个字符">
+						</div>
+					</div>
+
+				<div class="row cl certificate" <if condition = "$id neq 1 or $destination neq '中国'">style="display: none;"</if>>
+					<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>证件类型：</label>
+					<div class="formControls f-l">
+						<span class="select-box select_w_150">
+							<select name="certificate_type" class="select">$return_type
+								<foreach name="card_type" item = "vo">
+									<option value="{$vo.cardId}">{$vo.cardName}</option>
+								</foreach>
+							</select>
+						</span>
+					</div>
+				</div>
+				<div class="row cl certificate" <if condition = "$id neq 1 or $destination neq '中国'">style="display: none;"</if>>
+					<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>证件号码：</label>
+					<div class="formControls f-l">
+						<input type="text" class="input-text width_350" maxlength="25" autocomplete="off" value="{$addressArray.certificateNum}" name="certificate_num" placeholder="证件号码必须真实有效">
+						<img src="__PUBLIC_IMAGES__/load.gif" style="display: none;" id="loadImg">
+						<span class="lh-24 c-orange cardNotice" style="margin: 20px;display: none;"></span>
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>联系电话：</label>
+					<div class="formControls f-l">
+						<select name="mobile_first" class="input-text width_80 select">
+							<foreach name="mobile_country" item = "vo">
+								<option value="{$vo['countryNumber']}" <if condition = "$vo.countryNumber eq $mobilCode">selected</if>>+{$vo.countryNumber}</option>
+							</foreach>
+						</select>
+						<input type="text" class="input-text select_w_150" maxlength="20" id="mobile" autocomplete="off" name="mobile" value="{$addressArray.mobile}" placeholder="请输入常用的手机号">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>邮箱：</label>
+					<div class="formControls f-l">
+						<if condition = "$addressArray">
+							<input type="text" maxlength="50" class="input-text width_200" autocomplete="off" value="{$addressArray.email}" name="email" placeholder="请输入常用邮箱">
+							<else /><input maxlength="50" type="text" class="input-text width_200" autocomplete="off" value="{$info.memberEmail}" name="email" placeholder="请输入常用邮箱">
+						</if>
+
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label label_width_100 f-l pl-20"></label>
+					<div class="formControls f-l">
+						<button class="btn btn-warning size-L" id="submit" type="submit">保存信息</button>
+						<a class="btn btn-default-outline size-L" href="javascript:void(0);" id="closeIndex">返回</a>
+					</div>
+				</div>
+			</form>
+		</div>
+		<script type="text/javascript">
+			var check_url="{:U('Login/check')}",  //校验规则地址
+				city_url="{:U('Package/getCountryChildList')}";
+			var orderReceiverAddressAdd = "{:U('Package/orderAddressAdd',array('id' => '1'))}";//管理收货地址
+			var orderDeliveryAddressAdd = "{:U('Package/orderAddressAdd',array('id' => '2'))}";//管理发货地址
+			var checkCertificate_url="{:U('Index/checkCert')}";//证件校验地址
+		</script>
+	</body>
+</html>

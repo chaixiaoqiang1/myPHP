@@ -1,0 +1,94 @@
+ /*类似支付宝支付密码的*/
+@charset "utf-8";
+ .alieditContainer{
+        position: relative;
+    } 
+    
+.sixDigitPassword {
+    position: absolute;
+    left: -122px;
+    top: 0;   
+    width: 1000px;
+    height: 26px;  
+    color: #fff;
+    font-size: 12px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-user-select: initial;
+    outline: 'none';
+    z-index: 999;
+    opacity:0;
+    filter:alpha(opacity=0);
+  }
+
+  .sixDigitPassword-box {
+      
+        cursor:text;
+        background: #fff;
+        outline: none;
+        position: relative;
+        padding: 8px 0;
+        height: 15px;
+        border: 1px solid #cccccc;
+        border-radius: 2px;
+  }
+  .sixDigitPassword-box i {
+        float: left;
+        display: block;
+        padding: 4px 0;
+        height: 7px;
+        border-left: 1px solid #cccccc;
+    }
+   .sixDigitPassword-box .active {
+        background: url('password-blink.gif') no-repeat center center;        
+    }
+   .sixDigitPassword-box b {
+        display: block;
+        margin: 0 auto;
+        width: 7px;
+        height: 7px;
+        overflow: hidden;
+        visibility:hidden;
+        background: url('passeord-dot.png') no-repeat;
+    }
+  .sixDigitPassword-box span {
+        position: absolute;
+        display: block;
+        left: 0px;
+        top: 0px;
+        height: 30px;
+        border: 1px solid rgba(82, 168, 236, .8);
+        border: 1px solid #00ffff\9;
+        border-radius: 2px;
+        visibility: hidden;
+        -webkit-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.75), 0 0 8px rgba(82, 168, 236, 0.6);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+    }
+    .ui-securitycore  .ui-form-item .ui-form-explain{
+		margin-top: 8px; 
+	}
+  .i-block{
+	display:inline-block;
+  }
+ .six-password{
+    position: relative;
+    height:33px;
+    width:182px;
+    overflow: hidden;
+    vertical-align: middle;
+    
+}
+.help-block{
+	display: block;
+	clear: both;
+	float: left;
+	margin-left: 80px;
+	color: #999;
+	font-size: 12px;
+	padding-top: 5px;
+}
+
+ /*#payPassword_rsainput-error{
+     margin-left: 0px;
+     padding-left: 180px;
+ }*/

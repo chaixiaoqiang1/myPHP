@@ -1,0 +1,55 @@
+<include file="layout/header"/>
+<script type="text/javascript" src="__PUBLIC_JS__/page/memberRecharge.js?{:time()}"></script>
+		<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20">
+			<div class="panel-header">
+				<span class="active">账号充值</span>
+				<a href="javascript:void(0);" id="detail" class="btn btn-default-outline size-M f-r mr-10 mt-5">充值明细</a>
+			</div>
+			<div class="panel-body panel_body_block">
+				<form class="form form-horizontal" id="recharge" novalidate="novalidate">
+					<input type="hidden" name="payment_id" id="payment_id" value="">
+					<input type="hidden" name="payment_name" id="payment_name" value="">
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r">会员账号：</label>
+						<div class="formControls  col-xs-9 col-sm-9">
+							<label class="text-l f-l c-orange" style="margin-top: 3px;">{$mInfo.memberName}</label>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r">账户余额：</label>
+						<div class="formControls  col-xs-9 col-sm-9">
+							<label class="text-l f-l" style="margin-top: 3px;"><mark class="c-primary pr-5" style="background: none;">{:session("company.currencySymbol")}{$mInfo.money}</mark></label>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r"><span class="c-red">*</span>输入充值金额：</label>
+						<div class="formControls col-xs-9 col-sm-9 money">
+							<input type="text" class="input-text width_80" value="" placeholder="0.00" name="amount">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r"><span class="c-red">*</span>支付方式：</label>
+						<div class="formControls col-xs-9 col-sm-9" id="payStyle">
+							<if condition="empty($pay_type)">
+								<label class="text-l f-l c-orange" style="margin-top: 3px;">暂未开通线上充值，敬请关注</label>
+								<else/>
+								<foreach name="pay_type" key="n" item="vo">
+									<img class="b_eee f-l mr-10 pay_type_click" src="{$vo.payment_logo}" title="{$vo.payment_name}" payment_name="{$vo.payment_name}" payment_code="{$vo.payment_code}"  />
+								</foreach>
+							</if>
+
+
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r"></label>
+						<div class="formControls col-xs-9 col-sm-9">
+							<button class="btn btn-warning size-L radius" type="button">确认充值</button>
+						</div>
+
+					</div>
+				</form>
+			</div>
+		</div>
+<script type="text/javascript"> var recharge_url="{:U('Member/rechargeList')}"</script>
+<include file="layout/footer"/>

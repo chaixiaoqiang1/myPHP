@@ -1,0 +1,108 @@
+<include file="layout/header"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/lib/validate/pay.css" />
+
+<script type="text/javascript" src="__PUBLIC__/lib/H-ui/js/H-ui.min.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/validate-methods.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/messages_zh.min.js"></script>
+<script type="text/javascript" src="__PUBLIC_JS__/page/cash.js?{:time()}"></script>
+
+
+
+		<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20">
+			<div class="panel-header">
+				<span class="active">账号提现</span>
+				<a href="javascript:void(0);" id="detail" class="btn btn-default-outline size-M f-r mr-10 mt-5">提现明细</a>
+
+			</div>
+			<div class="panel-body panel_body_block">
+				<form class="form form-horizontal"  name="payPassword" id="cash" novalidate="novalidate" action="{:U('Member/cash')}">
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r">会员账号：</label>
+						<div class="formControls  col-xs-9 col-sm-9">
+							<label class="text-l f-l c-orange" style="margin-top: 3px;">{:session('member.memberName')}</label>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r">账户余额：</label>
+						<div class="formControls  col-xs-9 col-sm-9">
+							<label class="text-l f-l" style="margin-top: 3px;">
+								<mark class="c-primary pr-5" style="background: none;">
+									{:session("company.currencySymbol")}
+									<span id="Ymoney">{$member.memberMoney}</span>
+								</mark>
+								<span class="c-999">（冻结金额：{:session("company.currencySymbol")}{$member.memberFrozenMoney}）</span>
+							</label>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r"><span class="c-red">*</span>可提现金额：</label>
+						<div class="formControls col-xs-9 col-sm-9 money w-300">
+							<input type="text" name="money" class="input-text"  id="money_num" value="" placeholder="{$member.memberMoney}">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r"><span class="c-red">*</span>账号类型：</label>
+						<div class="formControls col-xs-8 col-sm-9 w-200">
+							<span class="select-box ">
+								<select name="paymentCode" class="select" id="select_type">
+									<option value="">请选择</option>
+									<foreach name="pay_type" key="k" item="vo">
+										<option value="{$k}">{$vo}</option>
+									</foreach>
+								</select>
+							</span>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r"><span class="c-red">*</span>提现账号：</label>
+						<div class="formControls col-xs-9 col-sm-9 width_250">
+							<input type="text" class="input-text " name="account" value="" placeholder="请输入提现账号">
+							<p class="lh-24 c-999" style="margin: 0px;">仅支持提现到个人账户</p>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r">备注信息：</label>
+						<div class="formControls col-xs-9 col-sm-9 width_350">
+							<textarea class="textarea valid" placeholder="说点什么..." name="remarks" onkeyup="$.Huitextarealength(this,100)"></textarea>
+							<p class="textarea-numberbar" style="left: 0px; text-align: right;"><em class="textarea-length">0</em>/100</p>
+						</div>
+					</div>
+					<div class="row cl">
+						<div id="payPassword_container" class="alieditContainer cl pb-10" data-busy="0">
+							<label class="form-label select_w_150 f-l pl-20 text-r"><span class="c-red">*</span>支付密码：</label>
+							<div class="formControls f-l" style="padding-left: 15px" data-error="i_error">
+								<div class="i-block six-password" style="display: block">
+									<input class="i-text sixDigitPassword" id="payPassword_rsainput" type="password" autocomplete="off" required="required" value="" name="payPassword_rsainput" data-role="sixDigitPassword" tabindex="" maxlength="6" minlength="6" aria-required="true">
+									<div tabindex="0" class="sixDigitPassword-box" style="width: 180px;">
+										<i style="width: 29px; border-color: transparent;" class=""><b style="visibility: hidden;"></b></i>
+										<i style="width: 29px;"><b style="visibility: hidden;"></b></i>
+										<i style="width: 29px;"><b style="visibility: hidden;"></b></i>
+										<i style="width: 29px;"><b style="visibility: hidden;"></b></i>
+										<i style="width: 29px;"><b style="visibility: hidden;"></b></i>
+										<i style="width: 29px;"><b style="visibility: hidden;"></b></i>
+										<span style="width: 29px; left: 0px; visibility: hidden;" id="cardwrap" data-role="cardwrap"></span>
+									</div>
+								</div>
+								<!--<div class="help-block"><i class="Hui-iconfont Hui-iconfont-shenhe-weitongguo"></i>&nbsp;请输入6位纯数字密码</div>-->
+							</div>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20"></label>
+						<div class="formControls col-xs-9 col-sm-9">
+							<button type="submit" class="btn btn-warning radius size-L">确认提现</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+<script type="text/javascript" src="__PUBLIC_JS__/page/pay.js"></script>
+<script type="text/javascript">
+	var url			=	"{:U('Member/cash')}",  	//提现提交
+        checkPass_url=	"{:U('Member/checkPay')}",  //支付密码验证
+		is_first	=	"{$isFirst}",				//是否设置过支付密码
+		payPass_url =	"{:U('Member/password',array('active'=>1))}",	//设置支付密码页面
+		cashList_url=	"{:U('Member/cashList')}";  //提现明细
+</script>
+<include file="layout/footer"/>

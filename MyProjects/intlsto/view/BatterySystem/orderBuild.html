@@ -1,0 +1,122 @@
+
+	<include file="layout/header"/>
+	<script type="text/javascript" src="__PUBLIC__/lib/icheck/jquery.icheck.min.js" ></script>
+	<link rel="stylesheet" href="__PUBLIC__/lib/icheck/icheck.css" />
+	<!--bootstrap table 引入-->
+	<link rel="stylesheet" href="__PUBLIC__/css/layout/table_boot.css"/>
+	<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC_JS__/battery/orderBuild.js?{:time()}"></script>
+		<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20 pb-20">
+			<div class="three steps">
+			  <span class="active step">第一步.选择转运信息</span>
+			  <span class="disabled step">第二步.绑定海外快递单号</span>
+			  <span class="disabled step">第三步.生成运单</span>
+			</div>
+			<div>
+
+			</div>
+			<div class="panel-body panel_body_block mt-20" style="border: 1px solid #eee;">
+				<form class="form form-horizontal" id="form-article-add" novalidate="novalidate">
+					<div class="row cl clearfix">
+						<label class="f-l text-r form-label select_w_150"><span class="c-error">*</span>收货方式：</label>
+						<div class="f-l">
+							<div class="skin-minimal f-l">
+								<div class="check-box" style="padding-top: 3px;">
+									<input type="radio" name="deliveryType" value="1" checked id="checkbox-0">
+									<label for="checkbox-0" style="font-size: 12px;">快递至仓库</label>
+								</div>
+							</div>
+							<div class="skin-minimal f-l">
+							  <div class="check-box" style="padding-top: 3px;">
+							    <input type="radio" name="deliveryType" value="2"  id="checkbox-1">
+							    <label for="checkbox-1" style="font-size: 12px;">自送货至门店</label>
+							  </div>
+							</div>
+						</div>
+					</div>
+					<div class="row cl clearfix">
+						<label class="f-l text-r form-label select_w_150"><span class="c-error">*</span>关税支付方式：</label>
+						<div class="f-l">
+							<div class="skin-minimal f-l">
+								<div class="check-box" style="padding-top: 3px;">
+									<input type="radio" name="taxPayer" value="1" checked="" id="checkbox-2">
+									<label for="checkbox-2" style="font-size: 12px;">发货人</label>
+								</div>
+							</div>
+							<div class="skin-minimal f-l">
+							  <div class="check-box" style="padding-top: 3px;">
+							    <input type="radio" name="taxPayer" value="0" id="checkbox-3">
+							    <label for="checkbox-3" style="font-size: 12px;">收货人</label>
+							  </div>
+							</div>
+						</div>
+					</div>
+					<div class="row cl clearfix">
+						<label class="f-l text-r form-label select_w_150"><span class="c-error">*</span>海外收货仓库：</label>
+						<div class="f-l formControls">
+							<span class="select-box width_250">
+								<select name="consolidator" class="select">
+									<option value="">请选择</option>
+									<foreach name="warehouse" item="vo">
+										<option value="{$vo.org_no}_{$vo.org_name}" >{$vo.org_name}</option>
+									</foreach>
+								</select>
+							</span>
+						</div>
+					</div>
+					<div class="row cl clearfix">
+						<div class="f-l">
+							<label class="f-l text-r form-label select_w_150"><span class="c-error">*</span>发货国家：</label>
+							<div class="f-l formControls">
+								<span class="select-box width_250">
+									<select name="sendCountry" class="select">
+										<option value="">请选择</option>
+										<foreach name="country" item="vo">
+											<option value="{$vo.country_code}_{$vo.country_name}" >{$vo.country_name}</option>
+										</foreach>
+									</select>
+								</span>
+							</div>
+						</div>
+						<div class="f-l">
+							<label class="f-l text-r form-label select_w_150"><span class="c-error">*</span>目的地：</label>
+							<div class="f-l formControls">
+								<span class="select-box width_250">
+									<select name="destination" class="select">
+										<option value="">请选择</option>
+									</select>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="row cl clearfix">
+						<div class="f-l">
+							<label class="f-l text-r form-label select_w_150"><span class="c-error">*</span>产品线路：</label>
+							<div class="f-l formControls">
+								<span class="select-box width_250">
+									<select name="line" class="select">
+										<option value="">请选择</option>
+									</select>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="row cl clearfix">
+						<label class="f-l text-r form-label select_w_150"></label>
+						<div class="f-l formControls pb-20">
+							<button type="button" class="btn btn-warning radius size-L" onclick="overOne()">下一步</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	<script type="text/javascript">
+		var destination_url="{:U('Package/getDestinationByWarehouse')}",
+            selectDestinationByLineName = "{:U('Package/selectDestinationByLineName')}",
+			getOrderByIds_url="{:U('BatterySystem/getOrderByIds')}",
+			order_build_url="{:U('BatterySystem/orderBuild')}",
+            idList="{$_GET['idList']}";
+	</script>
+<include file="layout/footer"/>

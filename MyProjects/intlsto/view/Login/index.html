@@ -1,0 +1,48 @@
+<include file="layout/header"/>
+<title>星云（国际）业务系统-会员</title>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/validate-methods.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/messages_zh.min.js"></script>
+<script type="text/javascript" src="__PUBLIC_JS__/page/login.js?{:time()}"></script>
+<script type="text/javascript" src="__PUBLIC_JS__/layout/meteor.js"></script>
+<link rel="stylesheet" href="__PUBLIC_CSS__/page/login_reg.css" />
+<style>
+	div.error{
+		color: #b94a48;
+		background-color: #f2dede;
+		border-color: #eed3d7;
+		position:relative;
+		padding:8px 35px 8px 14px;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+		margin-top: 20px;
+	}
+</style>
+		<div class="reg">
+			<div class="state_text"><span>登陆</span></div>
+			<img class="logo_reg clearfix" src="__PUBLIC__/img/login_logo.jpg" />
+			<form class="pb-20" style="padding-top: 40px;" id="login">
+				<div class="formControls">
+					<input type="text" class="radius input-text" name="userName" autocomplete="off" placeholder="输入会员账号" style="height: 48px; padding: 10px 15px;" />
+				</div>
+				<div class="formControls">
+					<input type="password" class="radius input-text mt-20" name="password" placeholder="输入密码" style="height: 48px; padding: 10px 15px;" />
+				</div>
+				<div class="clearfix member-login mt-20 formControls" id="imgCode" <if condition="!$isCode">style="display:none;"</if> >
+					<input type="text" name="verify" class="radius input-text" maxlength="5" autocomplete="off" placeholder="输入验证码" style="height: 48px; width: 200px; padding: 0px 15px;border: none;"/>
+					<img title="点击刷新验证码" onclick="freshCode()"  class="code_login" src="{:U('Login/verifyImg')}" />
+				</div>
+				<button type="submit" class="btn btn-block btn-sto size-XL ule_reg_btn mt-20">登录</button>
+				<div class="line mt-20"></div>
+				<div class="pt-20 pb-30">
+					<a href="{:U('Login/forgetPass')}" class="text-r dis_b pt-10 f-l pb-20">忘记密码？</a>
+					<a href="{:U('Login/reg')}" class="btn btn-sto-outline size-M radius f-r" >注册</a>
+				</div>
+			</form>
+		</div>
+		<p class="text-c c-white f-14" style="bottom: 20px; width: 100%; z-index: 1;">版权所有：申通快递有限公司&nbsp;&nbsp;沪ICP备13037807号-3</p>
+	<script>
+        var index_url="{$url}";
+	</script>
+
+<canvas id='canvas'></canvas>
+<include file="layout/footer"/>

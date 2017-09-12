@@ -1,0 +1,34 @@
+<include file="layout/header"/>
+
+
+<script type="text/javascript" src="__PUBLIC_JS__/page/orderManageAddress.js?{:time()}"></script>
+
+<link rel="stylesheet" href="__PUBLIC__/css/layout/table_boot.css"/>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+
+	<body>
+
+			<div class="b_bottom_ddd clearfix">
+				<div class="define_box b_bottom_ddd">
+					<a href="javascript:void(0)" id="manager_address" class="btn btn-default size-M">新增</a>
+					<a href="javascript:void(0)" id="determine" class="btn btn-default size-M">确定</a>
+					<input type="hidden" value="{$status}" id="status"/>
+					<input type="hidden" value="{$destination}" id="destination"/>
+					<!--父页面包裹id-->
+					<input type="hidden" value="{$pack}" id="pack">
+					<input type="hidden" value="{$type}" id="type">
+				</div>
+				<table id="table" class="table" data-sort-name="price"  data-sort-order="desc" data-pagination="true" style="font-size: 12px;">
+				</table>
+			</div>
+
+
+	<script type="text/javascript">
+		var addressUrl = "{:U('Package/getAddressById')}";//选中的id查询
+		var selectAddressList ="{:U('Package/selectAddressList')}"; //地址访问
+	</script>
+
+
+<include file="layout/footer"/>

@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+/*忘记密码*/
+.header{
+	height: 70px;
+	background: #f16325;
+}
+.header .header_forget_box{
+	width: 1100px;
+	height: 70px;
+	margin: 0 auto;
+	background: url(../../img/forget.png) no-repeat left center;
+	position: relative;
+}
+.header .header_forget_box a{
+	float: right;
+	line-height: 70px;
+	color: white;
+}
+
+.steps_box{
+	background: #eee;
+	height: 100px;
+}
+
+.steps_content{
+	width: 1080px;
+	margin: 0 auto;
+	height: 100px;
+}
+.steps_content dl{
+	float: left;
+	width: 510px;
+	height: 100px;
+	position: relative;
+}
+
+.steps_content dl dt{
+	width: 40px;
+	height: 40px;
+	background: #ccc;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	text-align: center;
+	line-height: 40px;
+	font-size: 16px;
+	color: #fff;
+	position: absolute;
+	left: 0px;
+	top: 20px;
+}
+.steps_content dl dd{
+	position: absolute;
+	top: 60px;
+	padding-top: 5px;
+	width: 80px;
+	left: -20px;
+	text-align: center;
+}
+.steps_content dl legend{
+	position: absolute;
+	height: 60px;
+	left: 80px;
+	top: 20px;
+	background: url(../../img/forget-de-line.png) no-repeat left center;
+	border:none
+}
+.steps_content dl:last-child{
+	width: 60px;
+}
+.steps_content dl.active dt{
+	background: #f16325;
+	color: white;	
+}
+.steps_content dl.active legend{
+	background: url(../../img/forget-ac-line.png) no-repeat left center;
+}
+.forget_box{
+	margin: 0 auto;
+	width: 1000px;
+	padding-top: 40px;
+	min-height: 400px;
+}

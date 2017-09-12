@@ -1,0 +1,197 @@
+<include file="layout/header"/>
+<script type="text/javascript" src="__PUBLIC_JS__/page/orderDetail.js?{:time()}"></script>
+		<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20">
+			<div class="panel-header">
+				<span class="active">包裹详情</span>
+				<span class="text-r">
+					<a href="javascript:history.go(-1)" class="btn btn-default radius f-r size-S mr-10" style="margin-top:6px;">返回</a>
+				</span>
+			</div>
+			<div class="panel-body panel_body_block">
+
+                <if condition = "$orderInfo.flag eq 1">
+				<table class="table">
+					<tbody>
+						<tr class="active">
+							<td colspan="8">包裹基本信息</td>
+						</tr>
+						<tr>
+							<td>申通单号：{$orderInfo.stoNo}</td>
+							<td>下单时间：<span class="localtime">{$orderInfo.strCreateTime}</span></td>
+							<td>收货国家：{$orderInfo.shipperCountry}</td>
+							<td>产品线路：{$orderInfo.lineName}</td>
+						</tr>
+						<tr>
+							<td>海外收货仓库：{$orderInfo.consolidatorName}</td>
+							<td>海外快递公司：{$orderInfo.expressCode}</td>
+							<td>海外快递号：{$orderInfo.trackingNo}</td>
+							<td>件数：{$orderInfo.orderPieces}件</td>
+						</tr>
+						<tr>
+							<td>称重重量：<if condition = "$orderInfo['orderRealWeight']">{:number_format($orderInfo['orderRealWeight'],2,'.','')}{:session("company.weightSymbol")}<else />0.00{:session("company.weightSymbol")}</if></td>
+							<td>收费重量：<if condition = "$orderInfo['orderChargeWeight']">{:number_format($orderInfo['orderChargeWeight'],2,'.','')}{:session("company.weightSymbol")}<else />0.00{:session("company.weightSymbol")}</if></td>
+							<td>金额：{:session("company.currencySymbol")}{:number_format($orderInfo['orderTotalMoney'],2,'.','')}</td>
+							<td>备注：{$orderInfo.orderNote}</td>
+						</tr>
+					</tbody>
+				</table>
+                <elseif condition ="$orderInfo.flag eq 2"/>
+                <table class="table">
+                    <tbody>
+                        <tr class="active">
+                            <td colspan="8">包裹基本信息</td>
+                        </tr>
+                        <tr class="text-c">
+                            <td>海外快递公司</td>
+                            <td>海外快递单号</td>
+                            <td>收货方式</td>
+                            <td>库存天数(天)</td>
+                            <td>库存费用({:session("company.currencySymbol")})</td>
+                        </tr>
+                        <foreach name="listIntlWarehouseForecast" item="vo">
+                            <tr class="text-c">
+                                <td>{$vo.expressName}</td>
+                                <td>{$vo.trackingNo}</td>
+                                <td>{$vo.expressName}</td>
+                                <td>{$vo.inventoryDays}</td>
+                                <td>{:number_format($vo['inventoryCost'],2,'.','')}</td>
+                            </tr>
+                        </foreach>
+                        <tr>
+                            <td colspan="8"><hr></td>
+                        </tr>
+                        <tr>
+                            <td>申通单号：{$orderInfo.stoNo}</td>
+                            <td>下单时间：{$orderInfo.strCreateTime}</td>
+                            <td>收货国家：{$orderInfo.receiverCountry}</td>
+                            <td>产品线路：{$orderInfo.lineName}</td>
+                        </tr>
+                        <tr>
+                            <td>海外收货仓库：{$orderInfo.consolidatorName}</td>
+                            <td>数量：{$orderInfo.orderPieces}件</td>
+                            <td>重量：<if condition = "$orderInfo['orderChargeWeight']">{:number_format($orderInfo['orderChargeWeight'],2,'.','')}{:session("company.weightSymbol")}<else />0.00{:session("company.weightSymbol")}</if></td>
+                            <td>金额：{:session("company.currencySymbol")}{:number_format($orderInfo['orderTotalMoney'],2,'.','')}</td>
+                        </tr>
+                        <tr>
+                            <td>备注：{$orderInfo.orderNote}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </if>
+				
+				<table class="table">
+					<tbody>
+						<tr class="active">
+							<td colspan="8">地址信息</td>
+						</tr>
+						<tr>
+							<td>发货人：{$orderInfo.shipperName}</td>
+							<td>联系电话：{$orderInfo.shipperMobile}</td>
+							<td colspan="2">邮编：{$orderInfo.shipperZipcode}</td>
+						</tr>
+						<tr>
+							<td colspan="4">地址：{$orderInfo.shipperProvince}{$orderInfo.shipperCity}{$orderInfo.shipperArea}{$orderInfo.shipperTown}{$orderInfo.shipperAddress}</td>
+						</tr>
+						<tr>
+							<td>收货人：{$orderInfo.receiverName}</td>
+							<td>联系电话：{$orderInfo.receiverMobile}</td>
+							<td colspan="2">邮编：{$orderInfo.receiverZipcode}</td>
+						</tr>
+						<tr>
+							<td colspan="4">地址：{$orderInfo.receiverProvince}{$orderInfo.receiverCity}{$orderInfo.receiverArea}{$orderInfo.receiverTown}{$orderInfo.receiverAddress}</td>
+						</tr>
+						
+					</tbody>
+				</table>
+				
+				<table class="table">
+					<tbody>
+						<tr class="active">
+							<td colspan="6">服务信息</td>
+						</tr>
+						<tr>
+							<foreach name="listOrderServices" item="vo">
+								<td>{$vo.servicesName}：{:session("company.currencySymbol")}{:number_format($vo['servicesCost'],2,'.','')}&nbsp;&nbsp;<if condition ="$vo.servicesNote">{$vo.servicesNote}</if></td>
+							</foreach>
+						</tr>
+					</tbody>
+				</table>
+				<if condition = "$taxRecordEntity['payName'] AND $taxRecordEntity['taxFee'] AND $orderInfo['strTaxPayer']">
+					<table class="table">
+						<tbody>
+							<tr class="active">
+								<td colspan="3">关税信息</td>
+							</tr>
+							<tr>
+								<td>支付人：{$orderInfo.strTaxPayer}</td>
+								<td>关税金额：{:session("company.currencySymbol")}{:number_format($taxRecordEntity['taxFee'],2,'.','')}</td>
+								<td>支付状态：{$taxRecordEntity.payName}</td>
+							</tr>
+						</tbody>
+					</table>
+				</if>
+				<table class="table table-hover">
+					<tbody>
+						<tr class="active">
+							<td colspan="8">包裹明细</td>
+						</tr>
+						<tr class="text-c">
+							<td>序号</td>
+							<td>类别</td>
+							<td>品牌</td>
+							<td>品名</td>
+							<td>规格</td>
+							<td>单价({:session("company.currencySymbol")})</td>
+							<td>数量</td>
+							<td>金额({:session("company.currencySymbol")})</td>
+						</tr>
+						<volist name="listOrderGoodsModel" key="k" id="vo">
+							<tr class="text-c">
+								<td>{$k}</td>
+								<td>{$vo.cateName}</td>
+								<td>{$vo.brandName}</td>
+								<td>{$vo.goodsName}</td>
+								<td>{$vo.goodsUnit}</td>
+								<td>{:number_format($vo['goodsPrice'],2,'.','')}</td>
+								<td>{$vo.goodsNumber}</td>
+								<td>{:number_format($vo['goodsTotal'],2,'.','')}</td>
+							</tr>
+						</volist>
+					</tbody>
+				</table>
+				<table class="table table-hover">
+					<tbody>
+						<tr class="active">
+							<input type="hidden" name="stoNo" value="{$orderInfo.stoNo}">
+							<td colspan="8">物流信息</td>
+						</tr>
+						<tr class="load">
+							<td colspan="8">
+								<div class="load6">
+									<div class="bounce1"></div>
+									<div class="bounce2"></div>
+									<div class="bounce3"></div>
+								</div>
+							</td>
+						</tr>
+					<if condition ="$logisticsInfo">
+						<tr>
+							<td>状态</td>
+							<td>时间</td>
+						</tr>
+						<foreach name="logisticsInfo" item = "vo">
+						<tr>
+							<td>{$vo.Memo}</td>
+							<td>{$vo.ScanDate}</td>
+						</tr>
+						</foreach>
+					</if>
+					</tbody>
+				</table>
+			</div>
+		</div>
+<script type="text/javascript">
+	var getScanList_url="{:U('Index/getScanList')}"
+</script>
+<include file="layout/footer"/>
+

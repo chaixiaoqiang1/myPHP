@@ -1,0 +1,60 @@
+<include file="layout/header"/>
+<style type="text/css">
+	.line{margin-bottom:20px;}
+	/* 复制提示 */
+	.copy-tips{position:fixed;z-index:999;bottom:50%;left:50%;margin:0 0 -20px -80px;background-color:rgba(0, 0, 0, 0.2);filter:progid:DXImageTransform.Microsoft.Gradient(startColorstr=#30000000, endColorstr=#30000000);padding:3px;}
+	.copy-tips-wrap{padding:10px 20px;text-align:center;background-color:#fff;font-size:14px;}
+</style>
+<script type="text/javascript" src="__PUBLIC__/lib/zeroClip/jquery.zclip.js" ></script>
+<table class="table table-border" id="table">
+	<volist name="list" id="vo">
+		<tr class="active">
+			<td colspan="4" class="copy">{$vo.orgName}</td>
+		</tr>
+		<tr>
+			<td class="text-r f-12" width="120">名(First Name):</td>
+			<td class="f-12 copy">{$vo.firstName}</td>
+			<td class="text-r f-12" width="120">姓(Last Name):</td>
+			<td class="f-12 copy">{$vo.lastName}</td>
+		</tr>
+		<tr>
+			<td class="text-r f-12" width="120">地址(Address):</td>
+			<td class="f-12 copy" colspan="3">{$vo.orgAddress}</td>
+		</tr>
+		<tr>
+			<td class="text-r f-12" width="120">州/省(State):</td>
+			<td class="f-12 copy">{$vo.provinceName}</td>
+			<td class="text-r f-12" width="120">城市(City):</td>
+			<td class="f-12 copy">{$vo.cityName}</td>
+		</tr>
+		<tr>
+			<td class="text-r f-12" width="120">邮编(Zip Code):</td>
+			<td class="f-12 copy">{$vo.orgZipcode}</td>
+			<td class="text-r f-12" width="120">电话(Tel):</td>
+			<td class="f-12 copy">{$vo.orgTelephone}</td>
+		</tr>
+	</volist>
+</table>
+<script type="text/javascript">
+	//快速复制
+    $("#table .copy").bind('mouseover',function () {
+        if(!$(this).data('init')){
+            $(this).zclip({
+                path: "__PUBLIC__/lib/zeroClip/ZeroClipboard.swf",
+                copy: function(){
+                    return $(this).text();
+                },
+                beforeCopy:function(){/* 按住鼠标时的操作 */
+                    $(this).css("color","orange");
+                },
+                afterCopy:function(){/* 复制成功后的操作 */
+                    var $copysuc = $("<div class='copy-tips'><div class='copy-tips-wrap'><i class='Hui-iconfont Hui-iconfont-face2'></i>&nbsp复制成功</div></div>");
+                    $("body").find(".copy-tips").remove().end().append($copysuc);
+                    $(".copy-tips").fadeOut(2000);
+                }
+            });
+            $(this).data('init',true)
+        }
+    });
+</script>
+<include file="layout/footer"/>

@@ -1,0 +1,360 @@
+<include file="layout/header"/>
+<script type="text/javascript" src="__PUBLIC_JS__/page/tanksSendGood.js?{:time()}"></script>
+<script type="text/javascript" src="__PUBLIC_JS__/page/public.js?{:time()}"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/H-ui/js/H-ui.min.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/lib/icheck/jquery.icheck.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/lib/icheck/icheck.css?123" />
+<style type="text/css">
+	html,body{
+		height: 100%;
+	}
+	.panel{
+		background: none;
+	}
+</style>
+		<script type="text/javascript">
+			$(function(){
+				$('.skin-mini input').iCheck({
+					checkboxClass: 'icheckbox-blue',
+					radioClass: 'iradio-blue',
+					increaseArea: '20%'
+				});
+			});
+		</script>
+		<div class="panel mt-20 mr-20 ml-20 mb-20">
+			<div class="panel-header">
+				<span class="active">合箱发货</span>
+			</div>
+			<form class="form form-horizontal" id="form-box-add" novalidate="novalidate">
+			<div class="panel-title">基本信息</div>
+			<input type="hidden" value="" id="status"/>
+			<div class="panel-body panel_body_block bg-fff package package0" pack="0">
+				
+				<table class="table table-border table-bordered table-bg table-hover">
+					<thead>
+						<tr>
+							<th colspan="6" class="text-r">海外收货仓库：<span style="font-weight: normal;">{$issueStorage[0]['consolidatorName']}</span></th>
+							<input type="hidden" name="consolidator" class="consolidator_no" value="{$issueStorage[0]['consolidatorNo']}_{$issueStorage[0]['consolidatorName']}"/>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="active text-c">
+							<td>序号</td>
+							<td>海外快递公司</td>
+							<td>海外快递单号</td>
+							<td>商品明细</td>
+							<td>库存天数（天）</td>
+							<td>库存费用({:session("company.currencySymbol")})</td>
+						</tr>
+						<foreach name="issueStorage" item="vo" key="key">
+							<tr class="text-c">
+								<td>{$key+1}</td>
+								<td>{$vo['expressName']}</td>
+								<td>{$vo.trackingNo}</td>
+								<td>{$vo.inventory}</td>
+								<td>{$vo.inventoryDays}</td>
+								<td class="text-r">{:number_format($vo['inventoryCost'],'2')}</td>
+								<input type="hidden" name="trackingAll[]" value="{$vo.trackingNo}"/>
+							</tr>
+						</foreach>
+						<tr class="warning">
+							<td colspan="6" class="f-16 text-r">总库存费用：<strong class="f-16 c-orange">{:session("company.currencySymbol")}{:number_format($totalMoney,'2')}</strong></td>
+						</tr>
+					</tbody>
+					
+				</table>				
+				
+			</div>
+				<div class="panel-title">
+					包裹信息
+					<!--<button type="button" class="btn btn-primary-outline size-MINI radius ml-15">+新增包裹</button>-->
+				</div>
+				<div class="panel-body panel_body_block mt-20 bg-fff" style="border: 1px solid #ddd;">
+
+					<div class="form form-horizontal">
+						<div class="row cl pb-10">
+							<div class="f-l">
+								<label class="f-l text-r form-label pl-20">目的地：</label>
+								<div class="f-l">
+                            <span class="select-box select_w_150">
+                                <select name="destination" id="destination0"  class="select">
+                                    <option value="0">请选择</option>
+                                    <foreach name="destination" item = "vo">
+                                        <option class="des" value="{$vo.destination}">{$vo.destination}</option>
+                                    </foreach>
+                                </select>
+                            </span>
+								</div>
+							</div>
+							<div class="f-l">
+								<label class="f-l text-r form-label pl-20">产品线路：</label>
+								<div class="f-l">
+						<span class="select-box select_w_150">
+							<select name="line_name" id="line_name0" class="select">
+                                <option value="0">请选择</option>
+                            </select>
+						</span>
+								</div>
+							</div>
+
+							<div class="f-l">
+								<label class="pl-20 f-l text-r form-label">关税支付：</label>
+								<div class="f-l">
+									<div class="skin-mini f-l">
+										<div class="check-box" style="padding-top: 5px;">
+											<input type="radio" value="1" id="checkbox-4" checked name="tax_payer">
+											<label for="checkbox-4" style="font-size: 12px;">发货人</label>
+										</div>
+									</div>
+									<div class="skin-mini f-l">
+										<div class="check-box" style="padding-top: 5px;">
+											<input type="radio" value="0" id="checkbox-3"  name="tax_payer">
+											<label for="checkbox-3" style="font-size: 12px;">收货人</label>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<table class="table table-bg table-border table-bordered table-hover table-striped mb-20">
+						<thead>
+						<tr>
+							<th class="text-c width_50">序号</th>
+							<th class="text-c">名称</th>
+							<th class="text-c">类别</th>
+							<th class="text-c">品牌</th>
+							<th class="text-c width_80">单位</th>
+							<th class="text-c width_50">数量</th>
+							<th class="text-c width_80">单价({:session("company.currencySymbol")})</th>
+							<th class="text-c width_100">合计金额({:session("company.currencySymbol")})</th>
+							<th class="text-c">操作</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr class="pa">
+							<td class="text-c">1</td>
+							<td class="text-c"><input type="text" name="goods_name[]" maxlength="80" autocomplete="off"  class="input-text text-c"></td>
+							<td class="text-c">
+						<span class="dropDown" style="display: block;" >
+							<input type="text" name="cate_name[]" readonly  autocomplete="off" onclick="cateNameList($(this))" class="input-text text-c" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							<input type="hidden" value="" name="cate_id[]">
+						</span>
+							</td>
+							<td class="text-c">
+						<span class="dropDown" style="display: block;">
+							<input type="text" name="brand_name[]"  maxlength="30" autocomplete="off" onclick="brandNameSearch($(this))" class="input-text text-c" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							<input type="hidden" value="" name="brand_id[]">
+						</span>
+							</td>
+							<td class="text-c">
+						<span class="dropDown" style="display: block;">
+							<input type="text" name="goods_unit[]"  maxlength="10" autocomplete="off" onclick="unitSearch($(this))" class="input-text text-c" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						</span>
+							</td>
+							<td class="text-c">
+								<input type="text" name="goods_number[]" maxlength="4" value="0" onchange="goodsNumber($(this))" autocomplete="off" class="input-text text-c">
+							</td>
+							<td class="text-c">
+								<input type="text" name="goods_price[]"  maxlength="8"  value="0.00"  onchange="goodsPrice($(this))" autocomplete="off" class="input-text text-r">
+							</td>
+							<td class="text-c">
+								<input type="text" name="goods_total[]"  value="0.00" onchange="goodsTotal($(this))" autocomplete="off" class="input-text text-r">
+							</td>
+							<td class="text-c">
+								<button class="btn btn-danger size-MINI radius" type="button" onclick="delete_goods($(this))">删除</button>
+							</td>
+						</tr>
+						<tr class="active">
+							<td colspan="9" class="text-r">
+						<span class="f-16 mr-20">
+                            总数量：
+                            <cite class="c-orange number">1</cite>
+                        </span>
+								<span class="f-16 mr-20">
+                            总价：
+                            <cite class="c-orange totalMoney">{:session("company.currencySymbol")}0.00</cite>
+                        </span>
+								<!--<button class="btn btn-primary radius size-MINI">新增一条</button>-->
+								<input value="+新增一条" type="button" class="btn btn-primary size-MINI radius" onclick="addAGoods($(this))"/>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+
+
+				<div class="panel-title services">服务项目</div>
+				<div class="panel-body panel_body_block mt-10 bg-fff services" style="border: 1px solid #ddd;">
+					<div class="form form-horizontal pl-10 pb-10 ">
+						<div class="row cl">
+							<foreach name="services" item = "vo">
+								<if condition="$vo['dataType'] eq 1 && $vo['isInput'] eq 0 && $vo['servcesNumberType'] eq 0">
+									<div class="skin-mini f-l ml-10">
+										<div class="check-box" style="padding-top: 3px;">
+											<input type="checkbox" id="checkbox-{$vo.servicesCode}" name="services_code[]" value="{$vo.servicesCode}_100">
+											<label for="checkbox-{$vo.servicesCode}" style="font-size: 12px;" title="{$vo.serviceDescription}">{$vo.servicesName}</label>
+											<input type="hidden" value="{$vo.servicesCost}" id="cost">
+											<strong class="f-1 c-orange" hidden>{:session('company.currencySymbol')}{$vo.servicesCost}</strong>
+										</div>
+									</div>
+									<elseif condition="$vo['dataType'] eq 2 && $vo['isInput'] eq 1 && $vo['servcesNumberType'] eq 0"/>
+									<div class="skin-mini f-l ml-10">
+										<div class="check-box f-l" style="padding-top: 3px;padding-right: 10px;">
+											<input type="checkbox" id="checkbox-77" name="services_code[]" value="{$vo.servicesCode}_210">
+											<label for="checkbox-77" style="font-size: 12px;" title="{$vo.serviceDescription}">{$vo.servicesName}({$vo.servicesRate}%)</label>
+											<input type="hidden" id="maxMoney" value="{$vo.servicesCost}"/>
+											<input type="hidden" id="rate" value="{$vo.servicesRate}"/>
+										</div>
+										<div class="f-l pr-10" style="padding-top: 3px;">
+											<input class="width_80" style="border: 1px solid #ddd;" disabled name="InsuranceMoney" maxlength="6" type="text" placeholder="填写保险金">
+											<strong class="f-1 c-orange" hidden></strong>
+										</div>
+									</div>
+									<div class="skin-mini f-l ml-10" style="display: none;">
+										<div class="check-box f-l" style="padding-top: 5px;padding-right: 10px;">
+											<input type="checkbox" id="checkbox-88" name="isTrue" checked>
+											<label for="checkbox-88" style="font-size: 12px;">我已阅读并同意<a class="c-orange" href="#">保险条款</a></label>
+										</div>
+									</div>
+									<elseif condition="$vo['dataType'] eq 1 && $vo['isInput'] eq 1 && $vo['servcesNumberType'] eq 1"/>
+									<div class="skin-mini f-l ml-10">
+										<div class="check-box f-l" style="padding-top: 3px;padding-right: 10px;">
+											<input type="checkbox" id="checkbox-{$vo.servicesCode}" name="services_code[]"  value="{$vo.servicesCode}_111">
+											<label for="checkbox-{$vo.servicesCode}" style="font-size: 12px;" title="{$vo.serviceDescription}">{$vo.servicesName}</label>
+										</div>
+										<div class="f-l pr-10" style="padding-top: 1px;">
+                               <span class="width_50 bg-fff f-l mr-5">
+                                   <select name="services_number" class="select f-l">
+                                       <foreach name="vo.servcesNumberData" item="voo">
+                                           <option value="{$voo}">{$voo}</option>
+                                       </foreach>
+                                  </select>
+                               </span>
+											<input class="width_80" name="service_note" disabled maxlength="150"  style="border: 1px solid #ddd;" type="text" placeholder="输入产品备注">
+											<input type="hidden" id="costMoney" value="{$vo.servicesCost}"/>
+											<strong class="f-1 c-orange" hidden></strong>
+										</div>
+									</div>
+								</if>
+
+							</foreach>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="panel-title" id="services0">地址选择</div>
+				<div class="clearfix pl-20 mt-10 mb-15 bg-fff pt-20 pb-20" style="border: 1px solid #ddd;">
+					<div class="f-l width_450 pr-10 mt-10" style="border-right: 1px dotted #ddd;">
+						<p style="margin-bottom: 10px;">
+							<span class="f-14 lh-30">收货地址</span>
+							<!--如果没有默认地址将deliveryAddressNo默认为1-->
+							<if condition ="!$deliveryAddress">
+								<input type="hidden" id="deliveryAddressNo0" value="1"/>
+							</if>
+							<!--有默认地址时显示-->
+							<button type="button" <if condition ="!$deliveryAddress"> style="display: none;"</if> class="btn btn-default-outline size-MINI radius f-r delivery0" onclick="administrationDeliveryAddress(0)">管理收货地址</button>
+							<!--没有默认地址时显示-->
+							<button type="button" <if condition ="$deliveryAddress"> style="display: none;"</if> class="btn btn-default-outline size-MINI radius f-r falseDelivery0" onclick="addDeliveryAddress(0)">新增收货地址</button>
+						</p>
+
+						<p class="lh-20 delivery0" style="margin-bottom: 0px;" <if condition ="!$deliveryAddress"> style="display: none;"</if>>
+						<span class="pr-5" style="font-weight: bolder;" id="deliveryName0">{$deliveryAddress.deliveryName}</span>
+						<span id="deliveryMobile0">{$deliveryAddress.deliveryMobile}</span>
+						</p>
+						<p class="lh-20 delivery0" style="margin-bottom: 0px;" <if condition ="!$deliveryAddress"> style="display: none;"</if>>
+						<span class="pr-5" id="deliveryCountry0">{$deliveryAddress.country}</span>
+						<span class="pr-5" id="deliveryProvince0">{$deliveryAddress.province}</span>
+						<span class="pr-5" id="deliveryCity0">{$deliveryAddress.city}</span>
+						<span class="pr-5" id="deliveryArea0">{$deliveryAddress.area}</span>
+						<span class="pr-5" id="deliveryTown0">{$deliveryAddress.town}</span>
+						<span class="pr-5" id="deliveryAddress0">{$deliveryAddress.address}</span>
+						<span id="deliveryPostCode0">{$deliveryAddress.postcode}</span>
+						<input type="hidden" value="{$deliveryAddress.deliveryAddressId}" id="deliveryAddressId0" name="delivery"/>
+						</p>
+
+						<!--没有默认地址时提示-->
+						<div class="c-999 f-12 falseDelivery0" <if condition ="$deliveryAddress"> style="display: none;"</if>>
+						亲~您还没有默认收货地址，赶紧去新增吧！
+					</div>
+					<!--身份证信息提示-->
+					<p class="lh-20 delivery0" style="margin-bottom: 0px;" id="certificateNum0" <if condition ="!$deliveryAddress"> style="display: none;"</if>>{$deliveryAddress.certificateNum}&nbsp;&nbsp;&nbsp;&nbsp;{$verification}</p>
+
+				</div>
+
+				<div class="f-l width_450 ml-20 mt-10">
+					<p style="margin-bottom: 10px;">
+						<span class="f-14 lh-30">发货地址</span>
+						<!--如果没有默认地址将deliveryAddressNo默认为1-->
+						<if condition ="!$senderAddress">
+							<input type="hidden" id="senderAddressNo0" value="1"/>
+						</if>
+						<button type="button" class="btn btn-default-outline size-MINI radius f-r sender0" <if condition ="!$senderAddress"> style="display: none;"</if> onclick="administrationSenderAddress()">管理发货地址</button>
+						<button type="button" class="btn btn-default-outline size-MINI radius f-r falseSender0" <if condition ="$senderAddress"> style="display: none;"</if> onclick="addSenderAddress()">新增发货地址</button>
+					</p>
+
+					<p class="lh-20 sender0" style="margin-bottom: 0px;" <if condition ="!$senderAddress"> style="display: none;"</if>>
+					<span class="pr-5" style="font-weight: bolder;" id="senderName0">{$senderAddress.senderName}</span>
+					<span id="senderMobile0">{$senderAddress.senderMobile}</span>
+					</p>
+					<p class="lh-20 sender0" style="margin-bottom: 0px;" <if condition ="!$senderAddress"> style="display: none;"</if>>
+					<span class="pr-5" id="senderCountry0">{$senderAddress.country}</span>
+					<span class="pr-5" id="senderProvince0">{$senderAddress.province}</span>
+					<span class="pr-5" id="senderCity0">{$senderAddress.city}</span>
+					<span class="pr-5" id="senderArea0">{$senderAddress.area}</span>
+					<span class="pr-5" id="senderTown0">{$senderAddress.town}</span>
+					<span class="pr-5" id="senderAddress0">{$senderAddress.address}</span>
+					<span id="senderPostCode0">{$senderAddress.postcode}</span>
+					<input type="hidden" value="{$senderAddress.senderAddressId}" id="senderAddressId0" name="sender"/>
+					</p>
+
+					<div class="c-999 f-12 falseSender0" <if condition ="$senderAddress"> style="display: none;"</if>>
+					亲~您还没有默认发货地址，赶紧去新增吧！
+				</div>
+		</div>
+</div>
+<div class="clearFix estimate">
+	<div class="form form-horizontal pb-10 bg-fff" style="border: 1px solid #ddd;">
+		<div class="row cl">
+			<div class="f-l">
+				<label class="f-l text-r form-label pl-20">包裹重量：</label>
+				<div class="f-l">
+					<input type="text" class="input-text text-r width_80" maxlength="6" placeholder="{:session('company.weightSymbol')}" id="estimate" />
+				</div>
+			</div>
+			<div class="f-l">
+				<label class="f-l text-r form-label pl-20">预估费用：</label>
+				<div class="f-l c-orange f-16" style="padding-top: 3px;">
+					<strong class="f-16 c-orange">{:session("company.currencySymbol")}0.00</strong>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<input class="btn btn-warning size-L radius mt-20" id="submit" type="button" value="提交信息">
+	<button class="btn btn-default-outline size-L radius mt-20" onclick="window.history.go(-1)">取消并返回</button>
+</div>
+</form>
+		</div>
+<script>
+	//定义单位列表
+	var
+		brandTypeUrl = "{:U('Package/selectBrandType')}",
+		brandNameUrl = "{:U('Package/selectBrandName')}",
+		changeLine="{:U('Package/selectDestinationByLineName')}",
+		selectDestinationByLineName = "{:U('Package/selectDestinationByLineName')}",
+		orderReceiverAddress = "{:U('Package/orderManageAddress',array('id' => '1'))}",
+		orderDeliveryAddress = "{:U('Package/orderManageAddress',array('id' => '2'))}",
+		orderDeliveryAddressAdd = "{:U('Package/orderAddressAdd',array('id' => '2'))}",
+		orderReceiverAddressAdd = "{:U('Package/orderAddressAdd',array('id' => '1'))}",
+		NameByTypeUrl = "{:U('Package/selectNameByType')}",
+		goodsOrderBox = "{:U('Package/tanksSendGood')}",
+		countryName = '{:session("countryName")}',
+		weightEstimate = '{:U("Package/weightEstimate")}',
+		selectNameByCateIdUrl = '{:U("Package/selectNameByCateId")}',
+        orderList="{:U('package/orderList')}",
+		unitUrl = "{:U('Package/selectUnit')}";
+</script>
+<include file="layout/footer"/>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>星云（国际）业务系统-会员</title>
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/lib/H-ui/css/H-ui.ie.css" />
+    <script type="text/javascript" src="__PUBLIC__/lib/html5.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/lib/respond.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/lib/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="icon" href="__ROOT__/favicon.ico" mce_href="__ROOT__/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="__ROOT__/favicon.ico" mce_href="__ROOT__/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="__PUBLIC_CSS__/layout/global.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/lib/H-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" href="__PUBLIC__/lib/font_icon/iconfont.css" />
+    <link rel="stylesheet" href="__PUBLIC_CSS__/layout/layout.css" />
+    <script type="text/javascript" src="__PUBLIC_JS__/1.9.1/jquery.min.js" ></script>
+    <script type="text/javascript" src="__PUBLIC_JS__/layout/box.js" ></script>
+    <script type="text/javascript" src="__PUBLIC__/lib/layer/layer.js" ></script>
+    <!--[if IE 6]>
+    <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/lib/scroll/style/jquery.jscrollpane.css"/>
+    <script type="text/javascript" src="__PUBLIC__/lib/scroll/script/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/lib/scroll/script/jquery.jscrollpane.min.js"></script>
+
+</head>
+<body>
+<style type="text/css">
+    .left_box{
+        overflow-y: auto;
+        position: relative;
+    }
+</style>
+<script type="text/javascript">
+    $(function()
+    {
+        var bars = '.jspHorizontalBar, .jspVerticalBar';
+
+        $('.left_box').bind('jsp-initialised', function (event, isScrollable) {
+
+            //hide the scroll bar on first load
+            $(this).find(bars).hide();
+
+        }).jScrollPane().hover(
+
+                //hide show scrollbar
+                function () {
+                    $(this).find(bars).stop().fadeTo('fast', 0.9);
+                },
+                function () {
+                    $(this).find(bars).stop().fadeTo('fast', 0);
+                }
+
+        );
+
+    });
+</script>
+<div id="content">
+    <div class="left">
+        <div class="logo"></div>
+        <div class="left_box">
+            <div class="nav_box nav_box_block">
+                <div class="nav clearfix">
+                    <p><a class="active" href="javascript:;"><i class="icon iconfont icon-manage_fill"></i>常用操作</a></p>
+                    <ul class="active clearfix">
+                        <a href="javascript:;" _href="{:U('Package/orderAdd')}">极速发货</a>
+                        <a href="javascript:;" _href="{:U('Package/storageAdd')}">仓储预报</a>
+                        <a href="javascript:;" _href="{:U('Package/batchImportPackage')}">批量导入</a>
+                    </ul>
+                </div>
+                <div class="nav clearfix">
+                    <p><a href="javascript:;"><i class="icon iconfont icon-addressbook_fill"></i>个人信息</a></p>
+                    <ul class="clearfix">
+                        <a href="javascript:;" _href="{:U('Member/userInfo')}">资料编辑</a>
+                        <a href="javascript:;" _href="{:U('Address/index')}">地址管理</a>
+                        <a href="javascript:;" _href="{:U('Member/password')}">密码管理</a>
+                        <a href="javascript:;" _href="{:U('Member/memberRecharge')}">账号充值</a>
+                        <a href="javascript:;" _href="{:U('Member/cash')}">账号提现</a>
+                        <a href="javascript:;" _href="{:U('Member/transaction_list')}">交易明细</a>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav_box">
+                <div class="nav clearfix">
+                    <p><a class="active" href="javascript:;"><i class="icon iconfont icon-homepage_fill"></i>仓储转运</a></p>
+                    <ul class="active clearfix">
+                        <a href="javascript:;" _href="{:U('Package/orderAdd')}">极速发货</a>
+                        <a href="javascript:;" _href="{:U('Package/storageAdd')}">仓储预报</a>
+                        <a href="javascript:;" _href="{:U('Package/batchImportPackage')}">批量导入</a>
+                        <a href="javascript:;" _href="{:U('Package/storageList')}">仓储管理</a>
+                        <a href="javascript:;" _href="{:U('BatterySystem/orderList')}">BMS订单管理</a>
+                    </ul>
+                </div>
+                <div class="nav clearfix">
+                    <p><a href="javascript:;"><i class="icon iconfont icon-bangdan"></i>记录查询</a></p>
+                    <ul class="clearfix">
+                        <a href="javascript:;" _href="{:U('package/orderList')}">我的包裹</a>
+                        <a href="javascript:;" _href="{:U('package/orderAbandon')}">退弃货记录</a>
+                        <a href="javascript:;" _href="{:U('package/orderServices')}">仓内服务记录</a>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav_box">
+                <div class="nav clearfix">
+                    <p><a class="active" href="javascript:;"><i class="icon iconfont icon-shangwufuwu"></i>客户服务</a></p>
+                    <ul class="active clearfix">
+                        <a href="javascript:;" _href="{:U('CustomerService/tariffPay')}">关税支付</a>
+                        <a href="javascript:;" _href="{:U('CustomerService/tariffQuery')}">税单查询</a>
+                        <a href="javascript:;" _href="{:U('CustomerService/complaintList')}">投诉建议</a>
+                        <a href="javascript:;" _href="{:U('CustomerService/claimList')}">理赔记录</a>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="nav_box">
+                <div class="nav clearfix">
+                    <p><a class="active" href="javascript:;"><i class="icon iconfont icon-barrage_fill"></i>个人信息</a></p>
+                    <ul class="active clearfix">
+                        <a href="javascript:;" _href="{:U('Member/userInfo')}">资料编辑</a>
+                        <a href="javascript:;" _href="{:U('Address/index')}">地址管理</a>
+                        <a href="javascript:;" _href="{:U('Member/password')}">密码管理</a>
+                        <a href="javascript:;" _href="{:U('Member/memberRecharge')}">账号充值</a>
+                        <a href="javascript:;" _href="{:U('Member/cash')}">账号提现</a>
+                        <a href="javascript:;" _href="{:U('Member/transaction_list')}">交易明细</a>
+                        <a href="javascript:;" _href="{:U('BatterySystem/deploy')}">BMS配置</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <img class="btn_tel" src="__PUBLIC_IMAGES__/btn_tel.png" />
+    </div>
+    <!--
+        描述：左侧导航栏结束
+    -->
+    <div class="right">
+        <div class="show_iframe clearfix">
+            <div class="right_top">
+                <!--<div class="top_index active" title="welcome.html">首页</div>-->
+                <div class="top_nav">
+                    <a title="{:U('Index/welcome')}" class="active" href="javascript:;">首页</a>
+                    <a href="javascript:;">仓储转运</a>
+                    <a href="javascript:;">客户服务</a>
+                    <a href="javascript:;">账户设置</a>
+                </div>
+                <div class="user_set">
+                    <div class="ring">
+                        <div class="allNumber">
+                            <egt name="message.allNumber" value="1">
+                                <div class="ring_num">{$message.allNumber}</div>
+                            </egt>
+                        </div>
+                        <div class="ring_updown" style="display: none;">
+                            <a href="javascript:void(0);" _href="{:U('CustomerService/tariffPay')}">
+                                关税支付
+                                <span class="badge badge-warning taxNumber">
+                                    <egt name="message.taxNumber" value="1">
+                                        {$message.taxNumber}
+                                    </egt>
+                                </span>
+                            </a>
+                            <a href="javascript:void(0);" _href="{:U('CustomerService/tariffQuery')}">
+                                税单查询
+                                <span class="badge badge-warning taxQueryNumber">
+                                    <egt name="message.taxQueryNumber" value="1">
+                                        {$message.taxQueryNumber}
+                                    </egt>
+                                </span>
+                            </a>
+                            <a href="javascript:void(0);" _href="{:U('CustomerService/complaintList')}">
+                                投诉建议
+                                <span class="badge badge-warning adviceComplaintNumber">
+                                    <egt name="message.adviceComplaintNumber" value="1">
+                                        {$message.adviceComplaintNumber}
+                                    </egt>
+                                </span>
+                            </a>
+                            <a href="javascript:void(0);" _href="{:U('CustomerService/claimList')}">
+                                理赔记录
+                                <span class="badge badge-warning claimNumber">
+                                    <egt name="message.claimNumber" value="1">
+                                        {$message.claimNumber}
+                                    </egt>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="user_box">
+                        <img src=" <if condition="session('member.memberAvatar')">{:session('member.memberAvatar')}<else/>__PUBLIC_IMAGES__/user_face_80.png </if>"/>
+                        <div class="user_name">{:session('member.memberName')}<span class="countryName">({:session('countryName')})</span></div>
+                        <div class="user_nav">
+                            <ul>
+                                <li><a href="javascript:void(0);" id="updateUser" _href="{:U('Member/userInfo')}">编辑资料</a></li>
+                                <li><a href="javascript:void(0);" id="changePass" >修改密码</a></li>
+                                <li><a href="{:U('Login/logout')}">安全退出</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <iframe id="iframe" name="iframe" scrolling="yes" frameborder="0" src="{$url}"></iframe>
+            <div class="footer">
+                版权所有：申通快递有限公司　沪ICP备13037807号-3
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var changePass_url="{:U('Member/password')}",
+        notice_url="{:U('Index/noticeNum')}",  //消息更新
+        web_root_url="{:U('Index/index')}";
+</script>
+</body>
+</html>

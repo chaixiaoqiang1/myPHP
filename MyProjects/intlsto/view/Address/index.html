@@ -1,0 +1,292 @@
+<include file="layout/header"/>
+<link rel="stylesheet" href="__PUBLIC__/lib/icheck/icheck.css" />
+
+
+<script type="text/javascript" src="__PUBLIC_JS__/page/address.js?{:time()}"></script>
+<!--验证类-->
+<script type="text/javascript" src="__PUBLIC__/lib/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/validate-methods.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/messages_zh.min.js"></script>
+<!--bootstrap table 引入-->
+<link rel="stylesheet" href="__PUBLIC__/css/layout/table_boot.css"/>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+
+<script type="text/javascript" src="__PUBLIC__/lib/H-ui/js/H-ui.min.js" ></script>
+
+
+		<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20">
+			<div class="panel-header">
+				<span class="active">收货地址</span>
+				<span see="0">发货地址</span>
+			</div>
+
+			<div class="panel-body panel_body_block">
+				<div class="panel-title">新增收货地址</div>
+				<form class="form form-horizontal" id="receiveAdd" novalidate="novalidate">
+                    <div class="row cl">
+                        <label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>所在地区：</label>
+                        <div class="formControls col-xs-9 col-sm-9">
+							<span class="select-box select_w_150 ">
+								<select name="country" class="select link" id="link1" link="1">
+                                    <option value="" >请选择</option>
+									<volist name="country" id="vo">
+										<option value="{$vo.country_id}_{$vo.country_name}_{$vo.country_code}_{$vo.country_number}">{$vo.country_name}</option>
+									</volist>
+                                </select>
+							</span>
+							<span class="select-box select_w_150 hide">
+								<select name="province"  class="select link" id="link2" link="2">
+                                    <option value="" >请选择</option>
+                                </select>
+							</span>
+							<span class="select-box select_w_150 hide">
+								<select name="city" class="select link" id="link3" link="3">
+                                    <option value="">请选择</option>
+                                </select>
+							</span>
+							<span class="select-box select_w_150 hide">
+								<select name="area" class="select link" id="link4" link="4">
+                                    <option value="">请选择</option>
+                                </select>
+							</span>
+							<span class="select-box select_w_150 hide">
+								<select name="town" class="select link" id="link5" link="5">
+                                    <option value="">请选择</option>
+                                </select>
+							</span>
+                        </div>
+                    </div>
+
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>详细地址：</label>
+						<div class="formControls col-xs-4 col-sm-5">
+							<textarea name="address" id="address" cols="" rows="" class="textarea" placeholder="建议您如实填写详细地址，例如街道名称，门牌号码，楼层和房间号等信息" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onkeyup="$.Huitextarealength(this,100)"></textarea>
+							<p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
+						</div>
+					</div>
+
+
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20">邮政编码：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="text" maxlength="12" name="postcode" class="input-text select_w_150" value="" placeholder="邮政编码">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>收货人姓名：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input name="name" maxlength="25"  type="text" class="input-text select_w_150" value="" placeholder="请输入收货人姓名">
+						</div>
+					</div>
+					<div class="row cl certificate" style="display: none;">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>证件类型：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<span class="select-box select_w_150">
+								<select name="certificate_type" class="select">
+									<foreach name="card_type" item="vo">
+										<option value="{$vo.cardId}">{$vo.cardName}</option>
+									</foreach>
+								</select>
+							</span>
+						</div>
+
+					</div>
+					<div class="row cl certificate" style="display: none;">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>证件号码：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="text" name="certificate_num" maxlength="25" class="input-text width_350" value="" placeholder="请输入收货人证件号码">
+							<button type="button" class="btn size-M btn-primary" onclick="openCard()">上传证件照片</button>
+							<input type="hidden" name="frontOfId">
+							<input type="hidden" name="backOfId">
+							<img src="__PUBLIC_IMAGES__/load.gif" style="margin-left:5px;display: none;" id="loadImg">
+							<span class="lh-24 c-orange cardNotice" style="margin: 5px;display: none;"></span>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>联系电话：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<select name="mobile_first" class="select input-text width_80" style="display: inline-block">
+								<option value="">请选择</option>
+								<foreach name="mobile_country" item="vo">
+									<option value="{$vo.countryNumber}">+{$vo.countryNumber}</option>
+								</foreach>
+							</select>
+							<input type="text" name="mobile" id="receiverMobile" maxlength="20" style="display: inline-block" class="input-text select_w_150" value="" placeholder="请输入收货人联系电话">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>邮箱：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="text" maxlength="50" name="email" class="input-text width_200" value="{$info.memberEmail}" placeholder="请输入收货人邮箱">
+						</div>
+					</div>
+
+					<!--<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"></label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<div class="skin-minimal">
+							  <div class="check-box" style="padding-top: 5px;">
+							    <input type="checkbox" id="checkbox-1"  name="is_default" value="1">
+							    <label for="checkbox-1" style="font-size: 12px;">设置为默认收货地址</label>
+							  </div>
+							 </div>
+						</div>
+					</div>-->
+
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"></label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<button class="btn btn-warning radius size-L" type="submit">保存收货地址</button>
+						</div>
+					</div>
+				</form>
+				<div class="panel-title">收货地址列表</div>
+				<div class="clearfix" style="border: 1px solid #ddd;">
+					<table id="receiveTable" class="table" data-pagination="true" 	></table>
+				</div>
+			</div>
+
+
+			<div class="panel-body">
+				<div class="panel-title">新增发货地址</div>
+				<form class="form form-horizontal" id="senderAdd" novalidate="novalidate">
+                    <div class="row cl">
+                        <label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>所在地区：</label>
+                        <div class="formControls col-xs-9 col-sm-9">
+							<span class="select-box select_w_150 ">
+								<select name="country" class="select senderLink" id="senderLink1" link="1">
+                                    <option value="" >请选择</option>
+									<volist name="country" id="vo">
+										<option value="{$vo.country_id}_{$vo.country_name}_{$vo.country_code}_{$vo.country_number}">{$vo.country_name}</option>
+									</volist>
+                                </select>
+							</span>
+
+							<span class="select-box select_w_150 hide">
+								<select name="province"  class="select senderLink" id="senderLink2" link="2">
+                                    <option value="" >请选择</option>
+                                </select>
+							</span>
+							<span class="select-box select_w_150 hide">
+								<select name="city" class="select senderLink" id="senderLink3" link="3">
+                                    <option value="">请选择</option>
+                                </select>
+							</span>
+							<span class="select-box select_w_150 hide">
+								<select name="area" class="select senderLink" id="senderLink4" link="4">
+                                    <option value="">请选择</option>
+                                </select>
+							</span>
+							<span class="select-box select_w_150 hide">
+								<select name="town" class="select senderLink" id="senderLink5" link="5">
+                                    <option value="">请选择</option>
+                                </select>
+							</span>
+                        </div>
+                    </div>
+
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>详细地址：</label>
+						<div class="formControls col-xs-4 col-sm-5">
+							<textarea name="address" cols="" rows="" class="textarea" placeholder="建议您如实填写详细地址，例如街道名称，门牌号码，楼层和房间号等信息" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onkeyup="$.Huitextarealength(this,100)"></textarea>
+							<p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
+						</div>
+					</div>
+
+
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20">邮政编码：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="text" name="postcode" class="input-text select_w_150" value="" placeholder="邮政编码">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>发货人姓名：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input type="text" name="name" class="input-text select_w_150" value="" placeholder="请输入发货人姓名">
+						</div>
+					</div>
+
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>联系电话：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<select name="mobile_first" class="select input-text width_80" style="display: inline-block">
+								<option value="">请选择</option>
+								<foreach name="mobile_country" item="vo">
+									<option value="{$vo.countryNumber}">+{$vo.countryNumber}</option>
+								</foreach>
+							</select>
+							<input type="text" name="mobile" id="senderMobile" maxlength="20" style="display: inline-block" class="input-text select_w_150" value="" placeholder="请输入发货人联系电话">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"><span class="c-red">*</span>邮箱：</label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<input name="email" type="text" class="input-text width_200" value="{$info.memberEmail}" placeholder="请输入发货人邮箱">
+						</div>
+					</div>
+
+					<!--<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"></label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<div class="skin-minimal">
+							  <div class="check-box" style="padding-top: 5px;">
+							    <input type="checkbox" id="checkbox-2" name="is_default" value="1">
+							    <label for="checkbox-2" style="font-size: 12px;">设置为默认收货地址</label>
+							  </div>
+							 </div>
+						</div>
+					</div>-->
+
+					<div class="row cl">
+						<label class="form-label label_width_100 f-l pl-20"></label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<button class="btn btn-warning radius size-L" type="submit">保存发货地址</button>
+						</div>
+					</div>
+				</form>
+				<div class="panel-title">发货地址列表</div>
+				<div class="clearfix" style="border: 1px solid #ddd;">
+					<table id="senderTable" class="table" data-pagination="true" 	></table>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+<script type="text/javascript">
+
+    $(function(){
+        $('.skin-minimal input').iCheck({
+            checkboxClass: 'icheckbox-blue',
+            radioClass: 'iradio-blue',
+            increaseArea: '20%'
+        });
+    });
+
+
+    var check_url="{:U('Login/check')}",  //校验规则地址
+		city_url="{:U('Address/getAreaList')}", //地址联动
+        active="{$_GET['active']}",         //定义展示列表
+        defaul_url="{:U('Address/setAddressDefault')}", //设置默认地址
+        checkCertificate_url="{:U('Index/checkCert')}",//证件校验地址
+		upCertificate_url="{:U('Address/upCertificate')}",//证件上传页面地址
+
+        add_receive_url="{:U('Address/addAddress',array('type'=>'receive'))}",  	//添加收货地址
+        del_receive_url="{:U('Address/delAddress',array('type'=>'receive'))}",		//删除收货地址
+        edit_receive_url="{:U('Address/editReceiveAddress')}",	//编辑收货地址
+        table_receive_url="{:U('Address/receiveAddressList')}",	//查询收货地址列表
+
+
+        add_sender_url="{:U('Address/addAddress',array('type'=>'sender'))}",		//添加发货地址
+        del_sender_url="{:U('Address/delAddress',array('type'=>'sender'))}",		//删除发货地址
+        edit_sender_url="{:U('Address/editSenderAddress')}",		//编辑发货地址
+        table_sender_url="{:U('Address/senderAddressList')}";	//查询发货地址列表
+
+</script>
+
+<include file="layout/footer"/>

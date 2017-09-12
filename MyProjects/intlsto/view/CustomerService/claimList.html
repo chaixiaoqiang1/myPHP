@@ -1,0 +1,81 @@
+<include file="layout/header"/>
+<script type="text/javascript" src="__PUBLIC__/lib/daterange/moment.min.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/lib/daterange/jquery.daterangepicker.min.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/validate-methods.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/messages_zh.min.js"></script>
+<script type="text/javascript" src="__PUBLIC_JS__/page/claimList.js?{:time()}"></script>
+<link rel="stylesheet" href="__PUBLIC__/lib/daterange/daterangepicker.min.css" />
+<!--bootstrap table 引入-->
+<link rel="stylesheet" href="__PUBLIC__/css/layout/table_boot.css"/>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+
+<script type="text/javascript" src="__PUBLIC__/lib/H-ui/js/H-ui.min.js" ></script>
+
+		<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20">
+			<div class="panel-header">
+				<span class="active">理赔记录</span>
+				<span>申请理赔</span>
+			</div>
+			<div class="panel-body panel_body_block box">
+				<form class="form form-horizontal" id="form-article-add" novalidate="novalidate">
+					<div class="f-l">
+						<label class="pl-20 f-l text-r form-label">时间段：</label>
+						<div class="f-l w-200">
+							<input id="date-range16" class="w-200 input-text" type="text">
+							<input type="hidden" id="beginDate" name="beginDate" >
+							<input type="hidden" id="endDate" name="endDate">
+						</div>
+					</div>
+					<div class="f-l">
+						<label class="pl-20 f-l text-r form-label">申通单号：</label>
+						<div class="f-l">
+							<input type="text" maxlength="25" id="stoNo" name="stoNo" class="w-200 input-text" />
+						</div>
+					</div>
+					<button class="btn btn-primary size-M ml-20" onclick="reloadTable('table')"  type="button">查询</button>
+					<button class="btn btn-warning size-M" onclick="resetTable(this,'table')" type="button">重置</button>
+				</form>
+				<div class="clearfix mt-20" style="border: 1px solid #ddd;">
+					<table id="table" class="table" data-pagination="true" 	></table>
+				</div>
+			</div>
+			<div class="panel-body box">
+				<div class="clearfix">
+					<form id="claimAdd" method="post" style="width: 500px;">
+						<div class="cl">
+							<div class="f-l width_350 formControls">
+								<input type="text" name="stoNo" maxlength="25" class="input-text mb-15" placeholder="输入您需要理赔的申通单号">
+							</div>
+						</div>
+						<div class="cl">
+							<div class="f-l width_350 formControls">
+								<textarea class="textarea" name="content" placeholder="键入您申请理赔的原因"></textarea>
+							</div>
+						</div>
+						<div class="btn-upload form-group mt-10">
+							<input class="input-text upload-url" type="text"  id="uploadfile-1" readonly="">
+							<a href="javascript:void(0);" class="btn btn-primary upload-btn"><i class="Hui-iconfont"></i> 上传凭证</a>
+							<input type="file" multiple id="upImg"  class="input-file">
+						</div>
+						<div class="clearfix pt-10" id="imgList">
+						</div>
+						<div class="clearfix pt-20">
+							<button class="btn btn-warning radius size-L" type="submit">提交理赔</button>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+<script>
+	var cancel_url="{:U('CustomerService/claimCancel')}",
+		claim_url="{:U('CustomerService/claim')}",
+		detail_url="{:U('CustomerService/claimDetail')}",
+		table_url="{:U('CustomerService/claimList',array('table'=>1))}";
+
+</script>
+<include file="layout/footer"/>
+

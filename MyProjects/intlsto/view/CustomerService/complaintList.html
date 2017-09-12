@@ -1,0 +1,71 @@
+<include file ="layout/header"/>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/validate-methods.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/messages_zh.min.js"></script>
+<script type="text/javascript" src="__PUBLIC_JS__/page/complaintList.js?{:time()}"></script>
+<!--bootstrap table 引入-->
+<link rel="stylesheet" href="__PUBLIC__/css/layout/table_boot.css"/>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+
+<div class="panel bg-fff mt-20 mr-20 ml-20 mb-20">
+			<div class="panel-header">
+				<span class="active">建议</span>
+				<span id="com" see="0">投诉</span>
+			</div>
+			<div class="panel-body panel_body_block">
+					<div class="clearfix pb-20">
+						<form id="advice" method="post">
+							<div class="clearfix pb-10">
+								<div class="f-l width_350 formControls">
+									<input type="text" name="stoNo" maxlength="25" class="input-text" autocomplete="off" placeholder="输入申通单号">
+								</div>
+							</div>
+							<div class="clearfix pb-10">
+								<div class="formControls ">
+									<textarea class="textarea" name="content" placeholder="发表您的建议"></textarea>
+								</div>
+							</div>
+							<button class="btn btn-warning size-L radius mt-10">提交建议</button>
+						</form>
+					</div>
+				<div class="clearfix" style="border: 1px solid #ddd;">
+					<table id="adviceTable" class="table" data-pagination="true"></table>
+				</div>
+			</div>
+			<div class="panel-body">
+					<div class="clearfix pb-20">
+						<form action="" id="complaint" method="post">
+							<div class="clearfix pb-10">
+								<div class="f-l width_350 formControls">
+									<input type="text" name="stoNo" maxlength="25" class="input-text" autocomplete="off" placeholder="输入申通单号">
+								</div>
+
+							</div>
+							<div class="clearfix pb-10">
+								<div class="formControls ">
+									<textarea class="textarea" name="content" placeholder="输入您的投诉内容"></textarea>
+								</div>
+							</div>
+							<button class="btn btn-warning size-L radius mt-10">提交投诉</button>
+						</form>
+					</div>
+				<div class="clearfix" style="border: 1px solid #ddd;">
+					<table id="complaintTable" class="table" data-pagination="true" 	></table>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var advice_url="{:U('CustomerService/advice')}",
+				complaint_url="{:U('CustomerService/complaint')}",
+
+                adviceDetail_url="{:U('CustomerService/adviceDetail')}",
+                complaintDetail_url="{:U('CustomerService/complaintDetail')}",
+
+                adviceList_url="{:U('CustomerService/complaintList',array('table'=>'advice'))}",
+                complaintList_url="{:U('CustomerService/complaintList',array('table'=>'complaint'))}",
+                active="{$active}";
+
+		</script>
+<include file="layout/footer"/>

@@ -1,0 +1,117 @@
+<include file="layout/header"/>
+<script type="text/javascript" src="__PUBLIC__/lib/H-ui/js/H-ui.min.js" ></script>
+    <div class="panel bg-fff mt-20 mr-20 ml-20 mb-20">
+			<div class="panel-header">
+				<span class="active">批量导入</span>
+				<span>API导入</span>
+			</div>
+			<div class="panel-body panel_body_block">
+				<form action="{:U('Package/batchImportPackage')}" method="post" enctype="multipart/form-data" class="form form-horizontal" id="form-batch-import" novalidate="novalidate">
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r"><span class="c-red">*</span>导入模板：</label>
+						<div class="formControls col-xs-9 col-sm-9">
+							<span class="select-box select_w_150">
+								<select name="platform" class="select">
+									<option value="sto" templet="__PUBLIC__/example/stoTemplet.xlsx">标准</option>
+									<foreach name="platform" item="vo">
+										<option value="{$vo.platformCode}" templet="__PUBLIC__/example/{$vo.platformCode}Templet.xlsx">{$vo.platformName}</option>
+									</foreach>
+								</select>
+							</span>
+							<span class="pt-10 pl-10"><a class="c-primary" href="__PUBLIC__/example/stoTemplet.xlsx">下载标准模板</a></span>
+						</div>
+					</div>
+					<div class="row cl stoTemplet">
+						<label class="form-label select_w_150 f-l pl-20 text-r"><span class="c-red">*</span>海外收货仓库：</label>
+						<div class="formControls col-xs-9 col-sm-9">
+							<span class="select-box select_w_150">
+								<select name="consolidator_no" class="select">
+									<option value="">请选择</option>
+									<foreach name="warehouse" item="vo">
+										<option value="{$vo.org_no}_{$vo.org_name}" >{$vo.org_name}</option>
+									</foreach>
+								</select>
+							</span>
+						</div>
+					</div>
+					<div class="row cl stoTemplet">
+						<div class="f-l">
+							<label class="form-label select_w_150 f-l pl-20 text-r"><span class="c-red">*</span>发货国家：</label>
+							<div class="formControls f-l ml-15">
+								<span class="select-box select_w_150">
+									<select name="shipperCountry"  class="select">
+										<option value="">请选择</option>
+										<foreach name="country" item="vo">
+											<option value="{$vo.country_name}" >{$vo.country_name}</option>
+										</foreach>
+									</select>
+								</span>
+							</div>
+						</div>
+						<div class="f-l">
+							<label class="form-label select_w_150 f-l pl-20 text-r"><span class="c-red">*</span>目的地：</label>
+							<div class="formControls f-l ml-15">
+								<span class="select-box select_w_150">
+									<select name="destination"  class="select">
+										<option value="">请选择</option>
+									</select>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="row cl stoTemplet">
+						<label class="form-label select_w_150 f-l pl-20 text-r"><span class="c-red">*</span>产品线路：</label>
+						<div class="formControls col-xs-9 col-sm-9">
+							<span class="select-box select_w_150">
+								<select name="line" class="select">
+									<option value="">请选择</option>
+								</select>
+							</span>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20 text-r"><span class="c-red">*</span>导入excel：</label>
+						<div class="formControls col-xs-9 col-sm-9">
+							<span class="btn-upload form-group">
+							  <input class="input-text upload-url radius mr-10 file-item" type="text" name="uploadfile" id="uploadfile-1" placeholder="请选择包裹Excel文件" readonly>
+                                <a href="javascript:void(0);" class="btn btn-primary radius">浏览文件</a>
+							  <input type="file"  name="package" class="input-file file-item" formenctype="multipart/form-data">
+							</span>
+						</div>
+					</div>
+					<div class="row cl load" style="display: none;">
+						<label class="form-label select_w_150 f-l pl-20 text-r">上传进度：</label>
+						<div class="formControls col-xs-4 col-sm-5">
+							<div class="progress" style="margin-top:10px">
+								<div class="progress-bar">
+									<span class="sr-only" style="width:0%;"></span>
+								</div>
+							</div>
+							<p class="lh-24 c-999"></p>
+							<p class="lh-24"></p>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label select_w_150 f-l pl-20"></label>
+						<div class="formControls col-xs-8 col-sm-9">
+							<button class="btn btn-warning radius size-L" type="submit">导入信息</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="panel-body panel_body_none">
+				API导入正在开发中...
+			</div>
+
+		</div>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/validate-methods.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/validation/messages_zh.min.js"></script>
+<script type="text/javascript" src="__PUBLIC_JS__/page/batchImportPackage.js?{:time()}"></script>
+<script type="text/javascript">
+	var destination_url="{:U('Package/getDestinationByWarehouse')}",
+        selectDestinationByLineName = "{:U('Package/selectDestinationByLineName')}", //根据目的地查询产品路线
+		loadImg="__PUBLIC_IMAGES__/load.gif";
+
+</script>
+<include file="layout/footer"/>

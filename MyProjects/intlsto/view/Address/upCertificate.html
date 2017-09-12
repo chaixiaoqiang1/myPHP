@@ -1,0 +1,64 @@
+<include file="layout/header"/>
+<script type="text/javascript" src="__PUBLIC_JS__/page/upCertificate.js?{:time()}"></script>
+	<body>
+		<div class="bg-fff pl-20 pr-20 pb-20 pt-10">
+			<div class="box-upload clearfix">
+				<div class="f-l Positive">
+					<p class="text-c">身份证正面</p>
+					<img src="__PUBLIC_IMAGES__/code_zheng.jpg" style="width: 251px;height: 158px" />
+					<div class="btn-upload btn-block mt-10" style="height: 36px;">
+						<button class="btn-block btn btn-secondary radius upload-btn">上传身份证正面</button>
+						<input type="file" multiple  name="cardFile" cardType="frontOfId"  class="input-file avatar-input">
+					</div>
+				</div>
+				<div class="f-r opposite">
+					<p class="text-c">身份证反面</p>
+					<img src="__PUBLIC_IMAGES__/code_fan.jpg"  style="width: 251px;height: 158px" />
+					<div class="btn-upload btn-block mt-10" style="height: 36px;">
+						<button class="btn-block btn btn-secondary radius upload-btn">上传身份证反面</button>
+						<input type="file" multiple name="cardFile" cardType="backOfId"  class="input-file avatar-input">
+					</div>
+				</div>
+			</div>
+			<!--<div class="clearfix">
+				<form class="form form-horizontal">
+					<div class="row cl">
+						<div class="f-l">
+							<label class="form-label f-l pl-20">证件姓名：</label>
+							<div class="formControls width_100 f-l">
+								<input type="text" class="input-text" />
+							</div>
+						</div>
+						<div class="f-l">
+							<label class="form-label f-l pl-20">证件号码：</label>
+							<div class="formControls width_250 f-l">
+								<input type="text" class="input-text" />
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>-->
+			<div class="clearfix lh-20 pt-10 f-12">
+				根据中国海关总署修订后的《中华人民共和国海关对进出境快件监管办法》第二十二条规定，
+				入境到中国大陆的个人包裹经海关查验需向海关提供收件人身份证件 (彩色) 等相关信息。
+				前往<a href="http://www.customs.gov.cn/publish/portal0/tab399/info265077.htm" target="_blank" class="c-danger">中华人民共和国海关总署官方网站</a>查看原文 >>
+			</div>
+			<div class="clearfix pt-10 lh-24 f-12">
+				<p class="f-14" style="margin-bottom: 0px;">上传身份证注意事项：</p>
+				1、证件上传及存储都全部加密；<br />
+				2、请使用有效期内的二代身份证或临时身份证；<br />
+				3、请保证身份证正反面文字清晰可见，并无多余的背景；<br />
+				4、请上传证图片格式为.JPEG, .JPG，.PNG的身份证；<br />
+				5、请确保图片大小小于1M，以保证上传速度；<br />
+				6、您提供的照片信息仅用于清关，不会挪作他用。<br />
+			</div>
+			<div class="line mt-5"></div>
+			<div class="clearfix text-c pt-10">
+				<button type="button" class="btn btn-warning radius size-L">确定</button>
+				<button type="button" class="btn btn-default radius size-L">取消</button>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var reSizeImage_url="{:U('Address/reSizeImage')}";
+		</script>
+<include filename="layout/footer"/>

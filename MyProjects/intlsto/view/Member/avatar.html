@@ -1,0 +1,60 @@
+<include file="layout/header"/>
+<link href="__PUBLIC__/lib/cropper/cropper.min.css" rel="stylesheet">
+<script src="__PUBLIC__/lib/cropper/cropper.js"></script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC_CSS__/page/avatar.css">
+<link rel="stylesheet"  href="__PUBLIC__/lib/font-awesome/css/font-awesome.min.css">
+<script src="__PUBLIC__/lib/H-ui/js/H-ui.min.js"></script>
+<script src="__PUBLIC_JS__/page/avatar.js?{:time()}"></script>
+<div  id="photoBody" class="panel-body panel_body_block" >
+    <form class="form form-horizontal avatar-form">
+        <div class="row cl">
+            <div class="col-sm-12">
+                <input class="avatar-src" name="avatar_src" type="hidden">
+                <input class="avatar-data" name="avatar_data" type="hidden">
+                <div class="btn-upload form-group">
+                    <input class="input-text upload-url" type="text"  id="uploadfile-1" readonly="">
+                    <a href="javascript:void(0);" id="upPhoto" class="btn btn-primary upload-btn radius fa fa-photo">上传头像</a>
+                    <input type="file" multiple id="avatarInput" name="avatar_file"  class="input-file avatar-input">
+                </div>
+            </div>
+        </div>
+        <div class="row cl hide">
+            <div class="col-sm-8">
+                <div class="avatar-wrapper"></div>
+            </div>
+            <div class="col-sm-4">
+                <div class="avatar-preview preview-lg" id="imageHead"></div>
+                <div class="avatar-preview preview-md"></div>
+                <div class="avatar-preview preview-sm"></div>
+            </div>
+        </div>
+        <div class="row cl hide">
+            <div class="col-sm-4 avatar-btns">
+                <button class="btn btn-primary radius fa fa-undo" data-method="rotate" data-option="-90" type="button" title="向左旋转"> 向左旋转</button>
+                <button class="btn  btn-primary radius fa fa-repeat" data-method="rotate" data-option="90" type="button" title="向右旋转"> 向右旋转</button>
+            </div>
+            <div class="col-sm-4 avatar-btns" style="text-align: right;">
+                <button class="btn btn-primary radius fa fa-arrows" data-method="setDragMode" data-option="move" type="button" title="移动">
+                    <span class="docs-tooltip" data-toggle="tooltip" title="" data-original-title="$().cropper(&quot;setDragMode&quot;, &quot;move&quot;)"></span>
+                </button>
+                <button type="button" class="btn btn-primary radius fa fa-search-plus" data-method="zoom" data-option="0.1" title="放大图片">
+                    <span class="docs-tooltip" data-toggle="tooltip" title="" data-original-title="$().cropper(&quot;zoom&quot;, 0.1)"></span>
+                </button>
+                <button type="button" class="btn btn-primary radius fa fa-search-minus" data-method="zoom" data-option="-0.1" title="缩小图片">
+                    <span class="docs-tooltip" data-toggle="tooltip" title="" data-original-title="$().cropper(&quot;zoom&quot;, -0.1)"></span>
+                </button>
+                <button type="button" class="btn btn-primary radius fa fa-refresh" data-method="reset" title="重置图片">
+                    <span class="docs-tooltip" data-toggle="tooltip" title="" data-original-title="$().cropper(&quot;reset&quot;)" aria-describedby="tooltip866214"></span>
+                </button>
+            </div>
+            <div class="col-sm-4">
+                <button class="btn btn-warning btn-block radius avatar-save fa fa-save" id="saveChange" type="button"> 保存修改</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="__PUBLIC__/lib/html2canvas.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    var avatar_url="{:U('Member/avatar')}";
+</script>
+<include file="layout/footer"/>
