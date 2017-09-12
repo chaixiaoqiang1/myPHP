@@ -1,0 +1,169 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>申通快递.国际业务-申请开通</title>
+    <link rel="stylesheet" href="__STATIC__/lib/layerui/css/layui.css">
+    <link rel="stylesheet" href="__STATIC__/lib/sto/css/sto.css" />
+    <style type="text/css">
+        .apply{
+            width: 500px;
+            height: 410px;
+            margin: 0 auto;
+            border: 1px solid #eee;
+            position: absolute;
+            left: 50%;
+            margin-left: -250px;
+            top: 50%;
+            margin-top: -205px;
+            box-shadow: 0px 0px 30px #ddd;
+        }
+        .apply .layui-form-label{
+            font-size: 14px;
+        }
+        .apply_title{
+            line-height: 40px;
+            text-align: center;
+            font-size: 16px;
+            border-bottom: 1px solid #e6e6e6;
+            background: #fafafa;
+        }
+    </style>
+</head>
+<body class="pd-10 overflow_x_h" style="background: #f5f5f5;">
+<div class="apply bg_white">
+    <form class="layui-form f-14" method="post" action="{:url('Login/register')}" id="form">
+        <p class="apply_title">申通开通</p>
+        <div class="layui-form-item pt-15">
+            <label class="layui-form-label">网点编号:</label>
+            <div class="layui-input-block">
+                <label class="layui-form-label" style="padding: 6px; 0px;text-align: left;width: inherit;">20123456</label>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">网点名称:</label>
+            <div class="layui-input-block">
+                <label class="layui-form-label" style="padding: 6px; 0px;text-align: left;width: inherit;">青浦区旗舰店</label>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">业务联系人:</label>
+            <div class="layui-input-block width_250">
+                <input type="text" name="username" id="username"  autocomplete="off" class="layui-input"  lay-verify="username">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">联系电话:</label>
+            <div class="layui-input-block width_250">
+                <input type="text" name="phone"  autocomplete="off"  class="layui-input" lay-verify="phone">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">邮箱:</label>
+            <div class="layui-input-block width_250">
+                <input type="text" name="email"  autocomplete="off" class="layui-input" lay-verify="email">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">验证码:</label>
+            <div class="layui-input-block width_250">
+				    	<span class="f-l">
+				    		<input type="text" name="code"  autocomplete="off" class="layui-input width_150" lay-verify="code">
+				    	</span>
+                <span class="f-l pl-5" style="fline-height: 32px;width:80px;height: 32px;">
+                            <img src="{:captcha_src()}" alt="验证码" style="width: 100%;height: 100%;" id="code">
+                        </span>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label"></label>
+            <div class="layui-input-block pt-15">
+                <button class="layui-btn layui-btn-sto" lay-submit="" lay-filter="demo1" id="demo1">申请</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript" src="__STATIC__/lib/layerui/layui.js" ></script>
+<script type="text/javascript" src="__STATIC__/lib/sto/sto.js"></script>
+<script>
+
+    layui.use(['layer','form', 'layedit', 'laydate', 'jquery','test','autocomplete'], function(){
+        var form = layui.form()
+                ,layer = layui.layer
+                ,$=layui.jquery
+                ,layedit = layui.layedit
+                ,laydate = layui.laydate
+                , test= layui.test
+                ,autocomplete = layui.autocomplete;
+        test.restVal();
+        test.formToggle();
+
+        // 验证码
+        $("#code").click(function(){
+            this.src = "{:captcha_src()}?t={:time()}";
+        });
+
+        //自定义验证规则
+        form.verify({
+            username: function(value){
+                if(value.length < 5){
+                    return '标题至少得5个字符啊';
+                }
+            },
+            content: function(value){
+                layedit.sync(editIndex);
+            },
+            phone:function (value) {
+                if(value.length < 1){
+                    return  '手机号码不能为空';
+                }
+                if(!value.match(/^1([0-9]{10})/)){
+                    return '手机号码不正确';
+                }
+            },
+            email:function (value) {
+                if(!value.match(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/)){
+                    return '邮箱格式不正确';
+                }
+            },
+            code:function (value) {
+                if(!value.match(/^[a-z0-9]{4}/)){
+                    return '验证码不正确';
+                }
+                if(value.length<1){
+                    return "验证码不能为空";
+                }
+            }
+        });
+
+        //监听提交
+        form.on('submit(demo1)', function(data){
+            $.ajax({
+                type: "POST",
+                url: "{:url('Login/register')}",
+                data: data.field,
+                success: function(msg){
+                    if(msg.status == 1){
+                        alert( "Data Saved: " + msg.msg );
+                        location.href = "{:url('Login/waitVerify')}";
+                    }else{
+                        alert( "Data Saved: " + msg.msg );
+                    }
+                }
+            });
+//				layer.alert(JSON.stringify(data.field), {
+//					title: '最终的提交信息'
+//				});
+            return false;
+        });
+    });
+</script>
+</body>
+</html>
