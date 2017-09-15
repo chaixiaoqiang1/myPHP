@@ -9,13 +9,31 @@
 </head>
 <body>
 
-<script>
-    //{}大括号的理解   1、有三种方式（固定，区间，至少）
-    //[]中括号的理解   1、有四种方式（字符集合，除字符集合外，字符区间，除字符区间外）
+	<input type="text" name="str" id="str">
+	<input type="text" name="zz" id="zz">
+	<button onclick="test()">点击查看结果</button>
 
-    // eval函数把它的参数当表达式来运行
+	<p id="w"></p>
+	<script>
+		function test(){
+			var str = document.querySelector("#str").value;
+			var zz = document.querySelector("#zz").value;
+			var a = eval(zz);
+			var w = document.querySelector("#w");
+			if(str.match(a)){
+				w.innerHTML = "匹配成功";
+			}else{
+				w.innerHTML = "匹配失败";
+			}
+		}
+	</script>
 
-</script>
 
 </body>
 </html>
+
+<script>
+    //{}大括号的理解   1、有三种方式（固定，区间，至少）
+    //[]中括号的理解   1、有四种方式（字符集合，除字符集合外，字符区间，除字符区间外）
+    // eval函数把它的参数当表达式来运行
+</script>
