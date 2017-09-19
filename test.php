@@ -1,6 +1,7 @@
 <?php
 
 
+
 $items = array(
     1 => array('id' => 1, 'pid' => 0, 'name' => '安徽省'),
     2 => array('id' => 2, 'pid' => 0, 'name' => '浙江省'),
@@ -34,7 +35,6 @@ die;
     $str = "helloworld";
     echo substr($str,0);
     echo substr($str,0,3);
-
 
     echo uniqid('hello_',true);die;
     // 第一个参数为空，没有第二个参数为13位 59b3f505e0f3f
