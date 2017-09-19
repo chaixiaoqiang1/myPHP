@@ -26,6 +26,22 @@
 				w.innerHTML = "匹配失败";
 			}
 		}
+		
+		
+		// match和test的用法相反
+		var str = 'hello world';
+		var reg = /hello/;  
+		if(str.match(reg)){
+			console.log('true');
+		}else{
+			console.log('false');
+		}
+
+		if(reg.test(str)){
+			console.log('true');
+		}else{
+			console.log('false');
+		}
 	</script>
 </body>
 </html>
