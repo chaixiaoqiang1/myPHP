@@ -68,6 +68,10 @@
         var test = new obj({'a':'string','b':function(){alert(this.a)}});
         var test = new obj(function(name,age){alert(this.name),alert(age)});
 
+        //PHP的 preg_match 与 JS的 match的第一个参数是一样的都是正则表达式
+        //正则表达式结尾字符(i代表忽略大小写，g是全局查找并返回)
+
+
 	</script>
 </body>
 </html>
@@ -77,3 +81,20 @@
     //[]中括号的理解   1、有四种方式（字符集合，除字符集合外，字符区间，除字符区间外）
     // eval函数把它的参数当表达式来运行
 </script>
+
+<?php
+
+//preg_match的使用说明
+参数1是正则表达式，参数2是搜索字符，参数3是匹配到结果赋予此变量，参数4是把返回结果偏移量也给参数3的变量
+
+$a = 'hello hello';
+$rs = preg_match('/hello/',$a,$match);
+print_r($match);
+if($rs){
+    echo 'true';
+}else{
+    echo 'false';
+}
+
+
+?>
