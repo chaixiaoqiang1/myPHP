@@ -63,7 +63,7 @@
             if(typeof p == "function"){
                 p.apply(dog,['hello','world']);
             }
-        }
+        };
 
         var test = new obj({'a':'string','b':function(){alert(this.a)}});
         var test = new obj(function(name,age){alert(this.name),alert(age)});
