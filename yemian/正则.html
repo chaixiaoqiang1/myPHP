@@ -43,9 +43,31 @@
 			console.log('false');
 		}
 		
-		
-// Undefined类型只有一个值，即undefined。当声明的变量还未被初始化时，变量的默认值为undefined。
-// Null类型也只有一个值，即null。null用来表示尚未存在的对象，常用来表示函数企图返回一个不存在的对象。
+        // Undefined类型只有一个值，即undefined。当声明的变量还未被初始化时，变量的默认值为undefined。
+        // Null类型也只有一个值，即null。null用来表示尚未存在的对象，常用来表示函数企图返回一个不存在的对象。
+
+
+        // 对象传递对象参数 Demo 对象的使用方法
+        var dog = {'name':'dog'};
+        var obj = function(p){
+            if(typeof p == 'object'){
+                for(var i in p){
+                    if(typeof p[i] == 'function'){
+                        p[i]();
+                    }else{
+                        this[i] = p[i];
+                    }
+                }
+            }
+            // call apply的使用方法 改变是执行函数里面的this指向
+            if(typeof p == "function"){
+                p.apply(dog,['hello','world']);
+            }
+        }
+
+        var test = new obj({'a':'string','b':function(){alert(this.a)}});
+        var test = new obj(function(name,age){alert(this.name),alert(age)});
+
 	</script>
 </body>
 </html>
