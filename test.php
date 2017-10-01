@@ -28,7 +28,7 @@ die;
 
 //print_r(generateTree($items));die;
 
-jk
+
 
 
     // 字符串截取
